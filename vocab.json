@@ -1057,23 +1057,6 @@
       }
     },
     {
-      "id": "n-petit-ami",
-      "type": "noun",
-      "en": "boyfriend / girlfriend",
-      "fr": "petit ami",
-      "gender": "m",
-      "article": "le",
-      "theme": "Relationships & marriage",
-      "alt": [
-        "la petite amie"
-      ],
-      "example": {
-        "fr": "Elle habite avec son petit ami.",
-        "en": "She lives with her boyfriend."
-      },
-      "tip": "= le petit copain / la petite copine"
-    },
-    {
       "id": "n-classe",
       "type": "noun",
       "en": "class, classroom",
