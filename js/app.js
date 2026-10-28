@@ -2,7 +2,10 @@
 import { gradeItem, buildLookup, conjugationWithPronouns, isDontKnow } from './grading.js';
 import { computeProgress, chooseWords, buildItems } from './selection.js';
 import { SEED } from './seed-progress.js';
-import * as sync from './sync.js';
+
+// local.html = device-only version: no sign-in and Firebase is never loaded
+const isLocalMode = document.documentElement.dataset.mode === 'local';
+const sync = isLocalMode ? await import('./local-store.js') : await import('./sync.js');
 
 const ACCENTS = ['é', 'è', 'ê', 'ë', 'à', 'â', 'ç', 'î', 'ï', 'ô', 'œ', 'ù', 'û'];
 const RESULT_ICON = { correct: '✅', partial: '⚠️', wrong: '❌' };
@@ -25,7 +28,7 @@ const storage = {
 };
 
 const state = {
-  onlineMode: storage.get('onlineMode', true),
+  onlineMode: isLocalMode || storage.get('onlineMode', true),
   deviceId: storage.get('deviceId', null),
   vocab: null,
   lookup: null,
@@ -68,7 +71,8 @@ function updateStatus() {
   const waitingText = `${waiting} answer${waiting === 1 ? '' : 's'} waiting`;
   let text;
   let kind;
-  if (!state.user) { text = ''; kind = 'none'; }
+  if (isLocalMode) { text = 'Saved on this device only'; kind = 'offline'; }
+  else if (!state.user) { text = ''; kind = 'none'; }
   else if (!state.onlineMode) { text = waiting ? `Offline mode — ${waitingText}` : 'Offline mode'; kind = 'offline'; }
   else if (!navigator.onLine) { text = `Offline — ${waitingText}`; kind = 'offline'; }
   else if (waiting) { text = `Syncing — ${waitingText}`; kind = 'syncing'; }
@@ -277,7 +281,7 @@ function onUser(user) {
   state.attempts = null;
   updateStatus();
   if (!user) { renderSignIn(); return; }
-  signOutButton.hidden = false;
+  signOutButton.hidden = isLocalMode;
   if (state.phase === 'signin' || state.phase === 'loading') renderMessage('Un moment…', 'Loading your progress.');
 }
 
@@ -333,6 +337,7 @@ function onKeyDown(event) {
 
 async function boot() {
   onlineToggle.checked = state.onlineMode;
+  onlineToggle.closest('label').hidden = isLocalMode;
   onlineToggle.addEventListener('change', onToggleOnline);
   signOutButton.addEventListener('click', () => sync.signOutUser().catch(onSyncError));
   setupAccentBar();

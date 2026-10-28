@@ -15,6 +15,7 @@ Hosted on GitHub Pages (auto-deploys on push to `main`); progress syncs through 
 | `js/seed-progress.js` | Starting Leitner boxes from the chat sessions before the app existed |
 | `js/sync.js` | Firebase: sign-in, Firestore attempt log with persistent offline cache, `disableNetwork` for Offline mode |
 | `js/firebase-config.js` | Public Firebase web config |
+| `local.html`, `local.webmanifest`, `js/local-store.js` | Device-only version (no sign-in, no Firebase): same app, attempt log in localStorage. `app.js` picks `local-store.js` instead of `sync.js` when `<html data-mode="local">` |
 | `sw.js` | Service worker: caches the app + Firebase SDK for offline use |
 | `firestore.rules` | Security rules (deployed by pasting into the Firebase console → Firestore → Rules) |
 | `scripts/validate.js` | Validates `vocab.json` |
