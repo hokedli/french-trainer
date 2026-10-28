@@ -1,0 +1,4 @@
+# Source notes contain personal details; vocab.json is the source of truth
+French*Vocabulary.md
+node_modules/
+.claude/settings.local.json

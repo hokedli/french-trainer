@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Each user can only read and add to their own answer log. The log is append-only: no edits, no deletes.
+    match /users/{userId}/attempts/{attemptId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId
+        && request.resource.data.keys().hasOnly(['wordId', 'result', 'myAnswer', 'timestamp', 'deviceId'])
+        && request.resource.data.wordId is string
+        && request.resource.data.result in ['correct', 'partial', 'wrong']
+        && request.resource.data.myAnswer is string
+        && request.resource.data.myAnswer.size() <= 1000
+        && request.resource.data.timestamp is number
+        && request.resource.data.deviceId is string;
+    }
+  }
+}
