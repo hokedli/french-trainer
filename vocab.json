@@ -836,19 +836,29 @@
     {
       "id": "n-beau-frere",
       "type": "noun",
-      "en": "brother-in-law / sister-in-law",
+      "en": "brother-in-law",
       "fr": "beau-frère",
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
-      "alt": [
-        "la belle-sœur"
-      ],
       "example": {
         "fr": "Julien est le beau-frère de Sophie.",
         "en": "Julien is Sophie's brother-in-law."
       }
     },
+    {
+      "id": "n-belle-sœur",
+      "type": "noun",
+      "en": "sister-in-law",
+      "fr": "belle-sœur",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Sophie est la belle-sœur de Julien.",
+        "en": "Sophie is Julien's brother-in-law."
+      }
+    },    
     {
       "id": "n-belle-fille",
       "type": "noun",
@@ -863,21 +873,47 @@
       }
     },
     {
-      "id": "n-demi-frere",
+      "id": "n-beau-fils",
       "type": "noun",
-      "en": "half-brother / half-sister",
-      "fr": "demi-frère",
+      "en": "son-in-law; stepson",
+      "fr": "beau-fils",
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
       "alt": [
-        "la demi-sœur"
+        "le gendre"
       ],
+      "example": {
+        "fr": "Julien est le beau-fils de Pierre et d'Aline.",
+        "en": "Julien is Pierre and Aline's son-in-law."
+      }
+    },    
+    {
+      "id": "n-demi-frere",
+      "type": "noun",
+      "en": "half-brother",
+      "fr": "demi-frère",
+      "gender": "m",
+      "article": "le",
+      "theme": "Family and relationships",
       "example": {
         "fr": "Mon demi-frère a 15 ans.",
         "en": "My half-brother is 15."
       }
     },
+    {
+      "id": "n-demi-sœur",
+      "type": "noun",
+      "en": "half-sister",
+      "fr": "demi-sœur",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Ma demi-sœur a 15 ans.",
+        "en": "My half-sister is 15."
+      }
+    },    
     {
       "id": "n-jumeau",
       "type": "noun",
@@ -1077,6 +1113,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Classroom and language learning",
+      "alt": [
+        "la leçon"
+      ],
       "example": {
         "fr": "On a cours de français.",
         "en": "We have French class."
