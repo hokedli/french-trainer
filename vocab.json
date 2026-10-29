@@ -10117,6 +10117,12 @@
       "masc": "tchèque",
       "fem": "tchèque",
       "theme": "Nationalities",
+      "alt": [
+        "tchèque (m/f)",
+        "tchèque (m / f)",
+        "tchèque (m,f)",
+        "tchèque (mf)"
+      ],      
       "example": {
         "fr": "Il est tchèque, elle est tchèque.",
         "en": "He is Czech, she is Czech."
