@@ -232,7 +232,7 @@ function resultRowHtml({ item, answer, graded }, index) {
       <td data-label="English">${english}</td>
       <td data-label="You wrote" lang="fr">${youWrote}</td>
       <td data-label="Correct answer" lang="fr">${correctAnswerHtml(item, graded)}</td>
-      <td data-label="Explanation">${notes.join('') || '<span class="muted">Parfait !</span>'}</td>
+      <td data-label="Explanation">${notes.join('') || (graded.result === 'correct' ? '<span class="muted">Parfait !</span>' : '')}</td>
     </tr>`;
 }
 

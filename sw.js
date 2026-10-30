@@ -1,6 +1,6 @@
 // Offline support. Bump CACHE_VERSION whenever an app file (not vocab.json) changes:
 // that is what makes installed copies download the new version.
-const CACHE_VERSION = 4;
+const CACHE_VERSION = 5;
 const CACHE_NAME = `french-trainer-v${CACHE_VERSION}`;
 const FIREBASE_SDK = 'https://www.gstatic.com/firebasejs/13.1.0';
 
