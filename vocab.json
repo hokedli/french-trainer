@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "words": [
     {
       "id": "n-prenom",
@@ -317,7 +317,9 @@
       "article": "le",
       "theme": "People, identity and jobs",
       "alt": [
-        "la petite copine"
+        "la petite copine",
+        "le petit ami",
+        "la petite amie"
       ],
       "example": {
         "fr": "J'habite avec mon petit copain.",
@@ -470,7 +472,10 @@
       "example": {
         "fr": "Le plombier répare la douche.",
         "en": "The plumber is fixing the shower."
-      }
+      },
+      "alt": [
+        "la plombière"
+      ]
     },
     {
       "id": "n-pompier",
@@ -483,7 +488,10 @@
       "example": {
         "fr": "Mon frère est pompier.",
         "en": "My brother is a firefighter."
-      }
+      },
+      "alt": [
+        "la pompière"
+      ]
     },
     {
       "id": "n-macon",
@@ -541,6 +549,993 @@
       "example": {
         "fr": "Martin est au travail.",
         "en": "Martin is at work."
+      }
+    },
+    {
+      "id": "n-metier",
+      "type": "noun",
+      "en": "job, trade",
+      "fr": "métier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Quel est ton métier ?",
+        "en": "What's your job?"
+      }
+    },
+    {
+      "id": "n-profession",
+      "type": "noun",
+      "en": "profession",
+      "fr": "profession",
+      "gender": "f",
+      "article": "la",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Quelle est ta profession ?",
+        "en": "What's your profession?"
+      }
+    },
+    {
+      "id": "n-entreprise",
+      "type": "noun",
+      "en": "company, business",
+      "fr": "entreprise",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Jobs",
+      "tip": "une entreprise d'informatique = an IT company",
+      "example": {
+        "fr": "Je travaille pour des entreprises.",
+        "en": "I work for companies."
+      }
+    },
+    {
+      "id": "n-compagnie-aerienne",
+      "type": "noun",
+      "en": "airline",
+      "fr": "compagnie aérienne",
+      "gender": "f",
+      "article": "la",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Air France est une compagnie aérienne.",
+        "en": "Air France is an airline."
+      }
+    },
+    {
+      "id": "n-institut",
+      "type": "noun",
+      "en": "institute",
+      "fr": "institut",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Je travaille pour des instituts.",
+        "en": "I work for institutes."
+      }
+    },
+    {
+      "id": "n-institution",
+      "type": "noun",
+      "en": "institution",
+      "fr": "institution",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Je travaille pour des institutions.",
+        "en": "I work for institutions."
+      }
+    },
+    {
+      "id": "n-prof",
+      "type": "noun",
+      "en": "teacher (informal)",
+      "fr": "prof",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la prof"
+      ],
+      "tip": "prof = professeur (informal)",
+      "example": {
+        "fr": "Je suis prof de français.",
+        "en": "I'm a French teacher."
+      }
+    },
+    {
+      "id": "n-retraite",
+      "type": "noun",
+      "en": "retirement",
+      "fr": "retraite",
+      "gender": "f",
+      "article": "la",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Mes parents sont à la retraite.",
+        "en": "My parents are retired."
+      }
+    },
+    {
+      "id": "x-etre-a-la-retraite",
+      "type": "expression",
+      "en": "to be retired",
+      "fr": "être à la retraite",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Ils sont à la retraite.",
+        "en": "They're retired."
+      }
+    },
+    {
+      "id": "n-architecte",
+      "type": "noun",
+      "en": "architect",
+      "fr": "architecte",
+      "gender": "mf",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Elle est architecte.",
+        "en": "She's an architect."
+      }
+    },
+    {
+      "id": "n-juge",
+      "type": "noun",
+      "en": "judge",
+      "fr": "juge",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la juge"
+      ],
+      "example": {
+        "fr": "Le juge, le procureur, l'avocat.",
+        "en": "The judge, the prosecutor, the lawyer."
+      }
+    },
+    {
+      "id": "n-secretaire",
+      "type": "noun",
+      "en": "secretary",
+      "fr": "secrétaire",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la secrétaire"
+      ],
+      "example": {
+        "fr": "Ma mère est secrétaire.",
+        "en": "My mother is a secretary."
+      }
+    },
+    {
+      "id": "n-pilote",
+      "type": "noun",
+      "en": "pilot",
+      "fr": "pilote",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la pilote"
+      ],
+      "example": {
+        "fr": "Il est pilote d'avion.",
+        "en": "He's a plane pilot."
+      }
+    },
+    {
+      "id": "n-peintre",
+      "type": "noun",
+      "en": "painter",
+      "fr": "peintre",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la peintre"
+      ],
+      "example": {
+        "fr": "Elle est peintre.",
+        "en": "She's a painter."
+      }
+    },
+    {
+      "id": "n-astronaute",
+      "type": "noun",
+      "en": "astronaut",
+      "fr": "astronaute",
+      "gender": "mf",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "L'astronaute est dans la fusée.",
+        "en": "The astronaut is in the rocket."
+      }
+    },
+    {
+      "id": "n-chimiste",
+      "type": "noun",
+      "en": "chemist (scientist)",
+      "fr": "chimiste",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la chimiste"
+      ],
+      "example": {
+        "fr": "Il est chimiste.",
+        "en": "He's a chemist."
+      }
+    },
+    {
+      "id": "n-detective",
+      "type": "noun",
+      "en": "detective",
+      "fr": "détective",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la détective"
+      ],
+      "example": {
+        "fr": "Le détective cherche le chat.",
+        "en": "The detective is looking for the cat."
+      }
+    },
+    {
+      "id": "n-veterinaire",
+      "type": "noun",
+      "en": "vet",
+      "fr": "vétérinaire",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la vétérinaire"
+      ],
+      "example": {
+        "fr": "Elle est vétérinaire.",
+        "en": "She's a vet."
+      }
+    },
+    {
+      "id": "n-comptable",
+      "type": "noun",
+      "en": "accountant",
+      "fr": "comptable",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la comptable"
+      ],
+      "example": {
+        "fr": "Mon père est comptable.",
+        "en": "My father is an accountant."
+      }
+    },
+    {
+      "id": "n-garagiste",
+      "type": "noun",
+      "en": "garage mechanic, garage owner",
+      "fr": "garagiste",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la garagiste"
+      ],
+      "example": {
+        "fr": "Il est garagiste.",
+        "en": "He's a garage mechanic."
+      }
+    },
+    {
+      "id": "n-photographe",
+      "type": "noun",
+      "en": "photographer",
+      "fr": "photographe",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la photographe"
+      ],
+      "example": {
+        "fr": "Elle est photographe.",
+        "en": "She's a photographer."
+      }
+    },
+    {
+      "id": "n-receptionniste",
+      "type": "noun",
+      "en": "receptionist",
+      "fr": "réceptionniste",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la réceptionniste"
+      ],
+      "example": {
+        "fr": "Il est réceptionniste à l'hôtel.",
+        "en": "He's a receptionist at the hotel."
+      }
+    },
+    {
+      "id": "n-archeologue",
+      "type": "noun",
+      "en": "archaeologist",
+      "fr": "archéologue",
+      "gender": "mf",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "L'archéologue travaille en Égypte.",
+        "en": "The archaeologist works in Egypt."
+      }
+    },
+    {
+      "id": "n-psychologue",
+      "type": "noun",
+      "en": "psychologist",
+      "fr": "psychologue",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la psychologue"
+      ],
+      "example": {
+        "fr": "Elle est psychologue.",
+        "en": "She's a psychologist."
+      }
+    },
+    {
+      "id": "n-capitaine",
+      "type": "noun",
+      "en": "captain",
+      "fr": "capitaine",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la capitaine"
+      ],
+      "example": {
+        "fr": "Il est capitaine.",
+        "en": "He's a captain."
+      }
+    },
+    {
+      "id": "n-fleuriste",
+      "type": "noun",
+      "en": "florist",
+      "fr": "fleuriste",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la fleuriste"
+      ],
+      "example": {
+        "fr": "La fleuriste vend des roses.",
+        "en": "The florist sells roses."
+      }
+    },
+    {
+      "id": "n-osteopathe",
+      "type": "noun",
+      "en": "osteopath",
+      "fr": "ostéopathe",
+      "gender": "mf",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Sa femme est ostéopathe.",
+        "en": "His wife is an osteopath."
+      }
+    },
+    {
+      "id": "n-enseignant",
+      "type": "noun",
+      "en": "teacher (enseignant)",
+      "fr": "enseignant",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'enseignante (f)"
+      ],
+      "tip": "enseignant, professeur and prof all mean teacher",
+      "confusables": [
+        "n-professeur",
+        "n-prof"
+      ],
+      "example": {
+        "fr": "Il est enseignant.",
+        "en": "He's a teacher."
+      }
+    },
+    {
+      "id": "n-professeur",
+      "type": "noun",
+      "en": "teacher, professor",
+      "fr": "professeur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la professeure"
+      ],
+      "confusables": [
+        "n-enseignant",
+        "n-prof"
+      ],
+      "example": {
+        "fr": "Je suis professeure.",
+        "en": "I'm a teacher."
+      }
+    },
+    {
+      "id": "n-etudiant",
+      "type": "noun",
+      "en": "student (at university)",
+      "fr": "étudiant",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'étudiante (f)"
+      ],
+      "confusables": [
+        "n-eleve"
+      ],
+      "example": {
+        "fr": "Il est étudiant.",
+        "en": "He's a student."
+      }
+    },
+    {
+      "id": "n-ingenieur",
+      "type": "noun",
+      "en": "engineer",
+      "fr": "ingénieur",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'ingénieure (f)"
+      ],
+      "tip": "ingénieur civil = civil engineer",
+      "example": {
+        "fr": "Ma sœur est ingénieure civile.",
+        "en": "My sister is a civil engineer."
+      }
+    },
+    {
+      "id": "n-avocat",
+      "type": "noun",
+      "en": "lawyer",
+      "fr": "avocat",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'avocate (f)"
+      ],
+      "example": {
+        "fr": "Elle est avocate.",
+        "en": "She's a lawyer."
+      }
+    },
+    {
+      "id": "n-marchand",
+      "type": "noun",
+      "en": "shopkeeper, merchant",
+      "fr": "marchand",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la marchande"
+      ],
+      "example": {
+        "fr": "Le marchand vend des fruits.",
+        "en": "The shopkeeper sells fruit."
+      }
+    },
+    {
+      "id": "n-procureur",
+      "type": "noun",
+      "en": "prosecutor",
+      "fr": "procureur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la procureure"
+      ],
+      "example": {
+        "fr": "Elle est procureure.",
+        "en": "She's a prosecutor."
+      }
+    },
+    {
+      "id": "n-boulanger",
+      "type": "noun",
+      "en": "baker",
+      "fr": "boulanger",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la boulangère"
+      ],
+      "example": {
+        "fr": "J'achète du pain chez le boulanger.",
+        "en": "I buy bread at the baker's."
+      }
+    },
+    {
+      "id": "n-boucher",
+      "type": "noun",
+      "en": "butcher",
+      "fr": "boucher",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la bouchère"
+      ],
+      "example": {
+        "fr": "Le boucher est sympa.",
+        "en": "The butcher is nice."
+      }
+    },
+    {
+      "id": "n-patissier",
+      "type": "noun",
+      "en": "pastry chef",
+      "fr": "pâtissier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la pâtissière"
+      ],
+      "example": {
+        "fr": "La pâtissière fait des macarons.",
+        "en": "The pastry chef makes macarons."
+      }
+    },
+    {
+      "id": "n-cuisinier",
+      "type": "noun",
+      "en": "cook",
+      "fr": "cuisinier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la cuisinière"
+      ],
+      "example": {
+        "fr": "Le cuisinier prépare le déjeuner.",
+        "en": "The cook is preparing lunch."
+      }
+    },
+    {
+      "id": "n-couturier",
+      "type": "noun",
+      "en": "dressmaker, fashion designer",
+      "fr": "couturier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la couturière"
+      ],
+      "example": {
+        "fr": "La couturière coud une jupe.",
+        "en": "The dressmaker is sewing a skirt."
+      }
+    },
+    {
+      "id": "n-policier",
+      "type": "noun",
+      "en": "police officer",
+      "fr": "policier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la policière"
+      ],
+      "example": {
+        "fr": "Mon oncle est policier.",
+        "en": "My uncle is a police officer."
+      }
+    },
+    {
+      "id": "n-infirmier",
+      "type": "noun",
+      "en": "nurse",
+      "fr": "infirmier",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'infirmière (f)"
+      ],
+      "example": {
+        "fr": "Le mari de Rose est infirmier.",
+        "en": "Rose's husband is a nurse."
+      }
+    },
+    {
+      "id": "n-ouvrier",
+      "type": "noun",
+      "en": "(factory) worker",
+      "fr": "ouvrier",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'ouvrière (f)"
+      ],
+      "example": {
+        "fr": "Il est ouvrier.",
+        "en": "He's a factory worker."
+      }
+    },
+    {
+      "id": "n-jardinier",
+      "type": "noun",
+      "en": "gardener",
+      "fr": "jardinier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la jardinière"
+      ],
+      "example": {
+        "fr": "Le jardinier aime les fleurs.",
+        "en": "The gardener likes flowers."
+      }
+    },
+    {
+      "id": "n-caissier",
+      "type": "noun",
+      "en": "cashier",
+      "fr": "caissier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la caissière"
+      ],
+      "example": {
+        "fr": "La caissière travaille au supermarché.",
+        "en": "The cashier works at the supermarket."
+      }
+    },
+    {
+      "id": "n-mecanicien",
+      "type": "noun",
+      "en": "mechanic",
+      "fr": "mécanicien",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la mécanicienne"
+      ],
+      "example": {
+        "fr": "Le mécanicien travaille au garage.",
+        "en": "The mechanic works at the garage."
+      }
+    },
+    {
+      "id": "n-informaticien",
+      "type": "noun",
+      "en": "IT specialist",
+      "fr": "informaticien",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'informaticienne (f)"
+      ],
+      "example": {
+        "fr": "Mon mari est informaticien.",
+        "en": "My husband is an IT specialist."
+      }
+    },
+    {
+      "id": "n-musicien",
+      "type": "noun",
+      "en": "musician",
+      "fr": "musicien",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la musicienne"
+      ],
+      "example": {
+        "fr": "Elle est musicienne.",
+        "en": "She's a musician."
+      }
+    },
+    {
+      "id": "n-chirurgien",
+      "type": "noun",
+      "en": "surgeon",
+      "fr": "chirurgien",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la chirurgienne"
+      ],
+      "example": {
+        "fr": "Il est chirurgien à l'hôpital.",
+        "en": "He's a surgeon at the hospital."
+      }
+    },
+    {
+      "id": "n-electricien",
+      "type": "noun",
+      "en": "electrician",
+      "fr": "électricien",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'électricienne (f)"
+      ],
+      "example": {
+        "fr": "Son mari est électricien.",
+        "en": "Her husband is an electrician."
+      }
+    },
+    {
+      "id": "n-pharmacien",
+      "type": "noun",
+      "en": "pharmacist",
+      "fr": "pharmacien",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la pharmacienne"
+      ],
+      "example": {
+        "fr": "Tu es pharmacienne.",
+        "en": "You're a pharmacist."
+      }
+    },
+    {
+      "id": "n-vendeur",
+      "type": "noun",
+      "en": "salesperson, shop assistant",
+      "fr": "vendeur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la vendeuse"
+      ],
+      "example": {
+        "fr": "La vendeuse est sympa.",
+        "en": "The shop assistant is nice."
+      }
+    },
+    {
+      "id": "n-vendeur-de-fruits",
+      "type": "noun",
+      "en": "fruit seller",
+      "fr": "vendeur de fruits",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la vendeuse de fruits"
+      ],
+      "example": {
+        "fr": "Le vendeur de fruits est au marché.",
+        "en": "The fruit seller is at the market."
+      }
+    },
+    {
+      "id": "n-coiffeur",
+      "type": "noun",
+      "en": "hairdresser",
+      "fr": "coiffeur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la coiffeuse"
+      ],
+      "example": {
+        "fr": "Notre fille Rose est coiffeuse.",
+        "en": "Our daughter Rose is a hairdresser."
+      }
+    },
+    {
+      "id": "n-serveur",
+      "type": "noun",
+      "en": "waiter / waitress",
+      "fr": "serveur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la serveuse"
+      ],
+      "example": {
+        "fr": "Le serveur travaille au café.",
+        "en": "The waiter works at the café."
+      }
+    },
+    {
+      "id": "n-chercheur",
+      "type": "noun",
+      "en": "researcher",
+      "fr": "chercheur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la chercheuse"
+      ],
+      "example": {
+        "fr": "Elle est chercheuse à l'université.",
+        "en": "She's a researcher at the university."
+      }
+    },
+    {
+      "id": "n-livreur",
+      "type": "noun",
+      "en": "delivery driver",
+      "fr": "livreur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la livreuse"
+      ],
+      "example": {
+        "fr": "Il est livreur.",
+        "en": "He's a delivery driver."
+      }
+    },
+    {
+      "id": "n-chanteur",
+      "type": "noun",
+      "en": "singer",
+      "fr": "chanteur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la chanteuse"
+      ],
+      "tip": "-teur → -teuse here (not -trice)",
+      "example": {
+        "fr": "Elles sont chanteuses.",
+        "en": "They're singers."
+      }
+    },
+    {
+      "id": "n-acteur",
+      "type": "noun",
+      "en": "actor / actress",
+      "fr": "acteur",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'actrice (f)"
+      ],
+      "example": {
+        "fr": "C'est une actrice française.",
+        "en": "She's a French actress."
+      }
+    },
+    {
+      "id": "n-operateur",
+      "type": "noun",
+      "en": "operator",
+      "fr": "opérateur",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'opératrice (f)"
+      ],
+      "example": {
+        "fr": "Elle est opératrice.",
+        "en": "She's an operator."
+      }
+    },
+    {
+      "id": "n-agriculteur",
+      "type": "noun",
+      "en": "farmer",
+      "fr": "agriculteur",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'agricultrice (f)"
+      ],
+      "example": {
+        "fr": "L'agriculteur habite dans un village.",
+        "en": "The farmer lives in a village."
+      }
+    },
+    {
+      "id": "n-realisateur",
+      "type": "noun",
+      "en": "film director",
+      "fr": "réalisateur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la réalisatrice"
+      ],
+      "example": {
+        "fr": "Le réalisateur aime le cinéma.",
+        "en": "The film director likes cinema."
+      }
+    },
+    {
+      "id": "n-facteur",
+      "type": "noun",
+      "en": "postman / postwoman",
+      "fr": "facteur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la factrice"
+      ],
+      "example": {
+        "fr": "Le facteur a une lettre.",
+        "en": "The postman has a letter."
+      }
+    },
+    {
+      "id": "n-directeur",
+      "type": "noun",
+      "en": "director, head",
+      "fr": "directeur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la directrice"
+      ],
+      "tip": "directeur pédagogique = director of studies",
+      "example": {
+        "fr": "Mon père est directeur pédagogique.",
+        "en": "My father is a director of studies."
       }
     },
     {
@@ -847,7 +1842,7 @@
       }
     },
     {
-      "id": "n-belle-sœur",
+      "id": "n-belle-soeur",
       "type": "noun",
       "en": "sister-in-law",
       "fr": "belle-sœur",
@@ -858,7 +1853,7 @@
         "fr": "Sophie est la belle-sœur de Julien.",
         "en": "Sophie is Julien's brother-in-law."
       }
-    },    
+    },
     {
       "id": "n-belle-fille",
       "type": "noun",
@@ -887,7 +1882,7 @@
         "fr": "Julien est le beau-fils de Pierre et d'Aline.",
         "en": "Julien is Pierre and Aline's son-in-law."
       }
-    },    
+    },
     {
       "id": "n-demi-frere",
       "type": "noun",
@@ -902,7 +1897,7 @@
       }
     },
     {
-      "id": "n-demi-sœur",
+      "id": "n-demi-soeur",
       "type": "noun",
       "en": "half-sister",
       "fr": "demi-sœur",
@@ -913,7 +1908,7 @@
         "fr": "Ma demi-sœur a 15 ans.",
         "en": "My half-sister is 15."
       }
-    },    
+    },
     {
       "id": "n-jumeau",
       "type": "noun",
@@ -996,6 +1991,98 @@
       "example": {
         "fr": "J'habite avec un animal.",
         "en": "I live with an animal."
+      }
+    },
+    {
+      "id": "n-grand-frere",
+      "type": "noun",
+      "en": "older brother",
+      "fr": "grand frère",
+      "gender": "m",
+      "article": "le",
+      "theme": "Family and relationships",
+      "confusables": [
+        "n-petit-frere"
+      ],
+      "example": {
+        "fr": "J'ai un grand frère.",
+        "en": "I have an older brother."
+      }
+    },
+    {
+      "id": "n-grande-soeur",
+      "type": "noun",
+      "en": "older sister",
+      "fr": "grande sœur",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "confusables": [
+        "n-petite-soeur"
+      ],
+      "example": {
+        "fr": "Moi, je suis la grande sœur.",
+        "en": "I'm the older sister."
+      }
+    },
+    {
+      "id": "n-petit-frere",
+      "type": "noun",
+      "en": "younger brother",
+      "fr": "petit frère",
+      "gender": "m",
+      "article": "le",
+      "theme": "Family and relationships",
+      "confusables": [
+        "n-grand-frere",
+        "n-petit-fils"
+      ],
+      "example": {
+        "fr": "J'ai un petit frère.",
+        "en": "I have a younger brother."
+      }
+    },
+    {
+      "id": "n-petite-soeur",
+      "type": "noun",
+      "en": "younger sister",
+      "fr": "petite sœur",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "confusables": [
+        "n-grande-soeur",
+        "la petite-fille"
+      ],
+      "example": {
+        "fr": "J'ai une petite sœur.",
+        "en": "I have a younger sister."
+      }
+    },
+    {
+      "id": "n-fils-unique",
+      "type": "noun",
+      "en": "only son",
+      "fr": "fils unique",
+      "gender": "m",
+      "article": "le",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Marius est fils unique.",
+        "en": "Marius is an only son."
+      }
+    },
+    {
+      "id": "n-fille-unique",
+      "type": "noun",
+      "en": "only daughter",
+      "fr": "fille unique",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Je suis fille unique.",
+        "en": "I'm an only daughter."
       }
     },
     {
@@ -1870,6 +2957,45 @@
         "en": "We're playing hangman."
       },
       "tip": "le jeu du pendu = hangman"
+    },
+    {
+      "id": "n-lycee",
+      "type": "noun",
+      "en": "secondary school, high school",
+      "fr": "lycée",
+      "gender": "m",
+      "article": "le",
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "Il est professeur au lycée.",
+        "en": "He's a teacher at a secondary school."
+      }
+    },
+    {
+      "id": "n-master",
+      "type": "noun",
+      "en": "master's degree",
+      "fr": "master",
+      "gender": "m",
+      "article": "le",
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "J'ai un master.",
+        "en": "I have a master's degree."
+      }
+    },
+    {
+      "id": "n-geographie",
+      "type": "noun",
+      "en": "geography",
+      "fr": "géographie",
+      "gender": "f",
+      "article": "la",
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "Il est professeur d'histoire et de géographie.",
+        "en": "He teaches history and geography."
+      }
     },
     {
       "id": "v-etre",
@@ -3116,6 +4242,44 @@
       }
     },
     {
+      "id": "v-discuter",
+      "type": "verb",
+      "en": "to chat, discuss",
+      "infinitive": "discuter",
+      "conj": [
+        "discute",
+        "discutes",
+        "discute",
+        "discutons",
+        "discutez",
+        "discutent"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "example": {
+        "fr": "Nous discutons beaucoup.",
+        "en": "We chat a lot."
+      }
+    },
+    {
+      "id": "v-cocher",
+      "type": "verb",
+      "en": "to tick",
+      "infinitive": "cocher",
+      "conj": [
+        "coche",
+        "coches",
+        "coche",
+        "cochons",
+        "cochez",
+        "cochent"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "example": {
+        "fr": "Cochez la réponse correcte.",
+        "en": "Tick the correct answer."
+      }
+    },
+    {
       "id": "v-manger",
       "type": "verb",
       "en": "to eat",
@@ -3318,6 +4482,46 @@
       "confusables": [
         "v-ecouter"
       ]
+    },
+    {
+      "id": "v-acheter",
+      "type": "verb",
+      "en": "to buy",
+      "infinitive": "acheter",
+      "conj": [
+        "j'achète",
+        "achètes",
+        "achète",
+        "achetons",
+        "achetez",
+        "achètent"
+      ],
+      "rule": "e→è",
+      "theme": "Verbs: -er verbs with spelling changes",
+      "example": {
+        "fr": "Tu achètes souvent des produits au marché ?",
+        "en": "Do you often buy things at the market?"
+      }
+    },
+    {
+      "id": "v-enlever",
+      "type": "verb",
+      "en": "to remove, take off",
+      "infinitive": "enlever",
+      "conj": [
+        "j'enlève",
+        "enlèves",
+        "enlève",
+        "enlevons",
+        "enlevez",
+        "enlèvent"
+      ],
+      "rule": "e→è",
+      "theme": "Verbs: -er verbs with spelling changes",
+      "example": {
+        "fr": "On enlève -er au verbe.",
+        "en": "You take -er off the verb."
+      }
     },
     {
       "id": "adj-sympa",
@@ -3921,6 +5125,44 @@
       }
     },
     {
+      "id": "adj-mort",
+      "type": "adjective",
+      "en": "dead",
+      "masc": "mort",
+      "fem": "morte",
+      "theme": "Describing places & people",
+      "tip": "= décédé",
+      "example": {
+        "fr": "Il est décédé = il est mort.",
+        "en": "He has died."
+      }
+    },
+    {
+      "id": "adj-nouveau",
+      "type": "adjective",
+      "en": "new",
+      "masc": "nouveau",
+      "fem": "nouvelle",
+      "theme": "Describing places & people",
+      "tip": "nouvel before a vowel",
+      "example": {
+        "fr": "Notre nouvelle maison est grande.",
+        "en": "Our new house is big."
+      }
+    },
+    {
+      "id": "adj-correct",
+      "type": "adjective",
+      "en": "correct",
+      "masc": "correct",
+      "fem": "correcte",
+      "theme": "Describing places & people",
+      "example": {
+        "fr": "Cochez la réponse correcte.",
+        "en": "Tick the correct answer."
+      }
+    },
+    {
       "id": "adj-masculin",
       "type": "adjective",
       "en": "masculine",
@@ -4465,6 +5707,17 @@
       }
     },
     {
+      "id": "x-bisous",
+      "type": "expression",
+      "en": "Love, kisses (to end a message to a friend)",
+      "fr": "Bisous",
+      "theme": "Greetings, phrases and questions",
+      "example": {
+        "fr": "Bisous, Fiona",
+        "en": "Love, Fiona"
+      }
+    },
+    {
       "id": "x-comment-tu-t-appelles",
       "type": "expression",
       "en": "What's your name?",
@@ -4522,7 +5775,8 @@
       "fr": "Quelle est ton adresse ?",
       "theme": "Useful questions",
       "alt": [
-        "Quelle est ton adresse e-mail ?"
+        "Quelle est ton adresse e-mail ?",
+        "Quelle est ton adresse mail ?"
       ]
     },
     {
@@ -4558,7 +5812,10 @@
       "type": "expression",
       "en": "Where do you live?",
       "fr": "Tu habites où ?",
-      "theme": "Useful questions"
+      "theme": "Useful questions",
+      "alt": [
+        "Où tu habites ?"
+      ]
     },
     {
       "id": "x-comment-est-ton-quartier",
@@ -4664,6 +5921,185 @@
       "en": "True, false, or we don't know?",
       "fr": "Vrai, faux, on ne sait pas ?",
       "theme": "Useful questions"
+    },
+    {
+      "id": "x-tu-as-des-freres-et-des-soeurs",
+      "type": "expression",
+      "en": "Do you have brothers and sisters?",
+      "fr": "Tu as des frères et des sœurs ?",
+      "theme": "Useful questions"
+    },
+    {
+      "id": "x-qu-est-ce-que-tu-fais-dans-la-vie",
+      "type": "expression",
+      "en": "What do you do (for a living)?",
+      "fr": "Qu'est-ce que tu fais dans la vie ?",
+      "theme": "Useful questions",
+      "alt": [
+        "Qu'est-ce que vous faites dans la vie ?"
+      ]
+    },
+    {
+      "id": "x-quel-est-ton-metier",
+      "type": "expression",
+      "en": "What's your job?",
+      "fr": "Quel est ton métier ?",
+      "theme": "Useful questions",
+      "alt": [
+        "Quel est votre métier ?",
+        "Quel est ton travail ?"
+      ]
+    },
+    {
+      "id": "x-quelle-est-ta-profession",
+      "type": "expression",
+      "en": "What's your profession?",
+      "fr": "Quelle est ta profession ?",
+      "theme": "Useful questions",
+      "alt": [
+        "Quelle est votre profession ?"
+      ]
+    },
+    {
+      "id": "x-quelle-est-ta-date-de-naissance",
+      "type": "expression",
+      "en": "What's your date of birth?",
+      "fr": "Quelle est ta date de naissance ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-ou-tu-es-ne",
+      "type": "expression",
+      "en": "Where were you born?",
+      "fr": "Où tu es né(e) ?",
+      "theme": "Questions for the oral test",
+      "alt": [
+        "Où tu es né ?",
+        "Où tu es née ?"
+      ]
+    },
+    {
+      "id": "x-quelles-langues-tu-parles",
+      "type": "expression",
+      "en": "Which languages do you speak?",
+      "fr": "Quelles langues tu parles ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-ou-tu-etudies",
+      "type": "expression",
+      "en": "Where do you study?",
+      "fr": "Où tu étudies ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-habites-seul-ou-avec-ta-famille",
+      "type": "expression",
+      "en": "Do you live alone or with your family?",
+      "fr": "Tu habites seul(e) ou avec ta famille ?",
+      "theme": "Questions for the oral test",
+      "alt": [
+        "Tu habites seul ou avec ta famille ?",
+        "Tu habites seule ou avec ta famille ?"
+      ]
+    },
+    {
+      "id": "x-tu-es-marie",
+      "type": "expression",
+      "en": "Are you married?",
+      "fr": "Tu es marié(e) ?",
+      "theme": "Questions for the oral test",
+      "alt": [
+        "Tu es marié ?",
+        "Tu es mariée ?"
+      ]
+    },
+    {
+      "id": "x-tu-as-un-animal",
+      "type": "expression",
+      "en": "Do you have a pet?",
+      "fr": "Tu as un animal ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-as-des-enfants",
+      "type": "expression",
+      "en": "Do you have children?",
+      "fr": "Tu as des enfants ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-quelles-activites-tu-aimes-faire-pendant-le-week-end",
+      "type": "expression",
+      "en": "What do you like doing at the weekend?",
+      "fr": "Quelles activités tu aimes faire pendant le week-end ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-en-ete-tu-preferes-la-mer-ou-la-montagne",
+      "type": "expression",
+      "en": "In summer, do you prefer the sea or the mountains?",
+      "fr": "En été, tu préfères la mer ou la montagne ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-preferes-jardiner-ou-regarder-un-film",
+      "type": "expression",
+      "en": "Do you prefer gardening or watching a film?",
+      "fr": "Tu préfères jardiner ou regarder un film ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-regardes-souvent-la-television",
+      "type": "expression",
+      "en": "Do you often watch TV?",
+      "fr": "Tu regardes souvent la télévision ?",
+      "theme": "Questions for the oral test",
+      "alt": [
+        "Tu regardes souvent la télé ?"
+      ]
+    },
+    {
+      "id": "x-tu-preferes-le-velo-ou-la-trottinette",
+      "type": "expression",
+      "en": "Do you prefer bikes or scooters?",
+      "fr": "Tu préfères le vélo ou la trottinette ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-pratiques-un-sport",
+      "type": "expression",
+      "en": "Do you do a sport?",
+      "fr": "Tu pratiques un sport ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-utilises-instagram",
+      "type": "expression",
+      "en": "Do you use Instagram?",
+      "fr": "Tu utilises Instagram ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-quelles-activites-tes-enfants-aiment",
+      "type": "expression",
+      "en": "What activities do your children like?",
+      "fr": "Quelles activités tes enfants aiment ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-quel-age-a-ton-frere",
+      "type": "expression",
+      "en": "How old is your brother?",
+      "fr": "Quel âge a ton frère ?",
+      "theme": "Questions for the oral test"
+    },
+    {
+      "id": "x-tu-as-des-oncles-ou-des-tantes",
+      "type": "expression",
+      "en": "Do you have uncles or aunts?",
+      "fr": "Tu as des oncles ou des tantes ?",
+      "theme": "Questions for the oral test"
     },
     {
       "id": "x-a",
@@ -4941,6 +6377,18 @@
       }
     },
     {
+      "id": "x-sans",
+      "type": "expression",
+      "en": "without",
+      "fr": "sans",
+      "theme": "Prepositions & linking words",
+      "example": {
+        "fr": "J'habite avec ma famille, sans animaux.",
+        "en": "I live with my family, without pets."
+      },
+      "tip": "sans ≠ avec"
+    },
+    {
       "id": "x-tres",
       "type": "expression",
       "en": "very",
@@ -5153,6 +6601,122 @@
       "tip": "ne + verb + pas"
     },
     {
+      "id": "x-ensemble",
+      "type": "expression",
+      "en": "together",
+      "fr": "ensemble",
+      "theme": "Adverbs",
+      "example": {
+        "fr": "Marius et moi, nous habitons ensemble.",
+        "en": "Marius and I live together."
+      }
+    },
+    {
+      "id": "x-plus-souvent-que",
+      "type": "expression",
+      "en": "more often… than…",
+      "fr": "plus souvent… que…",
+      "theme": "Adverbs",
+      "example": {
+        "fr": "J'utilise plus souvent le bus que la voiture.",
+        "en": "I use the bus more often than the car."
+      }
+    },
+    {
+      "id": "x-il-y-a",
+      "type": "expression",
+      "en": "there is / there are",
+      "fr": "il y a",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Il y a 12 mois dans une année.",
+        "en": "There are 12 months in a year."
+      }
+    },
+    {
+      "id": "x-c-est",
+      "type": "expression",
+      "en": "it is, this is",
+      "fr": "c'est",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "C'est ma rue.",
+        "en": "This is my street."
+      }
+    },
+    {
+      "id": "x-ce-sont",
+      "type": "expression",
+      "en": "these are, they are",
+      "fr": "ce sont",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Ce sont mes parents.",
+        "en": "These are my parents."
+      }
+    },
+    {
+      "id": "x-etre-en-couple",
+      "type": "expression",
+      "en": "to be in a relationship",
+      "fr": "être en couple",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Je suis en couple.",
+        "en": "I'm in a relationship."
+      }
+    },
+    {
+      "id": "x-faire-les-courses",
+      "type": "expression",
+      "en": "to do the (food) shopping",
+      "fr": "faire les courses",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Je fais les courses au supermarché.",
+        "en": "I do the shopping at the supermarket."
+      },
+      "confusables": [
+        "x-faire-du-shopping"
+      ]
+    },
+    {
+      "id": "x-faire-du-shopping",
+      "type": "expression",
+      "en": "to go shopping (clothes, nice things)",
+      "fr": "faire du shopping",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Le samedi, je fais du shopping.",
+        "en": "On Saturdays I go shopping."
+      },
+      "confusables": [
+        "x-faire-les-courses"
+      ]
+    },
+    {
+      "id": "x-ecouter-de-la-musique",
+      "type": "expression",
+      "en": "to listen to music",
+      "fr": "écouter de la musique",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "Il écoute de la musique.",
+        "en": "He's listening to music."
+      }
+    },
+    {
+      "id": "x-on-a-cours",
+      "type": "expression",
+      "en": "we have class",
+      "fr": "on a cours",
+      "theme": "Useful structures",
+      "example": {
+        "fr": "On a cours le jeudi à 9 heures.",
+        "en": "We have class on Thursdays at 9."
+      }
+    },
+    {
       "id": "n-jour",
       "type": "noun",
       "en": "day",
@@ -5359,6 +6923,19 @@
       "example": {
         "fr": "Pendant les vacances, j'aime la danse.",
         "en": "During the holidays I like dancing."
+      }
+    },
+    {
+      "id": "n-minute",
+      "type": "noun",
+      "en": "minute",
+      "fr": "minute",
+      "gender": "f",
+      "article": "la",
+      "theme": "Time: days, months and seasons",
+      "example": {
+        "fr": "La plage est à 8 minutes.",
+        "en": "The beach is 8 minutes away."
       }
     },
     {
@@ -6090,6 +7667,45 @@
       }
     },
     {
+      "id": "n-rez-de-chaussee",
+      "type": "noun",
+      "en": "ground floor",
+      "fr": "rez-de-chaussée",
+      "gender": "m",
+      "article": "le",
+      "theme": "Home, places and transport",
+      "example": {
+        "fr": "Le café est au rez-de-chaussée.",
+        "en": "The café is on the ground floor."
+      }
+    },
+    {
+      "id": "n-village",
+      "type": "noun",
+      "en": "village",
+      "fr": "village",
+      "gender": "m",
+      "article": "le",
+      "theme": "Home, places and transport",
+      "example": {
+        "fr": "Le week-end, on fait de la marche dans les villages.",
+        "en": "At weekends we go walking in the villages."
+      }
+    },
+    {
+      "id": "n-silence",
+      "type": "noun",
+      "en": "silence",
+      "fr": "silence",
+      "gender": "m",
+      "article": "le",
+      "theme": "Home, places and transport",
+      "example": {
+        "fr": "J'aime le silence.",
+        "en": "I like silence."
+      }
+    },
+    {
       "id": "n-cathedrale",
       "type": "noun",
       "en": "cathedral",
@@ -6348,6 +7964,22 @@
       "example": {
         "fr": "Budapest a beaucoup de ponts.",
         "en": "Budapest has a lot of bridges."
+      }
+    },
+    {
+      "id": "n-tramway",
+      "type": "noun",
+      "en": "tram",
+      "fr": "tramway",
+      "gender": "m",
+      "article": "le",
+      "theme": "Transport",
+      "alt": [
+        "le tram"
+      ],
+      "example": {
+        "fr": "Tu utilises le tram ? – Oui, j'utilise le tram.",
+        "en": "Do you use the tram? – Yes, I use the tram."
       }
     },
     {
@@ -6712,6 +8344,32 @@
       }
     },
     {
+      "id": "n-livre-audio",
+      "type": "noun",
+      "en": "audiobook",
+      "fr": "livre audio",
+      "gender": "m",
+      "article": "le",
+      "theme": "Hobbies, sports and music",
+      "example": {
+        "fr": "J'écoute un livre audio.",
+        "en": "I'm listening to an audiobook."
+      }
+    },
+    {
+      "id": "n-invitation",
+      "type": "noun",
+      "en": "invitation",
+      "fr": "invitation",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Hobbies, sports and music",
+      "example": {
+        "fr": "Merci pour l'invitation !",
+        "en": "Thanks for the invitation!"
+      }
+    },
+    {
       "id": "n-sport",
       "type": "noun",
       "en": "sport",
@@ -7047,6 +8705,22 @@
       "example": {
         "fr": "Tu joues souvent au golf ?",
         "en": "Do you often play golf?"
+      }
+    },
+    {
+      "id": "n-marche",
+      "type": "noun",
+      "en": "walking, hiking",
+      "fr": "marche",
+      "gender": "f",
+      "article": "la",
+      "theme": "Sports",
+      "confusables": [
+        "n-marche-market"
+      ],
+      "example": {
+        "fr": "Le week-end, on fait de la marche.",
+        "en": "At weekends we go walking."
       }
     },
     {
@@ -8344,6 +10018,19 @@
       }
     },
     {
+      "id": "n-plage",
+      "type": "noun",
+      "en": "beach",
+      "fr": "plage",
+      "gender": "f",
+      "article": "la",
+      "theme": "Nature & weather",
+      "example": {
+        "fr": "La maison est à 8 minutes de la plage.",
+        "en": "The house is 8 minutes from the beach."
+      }
+    },
+    {
       "id": "n-pantalon",
       "type": "noun",
       "en": "trousers",
@@ -8596,7 +10283,11 @@
       "example": {
         "fr": "Nous avons des posters.",
         "en": "We have posters."
-      }
+      },
+      "alt": [
+        "l'affiche (f)"
+      ],
+      "tip": "un poster = une affiche"
     },
     {
       "id": "n-idee",
@@ -8808,6 +10499,328 @@
       "example": {
         "fr": "Le nez de Pinocchio.",
         "en": "Pinocchio's nose."
+      }
+    },
+    {
+      "id": "n-tente",
+      "type": "noun",
+      "en": "tent",
+      "fr": "tente",
+      "gender": "f",
+      "article": "la",
+      "theme": "Clothes, body and everyday objects",
+      "tip": "la tente (tent) sounds like la tante (aunt)",
+      "confusables": [
+        "n-tante"
+      ],
+      "example": {
+        "fr": "La tente de camping.",
+        "en": "The camping tent."
+      }
+    },
+    {
+      "id": "n-coeur",
+      "type": "noun",
+      "en": "heart",
+      "fr": "cœur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Clothes, body and everyday objects",
+      "tip": "same œ sound as sœur",
+      "example": {
+        "fr": "Le cœur est rouge.",
+        "en": "The heart is red."
+      }
+    },
+    {
+      "id": "n-sac-a-dos",
+      "type": "noun",
+      "en": "backpack, rucksack",
+      "fr": "sac à dos",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Mon sac à dos est noir.",
+        "en": "My backpack is black."
+      }
+    },
+    {
+      "id": "n-sac-de-sport",
+      "type": "noun",
+      "en": "sports bag",
+      "fr": "sac de sport",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'ai un sac de sport.",
+        "en": "I have a sports bag."
+      }
+    },
+    {
+      "id": "n-sac-a-main",
+      "type": "noun",
+      "en": "handbag",
+      "fr": "sac à main",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Je n'ai pas de sac à main.",
+        "en": "I don't have a handbag."
+      }
+    },
+    {
+      "id": "n-valise",
+      "type": "noun",
+      "en": "suitcase",
+      "fr": "valise",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'utilise parfois une valise.",
+        "en": "I sometimes use a suitcase."
+      }
+    },
+    {
+      "id": "n-portefeuille",
+      "type": "noun",
+      "en": "wallet",
+      "fr": "portefeuille",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "confusables": [
+        "n-porte-monnaie"
+      ],
+      "example": {
+        "fr": "Mon portefeuille est marron.",
+        "en": "My wallet is brown."
+      }
+    },
+    {
+      "id": "n-porte-monnaie",
+      "type": "noun",
+      "en": "coin purse",
+      "fr": "porte-monnaie",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "confusables": [
+        "n-portefeuille"
+      ],
+      "example": {
+        "fr": "J'ai un porte-monnaie vert.",
+        "en": "I have a green coin purse."
+      }
+    },
+    {
+      "id": "n-etui-a-lunettes",
+      "type": "noun",
+      "en": "glasses case",
+      "fr": "étui à lunettes",
+      "gender": "m",
+      "article": "l'",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Je n'ai pas d'étui à lunettes.",
+        "en": "I don't have a glasses case."
+      }
+    },
+    {
+      "id": "n-trousse",
+      "type": "noun",
+      "en": "pencil case",
+      "fr": "trousse",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Ma trousse est bleue.",
+        "en": "My pencil case is blue."
+      }
+    },
+    {
+      "id": "n-agenda",
+      "type": "noun",
+      "en": "diary, planner",
+      "fr": "agenda",
+      "gender": "m",
+      "article": "l'",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'utilise souvent mon agenda.",
+        "en": "I often use my diary."
+      }
+    },
+    {
+      "id": "n-crayon",
+      "type": "noun",
+      "en": "pencil",
+      "fr": "crayon",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "alt": [
+        "le crayon à papier"
+      ],
+      "example": {
+        "fr": "J'ai un crayon dans ma trousse.",
+        "en": "I have a pencil in my pencil case."
+      }
+    },
+    {
+      "id": "n-crayon-de-couleur",
+      "type": "noun",
+      "en": "coloured pencil",
+      "fr": "crayon de couleur",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'ai des crayons de couleur dans ma trousse.",
+        "en": "I have coloured pencils in my pencil case."
+      }
+    },
+    {
+      "id": "n-porte-cle",
+      "type": "noun",
+      "en": "keyring",
+      "fr": "porte-clé",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Mon porte-clé est une fraise.",
+        "en": "My keyring is a strawberry."
+      }
+    },
+    {
+      "id": "n-parapluie",
+      "type": "noun",
+      "en": "umbrella",
+      "fr": "parapluie",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Je n'ai pas de parapluie.",
+        "en": "I don't have an umbrella."
+      }
+    },
+    {
+      "id": "n-gourde",
+      "type": "noun",
+      "en": "water bottle",
+      "fr": "gourde",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'utilise toujours une gourde.",
+        "en": "I always use a water bottle."
+      }
+    },
+    {
+      "id": "n-thermos",
+      "type": "noun",
+      "en": "thermos flask",
+      "fr": "thermos",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "Mon thermos est rose.",
+        "en": "My thermos is pink."
+      }
+    },
+    {
+      "id": "n-mouchoirs",
+      "type": "noun",
+      "en": "tissues",
+      "fr": "mouchoirs",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "What's in your bag",
+      "example": {
+        "fr": "J'ai des mouchoirs.",
+        "en": "I have tissues."
+      }
+    },
+    {
+      "id": "n-supermarche",
+      "type": "noun",
+      "en": "supermarket",
+      "fr": "supermarché",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Tu préfères le marché ou le supermarché ?",
+        "en": "Do you prefer the market or the supermarket?"
+      }
+    },
+    {
+      "id": "n-marche-market",
+      "type": "noun",
+      "en": "market",
+      "fr": "marché",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "confusables": [
+        "n-marche"
+      ],
+      "example": {
+        "fr": "Tu achètes souvent des produits au marché ?",
+        "en": "Do you often buy things at the market?"
+      }
+    },
+    {
+      "id": "n-magasin",
+      "type": "noun",
+      "en": "shop",
+      "fr": "magasin",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Il n'y a pas de magasin.",
+        "en": "There's no shop."
+      }
+    },
+    {
+      "id": "n-produit",
+      "type": "noun",
+      "en": "product",
+      "fr": "produit",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Des produits du marché.",
+        "en": "Products from the market."
+      }
+    },
+    {
+      "id": "n-courses",
+      "type": "noun",
+      "en": "(food) shopping",
+      "fr": "courses",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Shopping",
+      "tip": "le cours = lesson; les courses = shopping",
+      "confusables": [
+        "n-cours"
+      ],
+      "example": {
+        "fr": "Je fais les courses au supermarché.",
+        "en": "I do the shopping at the supermarket."
       }
     },
     {
@@ -10122,7 +12135,7 @@
         "tchèque (m / f)",
         "tchèque (m,f)",
         "tchèque (mf)"
-      ],      
+      ],
       "example": {
         "fr": "Il est tchèque, elle est tchèque.",
         "en": "He is Czech, she is Czech."

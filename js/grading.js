@@ -450,6 +450,8 @@ export function verbRuleNote(entry, wrongIndices) {
       return `Double **l** except with nous and vous: ${withPronoun(boldFirst(je, /ll/), 0)}, tu ${boldFirst(tu, /ll/)}, il ${boldFirst(il, /ll/)}, ils ${boldFirst(ils, /ll/)} — but nous ${nous}, vous ${vous}.`;
     case 'é→è':
       return `**é → è** except with nous and vous: je ${boldFirst(je, /è/)}, tu ${boldFirst(tu, /è/)}, il ${boldFirst(il, /è/)}, ils ${boldFirst(ils, /è/)} — but nous ${nous}, vous ${vous}.`;
+    case 'e→è':
+      return `**e → è** except with nous and vous: ${withPronoun(boldFirst(je, /è/), 0)}, tu ${boldFirst(tu, /è/)}, il ${boldFirst(il, /è/)}, ils ${boldFirst(ils, /è/)} — but nous ${nous}, vous ${vous}.`;
     case '-ir-iss':
       return `Regular -ir verb: je ${stem}**is**, tu ${stem}**is**, il ${stem}**it**, nous ${stem}**iss**ons, vous ${stem}**iss**ez, ils ${stem}**iss**ent.`;
     case '-re':

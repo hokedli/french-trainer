@@ -34,7 +34,7 @@ Common fields: `id` (stable, never change it), `type`, `en` (the English prompt)
 | type | fields | example |
 | --- | --- | --- |
 | `noun` | `fr` (no article), `gender` `m`/`f`/`mf`, `article` `le`/`la`/`l'`/`les`, `pluralOnly` (true for `les`) | `{"id":"n-hopital","type":"noun","en":"hospital","fr":"hôpital","gender":"m","article":"l'","theme":"Home, places and transport"}` |
-| `verb` | `infinitive`, `conj` = 6 forms je, tu, il, nous, vous, ils **without subject pronouns** (keep `j'`, keep reflexive `me`/`te`/`se`/`nous`/`vous`), optional `rule`: `-ger` `-cer` `é→è` `double-l` `-ir-iss` `-re` `irregular` | `"conj":["mange","manges","mange","mangeons","mangez","mangent"],"rule":"-ger"` |
+| `verb` | `infinitive`, `conj` = 6 forms je, tu, il, nous, vous, ils **without subject pronouns** (keep `j'`, keep reflexive `me`/`te`/`se`/`nous`/`vous`), optional `rule`: `-ger` `-cer` `é→è` `e→è` `double-l` `-ir-iss` `-re` `irregular` | `"conj":["mange","manges","mange","mangeons","mangez","mangent"],"rule":"-ger"` |
 | `adjective` | `masc` (or `null` if feminine-only), `fem`; `alt` entries are `"masc / fem"` | `{"masc":"bruyant","fem":"bruyante"}` |
 | `country` | like noun (`article` may be `""`, e.g. Malte) + `inTo` (`"en Hongrie"`) | |
 | `expression` | `fr`; `alt` for other accepted wordings | `{"fr":"Je ne sais pas.","en":"I don't know."}` |

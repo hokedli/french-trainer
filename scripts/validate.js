@@ -16,7 +16,7 @@ try {
 }
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
-const RULES = ['-ger', '-cer', 'é→è', 'double-l', '-ir-iss', '-re', 'irregular'];
+const RULES = ['-ger', '-cer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
 const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'alt', 'example', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
