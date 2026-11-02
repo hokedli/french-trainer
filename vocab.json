@@ -285,7 +285,8 @@
       "article": "le",
       "theme": "People, identity and jobs",
       "alt": [
-        "la collègue"
+        "la collègue",
+        "le collègue / la collègue"
       ],
       "example": {
         "fr": "Mon collègue est belge.",
@@ -423,9 +424,12 @@
       "type": "noun",
       "en": "doctor",
       "fr": "médecin",
-      "gender": "m",
+      "gender": "mf",
       "article": "le",
       "theme": "Jobs",
+      "alt": [
+        "la médecin"
+      ],
       "example": {
         "fr": "Martin est médecin.",
         "en": "Martin is a doctor."
@@ -952,13 +956,15 @@
     {
       "id": "n-enseignant",
       "type": "noun",
-      "en": "teacher (enseignant)",
+      "en": "teacher",
       "fr": "enseignant",
       "gender": "m",
       "article": "l'",
       "theme": "Jobs",
       "alt": [
-        "l'enseignante (f)"
+        "l'enseignante (f)",
+        "le professeur",
+        "la professeure"
       ],
       "tip": "enseignant, professeur and prof all mean teacher",
       "confusables": [
@@ -979,7 +985,9 @@
       "article": "le",
       "theme": "Jobs",
       "alt": [
-        "la professeure"
+        "la professeure",
+        "l'enseignant (m)",
+        "l'enseignante (f)"
       ],
       "confusables": [
         "n-enseignant",
@@ -4170,7 +4178,7 @@
     {
       "id": "v-souligner",
       "type": "verb",
-      "en": "to underline",
+      "en": "to emphasize, to underline",
       "infinitive": "souligner",
       "conj": [
         "souligne",
@@ -4189,7 +4197,7 @@
     {
       "id": "v-associer",
       "type": "verb",
-      "en": "to match",
+      "en": "to associate, to match",
       "infinitive": "associer",
       "conj": [
         "j'associe",
@@ -4584,6 +4592,9 @@
       "masc": "sale",
       "fem": "sale",
       "theme": "Describing places & people",
+      "alt": [
+        "sale / sale"
+      ]
       "example": {
         "fr": "Le week-end, mon quartier est un petit peu sale.",
         "en": "At weekends my neighbourhood is a bit dirty."
@@ -4807,7 +4818,7 @@
       "fem": "divorcée",
       "theme": "Describing places & people",
       "example": {
-        "fr": "Je suis divorcée.",
+        "fr": "Je suis divorcé(e).",
         "en": "I'm divorced."
       }
     },
@@ -5567,7 +5578,7 @@
     {
       "id": "x-je-vais-bien",
       "type": "expression",
-      "en": "I'm well. (= ça va)",
+      "en": "I'm well. (ça…)",
       "fr": "Je vais bien.",
       "theme": "Greetings, phrases and questions",
       "example": {
@@ -5918,7 +5929,10 @@
       "type": "expression",
       "en": "How do you say…?",
       "fr": "Comment on dit… ?",
-      "theme": "Useful questions"
+      "theme": "Useful questions",
+      "alt": [
+        "Comment dit-on… ?"
+      ]
     },
     {
       "id": "x-comment-on-prononce",
@@ -5994,7 +6008,10 @@
       "theme": "Questions for the oral test",
       "alt": [
         "Où tu es né ?",
-        "Où tu es née ?"
+        "Où tu es née ?",
+        "Où es-tu né(e) ?",
+        "Où es-tu né ?",
+        "Où es-tu née ?"
       ]
     },
     {
@@ -6683,6 +6700,9 @@
       "en": "to be in a relationship",
       "fr": "être en couple",
       "theme": "Useful structures",
+      "alt": [
+        "être en couple avec une personne"
+      ],
       "example": {
         "fr": "Je suis en couple.",
         "en": "I'm in a relationship."
@@ -10740,6 +10760,9 @@
       "gender": "f",
       "article": "la",
       "theme": "What's in your bag",
+      "alt": [
+        "la bouteille d'eau"
+      ],
       "example": {
         "fr": "J'utilise toujours une gourde.",
         "en": "I always use a water bottle."
@@ -11867,7 +11890,7 @@
     {
       "id": "c-coree",
       "type": "country",
-      "en": "(South / North) Korea",
+      "en": "Korea",
       "fr": "Corée",
       "gender": "f",
       "article": "la",
