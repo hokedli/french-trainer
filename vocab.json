@@ -4596,6 +4596,11 @@
       "masc": "calme",
       "fem": "calme",
       "theme": "Describing places & people",
+      "alt": [
+        "calme / calme",
+        "tranquille",
+        "tranquille / tranquille"
+      ],
       "example": {
         "fr": "Ma rue est calme en général.",
         "en": "My street is usually quiet."
@@ -4608,6 +4613,11 @@
       "masc": "tranquille",
       "fem": "tranquille",
       "theme": "Describing places & people",
+      "alt": [
+        "calme",
+        "calme / calme",
+        "tranquille / tranquille"
+      ],
       "example": {
         "fr": "C'est un quartier tranquille.",
         "en": "It's a quiet neighbourhood."
@@ -5607,6 +5617,9 @@
       "en": "I would like… (polite)",
       "fr": "Je voudrais…",
       "theme": "Greetings, phrases and questions",
+      "alt": [
+        "Je voudrais"
+      ],
       "example": {
         "fr": "Je voudrais un café.",
         "en": "I'd like a coffee."
@@ -6593,6 +6606,9 @@
       "en": "never",
       "fr": "ne… jamais",
       "theme": "Adverbs",
+      "alt": [
+        "ne … jamais"
+      ],
       "example": {
         "fr": "Je ne mange jamais d'escargots."
       },
