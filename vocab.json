@@ -319,7 +319,9 @@
       "alt": [
         "la petite copine",
         "le petit ami",
-        "la petite amie"
+        "la petite amie",
+        "le petit copain / la petite copine",
+        "le petit ami / la petite amie"
       ],
       "example": {
         "fr": "J'habite avec mon petit copain.",
@@ -5748,10 +5750,11 @@
       "id": "x-comment-ca-s-ecrit",
       "type": "expression",
       "en": "How is that spelt? / How do you spell Maxence?",
-      "fr": "Comment ça s'écrit ?",
+      "fr": "Comment ça s'écrit ? / Comment s'écrit Maxence ?",
       "theme": "Useful questions",
       "alt": [
-        "Comment s'écrit Maxence ?"
+        "Comment s'écrit Maxence ?",
+        "Comment ça s'écrit ?"
       ]
     },
     {
