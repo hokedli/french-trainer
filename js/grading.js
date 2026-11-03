@@ -95,6 +95,9 @@ function withPronoun(form, index) {
 
 export const conjugationWithPronouns = (entry) => entry.conj.map(withPronoun);
 
+// The main form for one person (0 = je … 5 = ils) followed by its accepted alternatives from conjAlt.
+export const acceptedVerbForms = (entry, personIndex) => [entry.conj[personIndex], ...(entry.conjAlt?.[personIndex] || [])];
+
 export function shortName(entry) {
   if (entry.type === 'noun' || entry.type === 'country') return nounDisplay(entry.article, entry.fr, entry.gender);
   if (entry.type === 'verb') return entry.infinitive;
@@ -113,7 +116,7 @@ export function formatAnswer(entry) {
       return alt.length ? `${main} (also: ${alt.join(', ')})` : main;
     }
     case 'verb':
-      return `${entry.infinitive}: ${entry.conj.map(withPronoun).join(', ')}`;
+      return `${entry.infinitive}: ${entry.conj.map((_, i) => withPronoun(acceptedVerbForms(entry, i).join(' / '), i)).join(', ')}`;
     default:
       return [entry.fr, ...alt].join(' / ');
   }
@@ -426,10 +429,12 @@ function splitVerbAnswer(raw) {
   return parts;
 }
 
-function compareVerbForm(userForm, expectedForm) {
+function compareVerbForm(userForm, acceptedForms) {
   const userOptions = unique([userForm, userForm.replace(SUBJECT_PRONOUN, ''), userForm.replace(/^j'/, '')]);
-  const expectedOptions = unique([expectedForm, expectedForm.replace(/^j'/, '')]);
-  return bestComparison(userOptions.flatMap((u) => expectedOptions.map((e) => compareText(u, e, expectedForm))));
+  return bestComparison(acceptedForms.flatMap((accepted) => {
+    const expectedOptions = unique([accepted, accepted.replace(/^j'/, '')]);
+    return userOptions.flatMap((u) => expectedOptions.map((e) => compareText(u, e, accepted)));
+  }));
 }
 
 function boldFirst(text, pattern) {
@@ -446,6 +451,8 @@ export function verbRuleNote(entry, wrongIndices) {
       return wrong.has(3) ? `-ger verbs keep the **e** before -ons: nous ${boldFirst(nous, /e(?=ons$)/)} (it keeps the soft g sound).` : null;
     case '-cer':
       return wrong.has(3) ? `-cer verbs take a **ç** before -ons: nous ${boldFirst(nous, /ç/)} (it keeps the soft c sound).` : null;
+    case '-yer':
+      return `**y → i** except with nous and vous: je ${boldFirst(je, /i/)}, tu ${boldFirst(tu, /i/)}, il ${boldFirst(il, /i/)}, ils ${boldFirst(ils, /i/)} — but nous ${nous}, vous ${vous}.`;
     case 'double-l':
       return `Double **l** except with nous and vous: ${withPronoun(boldFirst(je, /ll/), 0)}, tu ${boldFirst(tu, /ll/)}, il ${boldFirst(il, /ll/)}, ils ${boldFirst(ils, /ll/)} — but nous ${nous}, vous ${vous}.`;
     case 'é→è':
@@ -505,7 +512,7 @@ function gradeVerb(entry, raw, ctx) {
     return { result: infinitiveResult === 'correct' ? 'partial' : 'wrong', notes };
   }
 
-  const comparisons = entry.conj.map((expected, i) => (forms[i] === undefined ? { kind: 'missing' } : compareVerbForm(forms[i], normalizeText(expected))));
+  const comparisons = entry.conj.map((_, i) => (forms[i] === undefined ? { kind: 'missing' } : compareVerbForm(forms[i], acceptedVerbForms(entry, i).map(normalizeText))));
   const wrongIndices = comparisons.map((c, i) => (c.kind === 'exact' ? -1 : i)).filter((i) => i >= 0);
   const missing = wrongIndices.filter((i) => comparisons[i].kind === 'missing');
   const mistaken = wrongIndices.filter((i) => comparisons[i].kind !== 'missing');
@@ -559,14 +566,20 @@ function gradeFillIn(entry, fillIn, raw, ctx) {
     const withoutArticle = text.replace(/^(le|la|les|l')\s*/, '');
     if (withoutArticle === expected) text = withoutArticle;
   }
-  const cmp = compareText(text, expected, fillIn.answer);
+  const isConjugatedVerbBlank = entry.type === 'verb' && Number.isInteger(fillIn.formIndex);
+  // A conjugated verb blank also accepts the other spellings of that person (conjAlt), e.g. paie / paye.
+  const acceptedAnswers = isConjugatedVerbBlank
+    ? unique([expected, ...acceptedVerbForms(entry, fillIn.formIndex).map((f) => normalizeText(f).replace(/^j'/, ''))])
+    : [expected];
+  const cmp = bestComparison(acceptedAnswers.map((answer) => compareText(text, answer, answer === expected ? fillIn.answer : answer)));
   if (cmp.kind === 'exact') return { result: 'correct', notes: comparisonNotes(cmp) };
-  const rule = entry.type === 'verb' && Number.isInteger(fillIn.formIndex) ? verbRuleNote(entry, [fillIn.formIndex]) : null;
+  const rule = isConjugatedVerbBlank ? verbRuleNote(entry, [fillIn.formIndex]) : null;
 
   // Another form of the same word: right verb in the wrong person, adjective without agreement, singular/plural
   if (entry.type === 'verb') {
-    const otherForms = [entry.infinitive, ...entry.conj].map((f) => normalizeText(f).replace(/^j'/, ''));
-    const index = otherForms.indexOf(text.replace(/^j'/, ''));
+    const stripJ = (f) => normalizeText(f).replace(/^j'/, '');
+    const formsByPosition = [[entry.infinitive], ...entry.conj.map((_, i) => acceptedVerbForms(entry, i))];
+    const index = formsByPosition.findIndex((group) => group.map(stripJ).includes(stripJ(text)));
     if (index >= 0) {
       const which = index === 0 ? 'the infinitive' : `the **${PRONOUNS[index - 1]}** form`;
       return { result: 'partial', notes: [`That's ${which} of ${entry.infinitive}. Here you need **${fillIn.answer}**.`, rule].filter(Boolean) };

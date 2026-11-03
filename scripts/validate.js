@@ -16,13 +16,13 @@ try {
 }
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
-const RULES = ['-ger', '-cer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
+const RULES = ['-ger', '-cer', '-yer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
 const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'alt', 'example', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
   country: ['fr', 'gender', 'article', 'pluralOnly', 'inTo'],
   adjective: ['masc', 'fem'],
-  verb: ['infinitive', 'conj', 'rule'],
+  verb: ['infinitive', 'conj', 'conjAlt', 'rule'],
   expression: ['fr'],
   number: ['fr'],
 };
@@ -69,6 +69,13 @@ for (const [index, w] of vocab.words.entries()) {
     if (!isText(w.infinitive)) fail('missing "infinitive"');
     if (!Array.isArray(w.conj) || w.conj.length !== 6 || !w.conj.every(isText)) fail('"conj" must be 6 forms (je, tu, il, nous, vous, ils)');
     else if (w.conj.some((f) => /^(je|tu|il|elle|on|ils|elles) /.test(f))) fail('"conj" forms must not include the subject pronoun');
+    if (w.conjAlt !== undefined) {
+      if (!Array.isArray(w.conjAlt) || w.conjAlt.length !== 6 || !w.conjAlt.every((forms) => Array.isArray(forms) && forms.every(isText))) {
+        fail('"conjAlt" must be 6 lists of extra accepted forms (je, tu, il, nous, vous, ils); use [] for persons without one');
+      } else if (w.conjAlt.every((forms) => forms.length === 0)) fail('"conjAlt" has no forms — remove it');
+      else if (Array.isArray(w.conj) && w.conjAlt.some((forms, i) => forms.includes(w.conj[i]))) fail('"conjAlt" repeats a form that is already in "conj"');
+      else if (w.conjAlt.flat().some((f) => /^(je|tu|il|elle|on|ils|elles) /.test(f))) fail('"conjAlt" forms must not include the subject pronoun');
+    }
     if (w.rule !== undefined && !RULES.includes(w.rule)) fail(`rule must be one of ${RULES.join(', ')}`);
   }
   if ((w.type === 'expression' || w.type === 'number') && !isText(w.fr)) fail('missing "fr"');

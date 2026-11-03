@@ -1,4 +1,5 @@
 // Leitner boxes computed from the attempt log, and choosing the next set of prompts.
+import { acceptedVerbForms } from './grading.js';
 
 export const SET_SIZE = 10;
 const BOX_WEIGHT = { 1: 16, 2: 8, 3: 4, 4: 2, 5: 1 };
@@ -86,7 +87,7 @@ export const BLANK = '______';
 function fillInForms(entry) {
   switch (entry.type) {
     case 'verb':
-      return entry.conj.map((form, index) => ({ form: form.replace(/^j'/, ''), formIndex: index }))
+      return entry.conj.flatMap((_, index) => acceptedVerbForms(entry, index).map((form) => ({ form: form.replace(/^j'/, ''), formIndex: index })))
         .concat([{ form: entry.infinitive, formIndex: 'infinitive' }]);
     case 'adjective':
       return [entry.fem && `${entry.fem}s`, entry.masc && `${entry.masc}s`, entry.fem, entry.masc]

@@ -66,6 +66,10 @@ check('v-apprendre', "étudier, j'étudie, étudies, étudie, étudions, étudie
 check('v-se-presenter', 'se présenter, je me présente, tu te présentes, il se présente, nous nous présentons, vous vous présentez, ils se présentent', 'correct');
 check('v-s-appeler', "s'appeler, m'appelle, t'appelles, s'appelle, appelons, appelez, s'appellent", 'partial');
 check('v-aimer', "aimer, aime, aimes, aime, aimons, aimez, aiment", 'correct');
+check('v-payer', 'payer, paie, paies, paie, payons, payez, paient', 'correct');
+check('v-payer', 'payer, paye, payes, paye, payons, payez, payent', 'correct');
+check('v-payer', 'payer, paye, paies, paie, payons, payez, payent', 'correct');
+check('v-payer', 'payer, paie, paies, paie, paions, payez, paient', 'partial', 'y → i');
 // Expressions & numbers
 check('x-bonjour', 'bonjour', 'correct');
 check('x-ca-va', 'ca va?', 'partial', 'Accent');
@@ -76,6 +80,9 @@ check('num-80', 'quatre-vingt', 'partial', 'Almost');
 check('adj-bruyant', 'bruyante', 'correct', '', true);
 check('adj-bruyant', 'bruyant', 'partial', 'agree', true);
 check('v-manger', 'manges', 'correct', '', true);
+check('v-payer', 'paie', 'correct', '', true);
+check('v-payer', 'paye', 'correct', '', true);
+check('v-payer', 'payons', 'partial', 'nous', true);
 
 const fill = buildFillIn(byId.get('adj-bruyant'));
 console.log(`\nFill-in sample: ${fill.sentence} (${fill.hint}) — ${fill.translation} → ${fill.answer}`);

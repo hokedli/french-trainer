@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "words": [
     {
       "id": "n-prenom",
@@ -370,8 +370,10 @@
       "article": "l'",
       "theme": "People, identity and jobs",
       "alt": [
-        "l'auteure (f)"
+        "l'auteure (f)",
+        "l'autrice (f)"
       ],
+      "tip": "Autrice and auteure are both correct; autrice is now more common.",
       "example": {
         "fr": "C'est une auteure japonaise.",
         "en": "She is a Japanese author."
@@ -430,6 +432,10 @@
       "alt": [
         "la médecin"
       ],
+      "tip": "Never la médecine (= medicine). Title: docteur / docteure.",
+      "confusables": [
+        "n-docteur"
+      ],
       "example": {
         "fr": "Martin est médecin.",
         "en": "Martin is a doctor."
@@ -475,13 +481,14 @@
       "gender": "m",
       "article": "le",
       "theme": "Jobs",
+      "alt": [
+        "la plombière"
+      ],
+      "tip": "In speech you'll often hear elle est plombier. La glace plombières is an ice-cream dessert.",
       "example": {
         "fr": "Le plombier répare la douche.",
         "en": "The plumber is fixing the shower."
-      },
-      "alt": [
-        "la plombière"
-      ]
+      }
     },
     {
       "id": "n-pompier",
@@ -491,13 +498,16 @@
       "gender": "m",
       "article": "le",
       "theme": "Jobs",
+      "alt": [
+        "la pompière",
+        "le sapeur-pompier",
+        "la sapeuse-pompière"
+      ],
+      "tip": "Official title in France: sapeur-pompier / sapeuse-pompière. Many people say elle est pompier.",
       "example": {
         "fr": "Mon frère est pompier.",
         "en": "My brother is a firefighter."
-      },
-      "alt": [
-        "la pompière"
-      ]
+      }
     },
     {
       "id": "n-macon",
@@ -672,6 +682,9 @@
       "en": "to be retired",
       "fr": "être à la retraite",
       "theme": "Jobs",
+      "alt": [
+        "être retraité(e)"
+      ],
       "example": {
         "fr": "Ils sont à la retraite.",
         "en": "They're retired."
@@ -717,6 +730,7 @@
       "alt": [
         "la secrétaire"
       ],
+      "tip": "Le secrétaire (m) is also a writing desk.",
       "example": {
         "fr": "Ma mère est secrétaire.",
         "en": "My mother is a secretary."
@@ -903,6 +917,9 @@
       "alt": [
         "la psychologue"
       ],
+      "confusables": [
+        "n-psy"
+      ],
       "example": {
         "fr": "Elle est psychologue.",
         "en": "She's a psychologist."
@@ -989,6 +1006,7 @@
         "l'enseignant (m)",
         "l'enseignante (f)"
       ],
+      "tip": "The Académie française prefers elle est professeur; professeure is very common. Same pronunciation.",
       "confusables": [
         "n-enseignant",
         "n-prof"
@@ -1045,6 +1063,10 @@
       "alt": [
         "l'avocate (f)"
       ],
+      "tip": "Un avocat is also an avocado (always masculine).",
+      "confusables": [
+        "n-avocat-fruit"
+      ],
       "example": {
         "fr": "Elle est avocate.",
         "en": "She's a lawyer."
@@ -1093,6 +1115,10 @@
       "alt": [
         "la boulangère"
       ],
+      "tip": "Old meaning of la boulangère: the baker's wife.",
+      "confusables": [
+        "n-boulangerie"
+      ],
       "example": {
         "fr": "J'achète du pain chez le boulanger.",
         "en": "I buy bread at the baker's."
@@ -1125,6 +1151,7 @@
       "alt": [
         "la pâtissière"
       ],
+      "tip": "La crème pâtissière = custard / pastry cream.",
       "example": {
         "fr": "La pâtissière fait des macarons.",
         "en": "The pastry chef makes macarons."
@@ -1141,6 +1168,7 @@
       "alt": [
         "la cuisinière"
       ],
+      "tip": "La cuisinière is also the cooker / stove.",
       "example": {
         "fr": "Le cuisinier prépare le déjeuner.",
         "en": "The cook is preparing lunch."
@@ -1157,6 +1185,7 @@
       "alt": [
         "la couturière"
       ],
+      "tip": "(Grand) couturier = fashion designer; une couturière usually means a dressmaker.",
       "example": {
         "fr": "La couturière coud une jupe.",
         "en": "The dressmaker is sewing a skirt."
@@ -1173,6 +1202,7 @@
       "alt": [
         "la policière"
       ],
+      "tip": "Un policier is also a detective novel or film.",
       "example": {
         "fr": "Mon oncle est policier.",
         "en": "My uncle is a police officer."
@@ -1205,6 +1235,7 @@
       "alt": [
         "l'ouvrière (f)"
       ],
+      "tip": "Une ouvrière is also a worker bee.",
       "example": {
         "fr": "Il est ouvrier.",
         "en": "He's a factory worker."
@@ -1221,6 +1252,7 @@
       "alt": [
         "la jardinière"
       ],
+      "tip": "La jardinière is also a planter or window box and a dish of mixed vegetables; jardinière d'enfants = kindergarten teacher.",
       "example": {
         "fr": "Le jardinier aime les fleurs.",
         "en": "The gardener likes flowers."
@@ -1349,6 +1381,9 @@
       "alt": [
         "la vendeuse"
       ],
+      "confusables": [
+        "n-client"
+      ],
       "example": {
         "fr": "La vendeuse est sympa.",
         "en": "The shop assistant is nice."
@@ -1381,6 +1416,7 @@
       "alt": [
         "la coiffeuse"
       ],
+      "tip": "La coiffeuse is also a dressing table.",
       "example": {
         "fr": "Notre fille Rose est coiffeuse.",
         "en": "Our daughter Rose is a hairdresser."
@@ -1549,6 +1585,277 @@
       }
     },
     {
+      "id": "n-cabinet-d-avocat",
+      "type": "noun",
+      "en": "law firm",
+      "fr": "cabinet d'avocat",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Elle travaille dans un cabinet d'avocat.",
+        "en": "She works at a law firm."
+      }
+    },
+    {
+      "id": "n-usine",
+      "type": "noun",
+      "en": "factory",
+      "fr": "usine",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Une ouvrière travaille dans une usine.",
+        "en": "A worker works in a factory."
+      }
+    },
+    {
+      "id": "n-urgences",
+      "type": "noun",
+      "en": "A&E, emergency department",
+      "fr": "urgences",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Jobs",
+      "example": {
+        "fr": "Elle travaille aux urgences.",
+        "en": "She works in A&E."
+      }
+    },
+    {
+      "id": "n-urgentiste",
+      "type": "noun",
+      "en": "emergency (A&E) doctor",
+      "fr": "urgentiste",
+      "gender": "mf",
+      "article": "l'",
+      "theme": "Jobs",
+      "example": {
+        "fr": "Il est urgentiste.",
+        "en": "He's an emergency doctor."
+      }
+    },
+    {
+      "id": "n-psy",
+      "type": "noun",
+      "en": "therapist (informal)",
+      "fr": "psy",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la psy"
+      ],
+      "tip": "psy = psychologue or psychiatre (informal)",
+      "confusables": [
+        "n-psychologue"
+      ],
+      "example": {
+        "fr": "Elle est psy.",
+        "en": "She's a therapist."
+      }
+    },
+    {
+      "id": "n-chauffeur",
+      "type": "noun",
+      "en": "driver (bus, taxi)",
+      "fr": "chauffeur",
+      "gender": "mf",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "le chauffeur de bus",
+        "le chauffeur de taxi"
+      ],
+      "tip": "For a woman say elle est chauffeur. Une chauffeuse is a low armless chair.",
+      "confusables": [
+        "n-conducteur"
+      ],
+      "example": {
+        "fr": "Elle est chauffeur de bus.",
+        "en": "She's a bus driver."
+      }
+    },
+    {
+      "id": "n-conducteur",
+      "type": "noun",
+      "en": "driver",
+      "fr": "conducteur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la conductrice"
+      ],
+      "tip": "conduire = to drive",
+      "confusables": [
+        "n-chauffeur"
+      ],
+      "example": {
+        "fr": "Il est conducteur de bus.",
+        "en": "He's a bus driver."
+      }
+    },
+    {
+      "id": "n-poissonnier",
+      "type": "noun",
+      "en": "fishmonger",
+      "fr": "poissonnier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la poissonnière",
+        "le vendeur de poissons"
+      ],
+      "tip": "La poissonnière is also a fish kettle (pan for cooking fish).",
+      "example": {
+        "fr": "Le poissonnier est très sympa.",
+        "en": "The fishmonger is very nice."
+      }
+    },
+    {
+      "id": "n-charpentier",
+      "type": "noun",
+      "en": "carpenter (roofs and frames)",
+      "fr": "charpentier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la charpentière"
+      ],
+      "confusables": [
+        "n-menuisier"
+      ],
+      "example": {
+        "fr": "Le charpentier travaille sur le toit.",
+        "en": "The carpenter works on the roof."
+      }
+    },
+    {
+      "id": "n-menuisier",
+      "type": "noun",
+      "en": "joiner, carpenter (doors, furniture)",
+      "fr": "menuisier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la menuisière"
+      ],
+      "tip": "Le menuisier travaille avec le bois.",
+      "confusables": [
+        "n-charpentier"
+      ],
+      "example": {
+        "fr": "Le menuisier travaille avec le bois.",
+        "en": "The joiner works with wood."
+      }
+    },
+    {
+      "id": "n-ambulancier",
+      "type": "noun",
+      "en": "ambulance driver, paramedic",
+      "fr": "ambulancier",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'ambulancière (f)"
+      ],
+      "example": {
+        "fr": "L'ambulancier conduit l'ambulance.",
+        "en": "The paramedic drives the ambulance."
+      }
+    },
+    {
+      "id": "n-developpeur",
+      "type": "noun",
+      "en": "(software) developer",
+      "fr": "développeur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la développeuse"
+      ],
+      "example": {
+        "fr": "Je travaille comme développeuse.",
+        "en": "I work as a developer."
+      }
+    },
+    {
+      "id": "n-ambassadeur",
+      "type": "noun",
+      "en": "ambassador",
+      "fr": "ambassadeur",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Jobs",
+      "alt": [
+        "l'ambassadrice (f)"
+      ],
+      "tip": "Old meaning of ambassadrice: the ambassador's wife. Today it's also accepted for a woman ambassador.",
+      "example": {
+        "fr": "L'ambassadeur habite à Paris.",
+        "en": "The ambassador lives in Paris."
+      }
+    },
+    {
+      "id": "n-docteur",
+      "type": "noun",
+      "en": "doctor (as a title)",
+      "fr": "docteur",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "alt": [
+        "la docteure"
+      ],
+      "tip": "The job is médecin; docteur is the title (Docteur Martin). Doctoresse is dated in France.",
+      "confusables": [
+        "n-medecin"
+      ],
+      "example": {
+        "fr": "Bonjour, Docteur Martin !",
+        "en": "Hello, Doctor Martin!"
+      }
+    },
+    {
+      "id": "adj-retraite",
+      "type": "adjective",
+      "en": "retired",
+      "masc": "retraité",
+      "fem": "retraitée",
+      "theme": "Jobs",
+      "tip": "être retraité(e) = être à la retraite",
+      "confusables": [
+        "x-etre-a-la-retraite"
+      ],
+      "example": {
+        "fr": "Ils sont retraités.",
+        "en": "They're retired."
+      }
+    },
+    {
+      "id": "x-travailler-comme",
+      "type": "expression",
+      "en": "to work as…",
+      "fr": "travailler comme…",
+      "theme": "Jobs",
+      "alt": [
+        "travailler comme"
+      ],
+      "tip": "Je travaille comme… = I work as… (no article)",
+      "example": {
+        "fr": "Elle travaille comme enseignante.",
+        "en": "She works as a teacher."
+      }
+    },
+    {
       "id": "n-famille",
       "type": "noun",
       "en": "family",
@@ -1582,15 +1889,14 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
+      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
+      "confusables": [
+        "n-mer"
+      ],
       "example": {
         "fr": "Ma mère s'appelle Claire.",
         "en": "My mother is called Claire."
-      },
-      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
-      "confusables": [
-        "n-mer",
-        "la mare"
-      ]
+      }
     },
     {
       "id": "n-parents",
@@ -1998,6 +2304,9 @@
       "alt": [
         "les animaux"
       ],
+      "confusables": [
+        "n-animal-de-compagnie"
+      ],
       "example": {
         "fr": "J'habite avec un animal.",
         "en": "I live with an animal."
@@ -2062,7 +2371,7 @@
       "theme": "Family and relationships",
       "confusables": [
         "n-grande-soeur",
-        "la petite-fille"
+        "n-petit-fils"
       ],
       "example": {
         "fr": "J'ai une petite sœur.",
@@ -2093,6 +2402,61 @@
       "example": {
         "fr": "Je suis fille unique.",
         "en": "I'm an only daughter."
+      }
+    },
+    {
+      "id": "n-papa",
+      "type": "noun",
+      "en": "dad",
+      "fr": "papa",
+      "gender": "m",
+      "article": "le",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Le métier de ton papa est électricien.",
+        "en": "Your dad's job is electrician."
+      }
+    },
+    {
+      "id": "n-maman",
+      "type": "noun",
+      "en": "mum",
+      "fr": "maman",
+      "gender": "f",
+      "article": "la",
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Ma maman est enseignante.",
+        "en": "My mum is a teacher."
+      }
+    },
+    {
+      "id": "n-grands-parents-maternels",
+      "type": "noun",
+      "en": "maternal grandparents (your mother's parents)",
+      "fr": "grands-parents maternels",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Family and relationships",
+      "tip": "les grands-parents paternels = your father's parents",
+      "example": {
+        "fr": "Les parents de ta mère sont tes grands-parents maternels.",
+        "en": "Your mother's parents are your maternal grandparents."
+      }
+    },
+    {
+      "id": "n-grands-parents-paternels",
+      "type": "noun",
+      "en": "paternal grandparents (your father's parents)",
+      "fr": "grands-parents paternels",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Family and relationships",
+      "example": {
+        "fr": "Mes grands-parents paternels ont plus de 80 ans.",
+        "en": "My paternal grandparents are over 80."
       }
     },
     {
@@ -3008,6 +3372,46 @@
       }
     },
     {
+      "id": "n-verbes-du-1er-groupe",
+      "type": "noun",
+      "en": "first-group verbs (regular -er verbs)",
+      "fr": "verbes du 1er groupe",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "Habiter est un verbe du 1er groupe.",
+        "en": "Habiter is a first-group verb."
+      }
+    },
+    {
+      "id": "n-economie",
+      "type": "noun",
+      "en": "economics",
+      "fr": "économie",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "J'étudie l'économie.",
+        "en": "I study economics."
+      }
+    },
+    {
+      "id": "n-tourisme",
+      "type": "noun",
+      "en": "tourism",
+      "fr": "tourisme",
+      "gender": "m",
+      "article": "le",
+      "theme": "Classroom and language learning",
+      "example": {
+        "fr": "Elle étudie le tourisme à l'université.",
+        "en": "She studies tourism at university."
+      }
+    },
+    {
       "id": "v-etre",
       "type": "verb",
       "en": "to be",
@@ -3409,6 +3813,108 @@
       "tip": "Past tense of naître, formed with être: il est né, elle est née"
     },
     {
+      "id": "v-vouloir",
+      "type": "verb",
+      "en": "to want",
+      "infinitive": "vouloir",
+      "conj": [
+        "veux",
+        "veux",
+        "veut",
+        "voulons",
+        "voulez",
+        "veulent"
+      ],
+      "rule": "irregular",
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "example": {
+        "fr": "Combien de pommes vous voulez ?",
+        "en": "How many apples do you want?"
+      }
+    },
+    {
+      "id": "v-vendre",
+      "type": "verb",
+      "en": "to sell",
+      "infinitive": "vendre",
+      "conj": [
+        "vends",
+        "vends",
+        "vend",
+        "vendons",
+        "vendez",
+        "vendent"
+      ],
+      "rule": "-re",
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "tip": "vendre ≠ acheter",
+      "example": {
+        "fr": "Le vendeur vend des fruits.",
+        "en": "The seller sells fruit."
+      }
+    },
+    {
+      "id": "v-conduire",
+      "type": "verb",
+      "en": "to drive",
+      "infinitive": "conduire",
+      "conj": [
+        "conduis",
+        "conduis",
+        "conduit",
+        "conduisons",
+        "conduisez",
+        "conduisent"
+      ],
+      "rule": "irregular",
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "example": {
+        "fr": "Il conduit un bus.",
+        "en": "He drives a bus."
+      }
+    },
+    {
+      "id": "v-dormir",
+      "type": "verb",
+      "en": "to sleep",
+      "infinitive": "dormir",
+      "conj": [
+        "dors",
+        "dors",
+        "dort",
+        "dormons",
+        "dormez",
+        "dorment"
+      ],
+      "rule": "irregular",
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "example": {
+        "fr": "Le week-end, j'aime dormir.",
+        "en": "At weekends I like sleeping."
+      }
+    },
+    {
+      "id": "v-perdre",
+      "type": "verb",
+      "en": "to lose",
+      "infinitive": "perdre",
+      "conj": [
+        "perds",
+        "perds",
+        "perd",
+        "perdons",
+        "perdez",
+        "perdent"
+      ],
+      "rule": "-re",
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "tip": "perdre ≠ trouver",
+      "example": {
+        "fr": "Je perds souvent mes clés.",
+        "en": "I often lose my keys."
+      }
+    },
+    {
       "id": "v-aimer",
       "type": "verb",
       "en": "to like, love",
@@ -3734,6 +4240,9 @@
         "pêchent"
       ],
       "theme": "Verbs: regular -er verbs",
+      "confusables": [
+        "n-peche"
+      ],
       "example": {
         "fr": "Tu pêches souvent ?",
         "en": "Do you fish often?"
@@ -3962,6 +4471,9 @@
         "trouvent"
       ],
       "theme": "Verbs: regular -er verbs",
+      "confusables": [
+        "v-perdre"
+      ],
       "example": {
         "fr": "Ma mère ne trouve pas ses lunettes.",
         "en": "My mother can't find her glasses."
@@ -4291,6 +4803,84 @@
       }
     },
     {
+      "id": "v-couter",
+      "type": "verb",
+      "en": "to cost",
+      "infinitive": "coûter",
+      "conj": [
+        "coûte",
+        "coûtes",
+        "coûte",
+        "coûtons",
+        "coûtez",
+        "coûtent"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "tip": "Combien coûte… ? / Combien coûtent… ?",
+      "example": {
+        "fr": "Combien coûtent les fraises ?",
+        "en": "How much are the strawberries?"
+      }
+    },
+    {
+      "id": "v-desirer",
+      "type": "verb",
+      "en": "to wish, would like",
+      "infinitive": "désirer",
+      "conj": [
+        "désire",
+        "désires",
+        "désire",
+        "désirons",
+        "désirez",
+        "désirent"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "tip": "Vous désirez ? = What would you like? (in a shop)",
+      "example": {
+        "fr": "Bonjour madame, vous désirez ?",
+        "en": "Hello, what would you like?"
+      }
+    },
+    {
+      "id": "v-aider",
+      "type": "verb",
+      "en": "to help",
+      "infinitive": "aider",
+      "conj": [
+        "aide",
+        "aides",
+        "aide",
+        "aidons",
+        "aidez",
+        "aident"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "example": {
+        "fr": "Comment je peux vous aider ?",
+        "en": "How can I help you?"
+      }
+    },
+    {
+      "id": "v-organiser",
+      "type": "verb",
+      "en": "to organise",
+      "infinitive": "organiser",
+      "conj": [
+        "organise",
+        "organises",
+        "organise",
+        "organisons",
+        "organisez",
+        "organisent"
+      ],
+      "theme": "Verbs: regular -er verbs",
+      "example": {
+        "fr": "Vous organisez un pique-nique.",
+        "en": "You're organising a picnic."
+      }
+    },
+    {
       "id": "v-manger",
       "type": "verb",
       "en": "to eat",
@@ -4532,6 +5122,28 @@
       "example": {
         "fr": "On enlève -er au verbe.",
         "en": "You take -er off the verb."
+      }
+    },
+    {
+      "id": "v-payer",
+      "type": "verb",
+      "en": "to pay",
+      "infinitive": "payer",
+      "conj": [
+        "paie",
+        "paies",
+        "paie",
+        "payons",
+        "payez",
+        "paient"
+      ],
+      "conjAlt": [["paye"], ["payes"], ["paye"], [], [], ["payent"]],
+      "rule": "-yer",
+      "theme": "Verbs: -er verbs with spelling changes",
+      "tip": "je paye, tu payes, il paye, ils payent are also correct",
+      "example": {
+        "fr": "Je paie par carte.",
+        "en": "I'm paying by card."
       }
     },
     {
@@ -5187,6 +5799,99 @@
       }
     },
     {
+      "id": "adj-frais",
+      "type": "adjective",
+      "en": "fresh",
+      "masc": "frais",
+      "fem": "fraîche",
+      "theme": "Describing places & people",
+      "example": {
+        "fr": "Les produits sont frais.",
+        "en": "The produce is fresh."
+      }
+    },
+    {
+      "id": "adj-bio",
+      "type": "adjective",
+      "en": "organic",
+      "masc": "bio",
+      "fem": "bio",
+      "theme": "Describing places & people",
+      "alt": [
+        "biologique / biologique"
+      ],
+      "tip": "bio = biologique; never changes",
+      "example": {
+        "fr": "Les paniers bio.",
+        "en": "Organic veg boxes."
+      }
+    },
+    {
+      "id": "adj-local",
+      "type": "adjective",
+      "en": "local",
+      "masc": "local",
+      "fem": "locale",
+      "theme": "Describing places & people",
+      "tip": "plural: locaux / locales",
+      "example": {
+        "fr": "C'est 100 % local !",
+        "en": "It's 100% local!"
+      }
+    },
+    {
+      "id": "adj-complet",
+      "type": "adjective",
+      "en": "full, complete",
+      "masc": "complet",
+      "fem": "complète",
+      "theme": "Describing places & people",
+      "example": {
+        "fr": "Le panier complet avec un poulet.",
+        "en": "The full basket with a chicken."
+      }
+    },
+    {
+      "id": "adj-disponible",
+      "type": "adjective",
+      "en": "available",
+      "masc": "disponible",
+      "fem": "disponible",
+      "theme": "Describing places & people",
+      "example": {
+        "fr": "Les paniers sont disponibles le vendredi.",
+        "en": "The baskets are available on Fridays."
+      }
+    },
+    {
+      "id": "adj-parfait",
+      "type": "adjective",
+      "en": "perfect",
+      "masc": "parfait",
+      "fem": "parfaite",
+      "theme": "Describing places & people",
+      "tip": "Don't confuse with parfois (sometimes)",
+      "confusables": [
+        "x-parfois"
+      ],
+      "example": {
+        "fr": "Parfait !",
+        "en": "Perfect!"
+      }
+    },
+    {
+      "id": "adj-possible",
+      "type": "adjective",
+      "en": "possible",
+      "masc": "possible",
+      "fem": "possible",
+      "theme": "Describing places & people",
+      "example": {
+        "fr": "Ce n'est pas possible.",
+        "en": "It's not possible."
+      }
+    },
+    {
       "id": "adj-masculin",
       "type": "adjective",
       "en": "masculine",
@@ -5453,6 +6158,19 @@
       }
     },
     {
+      "id": "adj-bleu-gris",
+      "type": "adjective",
+      "en": "blue-grey",
+      "masc": "bleu-gris",
+      "fem": "bleu-gris",
+      "theme": "Colours",
+      "tip": "Compound colour: never changes",
+      "example": {
+        "fr": "Mon portefeuille est bleu-gris.",
+        "en": "My wallet is blue-grey."
+      }
+    },
+    {
       "id": "x-bonjour",
       "type": "expression",
       "en": "Hello, good morning / afternoon",
@@ -5668,6 +6386,9 @@
       "en": "There you go! / That's it!",
       "fr": "Voilà !",
       "theme": "Greetings, phrases and questions",
+      "confusables": [
+        "x-voici"
+      ],
       "example": {
         "fr": "Voilà ma carte de visite.",
         "en": "Here's my business card."
@@ -5742,6 +6463,42 @@
       "example": {
         "fr": "Bisous, Fiona",
         "en": "Love, Fiona"
+      }
+    },
+    {
+      "id": "x-bonne-journee",
+      "type": "expression",
+      "en": "Have a nice day!",
+      "fr": "Bonne journée !",
+      "theme": "Greetings, phrases and questions",
+      "example": {
+        "fr": "Merci, bonne journée !",
+        "en": "Thanks, have a nice day!"
+      }
+    },
+    {
+      "id": "x-a-bientot",
+      "type": "expression",
+      "en": "See you soon!",
+      "fr": "À bientôt !",
+      "theme": "Greetings, phrases and questions",
+      "example": {
+        "fr": "Au revoir, à bientôt !",
+        "en": "Goodbye, see you soon!"
+      }
+    },
+    {
+      "id": "x-d-accord",
+      "type": "expression",
+      "en": "OK, all right.",
+      "fr": "D'accord.",
+      "theme": "Greetings, phrases and questions",
+      "alt": [
+        "D'accord"
+      ],
+      "example": {
+        "fr": "Ah, d'accord.",
+        "en": "Ah, OK."
       }
     },
     {
@@ -5996,6 +6753,13 @@
       ]
     },
     {
+      "id": "x-qui-dit-quoi",
+      "type": "expression",
+      "en": "Who says what?",
+      "fr": "Qui dit quoi ?",
+      "theme": "Useful questions"
+    },
+    {
       "id": "x-quelle-est-ta-date-de-naissance",
       "type": "expression",
       "en": "What's your date of birth?",
@@ -6056,8 +6820,11 @@
       "id": "x-tu-as-un-animal",
       "type": "expression",
       "en": "Do you have a pet?",
-      "fr": "Tu as un animal ?",
-      "theme": "Questions for the oral test"
+      "fr": "Tu as un animal de compagnie ?",
+      "theme": "Questions for the oral test",
+      "alt": [
+        "Tu as un animal ?"
+      ]
     },
     {
       "id": "x-tu-as-des-enfants",
@@ -6427,6 +7194,51 @@
       "tip": "sans ≠ avec"
     },
     {
+      "id": "x-par",
+      "type": "expression",
+      "en": "per; by",
+      "fr": "par",
+      "theme": "Prepositions & linking words",
+      "tip": "une fois par semaine; payer par carte",
+      "example": {
+        "fr": "Une fois par semaine.",
+        "en": "Once a week."
+      }
+    },
+    {
+      "id": "x-comme",
+      "type": "expression",
+      "en": "as",
+      "fr": "comme",
+      "theme": "Prepositions & linking words",
+      "example": {
+        "fr": "Je travaille comme informaticienne.",
+        "en": "I work as an IT specialist."
+      }
+    },
+    {
+      "id": "x-plus-de",
+      "type": "expression",
+      "en": "more than, over",
+      "fr": "plus de",
+      "theme": "Prepositions & linking words",
+      "example": {
+        "fr": "Mes grands-parents ont plus de 80 ans.",
+        "en": "My grandparents are over 80."
+      }
+    },
+    {
+      "id": "x-alors",
+      "type": "expression",
+      "en": "so, then",
+      "fr": "alors",
+      "theme": "Prepositions & linking words",
+      "example": {
+        "fr": "Très bien, alors je voudrais 500 grammes de fraises.",
+        "en": "Fine, so I'd like 500 g of strawberries."
+      }
+    },
+    {
       "id": "x-tres",
       "type": "expression",
       "en": "very",
@@ -6455,6 +7267,9 @@
       "en": "a lot, very much",
       "fr": "beaucoup",
       "theme": "Adverbs",
+      "confusables": [
+        "x-beaucoup-de"
+      ],
       "example": {
         "fr": "J'aime beaucoup mon quartier.",
         "en": "I really like my neighbourhood."
@@ -6602,10 +7417,13 @@
       "en": "sometimes",
       "fr": "parfois",
       "theme": "Adverbs",
+      "tip": "50 %",
+      "confusables": [
+        "adj-parfait"
+      ],
       "example": {
         "fr": "Je mange parfois des pâtes."
-      },
-      "tip": "50 %"
+      }
     },
     {
       "id": "x-rarement",
@@ -6658,9 +7476,56 @@
       "en": "more often… than…",
       "fr": "plus souvent… que…",
       "theme": "Adverbs",
+      "confusables": [
+        "x-moins-souvent"
+      ],
       "example": {
         "fr": "J'utilise plus souvent le bus que la voiture.",
         "en": "I use the bus more often than the car."
+      }
+    },
+    {
+      "id": "x-moins-souvent",
+      "type": "expression",
+      "en": "less often",
+      "fr": "moins souvent",
+      "theme": "Adverbs",
+      "confusables": [
+        "x-plus-souvent-que"
+      ],
+      "example": {
+        "fr": "J'achète moins souvent de la viande.",
+        "en": "I buy meat less often."
+      }
+    },
+    {
+      "id": "x-beaucoup-de",
+      "type": "expression",
+      "en": "a lot of, lots of",
+      "fr": "beaucoup de",
+      "theme": "Adverbs",
+      "tip": "beaucoup de + noun, no article",
+      "confusables": [
+        "x-peu-de"
+      ],
+      "example": {
+        "fr": "J'ai beaucoup de stylos.",
+        "en": "I have lots of pens."
+      }
+    },
+    {
+      "id": "x-peu-de",
+      "type": "expression",
+      "en": "not much, few",
+      "fr": "peu de",
+      "theme": "Adverbs",
+      "tip": "peu de + noun, no article",
+      "confusables": [
+        "x-beaucoup-de"
+      ],
+      "example": {
+        "fr": "J'ai peu de cahiers.",
+        "en": "I have few notebooks."
       }
     },
     {
@@ -6980,6 +7845,23 @@
       "example": {
         "fr": "La plage est à 8 minutes.",
         "en": "The beach is 8 minutes away."
+      }
+    },
+    {
+      "id": "n-fois",
+      "type": "noun",
+      "en": "time (occasion)",
+      "fr": "fois",
+      "gender": "f",
+      "article": "la",
+      "theme": "Time: days, months and seasons",
+      "tip": "fois (time) / foi (faith) / foie (liver) all sound the same",
+      "confusables": [
+        "n-foie-gras"
+      ],
+      "example": {
+        "fr": "Une ou deux fois par semaine.",
+        "en": "Once or twice a week."
       }
     },
     {
@@ -8768,6 +9650,24 @@
       }
     },
     {
+      "id": "n-escalade",
+      "type": "noun",
+      "en": "climbing",
+      "fr": "escalade",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Sports",
+      "alt": [
+        "le bloc",
+        "l'escalade en bloc"
+      ],
+      "tip": "faire du bloc = to go bouldering",
+      "example": {
+        "fr": "Je fais du bloc.",
+        "en": "I go bouldering."
+      }
+    },
+    {
       "id": "n-instrument-de-musique",
       "type": "noun",
       "en": "musical instrument",
@@ -8944,7 +9844,7 @@
       "fr": "pain",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "J'achète du pain.",
         "en": "I buy bread."
@@ -8957,7 +9857,7 @@
       "fr": "croissant",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "Un croissant, s'il vous plaît !",
         "en": "A croissant, please!"
@@ -8970,7 +9870,7 @@
       "fr": "pain au chocolat",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "J'adore les pains au chocolat.",
         "en": "I love pains au chocolat."
@@ -9024,6 +9924,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Food and drink",
+      "tip": "le fromage de vache / de chèvre / de brebis = cow's / goat's / sheep's cheese",
       "example": {
         "fr": "Elle adore le fromage.",
         "en": "She loves cheese."
@@ -9142,7 +10043,7 @@
       "fr": "légume",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Vegetables",
       "alt": [
         "les légumes"
       ],
@@ -9158,7 +10059,7 @@
       "fr": "brocoli",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Vegetables",
       "example": {
         "fr": "Je n'aime pas le brocoli.",
         "en": "I don't like broccoli."
@@ -9171,7 +10072,7 @@
       "fr": "carotte",
       "gender": "f",
       "article": "la",
-      "theme": "Food and drink",
+      "theme": "Vegetables",
       "example": {
         "fr": "La carotte est orange.",
         "en": "The carrot is orange."
@@ -9184,10 +10085,180 @@
       "fr": "radis",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Vegetables",
       "example": {
         "fr": "Le radis est rouge et blanc.",
         "en": "The radish is red and white."
+      }
+    },
+    {
+      "id": "n-tomate",
+      "type": "noun",
+      "en": "tomato",
+      "fr": "tomate",
+      "gender": "f",
+      "article": "la",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "J'achète 500 grammes de tomates.",
+        "en": "I buy 500 grams of tomatoes."
+      }
+    },
+    {
+      "id": "n-salade",
+      "type": "noun",
+      "en": "lettuce",
+      "fr": "salade",
+      "gender": "f",
+      "article": "la",
+      "theme": "Vegetables",
+      "alt": [
+        "la laitue"
+      ],
+      "tip": "la salade also means salad",
+      "example": {
+        "fr": "Je voudrais une salade.",
+        "en": "I'd like a lettuce."
+      }
+    },
+    {
+      "id": "n-poivron",
+      "type": "noun",
+      "en": "(bell) pepper",
+      "fr": "poivron",
+      "gender": "m",
+      "article": "le",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Un poivron rouge.",
+        "en": "A red pepper."
+      }
+    },
+    {
+      "id": "n-courgette",
+      "type": "noun",
+      "en": "courgette, zucchini",
+      "fr": "courgette",
+      "gender": "f",
+      "article": "la",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Je voudrais une courgette.",
+        "en": "I'd like a courgette."
+      }
+    },
+    {
+      "id": "n-aubergine",
+      "type": "noun",
+      "en": "aubergine, eggplant",
+      "fr": "aubergine",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Une courgette et une aubergine.",
+        "en": "A courgette and an aubergine."
+      }
+    },
+    {
+      "id": "n-concombre",
+      "type": "noun",
+      "en": "cucumber",
+      "fr": "concombre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Voici un concombre.",
+        "en": "Here's a cucumber."
+      }
+    },
+    {
+      "id": "n-pomme-de-terre",
+      "type": "noun",
+      "en": "potato",
+      "fr": "pomme de terre",
+      "gender": "f",
+      "article": "la",
+      "theme": "Vegetables",
+      "alt": [
+        "les pommes de terre"
+      ],
+      "tip": "Literally 'apple of the earth'",
+      "confusables": [
+        "n-pomme"
+      ],
+      "example": {
+        "fr": "J'achète deux kilos de pommes de terre.",
+        "en": "I buy two kilos of potatoes."
+      }
+    },
+    {
+      "id": "n-haricots-verts",
+      "type": "noun",
+      "en": "green beans",
+      "fr": "haricots verts",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Vegetables",
+      "tip": "Aspirated h: no liaison (des / haricots) and de, not d' (une boîte de haricots)",
+      "example": {
+        "fr": "Un kilo de haricots verts.",
+        "en": "A kilo of green beans."
+      }
+    },
+    {
+      "id": "n-oignon",
+      "type": "noun",
+      "en": "onion",
+      "fr": "oignon",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Vegetables",
+      "tip": "Pronounced like 'onion'",
+      "example": {
+        "fr": "J'achète un kilo d'oignons.",
+        "en": "I buy a kilo of onions."
+      }
+    },
+    {
+      "id": "n-champignon",
+      "type": "noun",
+      "en": "mushroom",
+      "fr": "champignon",
+      "gender": "m",
+      "article": "le",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Des champignons.",
+        "en": "Mushrooms."
+      }
+    },
+    {
+      "id": "n-poireau",
+      "type": "noun",
+      "en": "leek",
+      "fr": "poireau",
+      "gender": "m",
+      "article": "le",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Un poireau.",
+        "en": "A leek."
+      }
+    },
+    {
+      "id": "n-raifort",
+      "type": "noun",
+      "en": "horseradish",
+      "fr": "raifort",
+      "gender": "m",
+      "article": "le",
+      "theme": "Vegetables",
+      "example": {
+        "fr": "Le raifort est blanc.",
+        "en": "Horseradish is white."
       }
     },
     {
@@ -9197,7 +10268,7 @@
       "fr": "ananas",
       "gender": "m",
       "article": "l'",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "J'aime l'ananas.",
         "en": "I like pineapple."
@@ -9210,7 +10281,10 @@
       "fr": "banane",
       "gender": "f",
       "article": "la",
-      "theme": "Food and drink",
+      "theme": "Fruit",
+      "confusables": [
+        "n-banane-sac"
+      ],
       "example": {
         "fr": "Tu peux épeler le mot banane ?",
         "en": "Can you spell the word banana?"
@@ -9223,7 +10297,7 @@
       "fr": "orange",
       "gender": "f",
       "article": "l'",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Je mange une orange.",
         "en": "I'm eating an orange."
@@ -9236,7 +10310,7 @@
       "fr": "citron",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Les citrons sont jaunes.",
         "en": "Lemons are yellow."
@@ -9249,7 +10323,7 @@
       "fr": "melon",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Le melon est délicieux.",
         "en": "The melon is delicious."
@@ -9262,7 +10336,7 @@
       "fr": "kiwi",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Le kiwi est vert.",
         "en": "The kiwi is green."
@@ -9275,7 +10349,7 @@
       "fr": "raisin",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "J'aime le raisin.",
         "en": "I like grapes."
@@ -9288,7 +10362,7 @@
       "fr": "fraise",
       "gender": "f",
       "article": "la",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Une fraise rouge.",
         "en": "A red strawberry."
@@ -9301,7 +10375,7 @@
       "fr": "framboise",
       "gender": "f",
       "article": "la",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "J'adore les framboises.",
         "en": "I love raspberries."
@@ -9314,10 +10388,204 @@
       "fr": "cerise",
       "gender": "f",
       "article": "la",
-      "theme": "Food and drink",
+      "theme": "Fruit",
       "example": {
         "fr": "Les cerises sont rouges.",
         "en": "Cherries are red."
+      }
+    },
+    {
+      "id": "n-pomme",
+      "type": "noun",
+      "en": "apple",
+      "fr": "pomme",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "confusables": [
+        "n-pomme-de-terre"
+      ],
+      "example": {
+        "fr": "J'achète 3 ou 4 pommes.",
+        "en": "I buy 3 or 4 apples."
+      }
+    },
+    {
+      "id": "n-poire",
+      "type": "noun",
+      "en": "pear",
+      "fr": "poire",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "J'achète 2 ou 3 poires.",
+        "en": "I buy 2 or 3 pears."
+      }
+    },
+    {
+      "id": "n-clementine",
+      "type": "noun",
+      "en": "clementine",
+      "fr": "clémentine",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "J'aime les clémentines, mais je préfère les oranges.",
+        "en": "I like clementines, but I prefer oranges."
+      }
+    },
+    {
+      "id": "n-pamplemousse",
+      "type": "noun",
+      "en": "grapefruit",
+      "fr": "pamplemousse",
+      "gender": "m",
+      "article": "le",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Un jus de pamplemousse.",
+        "en": "A grapefruit juice."
+      }
+    },
+    {
+      "id": "n-peche",
+      "type": "noun",
+      "en": "peach",
+      "fr": "pêche",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "tip": "la pêche also means fishing (pêcher = to fish)",
+      "confusables": [
+        "v-pecher"
+      ],
+      "example": {
+        "fr": "Tu manges deux pêches.",
+        "en": "You eat two peaches."
+      }
+    },
+    {
+      "id": "n-abricot",
+      "type": "noun",
+      "en": "apricot",
+      "fr": "abricot",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Une tarte aux abricots.",
+        "en": "An apricot tart."
+      }
+    },
+    {
+      "id": "n-mure",
+      "type": "noun",
+      "en": "blackberry",
+      "fr": "mûre",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Les mûres sont noires.",
+        "en": "Blackberries are black."
+      }
+    },
+    {
+      "id": "n-prune",
+      "type": "noun",
+      "en": "plum",
+      "fr": "prune",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Les prunes sont violettes.",
+        "en": "Plums are purple."
+      }
+    },
+    {
+      "id": "n-pasteque",
+      "type": "noun",
+      "en": "watermelon",
+      "fr": "pastèque",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "La pastèque est rouge et verte.",
+        "en": "Watermelon is red and green."
+      }
+    },
+    {
+      "id": "n-mangue",
+      "type": "noun",
+      "en": "mango",
+      "fr": "mangue",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "J'adore les mangues.",
+        "en": "I love mangoes."
+      }
+    },
+    {
+      "id": "n-figue",
+      "type": "noun",
+      "en": "fig",
+      "fr": "figue",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Les figues sont violettes.",
+        "en": "Figs are purple."
+      }
+    },
+    {
+      "id": "n-noix-de-coco",
+      "type": "noun",
+      "en": "coconut",
+      "fr": "noix de coco",
+      "gender": "f",
+      "article": "la",
+      "theme": "Fruit",
+      "example": {
+        "fr": "Une noix de coco.",
+        "en": "A coconut."
+      }
+    },
+    {
+      "id": "n-avocat-fruit",
+      "type": "noun",
+      "en": "avocado",
+      "fr": "avocat",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Fruit",
+      "tip": "Also means lawyer; the fruit is always masculine.",
+      "confusables": [
+        "n-avocat"
+      ],
+      "example": {
+        "fr": "Un avocat, c'est un fruit… et un métier !",
+        "en": "An avocado is a fruit… and a lawyer is a job!"
+      }
+    },
+    {
+      "id": "n-fruits-de-saison",
+      "type": "noun",
+      "en": "seasonal fruit",
+      "fr": "fruits de saison",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Fruit",
+      "example": {
+        "fr": "J'aime les fruits de saison.",
+        "en": "I like seasonal fruit."
       }
     },
     {
@@ -9340,7 +10608,7 @@
       "fr": "gâteau",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "Je n'aime pas les gâteaux.",
         "en": "I don't like cakes."
@@ -9353,7 +10621,7 @@
       "fr": "gâteau d'anniversaire",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "Une bougie sur le gâteau d'anniversaire.",
         "en": "A candle on the birthday cake."
@@ -9366,10 +10634,255 @@
       "fr": "macaron",
       "gender": "m",
       "article": "le",
-      "theme": "Food and drink",
+      "theme": "At the bakery",
       "example": {
         "fr": "Tu manges souvent des macarons ?",
         "en": "Do you often eat macarons?"
+      }
+    },
+    {
+      "id": "n-boulangerie",
+      "type": "noun",
+      "en": "bakery",
+      "fr": "boulangerie",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "confusables": [
+        "n-boulanger"
+      ],
+      "example": {
+        "fr": "Il y a une boulangerie ici ?",
+        "en": "Is there a bakery here?"
+      }
+    },
+    {
+      "id": "n-baguette",
+      "type": "noun",
+      "en": "baguette",
+      "fr": "baguette",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Je voudrais une baguette.",
+        "en": "I'd like a baguette."
+      }
+    },
+    {
+      "id": "n-croissant-aux-amandes",
+      "type": "noun",
+      "en": "almond croissant",
+      "fr": "croissant aux amandes",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "confusables": [
+        "n-croissant"
+      ],
+      "example": {
+        "fr": "Un croissant aux amandes.",
+        "en": "An almond croissant."
+      }
+    },
+    {
+      "id": "n-pain-aux-raisins",
+      "type": "noun",
+      "en": "raisin swirl pastry",
+      "fr": "pain aux raisins",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "confusables": [
+        "n-pain-au-chocolat"
+      ],
+      "example": {
+        "fr": "Un pain aux raisins.",
+        "en": "A raisin pastry."
+      }
+    },
+    {
+      "id": "n-chausson-aux-pommes",
+      "type": "noun",
+      "en": "apple turnover",
+      "fr": "chausson aux pommes",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Un chausson aux pommes.",
+        "en": "An apple turnover."
+      }
+    },
+    {
+      "id": "n-chouquettes",
+      "type": "noun",
+      "en": "small sugar-topped choux buns",
+      "fr": "chouquettes",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Des chouquettes.",
+        "en": "Choux buns."
+      }
+    },
+    {
+      "id": "n-canneles",
+      "type": "noun",
+      "en": "cannelés (small caramelised Bordeaux cakes)",
+      "fr": "cannelés",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Des cannelés.",
+        "en": "Cannelés."
+      }
+    },
+    {
+      "id": "n-brioche",
+      "type": "noun",
+      "en": "brioche (sweet bread)",
+      "fr": "brioche",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Une brioche.",
+        "en": "A brioche."
+      }
+    },
+    {
+      "id": "n-tarte",
+      "type": "noun",
+      "en": "tart",
+      "fr": "tarte",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "tip": "une tarte aux fraises / aux framboises / aux abricots",
+      "example": {
+        "fr": "La tarte aux abricots est pour 12 personnes.",
+        "en": "The apricot tart serves 12."
+      }
+    },
+    {
+      "id": "n-tarte-au-citron",
+      "type": "noun",
+      "en": "lemon tart",
+      "fr": "tarte au citron",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "alt": [
+        "la tarte au citron meringuée",
+        "la tarte citron meringuée"
+      ],
+      "tip": "meringuée = with meringue",
+      "confusables": [
+        "n-tarte"
+      ],
+      "example": {
+        "fr": "Une tarte citron meringuée pour 6 personnes.",
+        "en": "A lemon meringue tart for 6."
+      }
+    },
+    {
+      "id": "n-flan",
+      "type": "noun",
+      "en": "flan (custard tart)",
+      "fr": "flan",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "tip": "une part de flan = a slice of flan",
+      "example": {
+        "fr": "Une part de flan.",
+        "en": "A slice of flan."
+      }
+    },
+    {
+      "id": "n-eclair-au-chocolat",
+      "type": "noun",
+      "en": "chocolate éclair",
+      "fr": "éclair au chocolat",
+      "gender": "m",
+      "article": "l'",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Un éclair au chocolat.",
+        "en": "A chocolate éclair."
+      }
+    },
+    {
+      "id": "n-millefeuille",
+      "type": "noun",
+      "en": "mille-feuille, custard slice",
+      "fr": "millefeuille",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Un millefeuille.",
+        "en": "A mille-feuille."
+      }
+    },
+    {
+      "id": "n-financiers",
+      "type": "noun",
+      "en": "financiers (small almond cakes)",
+      "fr": "financiers",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Des financiers.",
+        "en": "Financiers."
+      }
+    },
+    {
+      "id": "n-gout",
+      "type": "noun",
+      "en": "flavour, taste",
+      "fr": "goût",
+      "gender": "m",
+      "article": "le",
+      "theme": "At the bakery",
+      "example": {
+        "fr": "Quels goûts vous avez ?",
+        "en": "What flavours do you have?"
+      }
+    },
+    {
+      "id": "n-vanille",
+      "type": "noun",
+      "en": "vanilla",
+      "fr": "vanille",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "tip": "un macaron à la vanille",
+      "example": {
+        "fr": "Un macaron à la vanille.",
+        "en": "A vanilla macaron."
+      }
+    },
+    {
+      "id": "n-pistache",
+      "type": "noun",
+      "en": "pistachio",
+      "fr": "pistache",
+      "gender": "f",
+      "article": "la",
+      "theme": "At the bakery",
+      "tip": "un macaron à la pistache",
+      "example": {
+        "fr": "Un macaron à la pistache.",
+        "en": "A pistachio macaron."
       }
     },
     {
@@ -9442,6 +10955,369 @@
       "example": {
         "fr": "De l'eau avec des glaçons.",
         "en": "Water with ice cubes."
+      }
+    },
+    {
+      "id": "n-viande",
+      "type": "noun",
+      "en": "meat",
+      "fr": "viande",
+      "gender": "f",
+      "article": "la",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Je n'achète pas de viande.",
+        "en": "I don't buy meat."
+      }
+    },
+    {
+      "id": "n-poulet",
+      "type": "noun",
+      "en": "chicken",
+      "fr": "poulet",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Le panier complet avec un poulet.",
+        "en": "The full basket with a chicken."
+      }
+    },
+    {
+      "id": "n-oeuf",
+      "type": "noun",
+      "en": "egg",
+      "fr": "œuf",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Food and drink",
+      "alt": [
+        "les œufs"
+      ],
+      "tip": "un œuf rhymes with neuf; in des œufs the f is silent",
+      "example": {
+        "fr": "Je voudrais six œufs.",
+        "en": "I'd like six eggs."
+      }
+    },
+    {
+      "id": "n-lait",
+      "type": "noun",
+      "en": "milk",
+      "fr": "lait",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Une bouteille de lait.",
+        "en": "A bottle of milk."
+      }
+    },
+    {
+      "id": "n-beurre",
+      "type": "noun",
+      "en": "butter",
+      "fr": "beurre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "J'achète du beurre.",
+        "en": "I buy butter."
+      }
+    },
+    {
+      "id": "n-creme",
+      "type": "noun",
+      "en": "cream",
+      "fr": "crème",
+      "gender": "f",
+      "article": "la",
+      "theme": "Food and drink",
+      "alt": [
+        "la crème chantilly"
+      ],
+      "tip": "la crème chantilly = whipped cream",
+      "example": {
+        "fr": "Une glace avec de la crème chantilly.",
+        "en": "An ice cream with whipped cream."
+      }
+    },
+    {
+      "id": "n-yaourt",
+      "type": "noun",
+      "en": "yoghurt",
+      "fr": "yaourt",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un yaourt à la fraise.",
+        "en": "A strawberry yoghurt."
+      }
+    },
+    {
+      "id": "n-produits-laitiers",
+      "type": "noun",
+      "en": "dairy products",
+      "fr": "produits laitiers",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Le lait et le yaourt sont des produits laitiers.",
+        "en": "Milk and yoghurt are dairy products."
+      }
+    },
+    {
+      "id": "n-fromage-de-chevre",
+      "type": "noun",
+      "en": "goat's cheese",
+      "fr": "fromage de chèvre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "confusables": [
+        "n-fromage"
+      ],
+      "example": {
+        "fr": "Deux fromages de chèvre, s'il vous plaît.",
+        "en": "Two goat's cheeses, please."
+      }
+    },
+    {
+      "id": "n-fromage-de-vache",
+      "type": "noun",
+      "en": "cow's cheese",
+      "fr": "fromage de vache",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "confusables": [
+        "n-fromage"
+      ],
+      "example": {
+        "fr": "Le camembert est un fromage de vache.",
+        "en": "Camembert is a cow's cheese."
+      }
+    },
+    {
+      "id": "n-fromage-de-brebis",
+      "type": "noun",
+      "en": "sheep's cheese",
+      "fr": "fromage de brebis",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "confusables": [
+        "n-fromage"
+      ],
+      "example": {
+        "fr": "J'aime le fromage de brebis.",
+        "en": "I like sheep's cheese."
+      }
+    },
+    {
+      "id": "n-foie-gras",
+      "type": "noun",
+      "en": "foie gras (duck or goose liver)",
+      "fr": "foie gras",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "tip": "le foie = liver; not fois (time) or foi (faith)",
+      "confusables": [
+        "n-fois"
+      ],
+      "example": {
+        "fr": "Le foie gras est français.",
+        "en": "Foie gras is French."
+      }
+    },
+    {
+      "id": "n-jambon",
+      "type": "noun",
+      "en": "ham",
+      "fr": "jambon",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Une tranche de jambon.",
+        "en": "A slice of ham."
+      }
+    },
+    {
+      "id": "n-riz",
+      "type": "noun",
+      "en": "rice",
+      "fr": "riz",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un paquet de riz.",
+        "en": "A packet of rice."
+      }
+    },
+    {
+      "id": "n-huile-d-olive",
+      "type": "noun",
+      "en": "olive oil",
+      "fr": "huile d'olive",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Une bouteille d'huile d'olive.",
+        "en": "A bottle of olive oil."
+      }
+    },
+    {
+      "id": "n-moutarde",
+      "type": "noun",
+      "en": "mustard",
+      "fr": "moutarde",
+      "gender": "f",
+      "article": "la",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un pot de moutarde.",
+        "en": "A jar of mustard."
+      }
+    },
+    {
+      "id": "n-sucre",
+      "type": "noun",
+      "en": "sugar",
+      "fr": "sucre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un morceau de sucre.",
+        "en": "A sugar lump."
+      }
+    },
+    {
+      "id": "n-confiture",
+      "type": "noun",
+      "en": "jam",
+      "fr": "confiture",
+      "gender": "f",
+      "article": "la",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un pot de confiture.",
+        "en": "A jar of jam."
+      }
+    },
+    {
+      "id": "n-chips",
+      "type": "noun",
+      "en": "crisps",
+      "fr": "chips",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Un paquet de chips.",
+        "en": "A bag of crisps."
+      }
+    },
+    {
+      "id": "n-petits-pois",
+      "type": "noun",
+      "en": "peas",
+      "fr": "petits pois",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Une boîte de petits pois.",
+        "en": "A tin of peas."
+      }
+    },
+    {
+      "id": "n-saumon",
+      "type": "noun",
+      "en": "salmon",
+      "fr": "saumon",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "J'achète du saumon.",
+        "en": "I buy salmon."
+      }
+    },
+    {
+      "id": "n-thon",
+      "type": "noun",
+      "en": "tuna",
+      "fr": "thon",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Une boîte de thon.",
+        "en": "A tin of tuna."
+      }
+    },
+    {
+      "id": "n-omelette",
+      "type": "noun",
+      "en": "omelette",
+      "fr": "omelette",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Je voudrais faire une omelette.",
+        "en": "I'd like to make an omelette."
+      }
+    },
+    {
+      "id": "n-aliments",
+      "type": "noun",
+      "en": "foods, groceries",
+      "fr": "aliments",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Les aliments au marché.",
+        "en": "The food at the market."
+      }
+    },
+    {
+      "id": "n-pique-nique",
+      "type": "noun",
+      "en": "picnic",
+      "fr": "pique-nique",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Vous organisez un pique-nique.",
+        "en": "You're organising a picnic."
+      }
+    },
+    {
+      "id": "n-frigo",
+      "type": "noun",
+      "en": "fridge",
+      "fr": "frigo",
+      "gender": "m",
+      "article": "le",
+      "theme": "Food and drink",
+      "example": {
+        "fr": "Dans mon frigo, j'ai du lait.",
+        "en": "In my fridge I have milk."
       }
     },
     {
@@ -9809,6 +11685,22 @@
       }
     },
     {
+      "id": "n-animal-de-compagnie",
+      "type": "noun",
+      "en": "pet",
+      "fr": "animal de compagnie",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Animals and nature",
+      "confusables": [
+        "n-animal"
+      ],
+      "example": {
+        "fr": "Tu as un animal de compagnie ?",
+        "en": "Do you have a pet?"
+      }
+    },
+    {
       "id": "n-nature",
       "type": "noun",
       "en": "nature",
@@ -9947,15 +11839,14 @@
       "gender": "f",
       "article": "la",
       "theme": "Nature & weather",
+      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
+      "confusables": [
+        "n-mere"
+      ],
       "example": {
         "fr": "La mer est bleue.",
         "en": "The sea is blue."
-      },
-      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
-      "confusables": [
-        "n-mere",
-        "la mare"
-      ]
+      }
     },
     {
       "id": "n-vague",
@@ -10298,6 +12189,9 @@
       "gender": "f",
       "article": "la",
       "theme": "Clothes, body and everyday objects",
+      "alt": [
+        "la clef"
+      ],
       "example": {
         "fr": "Ce sont nos clés.",
         "en": "These are our keys."
@@ -10577,6 +12471,45 @@
       }
     },
     {
+      "id": "n-boite-aux-lettres",
+      "type": "noun",
+      "en": "letterbox, mailbox",
+      "fr": "boîte aux lettres",
+      "gender": "f",
+      "article": "la",
+      "theme": "Clothes, body and everyday objects",
+      "example": {
+        "fr": "J'ai une clé pour la boîte aux lettres.",
+        "en": "I have a key for the letterbox."
+      }
+    },
+    {
+      "id": "n-cadenas",
+      "type": "noun",
+      "en": "padlock, bike lock",
+      "fr": "cadenas",
+      "gender": "m",
+      "article": "le",
+      "theme": "Clothes, body and everyday objects",
+      "example": {
+        "fr": "J'ai une clé pour le cadenas de mon vélo.",
+        "en": "I have a key for my bike lock."
+      }
+    },
+    {
+      "id": "n-bip",
+      "type": "noun",
+      "en": "(door) fob, remote",
+      "fr": "bip",
+      "gender": "m",
+      "article": "le",
+      "theme": "Clothes, body and everyday objects",
+      "example": {
+        "fr": "J'ai un bip pour la porte.",
+        "en": "I have a fob for the door."
+      }
+    },
+    {
       "id": "n-sac-a-dos",
       "type": "noun",
       "en": "backpack, rucksack",
@@ -10694,6 +12627,7 @@
       "gender": "m",
       "article": "l'",
       "theme": "What's in your bag",
+      "tip": "Google Agenda = Google Calendar",
       "example": {
         "fr": "J'utilise souvent mon agenda.",
         "en": "I often use my diary."
@@ -10708,7 +12642,8 @@
       "article": "le",
       "theme": "What's in your bag",
       "alt": [
-        "le crayon à papier"
+        "le crayon à papier",
+        "le crayon de papier"
       ],
       "example": {
         "fr": "J'ai un crayon dans ma trousse.",
@@ -10765,6 +12700,9 @@
       "alt": [
         "la bouteille d'eau"
       ],
+      "confusables": [
+        "n-bouteille-en-plastique"
+      ],
       "example": {
         "fr": "J'utilise toujours une gourde.",
         "en": "I always use a water bottle."
@@ -10792,9 +12730,94 @@
       "article": "les",
       "pluralOnly": true,
       "theme": "What's in your bag",
+      "alt": [
+        "le mouchoir",
+        "un paquet de mouchoirs"
+      ],
       "example": {
         "fr": "J'ai des mouchoirs.",
         "en": "I have tissues."
+      }
+    },
+    {
+      "id": "n-sac-a-ordinateur",
+      "type": "noun",
+      "en": "laptop bag",
+      "fr": "sac à ordinateur",
+      "gender": "m",
+      "article": "le",
+      "theme": "What's in your bag",
+      "confusables": [
+        "n-sacoche"
+      ],
+      "example": {
+        "fr": "J'ai un sac à ordinateur.",
+        "en": "I have a laptop bag."
+      }
+    },
+    {
+      "id": "n-sacoche",
+      "type": "noun",
+      "en": "satchel, messenger bag",
+      "fr": "sacoche",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "confusables": [
+        "n-sac-a-ordinateur"
+      ],
+      "example": {
+        "fr": "J'utilise une sacoche pour mon ordinateur.",
+        "en": "I use a satchel for my laptop."
+      }
+    },
+    {
+      "id": "n-banane-sac",
+      "type": "noun",
+      "en": "bum bag, fanny pack",
+      "fr": "banane",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "tip": "Same word as the fruit.",
+      "confusables": [
+        "n-banane"
+      ],
+      "example": {
+        "fr": "L'été, j'utilise très souvent ma banane.",
+        "en": "In summer I use my bum bag very often."
+      }
+    },
+    {
+      "id": "n-bouteille-en-plastique",
+      "type": "noun",
+      "en": "plastic bottle",
+      "fr": "bouteille en plastique",
+      "gender": "f",
+      "article": "la",
+      "theme": "What's in your bag",
+      "tip": "non réutilisable = single-use",
+      "confusables": [
+        "n-gourde"
+      ],
+      "example": {
+        "fr": "Je n'ai pas de gourde, j'ai une bouteille en plastique.",
+        "en": "I don't have a water bottle, I have a plastic bottle."
+      }
+    },
+    {
+      "id": "n-objets-perdus",
+      "type": "noun",
+      "en": "lost property",
+      "fr": "objets perdus",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "What's in your bag",
+      "tip": "perdre = to lose",
+      "example": {
+        "fr": "Mon parapluie est aux objets perdus.",
+        "en": "My umbrella is at lost property."
       }
     },
     {
@@ -10868,6 +12891,151 @@
       "example": {
         "fr": "Je fais les courses au supermarché.",
         "en": "I do the shopping at the supermarket."
+      }
+    },
+    {
+      "id": "n-site-internet",
+      "type": "noun",
+      "en": "website",
+      "fr": "site internet",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Un site internet de paniers bio.",
+        "en": "A website for organic veg boxes."
+      }
+    },
+    {
+      "id": "n-epicerie",
+      "type": "noun",
+      "en": "grocery shop, corner shop",
+      "fr": "épicerie",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Dans mon quartier, il y a une épicerie.",
+        "en": "There's a grocery shop in my area."
+      }
+    },
+    {
+      "id": "n-panier",
+      "type": "noun",
+      "en": "basket; veg box",
+      "fr": "panier",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "tip": "un panier bio = an organic veg box",
+      "example": {
+        "fr": "J'achète un panier par semaine.",
+        "en": "I buy one box a week."
+      }
+    },
+    {
+      "id": "n-client",
+      "type": "noun",
+      "en": "customer",
+      "fr": "client",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "alt": [
+        "la cliente"
+      ],
+      "confusables": [
+        "n-vendeur"
+      ],
+      "example": {
+        "fr": "La cliente achète une tarte.",
+        "en": "The customer buys a tart."
+      }
+    },
+    {
+      "id": "n-prix",
+      "type": "noun",
+      "en": "price",
+      "fr": "prix",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Quel est le prix ?",
+        "en": "What's the price?"
+      }
+    },
+    {
+      "id": "n-euro",
+      "type": "noun",
+      "en": "euro",
+      "fr": "euro",
+      "gender": "m",
+      "article": "l'",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Les fraises coûtent 5 euros le kilo.",
+        "en": "The strawberries are 5 euros a kilo."
+      }
+    },
+    {
+      "id": "n-caisse",
+      "type": "noun",
+      "en": "till, checkout",
+      "fr": "caisse",
+      "gender": "f",
+      "article": "la",
+      "theme": "Shopping",
+      "tip": "une caisse automatique = a self-checkout",
+      "example": {
+        "fr": "Je paie à la caisse.",
+        "en": "I pay at the till."
+      }
+    },
+    {
+      "id": "n-carte-bancaire",
+      "type": "noun",
+      "en": "bank card",
+      "fr": "carte bancaire",
+      "gender": "f",
+      "article": "la",
+      "theme": "Shopping",
+      "alt": [
+        "la carte bleue",
+        "la carte"
+      ],
+      "tip": "payer par carte = to pay by card",
+      "example": {
+        "fr": "Je paie par carte.",
+        "en": "I pay by card."
+      }
+    },
+    {
+      "id": "n-especes",
+      "type": "noun",
+      "en": "cash",
+      "fr": "espèces",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "theme": "Shopping",
+      "tip": "payer en espèces = to pay in cash",
+      "example": {
+        "fr": "Vous payez par carte ou en espèces ?",
+        "en": "Card or cash?"
+      }
+    },
+    {
+      "id": "n-code",
+      "type": "noun",
+      "en": "PIN",
+      "fr": "code",
+      "gender": "m",
+      "article": "le",
+      "theme": "Shopping",
+      "example": {
+        "fr": "Votre code, s'il vous plaît.",
+        "en": "Your PIN, please."
       }
     },
     {
@@ -12923,6 +15091,434 @@
       "fr": "deux-mille",
       "theme": "Numbers",
       "tip": "mille never takes an s"
+    },
+    {
+      "id": "n-creche",
+      "type": "noun",
+      "en": "nursery, day care (under 3)",
+      "fr": "crèche",
+      "gender": "f",
+      "article": "la",
+      "theme": "The French school system",
+      "example": {
+        "fr": "Le bébé va à la crèche.",
+        "en": "The baby goes to nursery."
+      }
+    },
+    {
+      "id": "n-ecole-maternelle",
+      "type": "noun",
+      "en": "nursery school, pre-school (3–6)",
+      "fr": "école maternelle",
+      "gender": "f",
+      "article": "l'",
+      "theme": "The French school system",
+      "tip": "Classes: petite section, moyenne section, grande section",
+      "example": {
+        "fr": "Il va à l'école maternelle.",
+        "en": "He goes to nursery school."
+      }
+    },
+    {
+      "id": "n-ecole-primaire",
+      "type": "noun",
+      "en": "primary school (6–11)",
+      "fr": "école primaire",
+      "gender": "f",
+      "article": "l'",
+      "theme": "The French school system",
+      "tip": "Classes: CP, CE1, CE2, CM1, CM2",
+      "example": {
+        "fr": "Elle va à l'école primaire.",
+        "en": "She goes to primary school."
+      }
+    },
+    {
+      "id": "n-college",
+      "type": "noun",
+      "en": "lower secondary school (11–15)",
+      "fr": "collège",
+      "gender": "m",
+      "article": "le",
+      "theme": "The French school system",
+      "tip": "Classes count down: sixième (6e), cinquième, quatrième, troisième. Not a university college.",
+      "confusables": [
+        "n-lycee"
+      ],
+      "example": {
+        "fr": "Mon frère est au collège.",
+        "en": "My brother is at secondary school."
+      }
+    },
+    {
+      "id": "n-kilo",
+      "type": "noun",
+      "en": "kilo",
+      "fr": "kilo",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "alt": [
+        "le kilogramme"
+      ],
+      "tip": "quantity + de: un kilo de pommes",
+      "example": {
+        "fr": "Un kilo de pêches.",
+        "en": "A kilo of peaches."
+      }
+    },
+    {
+      "id": "n-gramme",
+      "type": "noun",
+      "en": "gram",
+      "fr": "gramme",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "500 grammes de fraises.",
+        "en": "500 grams of strawberries."
+      }
+    },
+    {
+      "id": "n-litre",
+      "type": "noun",
+      "en": "litre",
+      "fr": "litre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Un litre de jus de pomme.",
+        "en": "A litre of apple juice."
+      }
+    },
+    {
+      "id": "n-bouteille",
+      "type": "noun",
+      "en": "bottle",
+      "fr": "bouteille",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une bouteille d'eau.",
+        "en": "A bottle of water."
+      }
+    },
+    {
+      "id": "n-verre",
+      "type": "noun",
+      "en": "glass",
+      "fr": "verre",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Un verre de lait.",
+        "en": "A glass of milk."
+      }
+    },
+    {
+      "id": "n-barquette",
+      "type": "noun",
+      "en": "punnet, tray",
+      "fr": "barquette",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une barquette de fraises.",
+        "en": "A punnet of strawberries."
+      }
+    },
+    {
+      "id": "n-paquet",
+      "type": "noun",
+      "en": "packet",
+      "fr": "paquet",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Un paquet de riz.",
+        "en": "A packet of rice."
+      }
+    },
+    {
+      "id": "n-pot",
+      "type": "noun",
+      "en": "jar, pot",
+      "fr": "pot",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Un pot de moutarde.",
+        "en": "A jar of mustard."
+      }
+    },
+    {
+      "id": "n-boite-de-conserve",
+      "type": "noun",
+      "en": "tin, can",
+      "fr": "boîte de conserve",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "alt": [
+        "la boîte"
+      ],
+      "example": {
+        "fr": "Une boîte de haricots verts.",
+        "en": "A tin of green beans."
+      }
+    },
+    {
+      "id": "n-douzaine",
+      "type": "noun",
+      "en": "dozen",
+      "fr": "douzaine",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une douzaine d'œufs.",
+        "en": "A dozen eggs."
+      }
+    },
+    {
+      "id": "n-morceau",
+      "type": "noun",
+      "en": "piece, lump",
+      "fr": "morceau",
+      "gender": "m",
+      "article": "le",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Un morceau de fromage.",
+        "en": "A piece of cheese."
+      }
+    },
+    {
+      "id": "n-part",
+      "type": "noun",
+      "en": "slice, portion",
+      "fr": "part",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une part de pizza.",
+        "en": "A slice of pizza."
+      }
+    },
+    {
+      "id": "n-tranche",
+      "type": "noun",
+      "en": "slice",
+      "fr": "tranche",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une tranche de jambon.",
+        "en": "A slice of ham."
+      }
+    },
+    {
+      "id": "n-tablette",
+      "type": "noun",
+      "en": "bar (of chocolate)",
+      "fr": "tablette",
+      "gender": "f",
+      "article": "la",
+      "theme": "Quantities",
+      "example": {
+        "fr": "Une tablette de chocolat.",
+        "en": "A bar of chocolate."
+      }
+    },
+    {
+      "id": "x-vous-desirez",
+      "type": "expression",
+      "en": "What would you like? (seller)",
+      "fr": "Vous désirez ?",
+      "theme": "Buying food at the market and the bakery",
+      "alt": [
+        "Comment je peux vous aider ?"
+      ],
+      "example": {
+        "fr": "Bonjour madame, vous désirez ?",
+        "en": "Hello, what would you like?"
+      }
+    },
+    {
+      "id": "x-et-avec-ceci",
+      "type": "expression",
+      "en": "Anything else?",
+      "fr": "Et avec ceci ?",
+      "theme": "Buying food at the market and the bakery",
+      "alt": [
+        "Autre chose ?",
+        "Vous désirez autre chose ?"
+      ],
+      "example": {
+        "fr": "Très bien, et avec ceci ?",
+        "en": "Fine, anything else?"
+      }
+    },
+    {
+      "id": "x-combien-de-vous-voulez",
+      "type": "expression",
+      "en": "How many… do you want?",
+      "fr": "Combien de… vous voulez ?",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Combien de pommes vous voulez ?",
+        "en": "How many apples do you want?"
+      }
+    },
+    {
+      "id": "x-vous-voulez-un-sac",
+      "type": "expression",
+      "en": "Do you want a bag?",
+      "fr": "Vous voulez un sac ?",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Vous voulez un sac ? – Non, c'est OK, j'ai mon sac à dos.",
+        "en": "Do you want a bag? – No, it's OK, I have my backpack."
+      }
+    },
+    {
+      "id": "x-vous-avez-des",
+      "type": "expression",
+      "en": "Do you have any…?",
+      "fr": "Vous avez des… ?",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Vous avez des tartes ?",
+        "en": "Do you have any tarts?"
+      }
+    },
+    {
+      "id": "x-combien-coute",
+      "type": "expression",
+      "en": "How much is…?",
+      "fr": "Combien coûte… ?",
+      "theme": "Buying food at the market and the bakery",
+      "alt": [
+        "Combien coûtent… ?"
+      ],
+      "example": {
+        "fr": "Combien coûtent les fraises ?",
+        "en": "How much are the strawberries?"
+      }
+    },
+    {
+      "id": "x-c-est-tout",
+      "type": "expression",
+      "en": "Is that all?",
+      "fr": "C'est tout ?",
+      "theme": "Buying food at the market and the bakery",
+      "alt": [
+        "Ce sera tout ?"
+      ],
+      "example": {
+        "fr": "Oui, merci, c'est tout.",
+        "en": "Yes thanks, that's all."
+      }
+    },
+    {
+      "id": "x-quel-est-le-prix",
+      "type": "expression",
+      "en": "What's the price?",
+      "fr": "Quel est le prix ?",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Quel est le prix ? – Au total, 10 euros.",
+        "en": "What's the price? – 10 euros in total."
+      }
+    },
+    {
+      "id": "x-au-total",
+      "type": "expression",
+      "en": "in total",
+      "fr": "au total",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Au total, le prix est 12 euros.",
+        "en": "In total, the price is 12 euros."
+      }
+    },
+    {
+      "id": "x-payer-par-carte",
+      "type": "expression",
+      "en": "to pay by card",
+      "fr": "payer par carte",
+      "theme": "Buying food at the market and the bakery",
+      "confusables": [
+        "x-payer-en-especes"
+      ],
+      "example": {
+        "fr": "Je voudrais payer par carte.",
+        "en": "I'd like to pay by card."
+      }
+    },
+    {
+      "id": "x-payer-en-especes",
+      "type": "expression",
+      "en": "to pay in cash",
+      "fr": "payer en espèces",
+      "theme": "Buying food at the market and the bakery",
+      "confusables": [
+        "x-payer-par-carte"
+      ],
+      "example": {
+        "fr": "Vous payez en espèces ?",
+        "en": "Are you paying in cash?"
+      }
+    },
+    {
+      "id": "x-votre-code-s-il-vous-plait",
+      "type": "expression",
+      "en": "Your PIN, please.",
+      "fr": "Votre code, s'il vous plaît.",
+      "theme": "Buying food at the market and the bakery",
+      "example": {
+        "fr": "Votre code, s'il vous plaît. Merci, bonne journée !",
+        "en": "Your PIN, please. Thank you, have a nice day!"
+      }
+    },
+    {
+      "id": "x-voici",
+      "type": "expression",
+      "en": "Here you are. / Here is…",
+      "fr": "Voici.",
+      "theme": "Buying food at the market and the bakery",
+      "tip": "Voici = here is (close); voilà = there you go",
+      "confusables": [
+        "x-voila"
+      ],
+      "example": {
+        "fr": "Voici un concombre.",
+        "en": "Here's a cucumber."
+      }
+    },
+    {
+      "id": "x-une-fois-par-semaine",
+      "type": "expression",
+      "en": "once a week",
+      "fr": "une fois par semaine",
+      "theme": "Quantities",
+      "tip": "une fois par jour / par mois / par an; deux fois par semaine",
+      "confusables": [
+        "n-fois"
+      ],
+      "example": {
+        "fr": "J'achète des légumes une fois par semaine.",
+        "en": "I buy vegetables once a week."
+      }
     }
   ]
 }
