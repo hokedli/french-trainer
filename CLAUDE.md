@@ -10,7 +10,7 @@ Hosted on GitHub Pages (auto-deploys on push to `main`); progress syncs through 
 | `vocab.json` | **All vocabulary — the single source of truth.** |
 | `index.html`, `style.css` | Page shell and styles |
 | `js/app.js` | UI: sign-in, practice set → Check → results table → Next set (key `N`), status line, Online switch, vocab/app update checks |
-| `js/grading.js` | Rule-based grading and explanations (pure functions, also runs in Node) |
+| `js/grading.js` | Rule-based grading and explanations (pure functions, also runs in Node). `buildLookup` = reverse index answer → entries, plus the `kindOf` links |
 | `js/selection.js` | Leitner boxes from the attempt log, choosing the 10 words, building sentence fill-ins |
 | `js/seed-progress.js` | Starting Leitner boxes from the chat sessions before the app existed |
 | `js/sync.js` | Firebase: sign-in, Firestore attempt log with persistent offline cache, `disableNetwork` for Offline mode |
@@ -29,7 +29,13 @@ Progress lives in Firestore as an append-only log: `users/{uid}/attempts/{autoId
 { "version": 7, "words": [ { "id": "n-quartier", "type": "noun", ... } ] }
 ```
 
-Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `theme`, optional `alt` (other accepted answers), `example` `{ "fr", "en" }`, `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`).
+Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `theme`, optional `alt` (other accepted answers), `example` `{ "fr", "en" }`, `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`), `kindOf` (id of a more general base word, placed right after `theme`: `n-sac-a-dos` has `"kindOf": "n-sac"`).
+
+**kindOf**: only on the specific entry; the base word doesn't list its kinds (the app collects them). The base must exist, must not be the entry itself and must not have its own `kindOf` — `validate.js` reports these as errors, and the app logs a warning and ignores the link. Use it when the specific word is still the same kind of thing (backpack → bag); if the meaning changes, use `confusables` (pomme / pomme de terre). Full rules: "French–English Vocabulary.md" → "For vocab.json: entries to add" → "How to convert".
+
+**Feedback that uses these fields** (in `js/grading.js`, results page only):
+- Correct answer to a base word → `Also: le sac à dos (backpack, rucksack) · …` listing its kinds.
+- Wrong answer that is another entry (all matches, verbs by infinitive only) → `Almost: la bouteille (bottle) is the general word; …` if it is the prompt's base word, `That's another kind of sac: le sac à main = handbag.` if it shares the base, otherwise `You wrote la pomme = apple.` (confusables included). Synonyms still get `Also right: …`.
 
 | type | fields | example |
 | --- | --- | --- |
@@ -64,4 +70,6 @@ On this Windows machine Node is at `C:\Program Files\nodejs` (add it to PATH in 
 
 Bump `CACHE_VERSION` in `sw.js` whenever any app file other than `vocab.json` changes, otherwise installed copies keep the old files. If you add a new file, add it to `APP_FILES` in `sw.js`. If the Firebase SDK version changes, update it in both `js/sync.js` and `sw.js`.
 
-Test locally with any static server from the repo root (e.g. `npx serve .`) — sign-in needs `localhost` in Firebase's authorised domains (it is there by default).
+Test locally with any static server from the repo root (e.g. `npx serve .`, then open `http://localhost:3000/local.html` for the no-sign-in version, or `/` for the synced one) — sign-in needs `localhost` in Firebase's authorised domains (it is there by default). After code changes, reload with Ctrl+Shift+R so the service worker doesn't serve the old files.
+
+`scripts/test-grading.js` checks grading against the real `vocab.json` (including the kindOf feedback and invalid-link warnings); add a `check(id, answer, expectedResult, noteFragment)` line when grading changes.

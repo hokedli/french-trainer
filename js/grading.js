@@ -141,6 +141,30 @@ function formsForLookup(entry) {
   }
 }
 
+// kindOf links: entry → its more general "base word". Invalid links are logged and ignored.
+function buildKindOfLinks(words) {
+  const byId = new Map(words.map((w) => [w.id, w]));
+  const baseIdByKindId = new Map();
+  const kindsByBaseId = new Map();
+  for (const entry of words) {
+    if (entry.kindOf === undefined) continue;
+    const base = byId.get(entry.kindOf);
+    let problem = null;
+    if (!base) problem = 'is not an id in vocab.json';
+    else if (base.id === entry.id) problem = 'points to the entry itself';
+    else if (base.kindOf !== undefined) problem = `has its own kindOf ("${base.kindOf}")`;
+    if (problem) {
+      console.warn(`vocab: ${entry.id} has kindOf "${entry.kindOf}", which ${problem} — link ignored`);
+      continue;
+    }
+    baseIdByKindId.set(entry.id, base.id);
+    if (!kindsByBaseId.has(base.id)) kindsByBaseId.set(base.id, []);
+    kindsByBaseId.get(base.id).push(entry);
+  }
+  return { byId, baseIdByKindId, kindsByBaseId };
+}
+
+// Reverse index from every accepted answer to the entries it belongs to, plus the kindOf links.
 export function buildLookup(words) {
   const byForm = new Map();
   for (const entry of words) {
@@ -148,15 +172,40 @@ export function buildLookup(words) {
       if (!form) continue;
       const key = lookupKey(form);
       if (!byForm.has(key)) byForm.set(key, []);
-      byForm.get(key).push(entry);
+      if (!byForm.get(key).includes(entry)) byForm.get(key).push(entry);
     }
   }
+  const { byId, baseIdByKindId, kindsByBaseId } = buildKindOfLinks(words);
+  const findAll = (form, excludeId, type) => (byForm.get(lookupKey(form)) || [])
+    .filter((e) => e.id !== excludeId && (!type || e.type === type));
   return {
-    find(form, excludeId, type) {
-      const matches = byForm.get(lookupKey(form)) || [];
-      return matches.find((e) => e.id !== excludeId && (!type || e.type === type));
-    },
+    findAll,
+    find: (form, excludeId, type) => findAll(form, excludeId, type)[0],
+    baseOf: (entry) => byId.get(baseIdByKindId.get(entry.id)) || null,
+    kindsOf: (entry) => kindsByBaseId.get(entry.id) || [],
   };
+}
+
+// The word without its article: "sac" for le sac, the masculine for adjectives.
+const bareName = (entry) => entry.fr || entry.infinitive || entry.masc || entry.fem;
+
+// "le sac à dos (backpack, rucksack) · le sac à main (handbag)" for a base word answered correctly
+function kindsNote(entry, lookup) {
+  const kinds = lookup?.kindsOf(entry) || [];
+  if (!kinds.length) return null;
+  return `Also: ${kinds.map((kind) => `**${shortName(kind)}** (${kind.en})`).join(' · ')}`;
+}
+
+// What the learner's wrong answer means, when it is another vocab entry
+function otherWordNote(entry, other, lookup) {
+  const base = lookup.baseOf(entry);
+  if (base && other.id === base.id) {
+    return `Almost: **${shortName(other)}** (${other.en}) is the general word; this one is more specific.`;
+  }
+  if (base && lookup.baseOf(other)?.id === base.id) {
+    return `That's another kind of **${bareName(base)}**: **${shortName(other)}** = ${other.en}.`;
+  }
+  return `You wrote **${shortName(other)}** = ${other.en}.`;
 }
 
 // Splits "a, b / c (d, e)" at top level only: ["a", "b", "c (d, e)"]
@@ -182,9 +231,9 @@ function isSynonym(promptEntry, otherEntry) {
 
 function gradeAsOtherWord(entry, raw, form, ctx, type) {
   if (!ctx.lookup || ctx.isNestedLookup) return null;
-  const other = ctx.lookup.find(form, entry.id, type);
-  if (!other) return null;
-  if (isSynonym(entry, other)) {
+  const others = ctx.lookup.findAll(form, entry.id, type);
+  if (!others.length) return null;
+  for (const other of others.filter((o) => isSynonym(entry, o))) {
     const otherGrade = gradeEntry(other, raw, { ...ctx, isNestedLookup: true });
     if (otherGrade.result !== 'wrong') {
       return {
@@ -193,10 +242,7 @@ function gradeAsOtherWord(entry, raw, form, ctx, type) {
       };
     }
   }
-  return {
-    result: 'wrong',
-    notes: [`That's **${shortName(other)}** = ${other.en}. ${capitalize(entry.en)} is **${shortName(entry)}**.`],
-  };
+  return { result: 'wrong', notes: others.map((other) => otherWordNote(entry, other, ctx.lookup)) };
 }
 
 // ---------- nouns & countries ----------
@@ -625,5 +671,6 @@ export function gradeItem(item, raw, ctx = {}) {
   const grade = fillIn ? gradeFillIn(entry, fillIn, raw, ctx) : gradeEntry(entry, raw, ctx);
   const notes = [...grade.notes];
   if (grade.result !== 'correct' && entry.tip) notes.push(`💡 ${entry.tip}`);
-  return { result: grade.result, correctAnswer, notes: unique(notes), showExample: grade.result !== 'correct' };
+  if (grade.result === 'correct') notes.push(kindsNote(entry, ctx.lookup));
+  return { result: grade.result, correctAnswer, notes: unique(notes.filter(Boolean)), showExample: grade.result !== 'correct' };
 }

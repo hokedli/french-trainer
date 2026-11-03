@@ -17,7 +17,7 @@ try {
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
 const RULES = ['-ger', '-cer', '-yer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
-const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'alt', 'example', 'tip', 'confusables'];
+const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'kindOf', 'alt', 'example', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
   country: ['fr', 'gender', 'article', 'pluralOnly', 'inTo'],
@@ -90,9 +90,16 @@ for (const [index, w] of vocab.words.entries()) {
   if (w.type !== 'number' && !w.example) warnings.push(`${where}: no example sentence`);
 }
 
+const wordsById = new Map(vocab.words.map((w) => [w.id, w]));
 for (const w of vocab.words) {
   for (const c of w.confusables || []) {
     if (/^(n|v|adj|x|c|nat|num)-/.test(c) && !ids.has(c)) errors.push(`${w.id}: confusable "${c}" is not an id in vocab.json`);
+  }
+  if (w.kindOf !== undefined) {
+    const base = wordsById.get(w.kindOf);
+    if (!base) errors.push(`${w.id}: kindOf "${w.kindOf}" is not an id in vocab.json`);
+    else if (base.id === w.id) errors.push(`${w.id}: kindOf points to itself`);
+    else if (base.kindOf !== undefined) errors.push(`${w.id}: kindOf "${w.kindOf}" has its own kindOf — the base word must not have one`);
   }
 }
 for (const id of Object.keys(SEED.boxes)) {

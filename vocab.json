@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 7,
   "words": [
     {
       "id": "n-prenom",
@@ -22,6 +22,7 @@
       "gender": "m",
       "article": "le",
       "theme": "People, identity and jobs",
+      "kindOf": "n-nom",
       "alt": [
         "le nom"
       ],
@@ -90,6 +91,7 @@
       "gender": "f",
       "article": "la",
       "theme": "People, identity and jobs",
+      "kindOf": "n-langue",
       "example": {
         "fr": "Le français est ma langue maternelle.",
         "en": "French is my mother tongue."
@@ -116,6 +118,7 @@
       "gender": "f",
       "article": "l'",
       "theme": "People, identity and jobs",
+      "kindOf": "n-adresse",
       "alt": [
         "le courriel"
       ],
@@ -132,6 +135,7 @@
       "gender": "m",
       "article": "le",
       "theme": "People, identity and jobs",
+      "kindOf": "n-numero",
       "example": {
         "fr": "Mon numéro de téléphone est le 06 24 38 48 99.",
         "en": "My phone number is …"
@@ -197,6 +201,7 @@
       "gender": "f",
       "article": "la",
       "theme": "People, identity and jobs",
+      "kindOf": "n-date",
       "example": {
         "fr": "Ma date de naissance est le 3 avril 2000.",
         "en": "My date of birth is 3 April 2000."
@@ -223,6 +228,7 @@
       "gender": "m",
       "article": "le",
       "theme": "People, identity and jobs",
+      "kindOf": "n-nom",
       "example": {
         "fr": "Quel est le nom de naissance de ta mère ?",
         "en": "What is your mother's maiden name?"
@@ -517,6 +523,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Jobs",
+      "alt": [
+        "la maçonne"
+      ],
       "example": {
         "fr": "Le maçon construit une maison.",
         "en": "The builder is building a house."
@@ -658,6 +667,10 @@
         "la prof"
       ],
       "tip": "prof = professeur (informal)",
+      "confusables": [
+        "n-enseignant",
+        "n-professeur"
+      ],
       "example": {
         "fr": "Je suis prof de français.",
         "en": "I'm a French teacher."
@@ -684,6 +697,9 @@
       "theme": "Jobs",
       "alt": [
         "être retraité(e)"
+      ],
+      "confusables": [
+        "adj-retraite"
       ],
       "example": {
         "fr": "Ils sont à la retraite.",
@@ -1075,13 +1091,16 @@
     {
       "id": "n-marchand",
       "type": "noun",
-      "en": "shopkeeper, merchant",
+      "en": "merchant, trader",
       "fr": "marchand",
       "gender": "m",
       "article": "le",
       "theme": "Jobs",
       "alt": [
         "la marchande"
+      ],
+      "confusables": [
+        "n-vendeur"
       ],
       "example": {
         "fr": "Le marchand vend des fruits.",
@@ -1382,7 +1401,8 @@
         "la vendeuse"
       ],
       "confusables": [
-        "n-client"
+        "n-client",
+        "n-marchand"
       ],
       "example": {
         "fr": "La vendeuse est sympa.",
@@ -1397,6 +1417,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Jobs",
+      "kindOf": "n-vendeur",
       "alt": [
         "la vendeuse de fruits"
       ],
@@ -1915,14 +1936,11 @@
     {
       "id": "n-enfant",
       "type": "noun",
-      "en": "child / children",
+      "en": "child",
       "fr": "enfant",
       "gender": "mf",
       "article": "l'",
       "theme": "Family and relationships",
-      "alt": [
-        "les enfants"
-      ],
       "example": {
         "fr": "Léon et Léa sont les enfants de Pierre et Nathalie.",
         "en": "Léon and Léa are Pierre and Nathalie's children."
@@ -2045,6 +2063,10 @@
       "alt": [
         "la petite-fille"
       ],
+      "confusables": [
+        "n-petit-frere",
+        "n-petite-soeur"
+      ],
       "example": {
         "fr": "Lucie est la petite-fille de Jeanne et d'Henri.",
         "en": "Lucie is Jeanne and Henri's granddaughter."
@@ -2071,6 +2093,9 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
+      "confusables": [
+        "n-tente"
+      ],
       "example": {
         "fr": "Marion est la tante d'Hugo.",
         "en": "Marion is Hugo's aunt."
@@ -2167,7 +2192,7 @@
       "theme": "Family and relationships",
       "example": {
         "fr": "Sophie est la belle-sœur de Julien.",
-        "en": "Sophie is Julien's brother-in-law."
+        "en": "Sophie is Julien's sister-in-law."
       }
     },
     {
@@ -2207,6 +2232,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
+      "kindOf": "n-frere",
       "example": {
         "fr": "Mon demi-frère a 15 ans.",
         "en": "My half-brother is 15."
@@ -2220,6 +2246,7 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
+      "kindOf": "n-soeur",
       "example": {
         "fr": "Ma demi-sœur a 15 ans.",
         "en": "My half-sister is 15."
@@ -2249,6 +2276,7 @@
       "gender": "mf",
       "article": "l'",
       "theme": "Family and relationships",
+      "kindOf": "n-enfant",
       "example": {
         "fr": "Tu es enfant unique ?",
         "en": "Are you an only child?"
@@ -2304,9 +2332,6 @@
       "alt": [
         "les animaux"
       ],
-      "confusables": [
-        "n-animal-de-compagnie"
-      ],
       "example": {
         "fr": "J'habite avec un animal.",
         "en": "I live with an animal."
@@ -2320,9 +2345,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
-      "confusables": [
-        "n-petit-frere"
-      ],
+      "kindOf": "n-frere",
       "example": {
         "fr": "J'ai un grand frère.",
         "en": "I have an older brother."
@@ -2336,9 +2359,7 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
-      "confusables": [
-        "n-petite-soeur"
-      ],
+      "kindOf": "n-soeur",
       "example": {
         "fr": "Moi, je suis la grande sœur.",
         "en": "I'm the older sister."
@@ -2352,8 +2373,8 @@
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
+      "kindOf": "n-frere",
       "confusables": [
-        "n-grand-frere",
         "n-petit-fils"
       ],
       "example": {
@@ -2369,8 +2390,8 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
+      "kindOf": "n-soeur",
       "confusables": [
-        "n-grande-soeur",
         "n-petit-fils"
       ],
       "example": {
@@ -2386,6 +2407,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
+      "kindOf": "n-fils",
       "example": {
         "fr": "Marius est fils unique.",
         "en": "Marius is an only son."
@@ -2399,6 +2421,7 @@
       "gender": "f",
       "article": "la",
       "theme": "Family and relationships",
+      "kindOf": "n-fille",
       "example": {
         "fr": "Je suis fille unique.",
         "en": "I'm an only daughter."
@@ -2412,6 +2435,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Family and relationships",
+      "alt": [
+        "le père"
+      ],
       "example": {
         "fr": "Le métier de ton papa est électricien.",
         "en": "Your dad's job is electrician."
@@ -2439,6 +2465,7 @@
       "article": "les",
       "pluralOnly": true,
       "theme": "Family and relationships",
+      "kindOf": "n-grands-parents",
       "tip": "les grands-parents paternels = your father's parents",
       "example": {
         "fr": "Les parents de ta mère sont tes grands-parents maternels.",
@@ -2454,6 +2481,7 @@
       "article": "les",
       "pluralOnly": true,
       "theme": "Family and relationships",
+      "kindOf": "n-grands-parents",
       "example": {
         "fr": "Mes grands-parents paternels ont plus de 80 ans.",
         "en": "My paternal grandparents are over 80."
@@ -2527,17 +2555,27 @@
     {
       "id": "n-ex-mari",
       "type": "noun",
-      "en": "ex-husband / ex-wife",
+      "en": "ex-husband",
       "fr": "ex-mari",
       "gender": "m",
       "article": "l'",
       "theme": "Relationships & marriage",
-      "alt": [
-        "l'ex-femme (f)"
-      ],
       "example": {
         "fr": "C'est mon ex-mari.",
         "en": "He's my ex-husband."
+      }
+    },
+    {
+      "id": "n-ex-femme",
+      "type": "noun",
+      "en": "ex-wife",
+      "fr": "ex-femme",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Relationships & marriage",
+      "example": {
+        "fr": "C'est ma ex-femme.",
+        "en": "She's my ex-wife."
       }
     },
     {
@@ -2576,6 +2614,9 @@
       "theme": "Classroom and language learning",
       "alt": [
         "la leçon"
+      ],
+      "confusables": [
+        "n-courses"
       ],
       "example": {
         "fr": "On a cours de français.",
@@ -3054,8 +3095,8 @@
       "article": "la",
       "theme": "Classroom and language learning",
       "example": {
-        "fr": "Je ne regarde pas : c'est la forme négative.",
-        "en": "\"I don't watch\" is the negative form."
+        "fr": "Je regarde : c'est la forme positive.",
+        "en": "\"I watch\" is the positive form."
       }
     },
     {
@@ -3183,6 +3224,9 @@
       "gender": "mf",
       "article": "l'",
       "theme": "Classroom and language learning",
+      "confusables": [
+        "n-etudiant"
+      ],
       "example": {
         "fr": "L'élève lit un livre.",
         "en": "The pupil is reading a book."
@@ -3340,6 +3384,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Classroom and language learning",
+      "confusables": [
+        "n-college"
+      ],
       "example": {
         "fr": "Il est professeur au lycée.",
         "en": "He's a teacher at a secondary school."
@@ -3909,6 +3956,9 @@
       "rule": "-re",
       "theme": "Verbs: irregular, -ir and -re verbs",
       "tip": "perdre ≠ trouver",
+      "confusables": [
+        "v-trouver"
+      ],
       "example": {
         "fr": "Je perds souvent mes clés.",
         "en": "I often lose my keys."
@@ -4848,7 +4898,7 @@
       "en": "to help",
       "infinitive": "aider",
       "conj": [
-        "aide",
+        "j'aide",
         "aides",
         "aide",
         "aidons",
@@ -4867,7 +4917,7 @@
       "en": "to organise",
       "infinitive": "organiser",
       "conj": [
-        "organise",
+        "j'organise",
         "organises",
         "organise",
         "organisons",
@@ -5306,10 +5356,13 @@
     {
       "id": "adj-genial",
       "type": "adjective",
-      "en": "great, brilliant",
+      "en": "brilliant, awesome, great",
       "masc": "génial",
       "fem": "géniale",
       "theme": "Describing places & people",
+      "alt": [
+        "super / super"
+      ],
       "example": {
         "fr": "L'art moderne, c'est génial.",
         "en": "Modern art is great."
@@ -5318,10 +5371,13 @@
     {
       "id": "adj-super",
       "type": "adjective",
-      "en": "great, super",
+      "en": "super, really good, great",
       "masc": "super",
       "fem": "super",
       "theme": "Describing places & people",
+      "alt": [
+        "génial / géniale"
+      ],
       "example": {
         "fr": "Le quartier Saint-Laurent est super !",
         "en": "The Saint-Laurent district is great!"
@@ -5892,6 +5948,22 @@
       }
     },
     {
+      "id": "adj-bienvenu",
+      "type": "adjective",
+      "en": "welcome (as in 'you're welcome here')",
+      "masc": "bienvenu",
+      "fem": "bienvenue",
+      "theme": "Describing places & people",
+      "tip": "Tu es le bienvenu / la bienvenue. The greeting 'Bienvenue !' never changes.",
+      "confusables": [
+        "x-bienvenue"
+      ],
+      "example": {
+        "fr": "Tu es la bienvenue chez moi.",
+        "en": "You're welcome at my place."
+      }
+    },
+    {
       "id": "adj-masculin",
       "type": "adjective",
       "en": "masculine",
@@ -6067,6 +6139,7 @@
       "masc": "vert sapin",
       "fem": "vert sapin",
       "theme": "Colours",
+      "kindOf": "adj-vert",
       "example": {
         "fr": "Une porte vert sapin.",
         "en": "A fir-green door."
@@ -6091,6 +6164,7 @@
       "masc": "bleu foncé",
       "fem": "bleu foncé",
       "theme": "Colours",
+      "kindOf": "adj-bleu",
       "example": {
         "fr": "Un pantalon bleu foncé.",
         "en": "Dark blue trousers."
@@ -6164,6 +6238,7 @@
       "masc": "bleu-gris",
       "fem": "bleu-gris",
       "theme": "Colours",
+      "kindOf": "adj-bleu",
       "tip": "Compound colour: never changes",
       "example": {
         "fr": "Mon portefeuille est bleu-gris.",
@@ -6297,7 +6372,7 @@
     {
       "id": "x-je-vais-bien",
       "type": "expression",
-      "en": "I'm well. (ça…)",
+      "en": "I'm well. (= ça va)",
       "fr": "Je vais bien.",
       "theme": "Greetings, phrases and questions",
       "example": {
@@ -6375,6 +6450,9 @@
       "en": "Welcome",
       "fr": "Bienvenue",
       "theme": "Greetings, phrases and questions",
+      "confusables": [
+        "adj-bienvenu"
+      ],
       "example": {
         "fr": "Bienvenue sur le site !",
         "en": "Welcome to the site!"
@@ -6392,17 +6470,6 @@
       "example": {
         "fr": "Voilà ma carte de visite.",
         "en": "Here's my business card."
-      }
-    },
-    {
-      "id": "x-ah-ok",
-      "type": "expression",
-      "en": "Ah, OK!",
-      "fr": "Ah, OK !",
-      "theme": "Greetings, phrases and questions",
-      "example": {
-        "fr": "Ah, OK, merci !",
-        "en": "Ah, OK, thanks!"
       }
     },
     {
@@ -6645,7 +6712,8 @@
       "type": "expression",
       "en": "What are your parents' names?",
       "fr": "Comment s'appellent tes parents ?",
-      "theme": "Useful questions"
+      "theme": "Useful questions",
+      "tip": "'Quels sont les noms de tes parents ?' is correct but unnatural, and nom often means surname. For first names: 'Quels sont les prénoms de tes parents ?'"
     },
     {
       "id": "x-ou-habitent-tes-parents",
@@ -7375,7 +7443,8 @@
       "fr": "tous les soirs",
       "theme": "Adverbs",
       "example": {
-        "fr": "Il travaille tous les week-ends."
+        "fr": "Tu téléphones à ta mère tous les soirs.",
+        "en": "You call your mother every evening."
       }
     },
     {
@@ -7506,7 +7575,8 @@
       "theme": "Adverbs",
       "tip": "beaucoup de + noun, no article",
       "confusables": [
-        "x-peu-de"
+        "x-peu-de",
+        "x-beaucoup"
       ],
       "example": {
         "fr": "J'ai beaucoup de stylos.",
@@ -7850,14 +7920,15 @@
     {
       "id": "n-fois",
       "type": "noun",
-      "en": "time (occasion)",
+      "en": "time(s) (occasion)",
       "fr": "fois",
       "gender": "f",
       "article": "la",
       "theme": "Time: days, months and seasons",
-      "tip": "fois (time) / foi (faith) / foie (liver) all sound the same",
+      "tip": "fois (time(s)) / foi (faith) / foie (liver) all sound the same",
       "confusables": [
-        "n-foie-gras"
+        "n-foie-gras",
+        "x-une-fois-par-semaine"
       ],
       "example": {
         "fr": "Une ou deux fois par semaine.",
@@ -8286,6 +8357,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Home, places and transport",
+      "confusables": [
+        "n-code"
+      ],
       "example": {
         "fr": "Le code postal est 75007.",
         "en": "The postcode is 75007."
@@ -9038,6 +9112,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Hobbies, sports and music",
+      "kindOf": "n-cours",
       "example": {
         "fr": "Nous n'aimons pas le cours de danse.",
         "en": "We don't like the dance class."
@@ -9171,6 +9246,7 @@
       "article": "les",
       "pluralOnly": true,
       "theme": "Hobbies, sports and music",
+      "kindOf": "n-jeu",
       "example": {
         "fr": "Je n'aime pas les jeux vidéo.",
         "en": "I don't like video games."
@@ -9199,6 +9275,7 @@
       "article": "les",
       "pluralOnly": true,
       "theme": "Hobbies, sports and music",
+      "kindOf": "n-jeu",
       "example": {
         "fr": "J'aime les jeux de société.",
         "en": "I like board games."
@@ -9277,6 +9354,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Hobbies, sports and music",
+      "kindOf": "n-livre",
       "example": {
         "fr": "J'écoute un livre audio.",
         "en": "I'm listening to an audiobook."
@@ -9866,11 +9944,14 @@
     {
       "id": "n-pain-au-chocolat",
       "type": "noun",
-      "en": "pain au chocolat",
+      "en": "chocolate pastry",
       "fr": "pain au chocolat",
       "gender": "m",
       "article": "le",
       "theme": "At the bakery",
+      "confusables": [
+        "n-pain-aux-raisins"
+      ],
       "example": {
         "fr": "J'adore les pains au chocolat.",
         "en": "I love pains au chocolat."
@@ -9933,7 +10014,7 @@
     {
       "id": "n-escargots",
       "type": "noun",
-      "en": "snails",
+      "en": "snails (food)",
       "fr": "escargots",
       "gender": "m",
       "article": "les",
@@ -10622,6 +10703,7 @@
       "gender": "m",
       "article": "le",
       "theme": "At the bakery",
+      "kindOf": "n-gateau",
       "example": {
         "fr": "Une bougie sur le gâteau d'anniversaire.",
         "en": "A candle on the birthday cake."
@@ -10677,9 +10759,7 @@
       "gender": "m",
       "article": "le",
       "theme": "At the bakery",
-      "confusables": [
-        "n-croissant"
-      ],
+      "kindOf": "n-croissant",
       "example": {
         "fr": "Un croissant aux amandes.",
         "en": "An almond croissant."
@@ -10777,14 +10857,12 @@
       "gender": "f",
       "article": "la",
       "theme": "At the bakery",
+      "kindOf": "n-tarte",
       "alt": [
         "la tarte au citron meringuée",
         "la tarte citron meringuée"
       ],
       "tip": "meringuée = with meringue",
-      "confusables": [
-        "n-tarte"
-      ],
       "example": {
         "fr": "Une tarte citron meringuée pour 6 personnes.",
         "en": "A lemon meringue tart for 6."
@@ -11034,12 +11112,9 @@
       "gender": "f",
       "article": "la",
       "theme": "Food and drink",
-      "alt": [
-        "la crème chantilly"
-      ],
-      "tip": "la crème chantilly = whipped cream",
+      "tip": "la crème fouettée = whipped cream",
       "example": {
-        "fr": "Une glace avec de la crème chantilly.",
+        "fr": "Une glace avec de la crème fouettée.",
         "en": "An ice cream with whipped cream."
       }
     },
@@ -11078,9 +11153,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Food and drink",
-      "confusables": [
-        "n-fromage"
-      ],
+      "kindOf": "n-fromage",
       "example": {
         "fr": "Deux fromages de chèvre, s'il vous plaît.",
         "en": "Two goat's cheeses, please."
@@ -11094,9 +11167,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Food and drink",
-      "confusables": [
-        "n-fromage"
-      ],
+      "kindOf": "n-fromage",
       "example": {
         "fr": "Le camembert est un fromage de vache.",
         "en": "Camembert is a cow's cheese."
@@ -11110,9 +11181,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Food and drink",
-      "confusables": [
-        "n-fromage"
-      ],
+      "kindOf": "n-fromage",
       "example": {
         "fr": "J'aime le fromage de brebis.",
         "en": "I like sheep's cheese."
@@ -11126,7 +11195,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Food and drink",
-      "tip": "le foie = liver; not fois (time) or foi (faith)",
+      "tip": "le foie = liver; not fois (time(s)) or foi (faith)",
       "confusables": [
         "n-fois"
       ],
@@ -11406,6 +11475,7 @@
       "gender": "m",
       "article": "le",
       "theme": "Animals and nature",
+      "kindOf": "n-poisson",
       "example": {
         "fr": "J'ai des poissons rouges.",
         "en": "I have goldfish."
@@ -11453,7 +11523,7 @@
     {
       "id": "n-escargot",
       "type": "noun",
-      "en": "snail",
+      "en": "snail (animal)",
       "fr": "escargot",
       "gender": "m",
       "article": "l'",
@@ -11692,9 +11762,7 @@
       "gender": "m",
       "article": "l'",
       "theme": "Animals and nature",
-      "confusables": [
-        "n-animal"
-      ],
+      "kindOf": "n-animal",
       "example": {
         "fr": "Tu as un animal de compagnie ?",
         "en": "Do you have a pet?"
@@ -12517,6 +12585,7 @@
       "gender": "m",
       "article": "le",
       "theme": "What's in your bag",
+      "kindOf": "n-sac",
       "example": {
         "fr": "Mon sac à dos est noir.",
         "en": "My backpack is black."
@@ -12530,6 +12599,7 @@
       "gender": "m",
       "article": "le",
       "theme": "What's in your bag",
+      "kindOf": "n-sac",
       "example": {
         "fr": "J'ai un sac de sport.",
         "en": "I have a sports bag."
@@ -12543,6 +12613,7 @@
       "gender": "m",
       "article": "le",
       "theme": "What's in your bag",
+      "kindOf": "n-sac",
       "example": {
         "fr": "Je n'ai pas de sac à main.",
         "en": "I don't have a handbag."
@@ -12658,6 +12729,7 @@
       "gender": "m",
       "article": "le",
       "theme": "What's in your bag",
+      "kindOf": "n-crayon",
       "example": {
         "fr": "J'ai des crayons de couleur dans ma trousse.",
         "en": "I have coloured pencils in my pencil case."
@@ -12692,16 +12764,15 @@
     {
       "id": "n-gourde",
       "type": "noun",
-      "en": "water bottle",
+      "en": "water bottle (reusable)",
       "fr": "gourde",
       "gender": "f",
       "article": "la",
       "theme": "What's in your bag",
-      "alt": [
-        "la bouteille d'eau"
-      ],
+      "tip": "Une bouteille d'eau is a bottle of water, e.g. one you buy in a shop.",
       "confusables": [
-        "n-bouteille-en-plastique"
+        "n-bouteille-en-plastique",
+        "n-bouteille"
       ],
       "example": {
         "fr": "J'utilise toujours une gourde.",
@@ -12747,6 +12818,7 @@
       "gender": "m",
       "article": "le",
       "theme": "What's in your bag",
+      "kindOf": "n-sac",
       "confusables": [
         "n-sacoche"
       ],
@@ -12796,6 +12868,7 @@
       "gender": "f",
       "article": "la",
       "theme": "What's in your bag",
+      "kindOf": "n-bouteille",
       "tip": "non réutilisable = single-use",
       "confusables": [
         "n-gourde"
@@ -13033,6 +13106,9 @@
       "gender": "m",
       "article": "le",
       "theme": "Shopping",
+      "confusables": [
+        "n-code-postal"
+      ],
       "example": {
         "fr": "Votre code, s'il vous plaît.",
         "en": "Your PIN, please."
@@ -15113,6 +15189,7 @@
       "gender": "f",
       "article": "l'",
       "theme": "The French school system",
+      "kindOf": "n-ecole",
       "tip": "Classes: petite section, moyenne section, grande section",
       "example": {
         "fr": "Il va à l'école maternelle.",
@@ -15127,6 +15204,7 @@
       "gender": "f",
       "article": "l'",
       "theme": "The French school system",
+      "kindOf": "n-ecole",
       "tip": "Classes: CP, CE1, CE2, CM1, CM2",
       "example": {
         "fr": "Elle va à l'école primaire.",
@@ -15201,6 +15279,9 @@
       "gender": "f",
       "article": "la",
       "theme": "Quantities",
+      "confusables": [
+        "n-gourde"
+      ],
       "example": {
         "fr": "Une bouteille d'eau.",
         "en": "A bottle of water."
