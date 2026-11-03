@@ -3210,7 +3210,7 @@
     {
       "id": "v-mettre",
       "type": "verb",
-      "en": "to put",
+      "en": "to put (as in 'I put my book in my bag')",
       "infinitive": "mettre",
       "conj": [
         "mets",
@@ -3223,9 +3223,10 @@
       "rule": "irregular",
       "theme": "Verbs: irregular, -ir and -re verbs",
       "example": {
-        "fr": "Remettez le dialogue dans l'ordre.",
-        "en": "Put the dialogue back in order."
-      }
+        "fr": "Je mets mon livre dans mon sac.",
+        "en": "I put my book in my bag."
+      },
+      "tip": "One t in the singular (mets, mets, met), tt in the plural (mettons, mettez, mettent)."
     },
     {
       "id": "v-apprendre",
@@ -5980,7 +5981,8 @@
       "theme": "Useful questions",
       "alt": [
         "Quel est votre métier ?",
-        "Quel est ton travail ?"
+        "Quel est ton travail ?",
+        "Quelle est ta profession ?"
       ]
     },
     {
@@ -6349,7 +6351,7 @@
     {
       "id": "x-que",
       "type": "expression",
-      "en": "that",
+      "en": "that (as in 'I think that…')",
       "fr": "que",
       "theme": "Prepositions & linking words",
       "example": {
