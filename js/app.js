@@ -88,7 +88,16 @@ async function loadVocab() {
   // The service worker answers this from its cache, so it works offline.
   const response = await fetch('vocab.json');
   if (!response.ok) throw new Error(`Could not load vocab.json (${response.status})`);
-  return response.json();
+  try {
+    return await response.json();
+  } catch (cachedCopyParseError) {
+    // The cached copy is broken (e.g. a bad vocab.json was once deployed): fetch a fresh one,
+    // which also replaces the cached copy. If that fails too, report the original error.
+    console.warn('Cached vocab.json is invalid, fetching a fresh copy', cachedCopyParseError);
+    const freshResponse = await fetch(`vocab.json?fresh=${Date.now()}`, { cache: 'no-store' }).catch(() => null);
+    if (!freshResponse || !freshResponse.ok) throw cachedCopyParseError;
+    return freshResponse.json();
+  }
 }
 
 function useVocab(vocab) {
