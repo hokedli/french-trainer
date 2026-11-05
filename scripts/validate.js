@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import { SEED } from '../js/seed-progress.js';
 import { buildFillIn } from '../js/selection.js';
+import { lookupKey, ownForms, altForms, synonymLinkProblem } from '../js/grading.js';
 
 const vocabPath = new URL('../vocab.json', import.meta.url);
 const errors = [];
@@ -17,7 +18,7 @@ try {
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
 const RULES = ['-ger', '-cer', '-yer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
-const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'kindOf', 'alt', 'example', 'tip', 'confusables'];
+const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'kindOf', 'synonymOf', 'alt', 'examples', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
   country: ['fr', 'gender', 'article', 'pluralOnly', 'inTo'],
@@ -81,16 +82,48 @@ for (const [index, w] of vocab.words.entries()) {
   if ((w.type === 'expression' || w.type === 'number') && !isText(w.fr)) fail('missing "fr"');
 
   if (w.alt !== undefined && (!Array.isArray(w.alt) || !w.alt.every(isText))) fail('"alt" must be a list of strings');
-  if (w.example !== undefined) {
-    if (!isText(w.example?.fr)) fail('"example.fr" missing');
-    if (w.example?.en !== undefined && typeof w.example.en !== 'string') fail('"example.en" must be text');
+  if (w.examples !== undefined) {
+    if (!Array.isArray(w.examples) || !w.examples.length) fail('"examples" must be a non-empty list (leave it out if there are none)');
+    else w.examples.forEach((example, i) => {
+      if (!isText(example?.fr)) fail(`"examples[${i}].fr" missing`);
+      if (example?.en !== undefined && typeof example.en !== 'string') fail(`"examples[${i}].en" must be text`);
+      for (const key of Object.keys(example || {})) if (key !== 'fr' && key !== 'en') fail(`unknown field "${key}" in examples[${i}]`);
+    });
   }
   if (w.tip !== undefined && !isText(w.tip)) fail('"tip" must be text');
   if (w.confusables !== undefined && (!Array.isArray(w.confusables) || !w.confusables.every(isText))) fail('"confusables" must be a list of strings');
-  if (w.type !== 'number' && !w.example) warnings.push(`${where}: no example sentence`);
+  if (w.synonymOf !== undefined) {
+    if (!Array.isArray(w.synonymOf) || !w.synonymOf.length || !w.synonymOf.every(isText)) fail('"synonymOf" must be a non-empty list of ids');
+    else if (new Set(w.synonymOf).size !== w.synonymOf.length) fail('"synonymOf" lists an id twice');
+  }
+  if (w.type !== 'number' && !w.examples) warnings.push(`${where}: no example sentence`);
 }
 
 const wordsById = new Map(vocab.words.map((w) => [w.id, w]));
+
+// Other entries an alt refers to: "le professeur" in n-enseignant's alt is n-professeur's own word
+const idsByOwnForm = new Map();
+for (const w of vocab.words) {
+  for (const form of ownForms(w)) {
+    const key = lookupKey(form);
+    if (!idsByOwnForm.has(key)) idsByOwnForm.set(key, new Set());
+    idsByOwnForm.get(key).add(w.id);
+  }
+}
+const altIdsOf = (w) => new Set(altForms(w).flatMap((form) => [...(idsByOwnForm.get(lookupKey(form)) || [])]).filter((id) => id !== w.id));
+
+// id → the relations this entry has to it. An id may be only one of kindOf / synonymOf / confusables / alt per entry.
+function relationsOf(w) {
+  const relations = new Map();
+  const add = (id, relation) => { if (!relations.has(id)) relations.set(id, new Set()); relations.get(id).add(relation); };
+  if (w.kindOf !== undefined) add(w.kindOf, 'kindOf');
+  for (const id of w.synonymOf || []) add(id, 'synonymOf');
+  for (const id of w.confusables || []) if (wordsById.has(id)) add(id, 'confusables');
+  for (const id of altIdsOf(w)) add(id, 'alt');
+  return relations;
+}
+const relationsById = new Map(vocab.words.map((w) => [w.id, relationsOf(w)]));
+
 for (const w of vocab.words) {
   for (const c of w.confusables || []) {
     if (/^(n|v|adj|x|c|nat|num)-/.test(c) && !ids.has(c)) errors.push(`${w.id}: confusable "${c}" is not an id in vocab.json`);
@@ -100,6 +133,19 @@ for (const w of vocab.words) {
     if (!base) errors.push(`${w.id}: kindOf "${w.kindOf}" is not an id in vocab.json`);
     else if (base.id === w.id) errors.push(`${w.id}: kindOf points to itself`);
     else if (base.kindOf !== undefined) errors.push(`${w.id}: kindOf "${w.kindOf}" has its own kindOf — the base word must not have one`);
+  }
+  for (const id of Array.isArray(w.synonymOf) ? w.synonymOf : []) {
+    const problem = synonymLinkProblem(w, id, wordsById);
+    if (problem) errors.push(`${w.id}: synonymOf "${id}" ${problem}`);
+  }
+  for (const [id, relations] of relationsById.get(w.id)) {
+    if (relations.size > 1) errors.push(`${w.id}: "${id}" is in ${[...relations].join(' and ')} — an id can only be one of kindOf, synonymOf, confusables or alt`);
+    // Confusables are never accepted, so the other entry must not accept this one or link it by kindOf either
+    const reverse = relationsById.get(id)?.get(w.id);
+    if (relations.has('confusables')) {
+      if (!reverse) warnings.push(`${w.id}: confusable "${id}" doesn't list ${w.id} back (links go both ways)`);
+      else if (!reverse.has('confusables')) errors.push(`${w.id}: "${id}" is a confusable here, but ${id} has ${w.id} in ${[...reverse].join(' and ')}`);
+    }
   }
 }
 for (const id of Object.keys(SEED.boxes)) {

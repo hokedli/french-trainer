@@ -102,10 +102,10 @@ function fillInForms(entry) {
   }
 }
 
-// Blanks the vocab word (or the conjugated form) out of the example sentence; null if not possible.
-export function buildFillIn(entry) {
-  if (!entry.example?.fr || !entry.example?.en) return null;
-  const sentence = entry.example.fr;
+// Blanks the vocab word (or the conjugated form) out of one example sentence; null if not possible.
+function blankExample(entry, example) {
+  if (!example.fr || !example.en) return null;
+  const sentence = example.fr;
   const forms = fillInForms(entry).sort((a, b) => b.form.length - a.form.length);
   for (const { form, formIndex } of forms) {
     if (form.length < 2) continue;
@@ -115,14 +115,35 @@ export function buildFillIn(entry) {
     const blanked = sentence.slice(0, start) + BLANK + sentence.slice(start + match[2].length);
     if (blanked.replace(BLANK, '').replace(/[^\p{L}]/gu, '').length < 4) continue;
     const hint = entry.type === 'verb' ? entry.infinitive : entry.type === 'adjective' ? entry.masc || entry.fem : null;
-    return { sentence: blanked, answer: match[2], hint, translation: entry.example.en, formIndex };
+    return { example, sentence: blanked, answer: match[2], hint, formIndex };
   }
   return null;
 }
 
+// A fill-in from a random example among those that can be blanked; null if none can.
+export function buildFillIn(entry, random = Math.random) {
+  const usableFillIns = (entry.examples || []).map((example) => blankExample(entry, example)).filter(Boolean);
+  return pickRandom(usableFillIns, random);
+}
+
+const pickRandom = (items, random) => (items.length ? items[Math.floor(random() * items.length)] : null);
+
 // Mostly vocab: 1–2 of the set become sentence fill-ins when possible.
+// Each item carries the one example it uses (the fill-in's, otherwise a random one), so the
+// question and the results show the same sentence.
 export function buildItems(chosenWords, random = Math.random) {
   const fillInCount = random() < 0.5 ? 1 : 2;
-  const fillInIds = new Set(shuffle(chosenWords.filter((w) => buildFillIn(w)), random).slice(0, fillInCount).map((w) => w.id));
-  return chosenWords.map((entry) => (fillInIds.has(entry.id) ? { entry, fillIn: buildFillIn(entry) } : { entry }));
+  const fillInsById = new Map();
+  for (const entry of chosenWords) {
+    const fillIn = buildFillIn(entry, random);
+    if (fillIn) fillInsById.set(entry.id, fillIn);
+  }
+  const fillInIds = new Set(shuffle([...fillInsById.keys()], random).slice(0, fillInCount));
+  return chosenWords.map((entry) => {
+    if (fillInIds.has(entry.id)) {
+      const fillIn = fillInsById.get(entry.id);
+      return { entry, fillIn, example: fillIn.example };
+    }
+    return { entry, example: pickRandom(entry.examples || [], random) };
+  });
 }

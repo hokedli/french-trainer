@@ -124,22 +124,29 @@ export function formatAnswer(entry) {
 
 // ---------- lookup of other vocab words ----------
 
-const lookupKey = (s) => stripAccents(expandLigatures(withoutPunctuation(normalizeText(s))));
+export const lookupKey = (s) => stripAccents(expandLigatures(withoutPunctuation(normalizeText(s))));
 
-function formsForLookup(entry) {
-  const altWords = (entry.alt || []).map((a) => parseNounAnswer(normalizeText(a)).word);
+// The entry's own word(s), without alts: "sac", "grand" + "grande", "manger"
+export const ownForms = (entry) => [entry.fr, entry.masc, entry.fem, entry.infinitive].filter(Boolean);
+
+// The words in the entry's alts, as the lookup indexes them
+export function altForms(entry) {
+  const alts = entry.alt || [];
   switch (entry.type) {
     case 'noun':
     case 'country':
-      return [entry.fr, ...altWords];
+      return alts.map((a) => parseNounAnswer(normalizeText(a)).word);
     case 'adjective':
-      return [entry.masc, entry.fem, ...(entry.alt || []).flatMap((a) => a.split('/'))];
+      // Drop bracketed notes first, or "tchèque (m/f)" would split into "tchèque (m" and "f)"
+      return alts.flatMap((a) => a.replace(/\s*\(.*?\)/g, '').split('/'));
     case 'verb':
-      return [entry.infinitive];
+      return [];
     default:
-      return [entry.fr, ...(entry.alt || [])];
+      return alts;
   }
 }
+
+const formsForLookup = (entry) => [...ownForms(entry), ...altForms(entry)];
 
 // kindOf links: entry → its more general "base word". Invalid links are logged and ignored.
 function buildKindOfLinks(words) {
@@ -164,7 +171,36 @@ function buildKindOfLinks(words) {
   return { byId, baseIdByKindId, kindsByBaseId };
 }
 
-// Reverse index from every accepted answer to the entries it belongs to, plus the kindOf links.
+// Why entry's synonymOf link to otherId is invalid, or null. Confusables are never accepted as each other's answer,
+// and an id is only ever one of kindOf / synonymOf / confusables / alt for an entry.
+export function synonymLinkProblem(entry, otherId, byId) {
+  const other = byId.get(otherId);
+  if (!other) return 'is not an id in vocab.json';
+  if (other.id === entry.id) return 'points to the entry itself';
+  if (other.type !== entry.type) return `is a ${other.type}, not a ${entry.type}`;
+  if ((entry.confusables || []).includes(other.id) || (other.confusables || []).includes(entry.id)) return 'is also a confusable';
+  if (entry.kindOf === other.id || other.kindOf === entry.id || (entry.kindOf && entry.kindOf === other.kindOf)) {
+    return 'is linked by kindOf (base word or another kind of it)';
+  }
+  return null;
+}
+
+// synonymOf links, one direction: entry → ids whose answers are also right on its card. Invalid links are logged and ignored.
+function buildSynonymLinks(words, byId) {
+  const synonymIdsById = new Map();
+  for (const entry of words) {
+    const validIds = new Set();
+    for (const otherId of entry.synonymOf || []) {
+      const problem = synonymLinkProblem(entry, otherId, byId);
+      if (problem) console.warn(`vocab: ${entry.id} has synonymOf "${otherId}", which ${problem} — link ignored`);
+      else validIds.add(otherId);
+    }
+    if (validIds.size) synonymIdsById.set(entry.id, validIds);
+  }
+  return synonymIdsById;
+}
+
+// Reverse index from every accepted answer to the entries it belongs to, plus the kindOf and synonymOf links.
 export function buildLookup(words) {
   const byForm = new Map();
   for (const entry of words) {
@@ -176,6 +212,7 @@ export function buildLookup(words) {
     }
   }
   const { byId, baseIdByKindId, kindsByBaseId } = buildKindOfLinks(words);
+  const synonymIdsById = buildSynonymLinks(words, byId);
   const findAll = (form, excludeId, type) => (byForm.get(lookupKey(form)) || [])
     .filter((e) => e.id !== excludeId && (!type || e.type === type));
   return {
@@ -183,6 +220,7 @@ export function buildLookup(words) {
     find: (form, excludeId, type) => findAll(form, excludeId, type)[0],
     baseOf: (entry) => byId.get(baseIdByKindId.get(entry.id)) || null,
     kindsOf: (entry) => kindsByBaseId.get(entry.id) || [],
+    synonymIdsOf: (entry) => synonymIdsById.get(entry.id) || new Set(),
   };
 }
 
@@ -205,37 +243,19 @@ function otherWordNote(entry, other, lookup) {
   if (base && lookup.baseOf(other)?.id === base.id) {
     return `That's another kind of **${bareName(base)}**: **${shortName(other)}** = ${other.en}.`;
   }
-  return `You wrote **${shortName(other)}** = ${other.en}.`;
+  return `**${shortName(other)}** = ${other.en}.`;
 }
 
-// Splits "a, b / c (d, e)" at top level only: ["a", "b", "c (d, e)"]
-function meanings(en) {
-  const result = [];
-  let depth = 0;
-  let current = '';
-  for (const ch of en.toLowerCase()) {
-    if (ch === '(') depth++;
-    if (ch === ')') depth--;
-    if (depth === 0 && /[,;/]/.test(ch)) { result.push(current); current = ''; } else current += ch;
-  }
-  result.push(current);
-  return result.map((m) => m.replace(/[?!.]+$/, '').trim()).filter(Boolean);
-}
-
-// Same type and the other word's meaning matches one of the prompt's meanings
-function isSynonym(promptEntry, otherEntry) {
-  if (promptEntry.type !== otherEntry.type) return false;
-  const promptMeanings = new Set(meanings(promptEntry.en));
-  return meanings(otherEntry.en).some((m) => promptMeanings.has(m.replace(/\s*\(.*?\)\s*/g, ' ').trim()));
-}
-
+// The answer is another entry. If this entry's synonymOf links to it, it is graded with that entry's own rules
+// (a full answer counts as correct, with "Also right: …"); otherwise it is wrong and the note says what it means.
 function gradeAsOtherWord(entry, raw, form, ctx, type) {
   if (!ctx.lookup || ctx.isNestedLookup) return null;
   const others = ctx.lookup.findAll(form, entry.id, type);
   if (!others.length) return null;
-  for (const other of others.filter((o) => isSynonym(entry, o))) {
+  const synonymIds = ctx.lookup.synonymIdsOf(entry);
+  for (const other of others.filter((o) => synonymIds.has(o.id))) {
     const otherGrade = gradeEntry(other, raw, { ...ctx, isNestedLookup: true });
-    if (otherGrade.result !== 'wrong') {
+    if (otherGrade && otherGrade.result !== 'wrong') {
       return {
         result: otherGrade.result,
         notes: [`Also right: **${shortName(other)}** = ${other.en}. The word we were after: **${shortName(entry)}**.`, ...otherGrade.notes],
@@ -251,7 +271,7 @@ const ARTICLE_GENDER = { le: 'm', la: 'f', un: 'm', une: 'f', 'le/la': 'mf' };
 const GENDER_WORDS = {
   m: 'm', masc: 'm', masculin: 'm', masculine: 'm',
   f: 'f', fem: 'f', 'fém': 'f', feminin: 'f', 'féminin': 'f', feminine: 'f', 'féminine': 'f',
-  'm/f': 'mf', 'f/m': 'mf',
+  'm/f': 'mf', 'f/m': 'mf', mf: 'mf', fm: 'mf',
 };
 const GENDER_PATTERNS = [
   [/age$/, 'm', '-age'], [/ier$/, 'm', '-ier'], [/ment$/, 'm', '-ment'], [/eau$/, 'm', '-eau'], [/isme$/, 'm', '-isme'],
@@ -263,10 +283,13 @@ const genderName = (g) => (g === 'm' ? 'masculine' : 'feminine');
 function parseNounAnswer(text) {
   let rest = withoutTrailingPunctuation(text);
   let gender = null;
-  const genderMatch = rest.match(/(?:^|\s|\()\(?\s*(m\/f|f\/m|masculine|masculin|masc|m|féminine|feminine|féminin|feminin|fém|fem|f)\s*\.?\s*\)?$/);
-  if (genderMatch) {
+  const genderMatch = rest.match(/(?:^|\s|\()\(?\s*(m\/f|f\/m|masculine|masculin|masc|m|mf|féminine|feminine|féminin|feminin|fém|fem|f|fm)\s*\.?\s*\)?$/);
+  const beforeGender = genderMatch ? rest.slice(0, genderMatch.index).trim() : '';
+  // Only a marker when a noun comes before it: "le masculin" is the noun masculin, not le + (m)
+  const isGenderMarker = Boolean(genderMatch) && !/^(le|la|les|un|une|des|l'|le\s*\/\s*la)?$/.test(beforeGender);
+  if (isGenderMarker) {
     gender = GENDER_WORDS[genderMatch[1]];
-    rest = rest.slice(0, genderMatch.index).trim();
+    rest = beforeGender;
   }
   let article = null;
   let m;
@@ -291,7 +314,12 @@ function nounCandidates(entry) {
       requireGender: article === "l'", display: altText,
     };
   });
-  return [main, ...alternatives];
+  const candidates = [main, ...alternatives];
+  // Every form with this word, e.g. "le dentiste / la dentiste" for an mf noun with its feminine in alt
+  for (const candidate of candidates) {
+    candidate.sameWordDisplay = unique(candidates.filter((other) => other.word === candidate.word).map((other) => other.display)).join(' / ');
+  }
+  return candidates;
 }
 
 function genderNote(candidate) {
@@ -318,8 +346,16 @@ function gradeNounAgainst(answer, candidate) {
   } else if (cmp.kind === 'different') return { result: 'wrong', notes, different: true };
   else wordResult = 'partial';
   if (!pluralIssue) notes.push(...comparisonNotes(cmp));
+  const wordExact = cmp.kind === 'exact';
 
-  const givenGender = answer.gender || ARTICLE_GENDER[answer.article] || null;
+  // "le conductrice (f)": the article and the gender marker contradict each other
+  const articleGender = ARTICLE_GENDER[answer.article] || null;
+  if (answer.gender && articleGender && answer.gender !== 'mf' && articleGender !== 'mf' && answer.gender !== articleGender) {
+    notes.push(`**${answer.article}** is ${genderName(articleGender)}, but you marked it (${answer.gender}): **${candidate.sameWordDisplay}**.`);
+    return { result: 'wrong', notes, wordExact };
+  }
+
+  const givenGender = answer.gender || articleGender;
   const genderRight = Boolean(givenGender) && (candidate.gender === 'mf' || givenGender === candidate.gender);
   const expected = candidate.article;
   const given = answer.article;
@@ -368,18 +404,25 @@ function gradeNounAgainst(answer, candidate) {
 
   if (pluralIssue) notes.unshift(`**${candidate.display}** is always plural in French.`);
   if (wordResult !== 'correct' && genderRight && expected) notes.push('Gender right ✓');
-  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue };
+  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue, wordExact };
 }
 
 function bestGrade(grades) {
   return grades.reduce((best, g) => (RESULT_RANK[g.result] > RESULT_RANK[best.result] || (best.different && !g.different) ? g : best));
 }
 
+// Grade against the form the learner actually wrote: for ami / amie, "l'amie (m)" is a gender
+// mistake on amie, not a misspelling of ami.
+function bestNounGrade(grades) {
+  const exactWordGrades = grades.filter((g) => g.wordExact);
+  return bestGrade(exactWordGrades.length ? exactWordGrades : grades);
+}
+
 function gradeNoun(entry, raw, ctx) {
   const text = normalizeText(raw);
   const parts = /^le\s*\/\s*la\s/.test(text) ? [text] : text.split(/\s*\/\s*(?=le\s|la\s|les\s|l')/).filter(Boolean);
   const candidates = nounCandidates(entry);
-  const grades = parts.map((part) => bestGrade(candidates.map((c) => gradeNounAgainst(parseNounAnswer(part), c))));
+  const grades = parts.map((part) => bestNounGrade(candidates.map((c) => gradeNounAgainst(parseNounAnswer(part), c))));
   if (grades.length === 1 && (grades[0].different || grades[0].close)) {
     // A near-spelling that is really another vocab word (la mère for la mer) counts as the wrong word
     const asOtherWord = gradeAsOtherWord(entry, raw, parseNounAnswer(parts[0]).word, ctx);
@@ -444,18 +487,26 @@ function gradeAdjectiveAgainst(forms, candidate) {
   return { result, notes };
 }
 
+// "(m)", "(f)", "(m/f)", "(m / f)", "(m,f)", "(mf)", "(f/m)", "(fm)". Only bracketed ones: a bare word could be
+// a real form ("masculin / masculine"). For adjectives the forms already show the gender, so markers are ignored.
+const BRACKETED_GENDER_MARKER = /\s*\(\s*(?:m|f)(?:\s*[\/,]?\s*(?:m|f))?\s*\)/g;
+const withoutGenderMarkers = (text) => text.replace(BRACKETED_GENDER_MARKER, '');
+
 function gradeAdjective(entry, raw, ctx) {
-  const forms = splitAdjectiveForms(normalizeText(raw), entry);
+  const forms = splitAdjectiveForms(withoutGenderMarkers(normalizeText(raw)), entry);
   const candidates = [
     { masc: entry.masc && normalizeText(entry.masc), fem: normalizeText(entry.fem) },
-    ...(entry.alt || []).map((a) => { const [m, f] = a.split('/').map(normalizeText); return { masc: m, fem: f || m }; }),
+    ...(entry.alt || []).map((a) => { const [m, f] = withoutGenderMarkers(a).split('/').map(normalizeText); return { masc: m, fem: f || m }; }),
   ];
   const grade = bestGrade(candidates.map((c) => gradeAdjectiveAgainst(forms, c)));
   if (grade.different) return gradeAsOtherWord(entry, raw, forms[0] || '', ctx) || { result: 'wrong', notes: [] };
   if (grade.result !== 'correct' && forms.length) {
+    // A near-spelling that is really another word; the entry's own forms (géniale for génial) never count
+    const ownForms = [entry.masc, entry.fem].filter(Boolean).map(normalizeText);
     const otherEntry = ctx.lookup?.find(forms[0], entry.id, 'adjective');
-    if (otherEntry && compareText(forms[0], normalizeText(entry.masc || entry.fem)).kind === 'close') {
-      return gradeAsOtherWord(entry, raw, forms[0], ctx);
+    if (otherEntry && !ownForms.includes(forms[0]) && compareText(forms[0], normalizeText(entry.masc || entry.fem)).kind === 'close') {
+      // null inside a nested lookup: then this entry's own grade stands
+      return gradeAsOtherWord(entry, raw, forms[0], ctx) || grade;
     }
   }
   return grade;

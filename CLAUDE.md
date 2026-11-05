@@ -26,16 +26,21 @@ Progress lives in Firestore as an append-only log: `users/{uid}/attempts/{autoId
 ## vocab.json format
 
 ```json
-{ "version": 7, "words": [ { "id": "n-quartier", "type": "noun", ... } ] }
+{ "version": 8, "words": [ { "id": "n-quartier", "type": "noun", ... } ] }
 ```
 
-Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `theme`, optional `alt` (other accepted answers), `example` `{ "fr", "en" }`, `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`), `kindOf` (id of a more general base word, placed right after `theme`: `n-sac-a-dos` has `"kindOf": "n-sac"`).
+Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `theme`, optional `alt` (other accepted spellings of this entry: gendered forms, or wordings with exactly the same meaning), `examples` (array of `{ "fr", "en" }`, even for one sentence; leave it out if there are none), `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`), `kindOf` (id of a more general base word, placed right after `theme`: `n-sac-a-dos` has `"kindOf": "n-sac"`), `synonymOf` (ids of other entries also accepted on this card, placed after `kindOf`, or after `theme` if there is none: `"synonymOf": ["n-metier"]`).
 
 **kindOf**: only on the specific entry; the base word doesn't list its kinds (the app collects them). The base must exist, must not be the entry itself and must not have its own `kindOf` — `validate.js` reports these as errors, and the app logs a warning and ignores the link. Use it when the specific word is still the same kind of thing (backpack → bag); if the meaning changes, use `confusables` (pomme / pomme de terre). Full rules: "French–English Vocabulary.md" → "For vocab.json: entries to add" → "How to convert".
 
+**synonymOf**: one direction only — the listed entries are accepted on this entry's card, not the other way round. For a two-way pair, list it on both entries (`n-travail` ↔ `n-metier`); one-way where the other prompt asks for a specific register (`n-enseignant` → `n-prof`, but "teacher (informal)" doesn't accept enseignant). Works for verbs too (`v-terminer` ↔ `v-finir`), which have no `alt`. A synonym answer is graded with the other entry's own rules (its alts, both adjective forms, full conjugation) and counts as correct in the Leitner boxes. Each id must exist, be a different entry of the same type, and not be a confusable (either direction) or a kindOf base / kind / sibling — `validate.js` reports these as errors, and the app logs a warning and ignores the link.
+
+**One relation per id**: for an entry, an id is only ever one of `kindOf`, `synonymOf`, `confusables` or `alt` (an alt that is another entry's own word counts as that id). Confusables are never accepted as each other's answer, so the other entry mustn't accept or kindOf-link this one either. `validate.js` enforces both; confusables that aren't listed back are a warning.
+
 **Feedback that uses these fields** (in `js/grading.js`, results page only):
 - Correct answer to a base word → `Also: le sac à dos (backpack, rucksack) · …` listing its kinds.
-- Wrong answer that is another entry (all matches, verbs by infinitive only) → `Almost: la bouteille (bottle) is the general word; …` if it is the prompt's base word, `That's another kind of sac: le sac à main = handbag.` if it shares the base, otherwise `You wrote la pomme = apple.` (confusables included). Synonyms still get `Also right: …`.
+- Wrong answer that is another entry (all matches, verbs by infinitive only) → `Almost: la bouteille (bottle) is the general word; …` if it is the prompt's base word, `That's another kind of sac: le sac à main = handbag.` if it shares the base, otherwise `la pomme = apple.` (confusables included).
+- Answer that is a `synonymOf` entry of the prompt → `Also right: le métier = job, trade. The word we were after: le travail.` and the synonym's own grade (correct for a full answer). Without a link, another entry is always wrong.
 
 | type | fields | example |
 | --- | --- | --- |
@@ -52,7 +57,7 @@ Alternatives for paired nouns go in `alt` as full answers: `"alt": ["la voisine"
 **Id convention** (only for new words; existing ids never change, even if the word is edited):
 prefix + slug of the French without accents: `n-` noun, `v-` verb, `adj-` adjective, `nat-` nationality, `c-` country, `x-` expression, `num-` number. `œ` → `oe`. Example: `la sœur` → `n-soeur`. If the slug is taken, add a meaning suffix (`x-ou-where`).
 
-Examples should be simple A1 sentences that contain the word, with an English translation — they are used for sentence fill-ins. Don't use the user's real name, surname, birthday or other personal details in examples (the repo is public).
+Examples should be simple A1 sentences that contain the word, with an English translation, one `{fr, en}` object per sentence (never several sentences in one string). Each set picks one example per word at random: fill-ins choose among the examples that contain the word, and the results page shows the same example the card used. Don't use the user's real name, surname, birthday or other personal details in examples (the repo is public).
 
 ## How to add or change words
 

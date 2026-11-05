@@ -191,7 +191,7 @@ function promptHtml(item, index) {
     : `<input type="text" ${fieldAttributes} enterkeyhint="next">`;
   const question = item.fillIn
     ? `<div class="prompt-text">${escapeHtml(item.fillIn.sentence)}${item.fillIn.hint ? ` <span class="paren">(${escapeHtml(item.fillIn.hint)})</span>` : ''}</div>
-       <div class="prompt-sub">${escapeHtml(item.fillIn.translation)} · fill in the blank</div>`
+       <div class="prompt-sub">${escapeHtml(item.example.en)} · fill in the blank</div>`
     : `<div class="prompt-text">${escapeHtml(item.entry.en)}</div><div class="prompt-sub">${escapeHtml(typeHint(item.entry))}</div>`;
   return `<li class="prompt"><label for="answer-${index}">${question}</label>${field}</li>`;
 }
@@ -225,15 +225,15 @@ function correctAnswerHtml(item, graded) {
 }
 
 function resultRowHtml({ item, answer, graded }, index) {
-  const { entry, fillIn } = item;
+  const { entry, fillIn, example } = item;
   const english = fillIn
-    ? `${escapeHtml(fillIn.sentence)}<div class="prompt-sub">${escapeHtml(fillIn.translation)}</div>`
+    ? `${escapeHtml(fillIn.sentence)}<div class="prompt-sub">${escapeHtml(example.en)}</div>`
     : escapeHtml(entry.en);
   const youWrote = isDontKnow(answer) ? '<span class="muted">—</span>' : escapeHtml(answer.trim()).replace(/\n/g, '<br>');
   const notes = graded.notes.map((n) => `<p>${formatNote(n)}</p>`);
-  if (graded.showExample && entry.example) {
-    const translation = entry.example.en ? ` — <i>${escapeHtml(entry.example.en)}</i>` : '';
-    notes.push(`<p class="example">${escapeHtml(entry.example.fr)}${translation}</p>`);
+  if (graded.showExample && example) {
+    const translation = example.en ? ` — <i>${escapeHtml(example.en)}</i>` : '';
+    notes.push(`<p class="example">${escapeHtml(example.fr)}${translation}</p>`);
   }
   return `
     <tr class="row-${graded.result}">
