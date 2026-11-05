@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "words": [
     {
       "id": "n-prenom",
@@ -864,7 +864,7 @@
       "alt": [
         "la secrétaire"
       ],
-      "tip": "Le secrétaire (m) is also a writing desk.",
+      "tip": "Le secrétaire (m) is also a writing desk. La secrétaire is only the person.",
       "examples": [
         {
           "fr": "Ma mère est secrétaire.",
@@ -1447,11 +1447,15 @@
       "alt": [
         "la jardinière"
       ],
-      "tip": "La jardinière is also a planter or window box and a dish of mixed vegetables; jardinière d'enfants = kindergarten teacher.",
+      "tip": "La jardinière is more often a planter or window box. Also a dish of mixed vegetables. Jardinière d'enfants = kindergarten teacher (old-fashioned).",
       "examples": [
         {
           "fr": "Le jardinier aime les fleurs.",
           "en": "The gardener likes flowers."
+        },
+        {
+          "fr": "Ma voisine est jardinière.",
+          "en": "My neighbour is a gardener."
         }
       ]
     },
@@ -1715,6 +1719,55 @@
       ]
     },
     {
+      "id": "n-chanteur-lyrique",
+      "type": "noun",
+      "en": "opera singer (2 words)",
+      "fr": "chanteur lyrique",
+      "gender": "m",
+      "article": "le",
+      "theme": "Jobs",
+      "kindOf": "n-chanteur",
+      "alt": [
+        "la chanteuse lyrique", 
+        "le chanteur d'opéra", 
+        "la chanteuse d'opéra"
+      ],
+      "tip": "For a woman you may also hear \"une cantatrice\".",
+      "confusables": [
+        "n-cantatrice"
+      ],
+      "examples": [
+        {
+          "fr": "Il est chanteur  d'opéra.",
+          "en": "He's an opera singer."
+        },
+        {
+          "fr": "Elle est chanteuse lyrique.",
+          "en": "She's an opera singer."
+        }
+      ]
+    },
+    {
+      "id": "n-cantatrice",
+      "type": "noun",
+      "en": "opera singer (woman, one word)",
+      "fr": "cantatrice",
+      "gender": "f",
+      "article": "la",
+      "theme": "Jobs",
+      "kindOf": "n-chanteur",
+      "confusables": [ 
+        "n-chanteur-lyrique"
+      ],
+      "tip": "A bit formal; \"une chanteuse lyrique\" is more common today. No masculine form: a man is \"un chanteur lyrique\".",
+      "examples": [
+        {
+          "fr": "La cantatrice chante à l'opéra.",
+          "en": "The opera singer sings at the opera."
+        }
+      ]
+    },
+    {
       "id": "n-acteur",
       "type": "noun",
       "en": "actor / actress",
@@ -1914,7 +1967,7 @@
       "gender": "mf",
       "article": "le",
       "theme": "Jobs",
-      "tip": "For a woman say elle est chauffeur. Une chauffeuse is a low armless chair.",
+      "tip": "For a woman say \"elle est chauffeur\". \"Une chauffeuse\" is a low armless chair.",
       "confusables": [
         "n-conducteur"
       ],
@@ -1934,7 +1987,7 @@
       "article": "le",
       "theme": "Jobs",
       "kindOf": "n-chauffeur",
-      "tip": "For a woman say elle est chauffeur. Une chauffeuse is a low armless chair.",
+      "tip": "For a woman say \"elle est chauffeur\". \"Une chauffeuse\" is a low armless chair.",
       "confusables": [
         "n-conducteur"
       ],
@@ -1954,7 +2007,7 @@
       "article": "le",
       "theme": "Jobs",
       "kindOf": "n-chauffeur",
-      "tip": "For a woman say elle est chauffeur. Une chauffeuse is a low armless chair.",
+      "tip": "For a woman say \"elle est chauffeur\". \"Une chauffeuse\" is a low armless chair.",
       "confusables": [
         "n-conducteur"
       ],
@@ -1968,7 +2021,7 @@
     {
       "id": "n-conducteur",
       "type": "noun",
-      "en": "driver",
+      "en": "driver (anyone driving a vehicle, \"the person at the wheel\")",
       "fr": "conducteur",
       "gender": "m",
       "article": "le",
@@ -1976,7 +2029,7 @@
       "alt": [
         "la conductrice"
       ],
-      "tip": "conduire = to drive",
+      "tip": "\"conduire\" = to drive. As a job (bus, taxi), people also say \"chauffeur\".",
       "confusables": [
         "n-chauffeur",
         "n-chauffeur-de-bus",
@@ -1984,8 +2037,12 @@
       ],
       "examples": [
         {
-          "fr": "Il est conducteur de bus.",
-          "en": "He's a bus driver."
+          "fr": "Elle est conductrice de bus.",
+          "en": "She's a bus driver."
+        },
+        {
+          "fr": "Le conducteur de la voiture parle au téléphone.",
+          "en": "The driver of the car is on the phone."
         }
       ]
     },
@@ -3123,10 +3180,33 @@
       "gender": "f",
       "article": "la",
       "theme": "Classroom and language learning",
+      "tip": "English \"phrase\" = une expression. French \"la sentence\" = a court verdict.",
+      "confusables": [
+        "n-expression"
+      ],
       "examples": [
         {
           "fr": "Lisez les phrases.",
           "en": "Read the sentences."
+        }
+      ]
+    },
+    {
+      "id": "n-expression",
+      "type": "noun",
+      "en": "phrase, expression (group of words)",
+      "fr": "expression",
+      "gender": "f",
+      "article": "l'",
+      "theme": "Classroom and language learning",
+      "tip": "French \"la phrase\" = a sentence.",
+      "confusables": [
+        "n-phrase"
+      ],
+      "examples": [
+        {
+          "fr": "C'est une expression française.",
+          "en": "It's a French phrase."
         }
       ]
     },
@@ -4221,7 +4301,7 @@
     {
       "id": "v-mettre",
       "type": "verb",
-      "en": "to put (as in 'I put my book in my bag')",
+      "en": "to put (as in \"I put my book in my bag\")",
       "infinitive": "mettre",
       "conj": [
         "mets",
@@ -4459,6 +4539,9 @@
           "fr": "Combien de pommes vous voulez ?",
           "en": "How many apples do you want?"
         }
+      ],
+      "confusables": [
+        "v-vouloir-dire"
       ]
     },
     {
@@ -5418,7 +5501,7 @@
     {
       "id": "v-signifier",
       "type": "verb",
-      "en": "to mean",
+      "en": "to mean (formal, as in a definition)",
       "infinitive": "signifier",
       "conj": [
         "signifie",
@@ -5429,11 +5512,41 @@
         "signifient"
       ],
       "theme": "Verbs: regular -er verbs",
+      "tip": "In everyday speech: vouloir dire. Qu'est-ce que ça veut dire ? = What does that mean?",
       "examples": [
         {
           "fr": "03/02 signifie le trois février.",
           "en": "03/02 means the third of February."
         }
+      ],
+      "confusables": [
+        "v-vouloir-dire"
+      ]
+    },
+    {
+      "id": "v-vouloir-dire",
+      "type": "verb",
+      "en": "to mean (everyday)",
+      "infinitive": "vouloir dire",
+      "conj": [
+        "veux dire",
+        "veux dire",
+        "veut dire",
+        "voulons dire",
+        "voulez dire",
+        "veulent dire"
+      ],
+      "theme": "Verbs: irregular, -ir and -re verbs",
+      "tip": "Conjugate vouloir, keep dire as it is. More formal: signifier.",
+      "examples": [
+        {
+          "fr": "Qu'est-ce que ça veut dire ?",
+          "en": "What does that mean?"
+        }
+      ],
+      "confusables": [
+        "v-signifier",
+        "v-vouloir"
       ]
     },
     {
@@ -6253,8 +6366,12 @@
       "theme": "Describing places & people",
       "examples": [
         {
-          "fr": "Je ne suis pas marié.",
-          "en": "I'm not married."
+          "fr": "Il n'est pas marié.",
+          "en": "He's not married."
+        },
+        {
+          "fr": "Elle est mariée.",
+          "en": "She's married."
         }
       ]
     },
@@ -6811,11 +6928,11 @@
     {
       "id": "adj-bienvenu",
       "type": "adjective",
-      "en": "welcome (as in 'you're welcome here')",
+      "en": "welcome (as in \"you're welcome here\")",
       "masc": "bienvenu",
       "fem": "bienvenue",
       "theme": "Describing places & people",
-      "tip": "Tu es le bienvenu / la bienvenue. The greeting 'Bienvenue !' never changes.",
+      "tip": "Tu es le bienvenu / la bienvenue. The greeting \"Bienvenue !\" never changes.",
       "confusables": [
         "x-bienvenue"
       ],
@@ -7318,16 +7435,27 @@
     {
       "id": "x-et-toi",
       "type": "expression",
-      "en": "And you? (informal / formal)",
+      "en": "And you? (informal)",
       "fr": "Et toi ?",
       "theme": "Greetings, phrases and questions",
-      "alt": [
-        "Et vous ?"
-      ],
+      "tip": "toi = informal (tu) · vous = formal, or to several people",
       "examples": [
         {
           "fr": "Ça va, et toi ?",
-          "en": "Fine, and you?"
+          "en": "Fine, and you (informal)?"
+        }
+      ]
+    },
+    {
+      "id": "x-et-vous",
+      "type": "expression",
+      "en": "And you? (formal)",
+      "fr": "Et vous ?",
+      "theme": "Greetings, phrases and questions",
+      "examples": [
+        {
+          "fr": "Ça va, merci. Et vous ?",
+          "en": "I'm fine, thank you. And you (formal)?"
         }
       ]
     },
@@ -7374,16 +7502,17 @@
     {
       "id": "x-je-te-presente",
       "type": "expression",
-      "en": "Let me introduce…",
+      "en": "Let me introduce… (to you)",
       "fr": "Je te présente…",
       "theme": "Greetings, phrases and questions",
       "alt": [
         "Je vous présente…"
       ],
+      "tip": "te = to a friend (tu) · vous = formal, or to several people",
       "examples": [
         {
           "fr": "Je te présente mon amie.",
-          "en": "This is my friend."
+          "en": "Let me introduce my friend (to you)."
         }
       ]
     },
@@ -7669,7 +7798,7 @@
       "en": "What are your parents' names?",
       "fr": "Comment s'appellent tes parents ?",
       "theme": "Useful questions",
-      "tip": "'Quels sont les noms de tes parents ?' is correct but unnatural, and nom often means surname. For first names: 'Quels sont les prénoms de tes parents ?'"
+      "tip": "'Quels sont les noms de tes parents ?' is correct but unnatural, and nom often means surname. For first names: \"Quels sont les prénoms de tes parents ?\""
     },
     {
       "id": "x-ou-habitent-tes-parents",
@@ -7719,8 +7848,9 @@
     {
       "id": "x-comment-on-prononce",
       "type": "expression",
-      "en": "How do you pronounce…?",
+      "en": "How do you pronounce…? (in general)",
       "fr": "Comment on prononce… ?",
+      "tip": "on = people in general. \"Comment tu prononces… ?\" asks one person how they say it.",
       "theme": "Useful questions"
     },
     {
@@ -8239,7 +8369,7 @@
     {
       "id": "x-que",
       "type": "expression",
-      "en": "that (as in 'I think that…')",
+      "en": "that (as in \"I think that…\")",
       "fr": "que",
       "theme": "Prepositions & linking words",
       "examples": [
@@ -11783,7 +11913,7 @@
       "alt": [
         "les pommes de terre"
       ],
-      "tip": "Literally 'apple of the earth'",
+      "tip": "Literally \"apple of the earth\"",
       "confusables": [
         "n-pomme"
       ],
@@ -11819,7 +11949,6 @@
       "gender": "m",
       "article": "l'",
       "theme": "Vegetables",
-      "tip": "Pronounced like 'onion'",
       "examples": [
         {
           "fr": "J'achète un kilo d'oignons.",
@@ -14831,11 +14960,12 @@
     {
       "id": "n-magasin",
       "type": "noun",
-      "en": "shop",
+      "en": "shop (any kind)",
       "fr": "magasin",
       "gender": "m",
       "article": "le",
       "theme": "Shopping",
+      "tip": "Un magasin is any shop; a (small) food shop is une épicerie, a big one is un supermarché.",
       "examples": [
         {
           "fr": "Il n'y a pas de magasin.",
@@ -14896,16 +15026,20 @@
     {
       "id": "n-epicerie",
       "type": "noun",
-      "en": "grocery shop, corner shop",
+      "en": "grocery shop, corner shop (small shop selling food)",
       "fr": "épicerie",
       "gender": "f",
       "article": "l'",
       "theme": "Shopping",
+      "tip": "Un magasin is any shop; a (small) food shop is une épicerie, a big one is un supermarché.",
       "examples": [
         {
           "fr": "Dans mon quartier, il y a une épicerie.",
           "en": "There's a grocery shop in my area."
         }
+      ],
+      "confusables": [
+        "n-magasin"
       ]
     },
     {
@@ -17656,23 +17790,39 @@
     {
       "id": "x-vous-desirez",
       "type": "expression",
-      "en": "What would you like? (seller)",
+      "en": "What would you like? (seller, 2 words)",
       "fr": "Vous désirez ?",
       "theme": "Buying food at the market and the bakery",
-      "alt": [
-        "Comment je peux vous aider ?"
-      ],
       "examples": [
         {
           "fr": "Bonjour madame, vous désirez ?",
           "en": "Hello, what would you like?"
         }
+      ],
+      "confusables": [
+        "x-comment-je-peux-vous-aider"
+      ]
+    },
+    {
+      "id": "x-comment-je-peux-vous-aider",
+      "type": "expression",
+      "en": "How can I help you?",
+      "fr": "Comment je peux vous aider ?",
+      "theme": "Buying food at the market and the bakery",
+      "examples": [
+        {
+          "fr": "Bonjour madame, comment je peux vous aider ?",
+          "en": "Hello, how can I help you?"
+        }
+      ],
+      "confusables": [
+        "x-vous-desirez"
       ]
     },
     {
       "id": "x-et-avec-ceci",
       "type": "expression",
-      "en": "Anything else?",
+      "en": "Anything else? (seller)",
       "fr": "Et avec ceci ?",
       "theme": "Buying food at the market and the bakery",
       "alt": [
@@ -17681,8 +17831,8 @@
       ],
       "examples": [
         {
-          "fr": "Très bien, et avec ceci ?",
-          "en": "Fine, anything else?"
+          "fr": "Voilà un kilo de pommes. Et avec ceci ?",
+          "en": "Here's a kilo of apples. Anything else?"
         }
       ]
     },
