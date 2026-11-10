@@ -16,6 +16,7 @@ const onlineToggle = document.getElementById('online-toggle');
 const accentBar = document.getElementById('accent-bar');
 const noticeArea = document.getElementById('notices');
 const signOutButton = document.getElementById('sign-out');
+const themeFilter = document.getElementById('theme-filter');
 
 // localStorage can throw (private mode, blocked storage); per-device settings then fall back to defaults.
 const storage = {
@@ -30,6 +31,8 @@ const storage = {
 const state = {
   onlineMode: isLocalMode || storage.get('onlineMode', true),
   deviceId: storage.get('deviceId', null),
+  // null = every theme, so themes added to vocab.json later are included automatically
+  selectedThemes: storage.get('selectedThemes', null),
   vocab: null,
   lookup: null,
   user: undefined,
@@ -103,6 +106,91 @@ async function loadVocab() {
 function useVocab(vocab) {
   state.vocab = vocab;
   state.lookup = buildLookup(vocab.words);
+  buildThemeList();
+}
+
+// ---------- theme filter ----------
+
+function selectedThemeSet() {
+  const allThemes = state.vocab.themes;
+  if (state.selectedThemes === null) return new Set(allThemes);
+  return new Set(state.selectedThemes.filter((theme) => allThemes.includes(theme)));
+}
+
+function saveSelectedThemes(selectedThemes) {
+  const allThemes = state.vocab.themes;
+  state.selectedThemes = allThemes.every((theme) => selectedThemes.has(theme)) ? null : allThemes.filter((theme) => selectedThemes.has(theme));
+  storage.set('selectedThemes', state.selectedThemes);
+  updateThemeFilter();
+}
+
+const wordsInThemes = (themes) => state.vocab.words.filter((word) => word.themes.some((theme) => themes.has(theme)));
+
+function setupThemeFilter() {
+  themeFilter.innerHTML = `
+    <summary id="theme-summary"></summary>
+    <div class="theme-filter-body">
+      <input type="search" id="theme-search" placeholder="Search themes…" autocomplete="off" aria-label="Search themes">
+      <label class="theme-option theme-select-all"><input type="checkbox" id="theme-select-all"><span id="theme-select-all-label">Select all</span></label>
+      <div class="theme-list" id="theme-list"></div>
+      <p class="muted">Changes apply from the next set. <button type="button" class="link-button" id="theme-new-set">Start a new set now</button></p>
+    </div>`;
+  document.getElementById('theme-search').addEventListener('input', updateThemeFilter);
+  document.getElementById('theme-list').addEventListener('change', (event) => {
+    const selected = selectedThemeSet();
+    if (event.target.checked) selected.add(event.target.value); else selected.delete(event.target.value);
+    saveSelectedThemes(selected);
+  });
+  document.getElementById('theme-select-all').addEventListener('change', (event) => {
+    const selected = selectedThemeSet();
+    for (const theme of visibleThemes()) {
+      if (event.target.checked) selected.add(theme); else selected.delete(theme);
+    }
+    saveSelectedThemes(selected);
+  });
+  document.getElementById('theme-new-set').addEventListener('click', () => {
+    themeFilter.open = false;
+    startNewSet();
+  });
+}
+
+function visibleThemes() {
+  const search = document.getElementById('theme-search').value.trim().toLowerCase();
+  return state.vocab.themes.filter((theme) => theme.toLowerCase().includes(search));
+}
+
+function buildThemeList() {
+  const wordCount = (theme) => state.vocab.words.filter((word) => word.themes.includes(theme)).length;
+  document.getElementById('theme-list').innerHTML = state.vocab.themes.map((theme) => `
+    <label class="theme-option" data-theme="${escapeHtml(theme)}">
+      <input type="checkbox" value="${escapeHtml(theme)}"><span>${escapeHtml(theme)}</span><span class="muted">${wordCount(theme)}</span>
+    </label>`).join('');
+  updateThemeFilter();
+}
+
+function updateThemeFilter() {
+  const selected = selectedThemeSet();
+  const visible = visibleThemes();
+  for (const option of document.querySelectorAll('#theme-list .theme-option')) {
+    option.hidden = !visible.includes(option.dataset.theme);
+    option.querySelector('input').checked = selected.has(option.dataset.theme);
+  }
+  const visibleSelectedCount = visible.filter((theme) => selected.has(theme)).length;
+  const selectAll = document.getElementById('theme-select-all');
+  selectAll.checked = visible.length > 0 && visibleSelectedCount === visible.length;
+  selectAll.indeterminate = visibleSelectedCount > 0 && visibleSelectedCount < visible.length;
+  selectAll.disabled = visible.length === 0;
+  const isSearching = visible.length !== state.vocab.themes.length;
+  document.getElementById('theme-select-all-label').textContent = isSearching ? `Select all matching (${visible.length})` : 'Select all';
+
+  const allThemes = state.vocab.themes;
+  const words = wordsInThemes(selected).length;
+  const chosen = allThemes.filter((theme) => selected.has(theme));
+  const themesText = chosen.length === allThemes.length ? 'all'
+    : chosen.length === 0 ? 'none selected'
+    : chosen.length <= 2 ? chosen.join(', ')
+    : `${chosen.length} of ${allThemes.length}`;
+  document.getElementById('theme-summary').textContent = `Themes: ${themesText} · ${words} word${words === 1 ? '' : 's'}`;
 }
 
 async function checkForVocabUpdate() {
@@ -155,6 +243,7 @@ function renderSignIn() {
   state.phase = 'signin';
   accentBar.hidden = true;
   signOutButton.hidden = true;
+  themeFilter.hidden = true;
   const canSignIn = state.onlineMode;
   main.innerHTML = `
     <section class="card">
@@ -255,9 +344,13 @@ function renderResults(results) {
         <thead><tr><th>#</th><th>English</th><th>You wrote</th><th>Correct answer</th><th>Explanation</th></tr></thead>
         <tbody>${results.map(resultRowHtml).join('')}</tbody>
       </table>
-      <button type="button" class="primary" id="next-set">Next set <kbd>N</kbd></button>
+      <div class="results-actions">
+        <button type="button" class="primary" id="next-set">Next set <kbd>N</kbd></button>
+        <button type="button" class="secondary" id="redo-set">Redo this set <kbd>R</kbd></button>
+      </div>
     </section>`;
   document.getElementById('next-set').addEventListener('click', startNewSet);
+  document.getElementById('redo-set').addEventListener('click', redoSet);
   window.scrollTo(0, 0);
 }
 
@@ -265,10 +358,24 @@ function renderResults(results) {
 
 function startNewSet() {
   if (state.appUpdateReady) { location.reload(); return; }
+  themeFilter.hidden = false;
+  const wordsToPractise = wordsInThemes(selectedThemeSet());
+  if (!wordsToPractise.length) {
+    state.phase = 'nothemes';
+    renderMessage('No themes selected', 'Open Themes above, pick at least one, then press "Start a new set now".');
+    themeFilter.open = true;
+    return;
+  }
   const progress = computeProgress(state.vocab.words, state.attempts, SEED);
-  const words = chooseWords({ words: state.vocab.words, progress, previousSetIds: storage.get('previousSetIds', []) });
+  const words = chooseWords({ words: wordsToPractise, progress, previousSetIds: storage.get('previousSetIds', []) });
   storage.set('previousSetIds', words.map((w) => w.id));
   state.items = buildItems(words);
+  state.phase = 'answering';
+  renderPractice();
+}
+
+// Same prompts in the same order, including the same fill-in sentences; answers are recorded again.
+function redoSet() {
   state.phase = 'answering';
   renderPractice();
 }
@@ -336,6 +443,9 @@ function onKeyDown(event) {
   if (state.phase === 'results' && !typing && !modifier && event.key.toLowerCase() === 'n') {
     event.preventDefault();
     startNewSet();
+  } else if (state.phase === 'results' && !typing && !modifier && event.key.toLowerCase() === 'r') {
+    event.preventDefault();
+    redoSet();
   } else if (state.phase === 'answering' && event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
     event.preventDefault();
     document.getElementById('practice-form').requestSubmit();
@@ -350,6 +460,7 @@ async function boot() {
   onlineToggle.addEventListener('change', onToggleOnline);
   signOutButton.addEventListener('click', () => sync.signOutUser().catch(onSyncError));
   setupAccentBar();
+  setupThemeFilter();
   document.addEventListener('keydown', onKeyDown);
   window.addEventListener('online', updateStatus);
   window.addEventListener('offline', updateStatus);
