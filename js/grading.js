@@ -183,8 +183,8 @@ function buildKindOfLinks(words) {
   return { byId, baseIdByKindId, kindsByBaseId };
 }
 
-// Why entry's synonymOf link to otherId is invalid, or null. Confusables are never accepted as each other's answer,
-// and an id is only ever one of kindOf / synonymOf / confusables / alt for an entry.
+// Why entry's acceptedSynonyms link to otherId is invalid, or null. Confusables are never accepted as each other's answer,
+// and an id is only ever one of kindOf / acceptedSynonyms / confusables / alt for an entry.
 export function synonymLinkProblem(entry, otherId, byId) {
   const other = byId.get(otherId);
   if (!other) return 'is not an id in vocab.json';
@@ -197,14 +197,14 @@ export function synonymLinkProblem(entry, otherId, byId) {
   return null;
 }
 
-// synonymOf links, one direction: entry → ids whose answers are also right on its card. Invalid links are logged and ignored.
+// acceptedSynonyms links, one direction: entry → ids whose answers are also right on its card. Invalid links are logged and ignored.
 function buildSynonymLinks(words, byId) {
   const synonymIdsById = new Map();
   for (const entry of words) {
     const validIds = new Set();
-    for (const otherId of entry.synonymOf || []) {
+    for (const otherId of entry.acceptedSynonyms || []) {
       const problem = synonymLinkProblem(entry, otherId, byId);
-      if (problem) console.warn(`vocab: ${entry.id} has synonymOf "${otherId}", which ${problem} — link ignored`);
+      if (problem) console.warn(`vocab: ${entry.id} has acceptedSynonyms "${otherId}", which ${problem} — link ignored`);
       else validIds.add(otherId);
     }
     if (validIds.size) synonymIdsById.set(entry.id, validIds);
@@ -212,7 +212,7 @@ function buildSynonymLinks(words, byId) {
   return synonymIdsById;
 }
 
-// Reverse index from every accepted answer to the entries it belongs to, plus the kindOf and synonymOf links.
+// Reverse index from every accepted answer to the entries it belongs to, plus the kindOf and acceptedSynonyms links.
 export function buildLookup(words) {
   const byForm = new Map();
   for (const entry of words) {
@@ -258,7 +258,7 @@ function otherWordNote(entry, other, lookup) {
   return `**${shortName(other)}** = ${other.en}.`;
 }
 
-// The answer is another entry. If this entry's synonymOf links to it, it is graded with that entry's own rules
+// The answer is another entry. If this entry's acceptedSynonyms links to it, it is graded with that entry's own rules
 // (a full answer counts as correct, with "Also right: …"); otherwise it is wrong and the note says what it means.
 function gradeAsOtherWord(entry, raw, form, ctx, type) {
   if (!ctx.lookup || ctx.isNestedLookup) return null;

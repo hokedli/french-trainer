@@ -68,7 +68,7 @@ check('adj-masculin', 'masculin / masculine', 'correct');
 // géniale on the grand card must not crash; the entry's own feminine is not a near-spelling of another word
 check('adj-grand', 'géniale', 'wrong', '**génial** = brilliant');
 check('adj-genial', 'géniale', 'partial', 'Give both forms');
-// synonymOf: only explicit links are accepted, graded with the synonym's own rules
+// acceptedSynonyms: only explicit links are accepted, graded with the synonym's own rules
 check('adj-grand', 'super', 'wrong', '**super** = super, really good, great.');
 check('adj-genial', 'super', 'correct', 'Also right: **super**');
 check('adj-super', 'génial / géniale', 'correct', 'Also right: **génial**');
@@ -77,8 +77,10 @@ check('adj-calme', 'tranquille', 'correct', 'Also right');
 check('n-enseignant', 'le prof', 'correct', 'Also right: **le prof**');
 check('n-enseignant', 'la professeure', 'correct', 'Also right');
 check('n-prof', "l'enseignant (m)", 'wrong', '= teacher.');
-check('n-papa', 'le père', 'correct', 'Also right: **le père**');
-check('n-pere', 'le papa', 'wrong', '= dad.');
+check('n-pere', 'le papa', 'correct', 'Also right: **le papa**');
+check('n-papa', 'le père', 'wrong', '**le père** = father.');
+check('n-mere', 'la maman', 'correct', 'Also right: **la maman**');
+check('n-maman', 'la mère', 'wrong', '**la mère** = mother.');
 check('x-ca-va', 'Comment allez-vous ?', 'correct', 'Also right');
 check('x-comment-vas-tu', 'Ça va ?', 'wrong', '= How are you?');
 check('v-terminer', 'finir, finis, finis, finit, finissons, finissez, finissent', 'correct', 'Also right: **finir**');
@@ -217,7 +219,7 @@ function expectNoNoteContaining(id, answer, fragment) {
   if (!results[0][1]) console.log(`    warnings: ${warnings.join(' | ')}`);
 }
 
-// Invalid synonymOf links: warning, link ignored (never accepted), no crash
+// Invalid acceptedSynonyms links: warning, link ignored (never accepted), no crash
 {
   const warnings = [];
   const originalWarn = console.warn;
@@ -225,13 +227,13 @@ function expectNoNoteContaining(id, answer, fragment) {
   const noun = (id, fr, extra = {}) => ({ id, type: 'noun', en: id, fr, gender: 'm', article: 'le', ...extra });
   const testWords = [
     noun('n-base', 'base'),
-    noun('n-kind-a', 'kind a', { kindOf: 'n-base', synonymOf: ['n-base', 'n-kind-b'] }), // its base, and another kind of it
+    noun('n-kind-a', 'kind a', { kindOf: 'n-base', acceptedSynonyms: ['n-base', 'n-kind-b'] }), // its base, and another kind of it
     noun('n-kind-b', 'kind b', { kindOf: 'n-base' }),
-    noun('n-mix', 'mix', { confusables: ['n-mixed'], synonymOf: ['n-mixed'] }), // confusable on this side
+    noun('n-mix', 'mix', { confusables: ['n-mixed'], acceptedSynonyms: ['n-mixed'] }), // confusable on this side
     noun('n-mixed', 'mixed', { confusables: ['n-mix'] }),
-    noun('n-one-way', 'one way', { synonymOf: ['n-mix'] }), // n-mix has no confusable with n-one-way: valid
-    noun('n-other-side', 'other side', { synonymOf: ['n-mixed'] }), // fine
-    noun('n-broken', 'broken', { synonymOf: ['n-broken', 'n-missing', 'x-phrase'] }),
+    noun('n-one-way', 'one way', { acceptedSynonyms: ['n-mix'] }), // n-mix has no confusable with n-one-way: valid
+    noun('n-other-side', 'other side', { acceptedSynonyms: ['n-mixed'] }), // fine
+    noun('n-broken', 'broken', { acceptedSynonyms: ['n-broken', 'n-missing', 'x-phrase'] }),
     { id: 'x-phrase', type: 'expression', en: 'phrase', fr: 'phrase' },
   ];
   let testLookup;
@@ -239,7 +241,7 @@ function expectNoNoteContaining(id, answer, fragment) {
   const byTestId = new Map(testWords.map((w) => [w.id, w]));
   const synonymsOf = (id) => [...testLookup.synonymIdsOf(byTestId.get(id))].join();
   const grade = (id, answer) => gradeItem({ entry: byTestId.get(id) }, answer, { lookup: testLookup });
-  const warned = (id, other) => warnings.some((w) => w.includes(`${id} has synonymOf "${other}"`));
+  const warned = (id, other) => warnings.some((w) => w.includes(`${id} has acceptedSynonyms "${other}"`));
   const results = [
     ['6 warnings logged', warnings.length === 6],
     ['kindOf base and sibling ignored', synonymsOf('n-kind-a') === '' && warned('n-kind-a', 'n-base') && warned('n-kind-a', 'n-kind-b')],
@@ -250,7 +252,7 @@ function expectNoNoteContaining(id, answer, fragment) {
   ];
   for (const [name, ok] of results) {
     if (!ok) failures++;
-    console.log(`${ok ? '✓' : '✗'} invalid synonymOf: ${name}`);
+    console.log(`${ok ? '✓' : '✗'} invalid acceptedSynonyms: ${name}`);
   }
   if (!results[0][1]) console.log(`    warnings: ${warnings.join(' | ')}`);
 }

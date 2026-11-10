@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -829,7 +829,7 @@
       "themes": [
         "Jobs & work"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-metier"
       ],
       "examples": [
@@ -849,7 +849,7 @@
       "themes": [
         "Jobs & work"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-travail"
       ],
       "examples": [
@@ -1292,7 +1292,7 @@
       "themes": [
         "Jobs & work"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-psy"
       ],
       "alt": [
@@ -1374,7 +1374,7 @@
         "Jobs & work",
         "Classroom & grammar"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-professeur",
         "n-prof"
       ],
@@ -1400,7 +1400,7 @@
         "Jobs & work",
         "Classroom & grammar"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-enseignant",
         "n-prof"
       ],
@@ -2698,7 +2698,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-papa"
       ],
       "examples": [
@@ -2718,7 +2718,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-maman"
       ],
       "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
@@ -3136,7 +3136,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-gendre"
       ],
       "tip": "Son-in-law is also le gendre; stepson is only le beau-fils.",
@@ -3157,7 +3157,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-beau-fils"
       ],
       "examples": [
@@ -3675,7 +3675,7 @@
       "themes": [
         "Classroom & grammar"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-lecon"
       ],
       "confusables": [
@@ -3699,7 +3699,7 @@
       "themes": [
         "Classroom & grammar"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-cours"
       ],
       "confusables": [
@@ -5925,6 +5925,7 @@
         "Hobbies & music",
         "Food & drink"
       ],
+      "tip": "Also: faire la cuisine.",
       "examples": [
         {
           "fr": "Oui, je cuisine souvent.",
@@ -6391,7 +6392,7 @@
       "themes": [
         "Common words"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "v-finir"
       ],
       "examples": [
@@ -6418,7 +6419,7 @@
       "themes": [
         "Common words"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "v-terminer"
       ],
       "examples": [
@@ -7589,7 +7590,7 @@
         "Describing places",
         "Describing people"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-tranquille"
       ],
       "examples": [
@@ -7608,7 +7609,7 @@
       "themes": [
         "Describing places"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-calme"
       ],
       "examples": [
@@ -7699,7 +7700,7 @@
       "themes": [
         "Opinions"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-super"
       ],
       "examples": [
@@ -7718,7 +7719,7 @@
       "themes": [
         "Opinions"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-genial"
       ],
       "examples": [
@@ -7936,7 +7937,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-mort"
       ],
       "examples": [
@@ -8335,7 +8336,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "adj-decede"
       ],
       "tip": "= décédé",
@@ -9191,7 +9192,7 @@
         "Greetings & phrases",
         "Questions"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-comment-vas-tu"
       ],
       "examples": [
@@ -9209,7 +9210,7 @@
       "themes": [
         "Greetings & phrases"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-je-vais-bien"
       ],
       "alt": [
@@ -9288,7 +9289,7 @@
       "themes": [
         "Greetings & phrases"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-ca-va-bien"
       ],
       "examples": [
@@ -9982,7 +9983,7 @@
         "Questions",
         "Jobs & work"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-quelle-est-ta-profession"
       ],
       "alt": [
@@ -9999,7 +10000,7 @@
         "Questions",
         "Jobs & work"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-quel-est-ton-metier"
       ],
       "alt": [
@@ -10189,7 +10190,7 @@
         "Oral exam",
         "Hobbies & music"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-qu-est-ce-que-tu-aimes-faire-le-week-end"
       ]
     },
@@ -10203,7 +10204,7 @@
         "Oral exam",
         "Hobbies & music"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-quelles-activites-tu-aimes-faire-pendant-le-week-end"
       ],
       "alt": [
@@ -10625,7 +10626,7 @@
       "themes": [
         "Prepositions & linking words"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-alors"
       ],
       "examples": [
@@ -10826,7 +10827,7 @@
       "themes": [
         "Prepositions & linking words"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "x-donc"
       ],
       "examples": [
@@ -11663,6 +11664,9 @@
       "themes": [
         "Hobbies & music",
         "Food & drink"
+      ],
+      "alt": [
+        "cuisiner"
       ],
       "examples": [
         {
@@ -13152,7 +13156,7 @@
       "themes": [
         "Home & town"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-endroit"
       ],
       "alt": [
@@ -13179,7 +13183,7 @@
       "themes": [
         "Home & town"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-lieu"
       ],
       "confusables": [
@@ -17997,7 +18001,7 @@
       "themes": [
         "Meals, restaurant & café"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-carte"
       ],
       "tip": "In France, le menu is often a fixed-price set menu; la carte is the full list of dishes.",
@@ -18018,7 +18022,7 @@
       "themes": [
         "Meals, restaurant & café"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-menu"
       ],
       "tip": "Also a card (la carte bancaire) and a map.",
@@ -21350,7 +21354,7 @@
       "themes": [
         "Shopping"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-commerce"
       ],
       "tip": "Un magasin is any shop; a (small) food shop is une épicerie, a big one is un supermarché.",
@@ -21625,7 +21629,7 @@
       "themes": [
         "Shopping"
       ],
-      "synonymOf": [
+      "acceptedSynonyms": [
         "n-magasin"
       ],
       "alt": [

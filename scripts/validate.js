@@ -18,7 +18,7 @@ try {
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
 const RULES = ['-ger', '-cer', '-yer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
-const COMMON_FIELDS = ['id', 'type', 'en', 'themes', 'kindOf', 'synonymOf', 'alt', 'examples', 'tip', 'confusables'];
+const COMMON_FIELDS = ['id', 'type', 'en', 'themes', 'kindOf', 'acceptedSynonyms', 'alt', 'examples', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
   country: ['fr', 'gender', 'article', 'pluralOnly', 'inTo'],
@@ -101,9 +101,9 @@ for (const [index, w] of vocab.words.entries()) {
   }
   if (w.tip !== undefined && !isText(w.tip)) fail('"tip" must be text');
   if (w.confusables !== undefined && (!Array.isArray(w.confusables) || !w.confusables.every(isText))) fail('"confusables" must be a list of strings');
-  if (w.synonymOf !== undefined) {
-    if (!Array.isArray(w.synonymOf) || !w.synonymOf.length || !w.synonymOf.every(isText)) fail('"synonymOf" must be a non-empty list of ids');
-    else if (new Set(w.synonymOf).size !== w.synonymOf.length) fail('"synonymOf" lists an id twice');
+  if (w.acceptedSynonyms !== undefined) {
+    if (!Array.isArray(w.acceptedSynonyms) || !w.acceptedSynonyms.length || !w.acceptedSynonyms.every(isText)) fail('"acceptedSynonyms" must be a non-empty list of ids');
+    else if (new Set(w.acceptedSynonyms).size !== w.acceptedSynonyms.length) fail('"acceptedSynonyms" lists an id twice');
   }
   if (w.type !== 'number' && !w.examples) warnings.push(`${where}: no example sentence`);
 }
@@ -121,12 +121,12 @@ for (const w of vocab.words) {
 }
 const altIdsOf = (w) => new Set(altForms(w).flatMap((form) => [...(idsByOwnForm.get(lookupKey(form)) || [])]).filter((id) => id !== w.id));
 
-// id → the relations this entry has to it. An id may be only one of kindOf / synonymOf / confusables / alt per entry.
+// id → the relations this entry has to it. An id may be only one of kindOf / acceptedSynonyms / confusables / alt per entry.
 function relationsOf(w) {
   const relations = new Map();
   const add = (id, relation) => { if (!relations.has(id)) relations.set(id, new Set()); relations.get(id).add(relation); };
   if (w.kindOf !== undefined) add(w.kindOf, 'kindOf');
-  for (const id of w.synonymOf || []) add(id, 'synonymOf');
+  for (const id of w.acceptedSynonyms || []) add(id, 'acceptedSynonyms');
   for (const id of w.confusables || []) if (wordsById.has(id)) add(id, 'confusables');
   for (const id of altIdsOf(w)) add(id, 'alt');
   return relations;
@@ -143,12 +143,12 @@ for (const w of vocab.words) {
     else if (base.id === w.id) errors.push(`${w.id}: kindOf points to itself`);
     else if (base.kindOf !== undefined) errors.push(`${w.id}: kindOf "${w.kindOf}" has its own kindOf — the base word must not have one`);
   }
-  for (const id of Array.isArray(w.synonymOf) ? w.synonymOf : []) {
+  for (const id of Array.isArray(w.acceptedSynonyms) ? w.acceptedSynonyms : []) {
     const problem = synonymLinkProblem(w, id, wordsById);
-    if (problem) errors.push(`${w.id}: synonymOf "${id}" ${problem}`);
+    if (problem) errors.push(`${w.id}: acceptedSynonyms "${id}" ${problem}`);
   }
   for (const [id, relations] of relationsById.get(w.id)) {
-    if (relations.size > 1) errors.push(`${w.id}: "${id}" is in ${[...relations].join(' and ')} — an id can only be one of kindOf, synonymOf, confusables or alt`);
+    if (relations.size > 1) errors.push(`${w.id}: "${id}" is in ${[...relations].join(' and ')} — an id can only be one of kindOf, acceptedSynonyms, confusables or alt`);
     // Confusables are never accepted, so the other entry must not accept this one or link it by kindOf either.
     // The link itself may be one-way (n-voiture lists n-car because of the English "car", n-car doesn't list n-voiture).
     const reverse = relationsById.get(id)?.get(w.id);
