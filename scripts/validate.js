@@ -149,11 +149,11 @@ for (const w of vocab.words) {
   }
   for (const [id, relations] of relationsById.get(w.id)) {
     if (relations.size > 1) errors.push(`${w.id}: "${id}" is in ${[...relations].join(' and ')} — an id can only be one of kindOf, synonymOf, confusables or alt`);
-    // Confusables are never accepted, so the other entry must not accept this one or link it by kindOf either
+    // Confusables are never accepted, so the other entry must not accept this one or link it by kindOf either.
+    // The link itself may be one-way (n-voiture lists n-car because of the English "car", n-car doesn't list n-voiture).
     const reverse = relationsById.get(id)?.get(w.id);
-    if (relations.has('confusables')) {
-      if (!reverse) warnings.push(`${w.id}: confusable "${id}" doesn't list ${w.id} back (links go both ways)`);
-      else if (!reverse.has('confusables')) errors.push(`${w.id}: "${id}" is a confusable here, but ${id} has ${w.id} in ${[...reverse].join(' and ')}`);
+    if (relations.has('confusables') && reverse && !reverse.has('confusables')) {
+      errors.push(`${w.id}: "${id}" is a confusable here, but ${id} has ${w.id} in ${[...reverse].join(' and ')}`);
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -1214,16 +1214,16 @@
       "alt": [
         "la garagiste"
       ],
+      "tip": "The person who repairs the car is un mécanicien.",
+      "confusables": [
+        "n-mecanicien"
+      ],
       "examples": [
         {
           "fr": "Ma voiture est chez le garagiste.",
           "en": "My car is at the garage."
         }
-      ],
-      "confusables": [
-        "n-mecanicien"
-      ],
-      "tip": "The person who repairs the car is un mécanicien."
+      ]
     },
     {
       "id": "n-photographe",
@@ -1292,11 +1292,11 @@
       "themes": [
         "Jobs & work"
       ],
-      "alt": [
-        "la psychologue"
-      ],
       "synonymOf": [
         "n-psy"
+      ],
+      "alt": [
+        "la psychologue"
       ],
       "examples": [
         {
@@ -1567,14 +1567,14 @@
       "alt": [
         "la bouchère"
       ],
+      "confusables": [
+        "n-boucherie"
+      ],
       "examples": [
         {
           "fr": "Le boucher est sympa.",
           "en": "The butcher is nice."
         }
-      ],
-      "confusables": [
-        "n-boucherie"
       ]
     },
     {
@@ -1592,14 +1592,14 @@
         "la pâtissière"
       ],
       "tip": "La crème pâtissière = custard / pastry cream.",
+      "confusables": [
+        "n-patisserie"
+      ],
       "examples": [
         {
           "fr": "La pâtissière fait des macarons.",
           "en": "The pastry chef makes macarons."
         }
-      ],
-      "confusables": [
-        "n-patisserie"
       ]
     },
     {
@@ -1786,14 +1786,14 @@
       "alt": [
         "la mécanicienne"
       ],
+      "confusables": [
+        "n-garagiste"
+      ],
       "examples": [
         {
           "fr": "Le mécanicien travaille au garage.",
           "en": "The mechanic works at the garage."
         }
-      ],
-      "confusables": [
-        "n-garagiste"
       ]
     },
     {
@@ -2400,21 +2400,21 @@
         "Jobs & work",
         "Shopping"
       ],
+      "kindOf": "n-vendeur",
       "alt": [
         "la poissonnière",
         "le vendeur de poissons",
         "la vendeuse de poissons"
       ],
       "tip": "La poissonnière is also a fish kettle (pan for cooking fish).",
-      "kindOf": "n-vendeur",
+      "confusables": [
+        "n-poissonnerie"
+      ],
       "examples": [
         {
           "fr": "Le poissonnier est très sympa.",
           "en": "The fishmonger is very nice."
         }
-      ],
-      "confusables": [
-        "n-poissonnerie"
       ]
     },
     {
@@ -2718,10 +2718,10 @@
       "themes": [
         "Family & relationships"
       ],
-      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
       "synonymOf": [
         "n-maman"
       ],
+      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
       "confusables": [
         "n-mer"
       ],
@@ -3252,13 +3252,13 @@
         "Family & relationships",
         "People & identity"
       ],
+      "tip": "Le garçon (de café) is also an old-fashioned word for a waiter (= le serveur).",
       "examples": [
         {
           "fr": "Les garçons jouent au foot.",
           "en": "The boys are playing football."
         }
-      ],
-      "tip": "Le garçon (de café) is also an old-fashioned word for a waiter (= le serveur)."
+      ]
     },
     {
       "id": "n-bebe",
@@ -3702,14 +3702,14 @@
       "synonymOf": [
         "n-cours"
       ],
+      "confusables": [
+        "n-classe"
+      ],
       "examples": [
         {
           "fr": "La leçon commence à 8 heures.",
           "en": "The lesson starts at 8."
         }
-      ],
-      "confusables": [
-        "n-classe"
       ]
     },
     {
@@ -3986,13 +3986,13 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "é = accent aigu, è = accent grave, ê = accent circonflexe",
       "examples": [
         {
           "fr": "« É », c'est « e accent aigu ».",
           "en": "É is \"e acute\"."
         }
-      ],
-      "tip": "é = accent aigu, è = accent grave, ê = accent circonflexe"
+      ]
     },
     {
       "id": "n-cedille",
@@ -4225,13 +4225,13 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "pronom tonique = stressed pronoun (moi, toi…); pronom personnel = subject pronoun (je, tu…)",
       "examples": [
         {
           "fr": "« Moi » est un pronom tonique.",
           "en": "\"Moi\" is a stressed pronoun."
         }
-      ],
-      "tip": "pronom tonique = stressed pronoun (moi, toi…); pronom personnel = subject pronoun (je, tu…)"
+      ]
     },
     {
       "id": "n-terminaison",
@@ -4507,6 +4507,7 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "At university: \"l'étudiant(e)\".",
       "confusables": [
         "n-etudiant"
       ],
@@ -4515,8 +4516,7 @@
           "fr": "L'élève lit un livre.",
           "en": "The pupil is reading a book."
         }
-      ],
-      "tip": "At university: \"l'étudiant(e)\"."
+      ]
     },
     {
       "id": "n-ecole",
@@ -4708,13 +4708,13 @@
       "themes": [
         "Hobbies & music"
       ],
+      "tip": "le jeu du pendu = hangman",
       "examples": [
         {
           "fr": "On joue au jeu du pendu.",
           "en": "We're playing hangman."
         }
-      ],
-      "tip": "le jeu du pendu = hangman"
+      ]
     },
     {
       "id": "n-lycee",
@@ -5265,13 +5265,13 @@
       "themes": [
         "Common words"
       ],
+      "tip": "One t in the singular (mets, mets, met), tt in the plural (mettons, mettez, mettent).",
       "examples": [
         {
           "fr": "Je mets mon livre dans mon sac.",
           "en": "I put my book in my bag."
         }
-      ],
-      "tip": "One t in the singular (mets, mets, met), tt in the plural (mettons, mettez, mettent)."
+      ]
     },
     {
       "id": "v-apprendre",
@@ -5290,15 +5290,15 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "apprendre = to learn (j'apprends le vocabulaire). To study = étudier.",
+      "confusables": [
+        "v-etudier"
+      ],
       "examples": [
         {
           "fr": "J'apprends le vocabulaire.",
           "en": "I'm learning the vocabulary."
         }
-      ],
-      "tip": "apprendre = to learn (j'apprends le vocabulaire). To study = étudier.",
-      "confusables": [
-        "v-etudier"
       ]
     },
     {
@@ -5481,13 +5481,13 @@
         "je suis né",
         "je suis née"
       ],
+      "tip": "Past tense of naître, formed with être: il est né, elle est née",
       "examples": [
         {
           "fr": "Je suis née le 12 mai 1995.",
           "en": "I was born on 12 May 1995."
         }
-      ],
-      "tip": "Past tense of naître, formed with être: il est né, elle est née"
+      ]
     },
     {
       "id": "v-vouloir",
@@ -5506,14 +5506,14 @@
       "themes": [
         "Common words"
       ],
+      "confusables": [
+        "v-vouloir-dire"
+      ],
       "examples": [
         {
           "fr": "Combien de pommes vous voulez ?",
           "en": "How many apples do you want?"
         }
-      ],
-      "confusables": [
-        "v-vouloir-dire"
       ]
     },
     {
@@ -5775,15 +5775,15 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "étudier = to study (a subject, at school or university). To learn = apprendre.",
+      "confusables": [
+        "v-apprendre"
+      ],
       "examples": [
         {
           "fr": "Vous étudiez l'anglais et l'allemand.",
           "en": "You study English and German."
         }
-      ],
-      "tip": "étudier = to study (a subject, at school or university). To learn = apprendre.",
-      "confusables": [
-        "v-apprendre"
       ]
     },
     {
@@ -5851,15 +5851,15 @@
       "themes": [
         "Hobbies & music"
       ],
+      "tip": "écouter = to listen (é-cou-ter). To spell = épeler.",
+      "confusables": [
+        "v-epeler"
+      ],
       "examples": [
         {
           "fr": "Ils écoutent de la musique.",
           "en": "They're listening to music."
         }
-      ],
-      "tip": "écouter = to listen (é-cou-ter). To spell = épeler.",
-      "confusables": [
-        "v-epeler"
       ]
     },
     {
@@ -6585,14 +6585,14 @@
         "Classroom & grammar"
       ],
       "tip": "In everyday speech: vouloir dire. Qu'est-ce que ça veut dire ? = What does that mean?",
+      "confusables": [
+        "v-vouloir-dire"
+      ],
       "examples": [
         {
           "fr": "03/02 signifie le trois février.",
           "en": "03/02 means the third of February."
         }
-      ],
-      "confusables": [
-        "v-vouloir-dire"
       ]
     },
     {
@@ -6612,15 +6612,15 @@
         "Common words"
       ],
       "tip": "Conjugate vouloir, keep dire as it is. More formal: signifier.",
+      "confusables": [
+        "v-signifier",
+        "v-vouloir"
+      ],
       "examples": [
         {
           "fr": "Qu'est-ce que ça veut dire ?",
           "en": "What does that mean?"
         }
-      ],
-      "confusables": [
-        "v-signifier",
-        "v-vouloir"
       ]
     },
     {
@@ -7366,15 +7366,15 @@
       "themes": [
         "Classroom & grammar"
       ],
+      "tip": "épeler = to spell (j'épelle — double l). To listen = écouter.",
+      "confusables": [
+        "v-ecouter"
+      ],
       "examples": [
         {
           "fr": "Tu peux épeler ton nom ?",
           "en": "Can you spell your surname?"
         }
-      ],
-      "tip": "épeler = to spell (j'épelle — double l). To listen = écouter.",
-      "confusables": [
-        "v-ecouter"
       ]
     },
     {
@@ -7519,13 +7519,13 @@
         "Describing people",
         "Opinions"
       ],
+      "tip": "bel before a vowel",
       "examples": [
         {
           "fr": "Mon quartier est très beau.",
           "en": "My neighbourhood is very beautiful."
         }
-      ],
-      "tip": "bel before a vowel"
+      ]
     },
     {
       "id": "adj-moche",
@@ -7569,14 +7569,14 @@
       "themes": [
         "Describing places"
       ],
+      "confusables": [
+        "adj-sale-salty"
+      ],
       "examples": [
         {
           "fr": "Le week-end, mon quartier est un petit peu sale.",
           "en": "At weekends my neighbourhood is a bit dirty."
         }
-      ],
-      "confusables": [
-        "adj-sale-salty"
       ]
     },
     {
@@ -7627,15 +7627,15 @@
       "themes": [
         "Describing places"
       ],
+      "tip": "le bruit (noise) → bruyant (noisy). Feminine: + e → bruyante.",
+      "confusables": [
+        "adj-ennuyeux"
+      ],
       "examples": [
         {
           "fr": "Le week-end, elle est bruyante.",
           "en": "At the weekend it's noisy."
         }
-      ],
-      "tip": "le bruit (noise) → bruyant (noisy). Feminine: + e → bruyante.",
-      "confusables": [
-        "adj-ennuyeux"
       ]
     },
     {
@@ -7679,15 +7679,15 @@
       "themes": [
         "Opinions"
       ],
+      "tip": "l'ennui (boredom) → ennuyeux (boring). -eux → -euse in the feminine.",
+      "confusables": [
+        "adj-bruyant"
+      ],
       "examples": [
         {
           "fr": "Ma rue est ennuyeuse.",
           "en": "My street is boring."
         }
-      ],
-      "tip": "l'ennui (boredom) → ennuyeux (boring). -eux → -euse in the feminine.",
-      "confusables": [
-        "adj-bruyant"
       ]
     },
     {
@@ -7988,13 +7988,13 @@
       "themes": [
         "Describing people"
       ],
+      "tip": "tout seul; toute seule",
       "examples": [
         {
           "fr": "J'habite toute seule.",
           "en": "I live on my own."
         }
-      ],
-      "tip": "tout seul; toute seule"
+      ]
     },
     {
       "id": "adj-enchante",
@@ -8388,14 +8388,14 @@
       "themes": [
         "Describing food"
       ],
+      "confusables": [
+        "n-fraise"
+      ],
       "examples": [
         {
           "fr": "Les produits sont frais.",
           "en": "The produce is fresh."
         }
-      ],
-      "confusables": [
-        "n-fraise"
       ]
     },
     {
@@ -8548,10 +8548,10 @@
       "themes": [
         "Time & dates"
       ],
+      "tip": "\"La semaine prochaine\" = next week. After something else, use \"suivant\": \"la semaine suivante\" = the following week.",
       "confusables": [
         "adj-suivant"
       ],
-      "tip": "\"La semaine prochaine\" = next week. After something else, use \"suivant\": \"la semaine suivante\" = the following week.",
       "examples": [
         {
           "fr": "L'hiver prochain, je veux apprendre le ski.",
@@ -8910,13 +8910,13 @@
       "themes": [
         "Colours"
       ],
+      "tip": "never changes",
       "examples": [
         {
           "fr": "Une carotte orange.",
           "en": "An orange carrot."
         }
-      ],
-      "tip": "never changes"
+      ]
     },
     {
       "id": "adj-jaune",
@@ -9026,6 +9026,7 @@
         "Colours",
         "Describing people"
       ],
+      "tip": "never changes",
       "confusables": [
         "adj-brun"
       ],
@@ -9034,8 +9035,7 @@
           "fr": "Une ceinture marron.",
           "en": "A brown belt."
         }
-      ],
-      "tip": "never changes"
+      ]
     },
     {
       "id": "adj-brun",
@@ -9209,11 +9209,11 @@
       "themes": [
         "Greetings & phrases"
       ],
-      "alt": [
-        "Ça va."
-      ],
       "synonymOf": [
         "x-je-vais-bien"
+      ],
+      "alt": [
+        "Ça va."
       ],
       "examples": [
         {
@@ -9921,11 +9921,11 @@
       "type": "expression",
       "en": "How do you pronounce…? (in general)",
       "fr": "Comment on prononce… ?",
-      "tip": "on = people in general. \"Comment tu prononces… ?\" asks one person how they say it.",
       "themes": [
         "Questions",
         "Classroom & grammar"
-      ]
+      ],
+      "tip": "on = people in general. \"Comment tu prononces… ?\" asks one person how they say it."
     },
     {
       "id": "x-quel-est-le-contraire-de",
@@ -10203,11 +10203,11 @@
         "Oral exam",
         "Hobbies & music"
       ],
-      "alt": [
-        "Qu'est-ce que tu aimes faire pendant le week-end ?"
-      ],
       "synonymOf": [
         "x-quelles-activites-tu-aimes-faire-pendant-le-week-end"
+      ],
+      "alt": [
+        "Qu'est-ce que tu aimes faire pendant le week-end ?"
       ]
     },
     {
@@ -10373,6 +10373,7 @@
         "Prepositions & linking words",
         "Countries"
       ],
+      "tip": "au = à + le, so never au l'…",
       "confusables": [
         "x-a",
         "x-aux",
@@ -10384,8 +10385,7 @@
           "fr": "Il habite au Japon.",
           "en": "He lives in Japan."
         }
-      ],
-      "tip": "au = à + le, so never au l'…"
+      ]
     },
     {
       "id": "x-aux",
@@ -10435,6 +10435,7 @@
       "themes": [
         "Prepositions & linking words"
       ],
+      "tip": "For inside something: dans l'immeuble, dans mon sac.",
       "confusables": [
         "x-a",
         "x-au",
@@ -10446,8 +10447,7 @@
           "fr": "Dans l'immeuble, il y a des appartements.",
           "en": "In the building there are flats."
         }
-      ],
-      "tip": "For inside something: dans l'immeuble, dans mon sac."
+      ]
     },
     {
       "id": "x-avec",
@@ -10764,13 +10764,13 @@
       "themes": [
         "Prepositions & linking words"
       ],
+      "tip": "sans ≠ avec",
       "examples": [
         {
           "fr": "J'habite avec ma famille, sans animaux.",
           "en": "I live with my family, without pets."
         }
-      ],
-      "tip": "sans ≠ avec"
+      ]
     },
     {
       "id": "x-par",
@@ -11170,13 +11170,13 @@
       "themes": [
         "Adverbs"
       ],
+      "tip": "100 %",
       "examples": [
         {
           "fr": "Je mange toujours à midi.",
           "en": "I always eat at noon."
         }
-      ],
-      "tip": "100 %"
+      ]
     },
     {
       "id": "x-souvent",
@@ -11186,12 +11186,12 @@
       "themes": [
         "Adverbs"
       ],
+      "tip": "70 %",
       "examples": [
         {
           "fr": "Tu cuisines souvent ? – Oui, je cuisine souvent."
         }
-      ],
-      "tip": "70 %"
+      ]
     },
     {
       "id": "x-parfois",
@@ -11219,13 +11219,13 @@
       "themes": [
         "Adverbs"
       ],
+      "tip": "30 %",
       "examples": [
         {
           "fr": "Je regarde rarement la télé.",
           "en": "I rarely watch TV."
         }
-      ],
-      "tip": "30 %"
+      ]
     },
     {
       "id": "x-ne-jamais",
@@ -11235,12 +11235,12 @@
       "themes": [
         "Adverbs"
       ],
+      "tip": "0 % — ne + verb + jamais",
       "examples": [
         {
           "fr": "Je ne mange jamais d'escargots."
         }
-      ],
-      "tip": "0 % — ne + verb + jamais"
+      ]
     },
     {
       "id": "x-ne-pas",
@@ -11563,17 +11563,17 @@
       "themes": [
         "Shopping"
       ],
+      "alt": [
+        "faire des courses"
+      ],
+      "confusables": [
+        "x-faire-du-shopping"
+      ],
       "examples": [
         {
           "fr": "Je fais les courses au supermarché.",
           "en": "I do the shopping at the supermarket."
         }
-      ],
-      "confusables": [
-        "x-faire-du-shopping"
-      ],
-      "alt": [
-        "faire des courses"
       ]
     },
     {
@@ -11584,14 +11584,14 @@
       "themes": [
         "Shopping"
       ],
+      "confusables": [
+        "x-faire-les-courses"
+      ],
       "examples": [
         {
           "fr": "Le samedi, je fais du shopping.",
           "en": "On Saturdays I go shopping."
         }
-      ],
-      "confusables": [
-        "x-faire-les-courses"
       ]
     },
     {
@@ -12260,13 +12260,13 @@
       "themes": [
         "Time & dates"
       ],
+      "tip": "say \"oot\"",
       "examples": [
         {
           "fr": "Je suis né en août.",
           "en": "I was born in August."
         }
-      ],
-      "tip": "say \"oot\""
+      ]
     },
     {
       "id": "x-mars",
@@ -12398,13 +12398,13 @@
       "themes": [
         "Home & town"
       ],
+      "tip": "After a food, maison = homemade: des gâteaux maison.",
       "examples": [
         {
           "fr": "J'habite dans une maison.",
           "en": "I live in a house."
         }
-      ],
-      "tip": "After a food, maison = homemade: des gâteaux maison."
+      ]
     },
     {
       "id": "n-appartement",
@@ -12416,15 +12416,15 @@
       "themes": [
         "Home & town"
       ],
+      "tip": "l'appartement = one flat (where you live). The whole building = l'immeuble.",
+      "confusables": [
+        "n-immeuble"
+      ],
       "examples": [
         {
           "fr": "J'habite un appartement avec des amies.",
           "en": "I live in a flat with friends."
         }
-      ],
-      "tip": "l'appartement = one flat (where you live). The whole building = l'immeuble.",
-      "confusables": [
-        "n-immeuble"
       ]
     },
     {
@@ -12437,15 +12437,15 @@
       "themes": [
         "Home & town"
       ],
+      "tip": "l'immeuble = the building / block of flats. One flat inside it = l'appartement.",
+      "confusables": [
+        "n-appartement"
+      ],
       "examples": [
         {
           "fr": "Dans l'immeuble, il y a des appartements.",
           "en": "In the building there are flats."
         }
-      ],
-      "tip": "l'immeuble = the building / block of flats. One flat inside it = l'appartement.",
-      "confusables": [
-        "n-appartement"
       ]
     },
     {
@@ -12729,13 +12729,13 @@
         "Home & town",
         "Countries"
       ],
+      "tip": "Same in the plural: les pays",
       "examples": [
         {
           "fr": "Tu habites dans quel pays ?",
           "en": "Which country do you live in?"
         }
-      ],
-      "tip": "Same in the plural: les pays"
+      ]
     },
     {
       "id": "n-monument",
@@ -13359,15 +13359,15 @@
       "themes": [
         "Home & town"
       ],
+      "confusables": [
+        "n-lieu",
+        "n-endroit"
+      ],
       "examples": [
         {
           "fr": "La place Rouge est russe.",
           "en": "Red Square is Russian."
         }
-      ],
-      "confusables": [
-        "n-lieu",
-        "n-endroit"
       ]
     },
     {
@@ -13730,13 +13730,13 @@
       "themes": [
         "Hobbies & music"
       ],
+      "tip": "un film d'action / d'horreur = an action / horror film",
       "examples": [
         {
           "fr": "Tu regardes souvent des films d'horreur ?",
           "en": "Do you often watch horror films?"
         }
-      ],
-      "tip": "un film d'action / d'horreur = an action / horror film"
+      ]
     },
     {
       "id": "n-art",
@@ -14592,14 +14592,14 @@
       "themes": [
         "Sports"
       ],
+      "confusables": [
+        "n-criquet"
+      ],
       "examples": [
         {
           "fr": "On joue au cricket en Angleterre.",
           "en": "People play cricket in England."
         }
-      ],
-      "confusables": [
-        "n-criquet"
       ]
     },
     {
@@ -14946,13 +14946,13 @@
       "themes": [
         "Food & drink"
       ],
+      "tip": "le vin rouge = red wine",
       "examples": [
         {
           "fr": "Le vin rouge est français.",
           "en": "The red wine is French."
         }
-      ],
-      "tip": "le vin rouge = red wine"
+      ]
     },
     {
       "id": "n-jus-de-fruit",
@@ -15106,14 +15106,14 @@
       "themes": [
         "Food & drink"
       ],
+      "confusables": [
+        "n-bete"
+      ],
       "examples": [
         {
           "fr": "Je mange très souvent des pâtes.",
           "en": "I eat pasta very often."
         }
-      ],
-      "confusables": [
-        "n-bete"
       ]
     },
     {
@@ -15389,14 +15389,14 @@
         "la laitue"
       ],
       "tip": "la salade also means salad",
+      "confusables": [
+        "n-salade-de-fruits"
+      ],
       "examples": [
         {
           "fr": "Je voudrais une salade.",
           "en": "I'd like a lettuce."
         }
-      ],
-      "confusables": [
-        "n-salade-de-fruits"
       ]
     },
     {
@@ -15409,15 +15409,15 @@
       "themes": [
         "Fruit & vegetables"
       ],
+      "confusables": [
+        "n-poivre",
+        "n-piment"
+      ],
       "examples": [
         {
           "fr": "Un poivron rouge.",
           "en": "A red pepper."
         }
-      ],
-      "confusables": [
-        "n-poivre",
-        "n-piment"
       ]
     },
     {
@@ -15850,14 +15850,14 @@
       "themes": [
         "Fruit & vegetables"
       ],
+      "confusables": [
+        "adj-frais"
+      ],
       "examples": [
         {
           "fr": "Une fraise rouge.",
           "en": "A red strawberry."
         }
-      ],
-      "confusables": [
-        "adj-frais"
       ]
     },
     {
@@ -16287,13 +16287,13 @@
       "themes": [
         "Bakery & desserts"
       ],
+      "tip": "Des baguettes are also chopsticks: du riz avec des baguettes.",
       "examples": [
         {
           "fr": "Je voudrais une baguette.",
           "en": "I'd like a baguette."
         }
-      ],
-      "tip": "Des baguettes are also chopsticks: du riz avec des baguettes."
+      ]
     },
     {
       "id": "n-croissant-aux-amandes",
@@ -16542,14 +16542,14 @@
         "Bakery & desserts",
         "Describing food"
       ],
+      "confusables": [
+        "n-gouter"
+      ],
       "examples": [
         {
           "fr": "Quels goûts vous avez ?",
           "en": "What flavours do you have?"
         }
-      ],
-      "confusables": [
-        "n-gouter"
       ]
     },
     {
@@ -16687,15 +16687,15 @@
         "Food & drink",
         "Bakery & desserts"
       ],
+      "tip": "la glace = ice cream (also: ice). Glasses for your eyes = les lunettes.",
+      "confusables": [
+        "n-lunettes"
+      ],
       "examples": [
         {
           "fr": "Je mange une glace.",
           "en": "I'm eating an ice cream."
         }
-      ],
-      "tip": "la glace = ice cream (also: ice). Glasses for your eyes = les lunettes.",
-      "confusables": [
-        "n-lunettes"
       ]
     },
     {
@@ -16746,14 +16746,14 @@
         "Food & drink",
         "Animals"
       ],
+      "confusables": [
+        "n-poule"
+      ],
       "examples": [
         {
           "fr": "Le panier complet avec un poulet.",
           "en": "The full basket with a chicken."
         }
-      ],
-      "confusables": [
-        "n-poule"
       ]
     },
     {
@@ -16804,14 +16804,14 @@
       "themes": [
         "Food & drink"
       ],
+      "confusables": [
+        "n-beurre-de-cacahuetes"
+      ],
       "examples": [
         {
           "fr": "J'achète du beurre.",
           "en": "I buy butter."
         }
-      ],
-      "confusables": [
-        "n-beurre-de-cacahuetes"
       ]
     },
     {
@@ -17056,14 +17056,14 @@
       "themes": [
         "Food & drink"
       ],
+      "confusables": [
+        "n-frites"
+      ],
       "examples": [
         {
           "fr": "Un paquet de chips.",
           "en": "A bag of crisps."
         }
-      ],
-      "confusables": [
-        "n-frites"
       ]
     },
     {
@@ -17077,14 +17077,14 @@
       "themes": [
         "Food & drink"
       ],
+      "confusables": [
+        "n-pois-chiches"
+      ],
       "examples": [
         {
           "fr": "Une boîte de petits pois.",
           "en": "A tin of peas."
         }
-      ],
-      "confusables": [
-        "n-pois-chiches"
       ]
     },
     {
@@ -19277,15 +19277,15 @@
       "themes": [
         "Animals"
       ],
+      "confusables": [
+        "n-boisson",
+        "n-poison"
+      ],
       "examples": [
         {
           "fr": "Le poisson est dans la mer.",
           "en": "The fish is in the sea."
         }
-      ],
-      "confusables": [
-        "n-boisson",
-        "n-poison"
       ]
     },
     {
@@ -19556,13 +19556,13 @@
       "themes": [
         "Animals"
       ],
+      "tip": "Say \"kanar\": the d is silent.",
       "examples": [
         {
           "fr": "Le canard nage.",
           "en": "The duck is swimming."
         }
-      ],
-      "tip": "Say \"kanar\": the d is silent."
+      ]
     },
     {
       "id": "n-coq",
@@ -19847,13 +19847,13 @@
       "themes": [
         "Nature & weather"
       ],
+      "tip": "une plante verte = a houseplant",
       "examples": [
         {
           "fr": "Tu as des plantes vertes.",
           "en": "You have houseplants."
         }
-      ],
-      "tip": "une plante verte = a houseplant"
+      ]
     },
     {
       "id": "n-arbre",
@@ -20279,15 +20279,15 @@
       "themes": [
         "Clothes & body"
       ],
+      "tip": "les lunettes = glasses (to see with). Not la glace = ice cream / ice.",
+      "confusables": [
+        "n-glace"
+      ],
       "examples": [
         {
           "fr": "Ma mère ne trouve pas ses lunettes.",
           "en": "My mother can't find her glasses."
         }
-      ],
-      "tip": "les lunettes = glasses (to see with). Not la glace = ice cream / ice.",
-      "confusables": [
-        "n-glace"
       ]
     },
     {
@@ -20478,16 +20478,16 @@
       "themes": [
         "Everyday objects & bag"
       ],
+      "alt": [
+        "l'affiche (f)"
+      ],
+      "tip": "un poster = une affiche",
       "examples": [
         {
           "fr": "Nous avons des posters.",
           "en": "We have posters."
         }
-      ],
-      "alt": [
-        "l'affiche (f)"
-      ],
-      "tip": "un poster = une affiche"
+      ]
     },
     {
       "id": "n-idee",
@@ -20642,12 +20642,12 @@
         "Everyday objects & bag",
         "Hobbies & music"
       ],
-      "tip": "One brick = une brique Lego (f).",
       "alt": [
         "le Lego",
         "les Lego",
         "les légos"
       ],
+      "tip": "One brick = une brique Lego (f).",
       "examples": [
         {
           "fr": "Les enfants jouent aux légos."
@@ -20698,15 +20698,15 @@
       "themes": [
         "Common words"
       ],
+      "confusables": [
+        "n-boisson",
+        "n-poisson"
+      ],
       "examples": [
         {
           "fr": "Attention : poison !",
           "en": "Careful: poison!"
         }
-      ],
-      "confusables": [
-        "n-boisson",
-        "n-poisson"
       ]
     },
     {
@@ -21245,8 +21245,8 @@
       "themes": [
         "Everyday objects & bag"
       ],
-      "tip": "Same word as the fruit.",
       "kindOf": "n-sac",
+      "tip": "Same word as the fruit.",
       "confusables": [
         "n-banane"
       ],
@@ -21429,15 +21429,15 @@
       ],
       "kindOf": "n-magasin",
       "tip": "Un magasin is any shop; a (small) food shop is une épicerie, a big one is un supermarché.",
+      "confusables": [
+        "n-droguerie",
+        "n-epicier"
+      ],
       "examples": [
         {
           "fr": "Dans mon quartier, il y a une épicerie.",
           "en": "There's a grocery shop in my area."
         }
-      ],
-      "confusables": [
-        "n-droguerie",
-        "n-epicier"
       ]
     },
     {
@@ -22026,11 +22026,11 @@
       "en": "Dutch (nationality)",
       "masc": "hollandais",
       "fem": "hollandaise",
-      "alt": [
-        "néerlandais / néerlandaise"
-      ],
       "themes": [
         "Nationalities"
+      ],
+      "alt": [
+        "néerlandais / néerlandaise"
       ],
       "examples": [
         {
@@ -22356,13 +22356,13 @@
       "themes": [
         "Countries"
       ],
+      "tip": "No article: à Malte",
       "examples": [
         {
           "fr": "J'habite à Malte.",
           "en": "I live in Malta."
         }
-      ],
-      "tip": "No article: à Malte"
+      ]
     },
     {
       "id": "nat-maltais",
@@ -23208,13 +23208,13 @@
       "themes": [
         "Countries"
       ],
+      "tip": "la Corée du Sud / du Nord = South / North Korea",
       "examples": [
         {
           "fr": "J'habite en Corée.",
           "en": "I live in Korea."
         }
-      ],
-      "tip": "la Corée du Sud / du Nord = South / North Korea"
+      ]
     },
     {
       "id": "nat-coreen",
@@ -23589,13 +23589,13 @@
       "themes": [
         "Countries"
       ],
+      "tip": "No article: à Chypre",
       "examples": [
         {
           "fr": "J'habite à Chypre.",
           "en": "I live in Cyprus."
         }
-      ],
-      "tip": "No article: à Chypre"
+      ]
     },
     {
       "id": "nat-chypriote",
@@ -25023,19 +25023,19 @@
         "Shopping",
         "Questions"
       ],
-      "tip": "In bakeries you'll often hear \"Je vous écoute.\" (literally: I'm listening to you)",
       "alt": [
         "Qu'est-ce que vous désirez ?",
         "Qu'est-ce que vous voulez ?"
+      ],
+      "tip": "In bakeries you'll often hear \"Je vous écoute.\" (literally: I'm listening to you)",
+      "confusables": [
+        "x-comment-je-peux-vous-aider"
       ],
       "examples": [
         {
           "fr": "Bonjour madame, vous désirez ?",
           "en": "Hello, what would you like?"
         }
-      ],
-      "confusables": [
-        "x-comment-je-peux-vous-aider"
       ]
     },
     {
@@ -25050,15 +25050,15 @@
       "alt": [
         "Je peux vous aider ?"
       ],
+      "tip": "To a friend: \"Comment je peux t'aider ?\" In bakeries you'll often hear \"Je vous écoute.\" (literally: I'm listening to you)",
+      "confusables": [
+        "x-vous-desirez"
+      ],
       "examples": [
         {
           "fr": "Bonjour madame, comment je peux vous aider ?",
           "en": "Hello, how can I help you?"
         }
-      ],
-      "tip": "To a friend: \"Comment je peux t'aider ?\" In bakeries you'll often hear \"Je vous écoute.\" (literally: I'm listening to you)",
-      "confusables": [
-        "x-vous-desirez"
       ]
     },
     {
@@ -25163,13 +25163,13 @@
       "alt": [
         "Ce sera tout ?"
       ],
+      "tip": "C'est tout ? is the present; Ce sera tout ? is the future (will that be all?).",
       "examples": [
         {
           "fr": "Oui, merci, c'est tout.",
           "en": "Yes thanks, that's all."
         }
-      ],
-      "tip": "C'est tout ? is the present; Ce sera tout ? is the future (will that be all?)."
+      ]
     },
     {
       "id": "x-quel-est-le-prix",
