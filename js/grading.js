@@ -73,6 +73,18 @@ export function compareText(user, correct, correctDisplay = correct) {
   return { kind: 'different' };
 }
 
+// Short words that only the accent tells apart: here a missing or extra accent is another word, not a spelling slip
+const WORDS_TOLD_APART_BY_ACCENT = {
+  a: 'has (il a, from avoir)', 'à': 'in, at, to',
+  ou: 'or', 'où': 'where',
+  la: 'the (feminine)', 'là': 'here, there',
+};
+function gradeAsAccentPairWord(user, correct) {
+  const isPairWord = (word) => Object.hasOwn(WORDS_TOLD_APART_BY_ACCENT, word);
+  if (user === correct || !isPairWord(user) || !isPairWord(correct) || stripAccents(user) !== stripAccents(correct)) return null;
+  return { result: 'wrong', notes: [`**${user}** = ${WORDS_TOLD_APART_BY_ACCENT[user]}. The accent makes it a different word: here you need **${correct}**.`] };
+}
+
 const bestComparison = (comparisons) => comparisons.reduce((best, c) => (KIND_RANK[c.kind] > KIND_RANK[best.kind] ? c : best));
 const kindToResult = (kind) => (kind === 'exact' ? 'correct' : kind === 'different' ? 'wrong' : 'partial');
 const worstResult = (...results) => results.reduce((a, b) => (RESULT_RANK[a] <= RESULT_RANK[b] ? a : b));
@@ -338,14 +350,19 @@ function gradeNounAgainst(answer, candidate) {
   const notes = [];
   const cmp = compareText(answer.word, candidate.word, candidate.wordDisplay);
   let pluralIssue = false;
+  // "les escargots" on the l'escargot card is the plural of this word, even when the plural is also its own entry
+  const answerIsPluralOfWord = candidate.article !== 'les' && [candidate.word + 's', candidate.word + 'x'].includes(answer.word);
   let wordResult;
   if (cmp.kind === 'exact') wordResult = 'correct';
   else if (candidate.article === 'les' && [answer.word + 's', answer.word + 'x'].includes(candidate.word)) {
     pluralIssue = true;
     wordResult = 'partial';
+  } else if (answerIsPluralOfWord) {
+    wordResult = 'partial';
+    notes.push(`Give the singular: **${candidate.display}**.`);
   } else if (cmp.kind === 'different') return { result: 'wrong', notes, different: true };
   else wordResult = 'partial';
-  if (!pluralIssue) notes.push(...comparisonNotes(cmp));
+  if (!pluralIssue && !answerIsPluralOfWord) notes.push(...comparisonNotes(cmp));
   const wordExact = cmp.kind === 'exact';
 
   // "le conductrice (f)": the article and the gender marker contradict each other
@@ -404,7 +421,7 @@ function gradeNounAgainst(answer, candidate) {
 
   if (pluralIssue) notes.unshift(`**${candidate.display}** is always plural in French.`);
   if (wordResult !== 'correct' && genderRight && expected) notes.push('Gender right ✓');
-  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue, wordExact };
+  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue && !answerIsPluralOfWord, wordExact };
 }
 
 function bestGrade(grades) {
@@ -641,6 +658,10 @@ function gradePlain(entry, raw, ctx) {
   const candidates = [entry.fr, ...(entry.alt || [])];
   const comparisons = candidates.map((c) => compareText(text, withoutPunctuation(normalizeText(c)), c));
   const cmp = bestComparison(comparisons);
+  if (cmp.kind === 'accent') {
+    const accentPairGrade = gradeAsAccentPairWord(text, withoutPunctuation(normalizeText(entry.fr)));
+    if (accentPairGrade) return accentPairGrade;
+  }
   if (entry.type === 'number' && cmp.kind !== 'exact') {
     const flatten = (s) => s.replace(/-/g, ' ').replace(/\s+/g, ' ');
     if (flatten(text) === flatten(normalizeText(entry.fr))) {
@@ -670,6 +691,8 @@ function gradeFillIn(entry, fillIn, raw, ctx) {
     : [expected];
   const cmp = bestComparison(acceptedAnswers.map((answer) => compareText(text, answer, answer === expected ? fillIn.answer : answer)));
   if (cmp.kind === 'exact') return { result: 'correct', notes: comparisonNotes(cmp) };
+  const accentPairGrade = cmp.kind === 'accent' && gradeAsAccentPairWord(text, expected);
+  if (accentPairGrade) return accentPairGrade;
   const rule = isConjugatedVerbBlank ? verbRuleNote(entry, [fillIn.formIndex]) : null;
 
   // Another form of the same word: right verb in the wrong person, adjective without agreement, singular/plural

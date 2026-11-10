@@ -92,6 +92,12 @@ check('n-nom-de-famille', 'le nom', 'wrong', 'is the general word');
 check('n-prenom', 'f', 'wrong', '');
 check('adj-grand', 'f', 'wrong', '');
 check('n-lunettes', 'la lunette', 'partial', 'always plural');
+// the plural of this word is a singular/plural slip, even when the plural is its own entry (les escargots = food)
+check('n-escargot', 'les escargots', 'partial', "Give the singular: **l'escargot (m)**.");
+expectNoNoteContaining('n-escargot', 'les escargots', 'snails (food)');
+check('n-escargots', "l'escargot (m)", 'partial', 'always plural');
+check('n-chat', 'les chats', 'partial', 'Give the singular: **le chat**.');
+expectNoNoteContaining('n-chat', 'les chats', 'Almost');
 check('n-soeur', 'la soeur', 'correct', 'œ');
 check('n-equitation', "l'équitation (m)", 'wrong', '-tion / -sion are usually feminine');
 check('n-image', "l'image (m)", 'wrong', 'exception');
@@ -99,6 +105,8 @@ check('n-collegue', 'la collègue', 'correct');
 check('n-voisin', 'le voisin / la voisine', 'correct');
 check('n-mer', 'la mère', 'wrong', 'mother');
 check('n-lecon', 'le cours', 'correct', 'Also right');
+check('n-beau-fils', 'le gendre', 'correct', 'Also right: **le gendre** = son-in-law.');
+check('n-gendre', 'le beau-fils', 'correct', 'Also right: **le beau-fils**');
 check('n-pluie', '?', 'wrong');
 check('n-pluie', '', 'wrong');
 check('c-hongrie', 'la Hongrie', 'correct');
@@ -137,6 +145,12 @@ check('x-ca-va', 'ca va?', 'partial', 'Accent');
 check('x-ne-jamais', 'ne ... jamais', 'correct');
 check('num-21', 'vingt-et-un', 'correct');
 check('num-80', 'quatre-vingt', 'partial', 'Almost');
+// a/à, ou/où, la/là: the accent makes it another word, not a spelling slip
+check('x-ou', 'où', 'wrong', '**où** = where.');
+check('x-ou-where', 'ou', 'wrong', '**ou** = or.');
+check('x-a', 'a', 'wrong', '**a** = has');
+check('x-la-there', 'la', 'wrong', '**la** = the (feminine).');
+check('x-merci', 'merçi', 'partial', 'Accent');
 // Fill-ins
 check('adj-bruyant', 'bruyante', 'correct', '', true);
 check('adj-bruyant', 'bruyant', 'partial', 'agree', true);
@@ -144,6 +158,8 @@ check('v-manger', 'manges', 'correct', '', true);
 check('v-payer', 'paie', 'correct', '', true);
 check('v-payer', 'paye', 'correct', '', true);
 check('v-payer', 'payons', 'partial', 'nous', true);
+check('x-a', 'a', 'wrong', 'here you need **à**', true);
+check('x-ou-where', 'ou', 'wrong', 'here you need **où**', true);
 
 // kindOf: base word answered correctly lists its kinds
 check('n-sac', 'le sac', 'correct', 'Also: **le sac à dos** (backpack, rucksack) · **le sac de sport** (sports bag) · **le sac à main** (handbag) · **le sac à ordinateur** (laptop bag)');
@@ -156,6 +172,8 @@ check('adj-bleu-fonce', 'bleu / bleue', 'wrong', 'Almost: **bleu** (blue) is the
 check('n-sac-a-dos', 'le sac à main', 'wrong', "That's another kind of **sac**: **le sac à main** = handbag.");
 check('n-marchand', 'le vendeur', 'wrong', '**le vendeur** = salesperson, shop assistant.');
 check('n-pomme-de-terre', 'la pomme', 'wrong', '**la pomme** = apple.');
+check('n-tarte-au-citron', 'la tarte au citron meringuée', 'wrong', "That's another kind of **tarte**: **la tarte au citron meringuée** = lemon meringue tart.");
+check('n-tarte-au-citron-meringuee', 'la tarte citron meringuée', 'correct');
 check('n-pomme', 'la banane', 'wrong', '**la banane** = banana. | **la banane** = bum bag, fanny pack.');
 // No kindOf and no kinds: notes as before
 check('n-quartier', 'le quartier', 'correct');

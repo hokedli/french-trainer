@@ -26,10 +26,12 @@ Progress lives in Firestore as an append-only log: `users/{uid}/attempts/{autoId
 ## vocab.json format
 
 ```json
-{ "version": 8, "words": [ { "id": "n-quartier", "type": "noun", ... } ] }
+{ "version": 11, "themes": ["People & identity", ...], "words": [ { "id": "n-quartier", "type": "noun", ... } ] }
 ```
 
-Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `theme`, optional `alt` (other accepted spellings of this entry: gendered forms, or wordings with exactly the same meaning), `examples` (array of `{ "fr", "en" }`, even for one sentence; leave it out if there are none), `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`), `kindOf` (id of a more general base word, placed right after `theme`: `n-sac-a-dos` has `"kindOf": "n-sac"`), `synonymOf` (ids of other entries also accepted on this card, placed after `kindOf`, or after `theme` if there is none: `"synonymOf": ["n-metier"]`).
+Common fields: `id` (stable, never change it), `type`, `en` (the English prompt), `themes`, optional `alt` (other accepted spellings of this entry: gendered forms, or wordings with exactly the same meaning), `examples` (array of `{ "fr", "en" }`, even for one sentence; leave it out if there are none), `tip`, `confusables` (ids like `n-glace`, or plain words like `"la mare"`), `kindOf` (id of a more general base word, placed right after `themes`: `n-sac-a-dos` has `"kindOf": "n-sac"`), `synonymOf` (ids of other entries also accepted on this card, placed after `kindOf`, or after `themes` if there is none: `"synonymOf": ["n-metier"]`).
+
+**themes**: 1–3 names from the top-level `themes` list (which sets their order); the first is the entry's main theme. Themes are topics, not grammar: verbs go under what they're about (`v-nager` → `Sports`), and basic verbs, adjectives and nouns that fit no topic go in `Common words`. The conjugation group is in `rule`, not in a theme. Only add a second theme if the word belongs in a practice session on that topic (`n-boulanger`: `["Jobs & work", "Shopping"]`); `Oral exam` is only ever a second theme, after `Questions`. A new theme goes in the top-level list first — `validate.js` reports unknown or repeated themes as errors and empty themes as a warning.
 
 **kindOf**: only on the specific entry; the base word doesn't list its kinds (the app collects them). The base must exist, must not be the entry itself and must not have its own `kindOf` — `validate.js` reports these as errors, and the app logs a warning and ignores the link. Use it when the specific word is still the same kind of thing (backpack → bag); if the meaning changes, use `confusables` (pomme / pomme de terre). Full rules: "French–English Vocabulary.md" → "For vocab.json: entries to add" → "How to convert".
 
@@ -41,17 +43,19 @@ Common fields: `id` (stable, never change it), `type`, `en` (the English prompt)
 - Correct answer to a base word → `Also: le sac à dos (backpack, rucksack) · …` listing its kinds.
 - Wrong answer that is another entry (all matches, verbs by infinitive only) → `Almost: la bouteille (bottle) is the general word; …` if it is the prompt's base word, `That's another kind of sac: le sac à main = handbag.` if it shares the base, otherwise `la pomme = apple.` (confusables included).
 - Answer that is a `synonymOf` entry of the prompt → `Also right: le métier = job, trade. The word we were after: le travail.` and the synonym's own grade (correct for a full answer). Without a link, another entry is always wrong.
+- The plural of the prompt's own noun is a singular/plural slip (`Give the singular: l'escargot (m).`), even if the plural is its own `pluralOnly` entry (`n-escargots`).
+- a / à, ou / où, la / là: a missing or extra accent is another word, not an accent slip → wrong, `ou = or. The accent makes it a different word: here you need où.` (list in `WORDS_TOLD_APART_BY_ACCENT`).
 
 | type | fields | example |
 | --- | --- | --- |
-| `noun` | `fr` (no article), `gender` `m`/`f`/`mf`, `article` `le`/`la`/`l'`/`les`, `pluralOnly` (true for `les`) | `{"id":"n-hopital","type":"noun","en":"hospital","fr":"hôpital","gender":"m","article":"l'","theme":"Home, places and transport"}` |
+| `noun` | `fr` (no article), `gender` `m`/`f`/`mf`, `article` `le`/`la`/`l'`/`les`, `pluralOnly` (true for `les`) | `{"id":"n-hopital","type":"noun","en":"hospital","fr":"hôpital","gender":"m","article":"l'","themes":["Home & town"]}` |
 | `verb` | `infinitive`, `conj` = 6 forms je, tu, il, nous, vous, ils **without subject pronouns** (keep `j'`, keep reflexive `me`/`te`/`se`/`nous`/`vous`), optional `rule`: `-ger` `-cer` `-yer` `é→è` `e→è` `double-l` `-ir-iss` `-re` `irregular`, optional `conjAlt` = 6 lists of other accepted spellings per person (`[]` where there are none) | `"conj":["mange","manges","mange","mangeons","mangez","mangent"],"rule":"-ger"`; `"conjAlt":[["paye"],["payes"],["paye"],[],[],["payent"]]` |
 | `adjective` | `masc` (or `null` if feminine-only), `fem`; `alt` entries are `"masc / fem"` | `{"masc":"bruyant","fem":"bruyante"}` |
 | `country` | like noun (`article` may be `""`, e.g. Malte) + `inTo` (`"en Hongrie"`) | |
 | `expression` | `fr`; `alt` for other accepted wordings | `{"fr":"Je ne sais pas.","en":"I don't know."}` |
 | `number` | `fr` in words, `en` is the digits | `{"id":"num-21","fr":"vingt et un","en":"21"}` |
 
-Nationalities are `adjective` entries with ids `nat-…` and theme `Nationalities`.
+Nationalities are `adjective` entries with ids `nat-…` and themes `["Nationalities"]`.
 Alternatives for paired nouns go in `alt` as full answers: `"alt": ["la voisine"]`, `"alt": ["l'amie (f)"]`.
 
 **Id convention** (only for new words; existing ids never change, even if the word is edited):

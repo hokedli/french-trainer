@@ -18,7 +18,7 @@ try {
 
 const TYPES = ['noun', 'verb', 'adjective', 'expression', 'country', 'number'];
 const RULES = ['-ger', '-cer', '-yer', 'é→è', 'e→è', 'double-l', '-ir-iss', '-re', 'irregular'];
-const COMMON_FIELDS = ['id', 'type', 'en', 'theme', 'kindOf', 'synonymOf', 'alt', 'examples', 'tip', 'confusables'];
+const COMMON_FIELDS = ['id', 'type', 'en', 'themes', 'kindOf', 'synonymOf', 'alt', 'examples', 'tip', 'confusables'];
 const FIELDS_BY_TYPE = {
   noun: ['fr', 'gender', 'article', 'pluralOnly'],
   country: ['fr', 'gender', 'article', 'pluralOnly', 'inTo'],
@@ -34,6 +34,10 @@ if (!Array.isArray(vocab.words)) {
   console.error('"words" must be an array');
   process.exit(1);
 }
+const MAX_THEMES_PER_WORD = 3;
+const knownThemes = new Set(Array.isArray(vocab.themes) ? vocab.themes : []);
+if (!Array.isArray(vocab.themes) || vocab.themes.length === 0 || !vocab.themes.every(isText)) errors.push('"themes" (top level) must be a list of theme names');
+else if (knownThemes.size !== vocab.themes.length) errors.push('"themes" (top level) lists a theme twice');
 
 const ids = new Set();
 for (const [index, w] of vocab.words.entries()) {
@@ -45,7 +49,12 @@ for (const [index, w] of vocab.words.entries()) {
   else ids.add(w.id);
   if (!TYPES.includes(w.type)) { fail(`type must be one of ${TYPES.join(', ')}`); continue; }
   if (!isText(w.en)) fail('missing "en"');
-  if (!isText(w.theme)) fail('missing "theme"');
+  if (!Array.isArray(w.themes) || w.themes.length === 0 || w.themes.length > MAX_THEMES_PER_WORD || !w.themes.every(isText)) {
+    fail(`"themes" must be a list of 1–${MAX_THEMES_PER_WORD} theme names`);
+  } else {
+    for (const theme of w.themes) if (!knownThemes.has(theme)) fail(`unknown theme "${theme}" (add it to the top-level "themes" list, or fix the spelling)`);
+    if (new Set(w.themes).size !== w.themes.length) fail('"themes" lists a theme twice');
+  }
 
   const allowed = new Set([...COMMON_FIELDS, ...FIELDS_BY_TYPE[w.type]]);
   for (const key of Object.keys(w)) if (!allowed.has(key)) fail(`unknown field "${key}" for type ${w.type}`);
@@ -148,6 +157,8 @@ for (const w of vocab.words) {
     }
   }
 }
+const usedThemes = new Set(vocab.words.flatMap((w) => (Array.isArray(w.themes) ? w.themes : [])));
+for (const theme of knownThemes) if (!usedThemes.has(theme)) warnings.push(`theme "${theme}" has no words`);
 for (const id of Object.keys(SEED.boxes)) {
   if (!ids.has(id)) warnings.push(`seed-progress.js: "${id}" is not in vocab.json (its seed is ignored)`);
 }
