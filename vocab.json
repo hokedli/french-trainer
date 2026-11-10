@@ -1,36 +1,41 @@
 {
-  "version": 17,
+  "version": 19,
   "themes": [
     "People & identity",
     "Jobs & work",
+    "Law & justice",
     "Family & relationships",
     "Greetings & phrases",
     "Questions",
-    "Oral exam",
-    "Classroom & grammar",
+    "School & studies",
+    "Language & grammar",
     "Common words",
-    "Prepositions & linking words",
-    "Adverbs",
-    "Describing people",
-    "Describing places",
-    "Opinions",
+    "Prepositions",
+    "Position words",
+    "Linking words",
+    "Quantity & degree",
+    "Describing",
+    "Likes & opinions",
     "Colours",
     "Time & dates",
     "Numbers",
-    "Home & town",
+    "Home & housework",
+    "Town & places",
+    "Travel & sightseeing",
     "Transport",
-    "Hobbies & music",
+    "Hobbies & free time",
     "Sports",
-    "Food & drink",
+    "Food & dishes",
     "Fruit & vegetables",
+    "Drinks",
     "Bakery & desserts",
-    "Meals, restaurant & café",
-    "Describing food",
+    "Restaurant & café",
     "Shopping",
     "Animals",
     "Nature & weather",
-    "Clothes & body",
-    "Everyday objects & bag",
+    "Clothes & accessories",
+    "Body & health",
+    "Everyday objects",
     "Countries",
     "Nationalities"
   ],
@@ -241,7 +246,7 @@
       "article": "l'",
       "themes": [
         "People & identity",
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -259,7 +264,7 @@
       "article": "le",
       "themes": [
         "People & identity",
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -277,7 +282,7 @@
       "article": "le",
       "themes": [
         "People & identity",
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -454,8 +459,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "People & identity",
-        "Family & relationships"
+        "Family & relationships",
+        "People & identity"
       ],
       "alt": [
         "l'amie (f)"
@@ -475,8 +480,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "People & identity",
-        "Family & relationships"
+        "Family & relationships",
+        "People & identity"
       ],
       "alt": [
         "le petit ami"
@@ -498,8 +503,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "People & identity",
-        "Family & relationships"
+        "Family & relationships",
+        "People & identity"
       ],
       "alt": [
         "la petite amie"
@@ -521,8 +526,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "People & identity",
-        "Family & relationships"
+        "Family & relationships",
+        "People & identity"
       ],
       "alt": [
         "la voisine"
@@ -542,6 +547,7 @@
       "gender": "mf",
       "article": "le",
       "themes": [
+        "Travel & sightseeing",
         "People & identity"
       ],
       "alt": [
@@ -638,7 +644,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "People & identity"
+        "Law & justice"
       ],
       "alt": [
         "la prisonnière"
@@ -658,7 +664,8 @@
       "gender": "mf",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "la médecin"
@@ -682,7 +689,8 @@
       "gender": "mf",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "la dentiste"
@@ -807,7 +815,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la danseuse"
@@ -955,7 +963,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Classroom & grammar"
+        "School & studies"
       ],
       "alt": [
         "la prof"
@@ -1028,7 +1036,8 @@
       "gender": "mf",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "alt": [
         "la juge"
@@ -1091,7 +1100,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la peintre"
@@ -1148,7 +1157,8 @@
       "gender": "mf",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "alt": [
         "la détective"
@@ -1290,7 +1300,8 @@
       "gender": "mf",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "acceptedSynonyms": [
         "n-psy"
@@ -1354,7 +1365,8 @@
       "gender": "mf",
       "article": "l'",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "examples": [
         {
@@ -1372,7 +1384,7 @@
       "article": "l'",
       "themes": [
         "Jobs & work",
-        "Classroom & grammar"
+        "School & studies"
       ],
       "acceptedSynonyms": [
         "n-professeur",
@@ -1398,7 +1410,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Classroom & grammar"
+        "School & studies"
       ],
       "acceptedSynonyms": [
         "n-enseignant",
@@ -1423,8 +1435,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Jobs & work",
-        "Classroom & grammar"
+        "School & studies",
+        "Jobs & work"
       ],
       "alt": [
         "l'étudiante (f)"
@@ -1468,7 +1480,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "alt": [
         "l'avocate (f)"
@@ -1516,7 +1529,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "alt": [
         "la procureure"
@@ -1611,7 +1625,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "alt": [
         "la cuisinière"
@@ -1653,7 +1667,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "alt": [
         "la policière"
@@ -1674,7 +1689,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "l'infirmière (f)"
@@ -1825,7 +1841,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la musicienne"
@@ -1845,7 +1861,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "la chirurgienne"
@@ -1886,7 +1903,8 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Shopping"
+        "Shopping",
+        "Body & health"
       ],
       "alt": [
         "la pharmacienne"
@@ -1975,7 +1993,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "alt": [
         "la serveuse"
@@ -2036,7 +2054,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la chanteuse"
@@ -2058,7 +2076,7 @@
       "article": "le",
       "themes": [
         "Jobs & work",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-chanteur",
       "alt": [
@@ -2212,7 +2230,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Law & justice"
       ],
       "examples": [
         {
@@ -2247,6 +2266,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
+        "Body & health",
         "Jobs & work"
       ],
       "examples": [
@@ -2264,7 +2284,8 @@
       "gender": "mf",
       "article": "l'",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "examples": [
         {
@@ -2472,7 +2493,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "l'ambulancière (f)"
@@ -2533,7 +2555,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Jobs & work"
+        "Jobs & work",
+        "Body & health"
       ],
       "alt": [
         "la docteure"
@@ -3249,8 +3272,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Family & relationships",
-        "People & identity"
+        "People & identity",
+        "Family & relationships"
       ],
       "tip": "Le garçon (de café) is also an old-fashioned word for a waiter (= le serveur).",
       "examples": [
@@ -3268,8 +3291,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Family & relationships",
-        "People & identity"
+        "People & identity",
+        "Family & relationships"
       ],
       "examples": [
         {
@@ -3286,7 +3309,6 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Family & relationships",
         "People & identity"
       ],
       "examples": [
@@ -3652,7 +3674,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "confusables": [
         "n-cours",
@@ -3673,7 +3695,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "acceptedSynonyms": [
         "n-lecon"
@@ -3697,7 +3719,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "acceptedSynonyms": [
         "n-cours"
@@ -3720,7 +3742,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -3738,7 +3760,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -3755,7 +3777,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3772,7 +3794,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3789,7 +3811,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "English \"phrase\" = une expression. French \"la sentence\" = a court verdict.",
       "confusables": [
@@ -3810,7 +3832,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "French \"la phrase\" = a sentence.",
       "confusables": [
@@ -3831,7 +3853,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3848,7 +3870,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3865,7 +3887,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3882,7 +3904,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3899,7 +3921,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3916,7 +3938,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3933,7 +3955,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3950,7 +3972,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3967,7 +3989,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -3984,7 +4006,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "é = accent aigu, è = accent grave, ê = accent circonflexe",
       "examples": [
@@ -4002,7 +4024,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4019,7 +4041,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4036,7 +4058,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4053,7 +4075,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4070,7 +4092,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4087,7 +4109,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4104,7 +4126,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4121,7 +4143,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4138,7 +4160,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4155,7 +4177,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4172,7 +4194,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4189,7 +4211,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4206,7 +4228,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4223,7 +4245,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "pronom tonique = stressed pronoun (moi, toi…); pronom personnel = subject pronoun (je, tu…)",
       "examples": [
@@ -4241,7 +4263,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4258,7 +4280,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4275,7 +4297,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -4286,7 +4308,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4303,7 +4325,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -4314,7 +4336,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4331,7 +4353,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4348,7 +4370,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4365,7 +4387,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4399,7 +4421,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4416,7 +4438,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -4433,8 +4455,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar",
-        "Everyday objects & bag"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -4451,8 +4473,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar",
-        "Everyday objects & bag"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -4469,8 +4491,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar",
-        "Everyday objects & bag"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -4487,8 +4509,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar",
-        "Everyday objects & bag"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -4505,7 +4527,7 @@
       "gender": "mf",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "tip": "At university: \"l'étudiant(e)\".",
       "confusables": [
@@ -4526,7 +4548,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4543,7 +4565,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4560,7 +4582,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4577,7 +4599,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies",
+        "Law & justice"
       ],
       "examples": [
         {
@@ -4594,7 +4617,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4611,7 +4634,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4628,7 +4651,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4645,7 +4668,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4662,8 +4685,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar",
-        "Numbers"
+        "Numbers",
+        "Language & grammar"
       ],
       "confusables": [
         "n-nombre",
@@ -4684,8 +4707,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar",
-        "Numbers"
+        "Numbers",
+        "Language & grammar"
       ],
       "confusables": [
         "n-numero",
@@ -4706,7 +4729,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "tip": "le jeu du pendu = hangman",
       "examples": [
@@ -4724,7 +4747,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "confusables": [
         "n-college"
@@ -4744,7 +4767,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "kindOf": "n-diplome",
       "examples": [
@@ -4762,7 +4785,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4780,7 +4803,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "kindOf": "n-verbe",
       "alt": [
@@ -4801,7 +4824,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4818,7 +4841,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies",
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -4835,7 +4859,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4852,7 +4876,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4869,7 +4893,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4886,7 +4910,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "To order food or drinks = commander.",
       "confusables": [
@@ -4907,7 +4931,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -4941,7 +4965,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "le présent de l'indicatif = the present tense. C'est tout ? (présent) / Ce sera tout ? (futur)",
       "confusables": [
@@ -4962,7 +4986,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "confusables": [
         "n-present"
@@ -4982,7 +5006,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -4999,7 +5023,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -5219,7 +5243,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -5243,7 +5267,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -5292,7 +5316,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "tip": "apprendre = to learn (j'apprends le vocabulaire). To study = étudier.",
       "confusables": [
@@ -5320,7 +5344,7 @@
       ],
       "rule": "-re",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -5368,7 +5392,7 @@
       ],
       "rule": "-ir-iss",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -5440,7 +5464,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5464,7 +5488,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5635,8 +5659,8 @@
         "aiment"
       ],
       "themes": [
-        "Common words",
-        "Opinions"
+        "Likes & opinions",
+        "Common words"
       ],
       "examples": [
         {
@@ -5659,8 +5683,8 @@
         "adorent"
       ],
       "themes": [
-        "Common words",
-        "Opinions"
+        "Likes & opinions",
+        "Common words"
       ],
       "examples": [
         {
@@ -5683,8 +5707,8 @@
         "détestent"
       ],
       "themes": [
-        "Common words",
-        "Opinions"
+        "Likes & opinions",
+        "Common words"
       ],
       "examples": [
         {
@@ -5707,7 +5731,7 @@
         "habitent"
       ],
       "themes": [
-        "Home & town",
+        "Home & housework",
         "People & identity"
       ],
       "examples": [
@@ -5754,7 +5778,7 @@
         "jouent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5777,7 +5801,7 @@
         "étudient"
       ],
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "tip": "étudier = to study (a subject, at school or university). To learn = apprendre.",
       "confusables": [
@@ -5827,7 +5851,7 @@
         "regardent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "confusables": [
         "v-observer"
@@ -5853,7 +5877,7 @@
         "écoutent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "tip": "écouter = to listen (é-cou-ter). To spell = épeler.",
       "confusables": [
@@ -5880,7 +5904,7 @@
         "chantent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5903,7 +5927,7 @@
         "dansent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5926,8 +5950,8 @@
         "cuisinent"
       ],
       "themes": [
-        "Hobbies & music",
-        "Food & drink"
+        "Hobbies & free time",
+        "Food & dishes"
       ],
       "tip": "Also: faire la cuisine.",
       "examples": [
@@ -5951,7 +5975,7 @@
         "jardinent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5974,7 +5998,7 @@
         "bricolent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -5997,7 +6021,7 @@
         "dessinent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -6020,7 +6044,7 @@
         "pêchent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "confusables": [
         "n-peche"
@@ -6046,7 +6070,7 @@
         "chassent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -6069,7 +6093,7 @@
         "campent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -6092,7 +6116,7 @@
         "visitent"
       ],
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -6253,7 +6277,7 @@
         "invitent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -6541,7 +6565,7 @@
         "accordent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6564,7 +6588,7 @@
         "posent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6587,7 +6611,7 @@
         "signifient"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "In everyday speech: vouloir dire. Qu'est-ce que ça veut dire ? = What does that mean?",
       "confusables": [
@@ -6643,7 +6667,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "tip": "nous buvons, vous buvez, ils boivent: the stem changes.",
       "examples": [
@@ -6669,7 +6693,7 @@
       "rule": "irregular",
       "themes": [
         "Common words",
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "Like apprendre. In a café or restaurant: je vais prendre… = I'll have…",
       "examples": [
@@ -6693,7 +6717,7 @@
         "soulignent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6716,7 +6740,7 @@
         "associent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6739,7 +6763,7 @@
         "observent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "confusables": [
         "v-regarder"
@@ -6765,7 +6789,7 @@
         "ajoutent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6811,7 +6835,7 @@
         "cochent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -6908,7 +6932,7 @@
         "organisent"
       ],
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -6931,7 +6955,7 @@
         "désignent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -7000,7 +7024,7 @@
         "commandent"
       ],
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "L'ordre = order (sequence), not an order in a restaurant.",
       "confusables": [
@@ -7104,7 +7128,7 @@
         "dînent"
       ],
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "Le dîner (noun) = dinner.",
       "examples": [
@@ -7152,7 +7176,7 @@
       ],
       "rule": "-ger",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -7224,6 +7248,7 @@
       ],
       "rule": "-ger",
       "themes": [
+        "Travel & sightseeing",
         "Transport"
       ],
       "examples": [
@@ -7272,7 +7297,7 @@
       ],
       "rule": "-cer",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -7320,8 +7345,8 @@
       ],
       "rule": "é→è",
       "themes": [
-        "Common words",
-        "Opinions"
+        "Likes & opinions",
+        "Common words"
       ],
       "examples": [
         {
@@ -7345,7 +7370,7 @@
       ],
       "rule": "é→è",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -7369,7 +7394,7 @@
       ],
       "rule": "double-l",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "épeler = to spell (j'épelle — double l). To listen = écouter.",
       "confusables": [
@@ -7421,7 +7446,7 @@
       ],
       "rule": "e→è",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -7501,7 +7526,7 @@
         "conjuguent"
       ],
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "la conjugaison = conjugation",
       "examples": [
@@ -7603,7 +7628,7 @@
       ],
       "rule": "irregular",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "Like écrire: nous décrivons.",
       "examples": [
@@ -7628,7 +7653,7 @@
       ],
       "themes": [
         "Common words",
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -7651,8 +7676,8 @@
         "pique-niquent"
       ],
       "themes": [
-        "Hobbies & music",
-        "Food & drink"
+        "Hobbies & free time",
+        "Food & dishes"
       ],
       "tip": "Also spelt piqueniquer.",
       "examples": [
@@ -7669,7 +7694,7 @@
       "masc": "sympa",
       "fem": "sympa",
       "themes": [
-        "Describing people"
+        "Describing"
       ],
       "alt": [
         "sympathique / sympathique"
@@ -7688,8 +7713,8 @@
       "masc": "beau",
       "fem": "belle",
       "themes": [
-        "Describing people",
-        "Opinions"
+        "Describing",
+        "Likes & opinions"
       ],
       "tip": "bel before a vowel",
       "examples": [
@@ -7706,8 +7731,8 @@
       "masc": "moche",
       "fem": "moche",
       "themes": [
-        "Describing people",
-        "Opinions"
+        "Describing",
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -7723,7 +7748,7 @@
       "masc": "propre",
       "fem": "propre",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -7739,7 +7764,7 @@
       "masc": "sale",
       "fem": "sale",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "confusables": [
         "adj-sale-salty"
@@ -7758,8 +7783,7 @@
       "masc": "calme",
       "fem": "calme",
       "themes": [
-        "Describing places",
-        "Describing people"
+        "Describing"
       ],
       "acceptedSynonyms": [
         "adj-tranquille"
@@ -7778,7 +7802,7 @@
       "masc": "tranquille",
       "fem": "tranquille",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "acceptedSynonyms": [
         "adj-calme"
@@ -7797,7 +7821,7 @@
       "masc": "bruyant",
       "fem": "bruyante",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "tip": "le bruit (noise) → bruyant (noisy). Feminine: + e → bruyante.",
       "confusables": [
@@ -7817,7 +7841,7 @@
       "masc": "animé",
       "fem": "animée",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -7833,7 +7857,7 @@
       "masc": "intéressant",
       "fem": "intéressante",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -7849,7 +7873,7 @@
       "masc": "ennuyeux",
       "fem": "ennuyeuse",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "tip": "l'ennui (boredom) → ennuyeux (boring). -eux → -euse in the feminine.",
       "confusables": [
@@ -7869,7 +7893,7 @@
       "masc": "génial",
       "fem": "géniale",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "acceptedSynonyms": [
         "adj-super"
@@ -7888,7 +7912,7 @@
       "masc": "super",
       "fem": "super",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "acceptedSynonyms": [
         "adj-genial"
@@ -7907,8 +7931,8 @@
       "masc": "cool",
       "fem": "cool",
       "themes": [
-        "Opinions",
-        "Describing people"
+        "Likes & opinions",
+        "Describing"
       ],
       "examples": [
         {
@@ -7924,8 +7948,7 @@
       "masc": "petit",
       "fem": "petite",
       "themes": [
-        "Describing people",
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -7941,8 +7964,7 @@
       "masc": "grand",
       "fem": "grande",
       "themes": [
-        "Describing people",
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -7958,7 +7980,7 @@
       "masc": "bon",
       "fem": "bonne",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -7974,7 +7996,7 @@
       "masc": "vrai",
       "fem": "vraie",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -7990,7 +8012,7 @@
       "masc": "faux",
       "fem": "fausse",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8006,7 +8028,7 @@
       "masc": "facile",
       "fem": "facile",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -8126,7 +8148,8 @@
       "fem": "enceinte",
       "themes": [
         "Family & relationships",
-        "Describing people"
+        "Describing",
+        "Body & health"
       ],
       "examples": [
         {
@@ -8158,7 +8181,7 @@
       "masc": "seul",
       "fem": "seule",
       "themes": [
-        "Describing people"
+        "Describing"
       ],
       "tip": "tout seul; toute seule",
       "examples": [
@@ -8191,7 +8214,7 @@
       "masc": "préféré",
       "fem": "préférée",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -8207,7 +8230,7 @@
       "masc": "formel",
       "fem": "formelle",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8223,7 +8246,7 @@
       "masc": "informel",
       "fem": "informelle",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8288,7 +8311,7 @@
       "masc": "moderne",
       "fem": "moderne",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -8304,7 +8327,7 @@
       "masc": "ancien",
       "fem": "ancienne",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "confusables": [
         "adj-vieux"
@@ -8323,7 +8346,7 @@
       "masc": "minimaliste",
       "fem": "minimaliste",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -8339,7 +8362,7 @@
       "masc": "confortable",
       "fem": "confortable",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -8355,7 +8378,7 @@
       "masc": "classique",
       "fem": "classique",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -8451,7 +8474,7 @@
       "masc": "invariable",
       "fem": "invariable",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8467,7 +8490,7 @@
       "masc": "suivant",
       "fem": "suivante",
       "themes": [
-        "Classroom & grammar",
+        "Language & grammar",
         "Time & dates"
       ],
       "tip": "Au suivant ! = Next, please! (in a queue)",
@@ -8545,7 +8568,7 @@
       "masc": "correct",
       "fem": "correcte",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8561,7 +8584,7 @@
       "masc": "frais",
       "fem": "fraîche",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "confusables": [
         "n-fraise"
@@ -8580,7 +8603,7 @@
       "masc": "bio",
       "fem": "bio",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "alt": [
         "biologique / biologique"
@@ -8600,7 +8623,7 @@
       "masc": "local",
       "fem": "locale",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "tip": "plural: locaux / locales",
       "examples": [
@@ -8617,7 +8640,7 @@
       "masc": "complet",
       "fem": "complète",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "examples": [
         {
@@ -8649,7 +8672,7 @@
       "masc": "parfait",
       "fem": "parfaite",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "tip": "Don't confuse with parfois (sometimes)",
       "confusables": [
@@ -8705,7 +8728,7 @@
       "masc": "pratique",
       "fem": "pratique",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -8745,7 +8768,7 @@
       "masc": "typique",
       "fem": "typique",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -8761,7 +8784,7 @@
       "masc": "chaud",
       "fem": "chaude",
       "themes": [
-        "Describing food",
+        "Describing",
         "Nature & weather"
       ],
       "confusables": [
@@ -8781,7 +8804,7 @@
       "masc": "froid",
       "fem": "froide",
       "themes": [
-        "Describing food",
+        "Describing",
         "Nature & weather"
       ],
       "confusables": [
@@ -8801,7 +8824,7 @@
       "masc": "sucré",
       "fem": "sucrée",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "tip": "le sucré / le salé = sweet / savoury food",
       "confusables": [
@@ -8821,7 +8844,7 @@
       "masc": "salé",
       "fem": "salée",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "tip": "salé (salty) ≠ sale (dirty)",
       "confusables": [
@@ -8842,8 +8865,8 @@
       "masc": "délicieux",
       "fem": "délicieuse",
       "themes": [
-        "Describing food",
-        "Opinions"
+        "Describing",
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -8859,7 +8882,7 @@
       "masc": "végétarien",
       "fem": "végétarienne",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "examples": [
         {
@@ -8875,7 +8898,7 @@
       "masc": "décaféiné",
       "fem": "décaféinée",
       "themes": [
-        "Describing food"
+        "Describing"
       ],
       "examples": [
         {
@@ -8891,7 +8914,7 @@
       "masc": "masculin",
       "fem": "masculine",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8907,7 +8930,7 @@
       "masc": "féminin",
       "fem": "féminine",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8923,7 +8946,7 @@
       "masc": "singulier",
       "fem": "singulière",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8939,7 +8962,7 @@
       "masc": "pluriel",
       "fem": "plurielle",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8955,7 +8978,7 @@
       "masc": "défini",
       "fem": "définie",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8971,7 +8994,7 @@
       "masc": "indéfini",
       "fem": "indéfinie",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -8987,7 +9010,7 @@
       "masc": "positif",
       "fem": "positive",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -9003,7 +9026,7 @@
       "masc": "négatif",
       "fem": "négative",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -9019,7 +9042,7 @@
       "masc": "tonique",
       "fem": "tonique",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -9035,7 +9058,7 @@
       "masc": "possessif",
       "fem": "possessive",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -9051,7 +9074,7 @@
       "masc": "irrégulier",
       "fem": "irrégulière",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -9199,7 +9222,7 @@
       "fem": "marron",
       "themes": [
         "Colours",
-        "Describing people"
+        "Describing"
       ],
       "tip": "never changes",
       "confusables": [
@@ -9220,7 +9243,7 @@
       "fem": "brune",
       "themes": [
         "Colours",
-        "Describing people"
+        "Describing"
       ],
       "confusables": [
         "adj-marron"
@@ -9544,7 +9567,7 @@
       "themes": [
         "Greetings & phrases",
         "Shopping",
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -9755,7 +9778,8 @@
       "en": "Bless you! (after a sneeze)",
       "fr": "À tes souhaits !",
       "themes": [
-        "Greetings & phrases"
+        "Greetings & phrases",
+        "Body & health"
       ],
       "alt": [
         "À vos souhaits !"
@@ -9868,7 +9892,7 @@
       "fr": "Comment ça s'écrit ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -9878,7 +9902,7 @@
       "fr": "Tu peux épeler, s'il te plaît ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -9961,7 +9985,7 @@
       "fr": "Tu habites où ?",
       "themes": [
         "Questions",
-        "Home & town"
+        "Town & places"
       ],
       "alt": [
         "Où tu habites ?"
@@ -9974,7 +9998,7 @@
       "fr": "Comment est ton quartier ?",
       "themes": [
         "Questions",
-        "Home & town"
+        "Town & places"
       ]
     },
     {
@@ -9984,7 +10008,7 @@
       "fr": "Qu'est-ce que tu aimes ?",
       "themes": [
         "Questions",
-        "Hobbies & music"
+        "Hobbies & free time"
       ]
     },
     {
@@ -10085,7 +10109,7 @@
       "fr": "Comment on dit… ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "alt": [
         "Comment dit-on… ?"
@@ -10098,7 +10122,7 @@
       "fr": "Comment on prononce… ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "on = people in general. \"Comment tu prononces… ?\" asks one person how they say it."
     },
@@ -10109,7 +10133,7 @@
       "fr": "Quel est le contraire de… ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -10119,7 +10143,7 @@
       "fr": "Vrai, faux, on ne sait pas ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -10188,7 +10212,7 @@
       "fr": "Qui dit quoi ?",
       "themes": [
         "Questions",
-        "Classroom & grammar"
+        "Language & grammar"
       ]
     },
     {
@@ -10228,7 +10252,7 @@
       "fr": "Quels commerces il y a dans ton quartier ?",
       "themes": [
         "Questions",
-        "Home & town"
+        "Town & places"
       ],
       "alt": [
         "Quels magasins il y a dans ton quartier ?",
@@ -10242,7 +10266,7 @@
       "fr": "Quelles sont tes habitudes pendant le week-end ?",
       "themes": [
         "Questions",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "Quelles sont vos habitudes pendant le week-end ?"
@@ -10255,7 +10279,7 @@
       "fr": "Quelle est ta date de naissance ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Time & dates",
         "People & identity"
       ]
     },
@@ -10266,7 +10290,7 @@
       "fr": "Où tu es né(e) ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Countries",
         "People & identity"
       ],
       "alt": [
@@ -10284,7 +10308,7 @@
       "fr": "Quelles langues tu parles ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Nationalities",
         "People & identity"
       ]
     },
@@ -10295,8 +10319,8 @@
       "fr": "Où tu étudies ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Classroom & grammar"
+        "Town & places",
+        "School & studies"
       ]
     },
     {
@@ -10306,7 +10330,7 @@
       "fr": "Tu habites seul(e) ou avec ta famille ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Home & housework",
         "Family & relationships"
       ],
       "alt": [
@@ -10321,7 +10345,7 @@
       "fr": "Tu es marié(e) ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "People & identity",
         "Family & relationships"
       ],
       "alt": [
@@ -10336,7 +10360,7 @@
       "fr": "Tu as un animal de compagnie ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Home & housework",
         "Animals"
       ],
       "alt": [
@@ -10350,7 +10374,6 @@
       "fr": "Tu as des enfants ?",
       "themes": [
         "Questions",
-        "Oral exam",
         "Family & relationships"
       ]
     },
@@ -10361,8 +10384,8 @@
       "fr": "Quelles activités tu aimes faire pendant le week-end ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Hobbies & music"
+        "Likes & opinions",
+        "Hobbies & free time"
       ],
       "acceptedSynonyms": [
         "x-qu-est-ce-que-tu-aimes-faire-le-week-end"
@@ -10375,8 +10398,8 @@
       "fr": "Qu'est-ce que tu aimes faire le week-end ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Hobbies & music"
+        "Likes & opinions",
+        "Hobbies & free time"
       ],
       "acceptedSynonyms": [
         "x-quelles-activites-tu-aimes-faire-pendant-le-week-end"
@@ -10392,7 +10415,7 @@
       "fr": "En été, tu préfères la mer ou la montagne ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Likes & opinions",
         "Nature & weather"
       ]
     },
@@ -10403,8 +10426,8 @@
       "fr": "Tu préfères jardiner ou regarder un film ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Hobbies & music"
+        "Likes & opinions",
+        "Hobbies & free time"
       ]
     },
     {
@@ -10414,8 +10437,8 @@
       "fr": "Tu regardes souvent la télévision ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Hobbies & music"
+        "Time & dates",
+        "Hobbies & free time"
       ],
       "alt": [
         "Tu regardes souvent la télé ?"
@@ -10428,7 +10451,7 @@
       "fr": "Tu préfères le vélo ou la trottinette ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Likes & opinions",
         "Transport"
       ]
     },
@@ -10439,7 +10462,7 @@
       "fr": "Tu pratiques un sport ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Hobbies & free time",
         "Sports"
       ]
     },
@@ -10450,8 +10473,7 @@
       "fr": "Tu utilises Instagram ?",
       "themes": [
         "Questions",
-        "Oral exam",
-        "Hobbies & music"
+        "Hobbies & free time"
       ]
     },
     {
@@ -10461,7 +10483,7 @@
       "fr": "Quelles activités tes enfants aiment ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Hobbies & free time",
         "Family & relationships"
       ]
     },
@@ -10472,7 +10494,7 @@
       "fr": "Quel âge a ton frère ?",
       "themes": [
         "Questions",
-        "Oral exam",
+        "Numbers",
         "Family & relationships"
       ]
     },
@@ -10483,7 +10505,6 @@
       "fr": "Tu as des oncles ou des tantes ?",
       "themes": [
         "Questions",
-        "Oral exam",
         "Family & relationships"
       ]
     },
@@ -10493,7 +10514,7 @@
       "en": "in, at, to (+ city, or time)",
       "fr": "à",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "confusables": [
         "x-au",
@@ -10523,7 +10544,7 @@
       "en": "in, to (+ feminine country, month or season)",
       "fr": "en",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Countries"
       ],
       "confusables": [
@@ -10545,7 +10566,7 @@
       "en": "in, to, at the (masculine country or place)",
       "fr": "au",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Countries"
       ],
       "tip": "au = à + le, so never au l'…",
@@ -10568,7 +10589,7 @@
       "en": "in, to (+ plural country)",
       "fr": "aux",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Countries"
       ],
       "confusables": [
@@ -10590,7 +10611,7 @@
       "en": "of, from",
       "fr": "de",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "alt": [
         "d'"
@@ -10608,7 +10629,7 @@
       "en": "in, inside (building, bag, room)",
       "fr": "dans",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "tip": "For inside something: dans l'immeuble, dans mon sac.",
       "confusables": [
@@ -10630,7 +10651,7 @@
       "en": "with",
       "fr": "avec",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "examples": [
         {
@@ -10645,7 +10666,7 @@
       "en": "on",
       "fr": "sur",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "examples": [
         {
@@ -10660,7 +10681,7 @@
       "en": "for",
       "fr": "pour",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "examples": [
         {
@@ -10675,7 +10696,7 @@
       "en": "between",
       "fr": "entre",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "examples": [
         {
@@ -10690,7 +10711,7 @@
       "en": "in front of; before",
       "fr": "devant",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "examples": [
         {
@@ -10705,7 +10726,7 @@
       "en": "before",
       "fr": "avant",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Time & dates"
       ],
       "examples": [
@@ -10721,7 +10742,7 @@
       "en": "after",
       "fr": "après",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Time & dates"
       ],
       "examples": [
@@ -10737,7 +10758,7 @@
       "en": "during",
       "fr": "pendant",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Time & dates"
       ],
       "examples": [
@@ -10753,7 +10774,7 @@
       "en": "and",
       "fr": "et",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10767,7 +10788,7 @@
       "en": "or",
       "fr": "ou",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "confusables": [
         "x-ou-where"
@@ -10784,7 +10805,7 @@
       "en": "but",
       "fr": "mais",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10798,7 +10819,7 @@
       "en": "so, therefore",
       "fr": "donc",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "acceptedSynonyms": [
         "x-alors"
@@ -10815,7 +10836,7 @@
       "en": "because",
       "fr": "parce que",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10829,7 +10850,7 @@
       "en": "also, too",
       "fr": "aussi",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10844,7 +10865,7 @@
       "en": "that (as in \"I think that…\")",
       "fr": "que",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10922,7 +10943,7 @@
       "en": "each, every",
       "fr": "chaque",
       "themes": [
-        "Prepositions & linking words"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -10937,7 +10958,7 @@
       "en": "without",
       "fr": "sans",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "tip": "sans ≠ avec",
       "examples": [
@@ -10953,7 +10974,7 @@
       "en": "per; by",
       "fr": "par",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "tip": "une fois par semaine; payer par carte",
       "examples": [
@@ -10969,7 +10990,7 @@
       "en": "as",
       "fr": "comme",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -10984,7 +11005,7 @@
       "en": "more than, over",
       "fr": "plus de",
       "themes": [
-        "Prepositions & linking words"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -10999,7 +11020,7 @@
       "en": "so, then",
       "fr": "alors",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "acceptedSynonyms": [
         "x-donc"
@@ -11017,7 +11038,7 @@
       "en": "here, there (= present, around)",
       "fr": "là",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "tip": "With an accent: là = here / there. Without: la = the. Être là = to be around: je ne suis pas là samedi = I'm away on Saturday.",
       "examples": [
@@ -11041,7 +11062,7 @@
       "en": "from; using, based on",
       "fr": "à partir de",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "examples": [
         {
@@ -11056,7 +11077,7 @@
       "en": "at / to (someone's home or shop)",
       "fr": "chez",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "tip": "chez + a person (chez le boulanger, chez mes parents); à + a place (à la boulangerie)",
       "confusables": [
@@ -11075,7 +11096,7 @@
       "en": "around (+ a time); towards",
       "fr": "vers",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Time & dates"
       ],
       "examples": [
@@ -11091,7 +11112,7 @@
       "en": "if",
       "fr": "si",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "tip": "si + il = s'il",
       "examples": [
@@ -11107,7 +11128,7 @@
       "en": "according to, following",
       "fr": "selon",
       "themes": [
-        "Prepositions & linking words"
+        "Prepositions"
       ],
       "examples": [
         {
@@ -11122,7 +11143,7 @@
       "en": "for example",
       "fr": "par exemple",
       "themes": [
-        "Prepositions & linking words"
+        "Linking words"
       ],
       "examples": [
         {
@@ -11137,7 +11158,7 @@
       "en": "very",
       "fr": "très",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -11151,7 +11172,7 @@
       "en": "well",
       "fr": "bien",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "examples": [
         {
@@ -11165,7 +11186,7 @@
       "en": "a lot, very much",
       "fr": "beaucoup",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "confusables": [
         "x-beaucoup-de"
@@ -11183,7 +11204,7 @@
       "en": "a (little) bit",
       "fr": "un peu",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "alt": [
         "un petit peu"
@@ -11200,7 +11221,7 @@
       "en": "more",
       "fr": "plus",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -11214,7 +11235,7 @@
       "en": "less",
       "fr": "moins",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ]
     },
     {
@@ -11223,7 +11244,6 @@
       "en": "now",
       "fr": "maintenant",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11238,7 +11258,6 @@
       "en": "today",
       "fr": "aujourd'hui",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11253,7 +11272,7 @@
       "en": "online",
       "fr": "en ligne",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "examples": [
         {
@@ -11268,7 +11287,7 @@
       "en": "usually, in general",
       "fr": "en général",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "examples": [
         {
@@ -11282,7 +11301,7 @@
       "en": "in particular, specifically",
       "fr": "en particulier",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "examples": [
         {
@@ -11297,7 +11316,7 @@
       "en": "abroad",
       "fr": "à l'étranger",
       "themes": [
-        "Adverbs"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -11312,7 +11331,6 @@
       "en": "every evening",
       "fr": "tous les soirs",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11328,7 +11346,6 @@
       "en": "every weekend",
       "fr": "tous les week-ends",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11343,7 +11360,7 @@
       "en": "always",
       "fr": "toujours",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "tip": "100 %",
       "examples": [
@@ -11359,7 +11376,7 @@
       "en": "often",
       "fr": "souvent",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "tip": "70 %",
       "examples": [
@@ -11374,7 +11391,7 @@
       "en": "sometimes",
       "fr": "parfois",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "tip": "50 %",
       "confusables": [
@@ -11392,7 +11409,7 @@
       "en": "rarely",
       "fr": "rarement",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "tip": "30 %",
       "examples": [
@@ -11408,7 +11425,7 @@
       "en": "never",
       "fr": "ne… jamais",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "tip": "0 % — ne + verb + jamais",
       "examples": [
@@ -11423,7 +11440,7 @@
       "en": "not",
       "fr": "ne… pas",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "tip": "ne + verb + pas"
     },
@@ -11433,7 +11450,7 @@
       "en": "together",
       "fr": "ensemble",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "examples": [
         {
@@ -11448,7 +11465,7 @@
       "en": "more often",
       "fr": "plus souvent",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "confusables": [
         "x-moins-souvent"
@@ -11466,7 +11483,7 @@
       "en": "less often",
       "fr": "moins souvent",
       "themes": [
-        "Adverbs"
+        "Time & dates"
       ],
       "confusables": [
         "x-plus-souvent"
@@ -11484,7 +11501,7 @@
       "en": "a lot of, lots of",
       "fr": "beaucoup de",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "tip": "beaucoup de + noun, no article",
       "confusables": [
@@ -11504,7 +11521,7 @@
       "en": "not much, few",
       "fr": "peu de",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "tip": "peu de + noun, no article",
       "confusables": [
@@ -11523,7 +11540,7 @@
       "en": "about, approximately",
       "fr": "environ",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -11538,7 +11555,6 @@
       "en": "tomorrow",
       "fr": "demain",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11554,7 +11570,6 @@
       "en": "every day",
       "fr": "tous les jours",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11570,7 +11585,6 @@
       "en": "on weekdays",
       "fr": "en semaine",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11586,7 +11600,6 @@
       "en": "for now, for the moment",
       "fr": "pour le moment",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -11602,7 +11615,7 @@
       "en": "a few",
       "fr": "quelques",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "confusables": [
         "x-quelque-chose"
@@ -11620,7 +11633,7 @@
       "en": "something",
       "fr": "quelque chose",
       "themes": [
-        "Adverbs"
+        "Common words"
       ],
       "confusables": [
         "x-quelques"
@@ -11638,7 +11651,7 @@
       "en": "enormously; a huge amount",
       "fr": "énormément",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "tip": "énormément de + noun, like beaucoup de (but even more)",
       "examples": [
@@ -11654,7 +11667,7 @@
       "en": "all (the), every (+ plural noun)",
       "fr": "tous les",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "alt": [
         "toutes les"
@@ -11775,7 +11788,7 @@
       "en": "to listen to music",
       "fr": "écouter de la musique",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -11790,7 +11803,7 @@
       "en": "we have class",
       "fr": "on a cours",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -11836,8 +11849,8 @@
       "en": "to cook, to do the cooking",
       "fr": "faire la cuisine",
       "themes": [
-        "Hobbies & music",
-        "Food & drink"
+        "Hobbies & free time",
+        "Food & dishes"
       ],
       "alt": [
         "cuisiner"
@@ -11855,7 +11868,7 @@
       "en": "to do the housework, to clean",
       "fr": "faire le ménage",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -11870,7 +11883,7 @@
       "en": "to do the washing-up",
       "fr": "faire la vaisselle",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -11885,7 +11898,7 @@
       "en": "to party",
       "fr": "faire la fête",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -12162,6 +12175,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
+        "Travel & sightseeing",
         "Time & dates"
       ],
       "examples": [
@@ -12574,7 +12588,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "tip": "After a food, maison = homemade: des gâteaux maison.",
       "examples": [
@@ -12592,7 +12606,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "tip": "l'appartement = one flat (where you live). The whole building = l'immeuble.",
       "confusables": [
@@ -12613,7 +12627,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "kindOf": "n-batiment",
       "tip": "l'immeuble = the building / block of flats. One flat inside it = l'appartement.",
@@ -12635,7 +12649,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -12652,7 +12666,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -12669,7 +12683,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -12686,7 +12700,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -12703,7 +12717,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -12720,7 +12734,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12737,7 +12751,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12754,7 +12768,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12771,7 +12785,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "confusables": [
         "n-arrondissement"
@@ -12791,7 +12805,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "confusables": [
         "n-quartier"
@@ -12811,7 +12825,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
+        "Town & places",
         "Numbers"
       ],
       "confusables": [
@@ -12833,7 +12847,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
+        "Town & places",
         "People & identity"
       ],
       "confusables": [
@@ -12854,7 +12868,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12871,7 +12885,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12888,7 +12902,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -12905,7 +12919,6 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
         "Countries"
       ],
       "tip": "Same in the plural: les pays",
@@ -12924,7 +12937,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -12941,8 +12954,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Hobbies & music"
+        "Travel & sightseeing",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -12959,8 +12972,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Meals, restaurant & café"
+        "Town & places",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -12977,8 +12990,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Meals, restaurant & café"
+        "Town & places",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -12995,8 +13008,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Hobbies & music"
+        "Town & places",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13013,7 +13026,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13030,7 +13043,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Town & places",
+        "Body & health"
       ],
       "examples": [
         {
@@ -13047,8 +13061,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town",
-        "Hobbies & music"
+        "Town & places",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13065,8 +13079,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town",
-        "Hobbies & music"
+        "Town & places",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13083,8 +13097,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Hobbies & music"
+        "Town & places",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13102,7 +13116,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13119,7 +13133,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13136,7 +13150,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13153,7 +13167,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13170,7 +13184,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13187,7 +13201,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13221,7 +13235,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13238,7 +13252,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -13255,7 +13269,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "examples": [
         {
@@ -13272,7 +13286,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -13289,7 +13303,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -13306,8 +13320,9 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town",
-        "Shopping"
+        "Shopping",
+        "Town & places",
+        "Body & health"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -13329,7 +13344,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "acceptedSynonyms": [
         "n-endroit"
@@ -13356,7 +13371,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "acceptedSynonyms": [
         "n-lieu"
@@ -13379,7 +13394,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -13396,7 +13411,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -13413,8 +13428,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Jobs & work"
+        "Jobs & work",
+        "Town & places"
       ],
       "examples": [
         {
@@ -13431,7 +13446,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Home & housework"
       ],
       "kindOf": "n-maison",
       "tip": "-ette = small: une maison → une maisonnette",
@@ -13450,7 +13465,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13467,7 +13482,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13484,7 +13499,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13501,7 +13516,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13519,7 +13534,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -13536,7 +13551,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "confusables": [
         "n-lieu",
@@ -13679,7 +13694,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Transport"
+        "Transport",
+        "Body & health"
       ],
       "examples": [
         {
@@ -13856,7 +13872,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13873,7 +13889,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13890,7 +13906,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13907,7 +13923,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "tip": "un film d'action / d'horreur = an action / horror film",
       "examples": [
@@ -13925,7 +13941,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13942,7 +13958,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13959,7 +13975,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la bande dessinée"
@@ -13979,7 +13995,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -13996,7 +14012,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14013,7 +14029,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-cours",
       "examples": [
@@ -14031,7 +14047,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14048,7 +14064,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14065,7 +14081,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14082,8 +14098,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music",
-        "Food & drink"
+        "Hobbies & free time",
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -14100,7 +14116,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "confusables": [
         "n-jardin"
@@ -14120,7 +14136,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14138,7 +14154,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14155,7 +14171,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music",
+        "Hobbies & free time",
         "Sports"
       ],
       "examples": [
@@ -14174,7 +14190,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music",
+        "Hobbies & free time",
         "Sports"
       ],
       "examples": [
@@ -14193,7 +14209,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-jeu",
       "examples": [
@@ -14212,7 +14228,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14230,7 +14246,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-jeu",
       "examples": [
@@ -14248,7 +14264,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "la télé"
@@ -14262,7 +14278,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14280,7 +14296,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14331,7 +14347,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-livre",
       "examples": [
@@ -14349,7 +14365,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14366,7 +14382,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "kindOf": "n-temps",
       "examples": [
@@ -14384,7 +14400,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "tip": "les fêtes = the holidays (Christmas and New Year)",
       "examples": [
@@ -14402,7 +14418,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14419,7 +14435,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14436,7 +14452,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "alt": [
         "les dés"
@@ -14973,7 +14989,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -14990,7 +15006,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15007,7 +15023,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15024,7 +15040,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15041,7 +15057,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15058,7 +15074,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15075,7 +15091,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15092,7 +15108,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -15109,7 +15125,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "examples": [
         {
@@ -15126,7 +15142,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "tip": "le vin rouge = red wine",
       "examples": [
@@ -15144,7 +15160,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "examples": [
         {
@@ -15161,8 +15177,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink",
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -15179,7 +15194,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-repas",
       "examples": [
@@ -15251,7 +15266,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15268,7 +15283,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15286,7 +15301,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-bete"
@@ -15306,7 +15321,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "le fromage de vache / de chèvre / de brebis = cow's / goat's / sheep's cheese",
       "examples": [
@@ -15325,7 +15340,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "One snail (the animal) = l'escargot.",
       "examples": [
@@ -15343,7 +15358,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15361,7 +15376,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15378,7 +15393,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15395,7 +15410,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15412,7 +15427,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15429,7 +15444,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -15446,7 +15461,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "examples": [
         {
@@ -16375,7 +16390,6 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "examples": [
@@ -16445,8 +16459,9 @@
       "gender": "f",
       "article": "la",
       "themes": [
+        "Shopping",
         "Bakery & desserts",
-        "Shopping"
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -16722,7 +16737,7 @@
       "article": "le",
       "themes": [
         "Bakery & desserts",
-        "Describing food"
+        "Describing"
       ],
       "confusables": [
         "n-gouter"
@@ -16814,7 +16829,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Bakery & desserts"
       ],
       "examples": [
         {
@@ -16831,7 +16846,6 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "examples": [
@@ -16849,7 +16863,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Bakery & desserts"
       ],
       "examples": [
         {
@@ -16866,7 +16880,6 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "tip": "la glace = ice cream (also: ice). Glasses for your eyes = les lunettes.",
@@ -16888,7 +16901,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Drinks"
       ],
       "alt": [
         "les glaçons"
@@ -16908,7 +16921,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -16925,7 +16938,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "confusables": [
@@ -16946,7 +16959,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les œufs"
@@ -16967,7 +16980,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Drinks",
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -16984,7 +16998,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-beurre-de-cacahuetes"
@@ -17004,7 +17018,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "la crème fouettée = whipped cream",
       "examples": [
@@ -17022,7 +17036,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17040,7 +17054,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17057,7 +17071,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17075,7 +17089,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17093,7 +17107,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17111,7 +17125,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "le foie = liver; not fois (time(s)) or foi (faith)",
       "confusables": [
@@ -17132,7 +17146,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17149,7 +17163,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17166,7 +17180,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-huile",
       "examples": [
@@ -17184,7 +17198,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17201,7 +17215,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17218,7 +17232,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17236,7 +17250,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-frites"
@@ -17257,7 +17271,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-pois-chiches"
@@ -17277,7 +17291,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17294,7 +17308,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17311,7 +17325,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17329,7 +17343,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17346,8 +17360,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
-        "Hobbies & music"
+        "Food & dishes",
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -17364,8 +17378,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Food & drink"
+        "Home & housework",
+        "Food & dishes"
       ],
       "acceptedSynonyms": [
         "n-refrigerateur"
@@ -17385,7 +17399,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "tip": "Say \"beuf\"; in des bœufs the f is silent.",
@@ -17404,7 +17418,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "tip": "The c is silent. Le porc = the meat (pork); the animal is le cochon.",
@@ -17426,7 +17440,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "tip": "Say \"vo\".",
@@ -17445,7 +17459,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "tip": "Un agneau is a baby sheep (le mouton).",
@@ -17467,7 +17481,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "confusables": [
@@ -17488,7 +17502,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink",
+        "Food & dishes",
         "Animals"
       ],
       "examples": [
@@ -17506,7 +17520,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17523,7 +17537,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les saucisses"
@@ -17546,7 +17560,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "Le saucisson is dry and sliced; une saucisse is cooked.",
       "confusables": [
@@ -17567,7 +17581,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17585,7 +17599,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "Literally \"fruits of the sea\".",
       "examples": [
@@ -17603,7 +17617,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les crevettes"
@@ -17623,7 +17637,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17640,7 +17654,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17657,7 +17671,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-sauce",
       "examples": [
@@ -17675,7 +17689,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-sauce",
       "examples": [
@@ -17693,7 +17707,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-vinaigrette"
@@ -17713,7 +17727,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-sauce",
       "confusables": [
@@ -17734,7 +17748,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17751,7 +17765,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "confusables": [
         "n-beurre"
@@ -17771,7 +17785,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17788,7 +17802,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les épices"
@@ -17808,7 +17822,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "le poivre = black pepper; le poivron = a (bell) pepper; le piment = chilli",
       "confusables": [
@@ -17830,7 +17844,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17847,7 +17861,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17864,7 +17878,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les olives"
@@ -17885,7 +17899,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17903,7 +17917,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17921,7 +17935,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -17939,7 +17953,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-pizza",
       "examples": [
@@ -17958,7 +17972,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "tip": "les chips = crisps",
       "confusables": [
@@ -17979,7 +17993,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -17996,7 +18010,6 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "confusables": [
@@ -18017,7 +18030,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -18034,7 +18047,6 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "alt": [
@@ -18059,7 +18071,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -18076,7 +18088,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -18093,7 +18105,6 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink",
         "Bakery & desserts"
       ],
       "examples": [
@@ -18111,7 +18122,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-viande",
       "examples": [
@@ -18129,7 +18140,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -18146,7 +18157,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -18163,7 +18174,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18180,7 +18191,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "acceptedSynonyms": [
         "n-carte"
@@ -18201,7 +18212,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "acceptedSynonyms": [
         "n-menu"
@@ -18222,7 +18233,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "tip": "la boisson (drink) / le poisson (fish) / le poison (poison)",
       "confusables": [
@@ -18244,7 +18256,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "Une carafe d'eau = a jug of tap water, free in French restaurants.",
       "examples": [
@@ -18262,7 +18274,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18279,7 +18291,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18296,7 +18308,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18313,7 +18325,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "finir son assiette = to eat everything on your plate",
       "examples": [
@@ -18331,7 +18343,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "alt": [
         "les couteaux"
@@ -18351,7 +18363,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18368,7 +18380,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "alt": [
         "la cuiller"
@@ -18388,7 +18400,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "alt": [
@@ -18409,7 +18422,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "examples": [
@@ -18427,7 +18441,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "examples": [
@@ -18445,7 +18460,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "examples": [
@@ -18463,7 +18479,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "examples": [
@@ -18481,7 +18498,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18498,7 +18516,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "tip": "thé ou infusion = tea or herbal tea",
       "examples": [
@@ -18516,7 +18535,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-the",
       "examples": [
@@ -18534,7 +18554,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18551,7 +18571,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-lait",
       "examples": [
@@ -18569,7 +18590,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-lait",
       "examples": [
@@ -18587,7 +18609,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Bakery & desserts",
+        "Restaurant & café"
       ],
       "kindOf": "n-creme",
       "alt": [
@@ -18608,7 +18631,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-sirop",
       "examples": [
@@ -18626,7 +18650,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-eau",
       "examples": [
@@ -18644,7 +18669,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-eau",
       "alt": [
@@ -18665,7 +18691,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-eau",
       "examples": [
@@ -18683,7 +18710,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "tip": "French limonade is fizzy, like Sprite.",
       "examples": [
@@ -18701,7 +18729,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18718,7 +18747,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18735,7 +18765,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-vin",
       "examples": [
@@ -18753,7 +18784,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-vin",
       "examples": [
@@ -18771,7 +18803,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "tip": "une bière blonde (lager), blanche (wheat beer), rousse (amber ale), brune (dark beer)",
       "examples": [
@@ -18788,7 +18821,7 @@
       "masc": "inclus",
       "fem": "incluse",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18803,7 +18836,7 @@
       "en": "to eat in (here)",
       "fr": "sur place",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "confusables": [
         "x-a-emporter"
@@ -18821,7 +18854,7 @@
       "en": "to take away, to go",
       "fr": "à emporter",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "confusables": [
         "x-sur-place"
@@ -18839,7 +18872,7 @@
       "en": "I'd like a table for two.",
       "fr": "Je voudrais une table pour deux personnes.",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ]
     },
     {
@@ -18848,7 +18881,7 @@
       "en": "to make a reservation, to book",
       "fr": "faire une réservation",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18863,7 +18896,7 @@
       "en": "Under what name? (booking)",
       "fr": "À quel nom ?",
       "themes": [
-        "Meals, restaurant & café",
+        "Restaurant & café",
         "Questions"
       ],
       "examples": [
@@ -18879,7 +18912,7 @@
       "en": "I'll have… (ordering)",
       "fr": "Je vais prendre…",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -18894,7 +18927,7 @@
       "en": "Is everything OK?",
       "fr": "Tout est OK ?",
       "themes": [
-        "Meals, restaurant & café",
+        "Restaurant & café",
         "Questions"
       ],
       "alt": [
@@ -18913,7 +18946,7 @@
       "en": "The bill, please.",
       "fr": "L'addition, s'il vous plaît.",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "alt": [
         "Je voudrais l'addition, s'il vous plaît."
@@ -18927,7 +18960,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "Same in the plural: les repas.",
       "examples": [
@@ -18945,7 +18978,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-repas",
       "tip": "= le repas du matin (the morning meal)",
@@ -18964,7 +18997,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-repas",
       "tip": "Goûter is also a verb: to taste.",
@@ -18986,7 +19019,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-repas",
       "examples": [
@@ -19004,7 +19037,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "En entrée / en plat / en dessert = as a starter / main / dessert. Not a main course, as in American English!",
       "examples": [
@@ -19022,7 +19055,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19039,7 +19072,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-plat",
       "examples": [
@@ -19057,7 +19090,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "kindOf": "n-plat",
       "examples": [
@@ -19075,7 +19108,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "tip": "Same in the plural: ces mets. The t and s are silent.",
       "examples": [
@@ -19093,7 +19126,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "tip": "le thé vert / noir / blanc / à la menthe = green / black / white / mint tea",
       "examples": [
@@ -19111,7 +19145,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-jus-de-fruit",
       "examples": [
@@ -19129,7 +19164,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Drinks",
+        "Restaurant & café"
       ],
       "kindOf": "n-cafe",
       "examples": [
@@ -19148,7 +19184,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes"
       ],
       "confusables": [
         "n-crepe"
@@ -19168,7 +19204,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes"
       ],
       "alt": [
         "les biscottes"
@@ -19188,7 +19224,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -19205,7 +19241,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19222,7 +19259,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19239,7 +19277,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19256,7 +19295,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19273,7 +19313,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19290,7 +19331,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19307,7 +19349,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Bakery & desserts",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19324,7 +19367,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Bakery & desserts",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -19341,7 +19385,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes"
       ],
       "kindOf": "n-confiture",
       "examples": [
@@ -19359,7 +19403,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Meals, restaurant & café"
+        "Food & dishes",
+        "Restaurant & café"
       ],
       "examples": [
         {
@@ -20343,7 +20388,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20360,7 +20405,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20377,7 +20422,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20394,7 +20439,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20411,7 +20456,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20428,7 +20473,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20445,7 +20490,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20463,7 +20508,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "tip": "les lunettes = glasses (to see with). Not la glace = ice cream / ice.",
       "confusables": [
@@ -20484,7 +20529,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20501,7 +20546,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "alt": [
         "les bijoux"
@@ -20521,7 +20566,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -20538,7 +20583,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20555,8 +20600,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Transport"
+        "Travel & sightseeing",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20573,7 +20618,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20590,7 +20635,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20607,7 +20652,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20624,7 +20669,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "alt": [
         "la clef"
@@ -20644,8 +20689,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Classroom & grammar"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20662,7 +20707,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "alt": [
         "l'affiche (f)"
@@ -20717,7 +20762,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "alt": [
         "les cadeaux"
@@ -20737,7 +20782,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20754,7 +20799,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20772,7 +20817,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20789,8 +20834,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag",
-        "Hobbies & music"
+        "Hobbies & free time",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20807,8 +20852,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Hobbies & music"
+        "Hobbies & free time",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20825,8 +20870,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Hobbies & music"
+        "Hobbies & free time",
+        "Everyday objects"
       ],
       "alt": [
         "le Lego",
@@ -20848,7 +20893,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20865,7 +20910,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -20903,7 +20948,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -20920,7 +20965,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Body & health"
       ],
       "examples": [
         {
@@ -20937,7 +20982,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & body"
+        "Body & health"
       ],
       "examples": [
         {
@@ -20954,7 +20999,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Body & health"
       ],
       "examples": [
         {
@@ -20971,7 +21016,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "tip": "la tente (tent) sounds like la tante (aunt)",
       "confusables": [
@@ -20992,7 +21037,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Body & health"
       ],
       "tip": "same œ sound as sœur",
       "examples": [
@@ -21010,7 +21055,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21027,7 +21072,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21044,7 +21089,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21061,7 +21106,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Clothes & body"
+        "Clothes & accessories"
       ],
       "examples": [
         {
@@ -21078,7 +21123,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-sac",
       "examples": [
@@ -21096,7 +21141,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
+        "Everyday objects",
         "Sports"
       ],
       "kindOf": "n-sac",
@@ -21115,7 +21160,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-sac",
       "examples": [
@@ -21133,8 +21178,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag",
-        "Transport"
+        "Travel & sightseeing",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21151,7 +21196,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
+        "Everyday objects",
         "Shopping"
       ],
       "confusables": [
@@ -21172,7 +21217,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
+        "Everyday objects",
         "Shopping"
       ],
       "confusables": [
@@ -21193,7 +21238,7 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21210,8 +21255,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag",
-        "Classroom & grammar"
+        "School & studies",
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21228,8 +21273,8 @@
       "gender": "m",
       "article": "l'",
       "themes": [
-        "Everyday objects & bag",
-        "Classroom & grammar"
+        "Everyday objects",
+        "School & studies"
       ],
       "tip": "Google Agenda = Google Calendar",
       "examples": [
@@ -21247,8 +21292,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Classroom & grammar"
+        "School & studies",
+        "Everyday objects"
       ],
       "alt": [
         "le crayon à papier",
@@ -21269,8 +21314,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag",
-        "Classroom & grammar"
+        "School & studies",
+        "Everyday objects"
       ],
       "kindOf": "n-crayon",
       "examples": [
@@ -21288,7 +21333,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21305,7 +21350,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21322,7 +21367,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "tip": "Une bouteille d'eau is a bottle of water, e.g. one you buy in a shop.",
       "confusables": [
@@ -21344,7 +21389,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "examples": [
         {
@@ -21361,7 +21406,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "tip": "\"Un mouchoir en papier\" = a paper tissue; \"un mouchoir en tissu\" = a cloth handkerchief.",
       "examples": [
@@ -21387,7 +21432,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-sac",
       "confusables": [
@@ -21408,7 +21453,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-sac",
       "confusables": [
@@ -21429,7 +21474,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-sac",
       "tip": "Same word as the fruit.",
@@ -21451,7 +21496,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "kindOf": "n-bouteille",
       "tip": "non réutilisable = single-use",
@@ -21474,7 +21519,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "tip": "perdre = to lose",
       "examples": [
@@ -21492,7 +21537,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -21513,7 +21559,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "confusables": [
         "n-marche",
@@ -21534,7 +21581,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "acceptedSynonyms": [
         "n-commerce"
@@ -21611,7 +21659,8 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "tip": "Un magasin is any shop; a (small) food shop is une épicerie, a big one is un supermarché.",
@@ -21634,7 +21683,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -21809,7 +21859,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "acceptedSynonyms": [
         "n-magasin"
@@ -21913,7 +21964,8 @@
       "article": "la",
       "themes": [
         "Shopping",
-        "Bakery & desserts"
+        "Bakery & desserts",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "tip": "Also a pastry or cake: les pâtisseries françaises.",
@@ -21935,7 +21987,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -21956,7 +22009,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "tip": "Also the cold meats themselves: le jambon, le saucisson…",
@@ -21978,7 +22032,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -21999,7 +22054,8 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "confusables": [
@@ -22020,7 +22076,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping"
+        "Shopping",
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "alt": [
@@ -22040,7 +22097,7 @@
       "fr": "jouer à la marchande",
       "themes": [
         "Shopping",
-        "Hobbies & music"
+        "Hobbies & free time"
       ],
       "examples": [
         {
@@ -24389,7 +24446,7 @@
       "masc": "approprié",
       "fem": "appropriée",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -24405,7 +24462,7 @@
       "masc": "jeune",
       "fem": "jeune",
       "themes": [
-        "Describing people"
+        "Describing"
       ],
       "examples": [
         {
@@ -24421,8 +24478,7 @@
       "masc": "vieux",
       "fem": "vieille",
       "themes": [
-        "Describing people",
-        "Describing places"
+        "Describing"
       ],
       "tip": "vieil before a vowel: un vieil homme. For buildings, ancien = old (not modern).",
       "confusables": [
@@ -24442,7 +24498,7 @@
       "masc": "majeur",
       "fem": "majeure",
       "themes": [
-        "Describing people",
+        "Describing",
         "People & identity"
       ],
       "tip": "Under 18 = mineur / mineure.",
@@ -24460,7 +24516,8 @@
       "masc": "fatigué",
       "fem": "fatiguée",
       "themes": [
-        "Describing people"
+        "Describing",
+        "Body & health"
       ],
       "tip": "la fatigue = tiredness",
       "examples": [
@@ -24477,7 +24534,7 @@
       "masc": "content",
       "fem": "contente",
       "themes": [
-        "Describing people"
+        "Describing"
       ],
       "examples": [
         {
@@ -24493,7 +24550,7 @@
       "masc": "maladroit",
       "fem": "maladroite",
       "themes": [
-        "Describing people"
+        "Describing"
       ],
       "examples": [
         {
@@ -24509,7 +24566,7 @@
       "masc": "historique",
       "fem": "historique",
       "themes": [
-        "Describing places"
+        "Describing"
       ],
       "examples": [
         {
@@ -24525,8 +24582,8 @@
       "masc": "agréable",
       "fem": "agréable",
       "themes": [
-        "Describing places",
-        "Opinions"
+        "Describing",
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -24542,8 +24599,7 @@
       "masc": "dynamique",
       "fem": "dynamique",
       "themes": [
-        "Describing places",
-        "Describing people"
+        "Describing"
       ],
       "tip": "Close to animé (lively).",
       "examples": [
@@ -24560,8 +24616,8 @@
       "masc": "magnifique",
       "fem": "magnifique",
       "themes": [
-        "Describing places",
-        "Opinions"
+        "Describing",
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -24577,7 +24633,7 @@
       "masc": "difficile",
       "fem": "difficile",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "examples": [
         {
@@ -25071,7 +25127,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "examples": [
         {
@@ -25088,7 +25144,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "kindOf": "n-ecole",
       "tip": "Classes: petite section, moyenne section, grande section",
@@ -25107,7 +25163,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "kindOf": "n-ecole",
       "tip": "Classes: CP, CE1, CE2, CM1, CM2",
@@ -25126,7 +25182,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "tip": "Classes count down: sixième (6e), cinquième, quatrième, troisième. Not a university college.",
       "confusables": [
@@ -25222,8 +25278,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Shopping",
-        "Meals, restaurant & café"
+        "Restaurant & café",
+        "Shopping"
       ],
       "tip": "Same sound as vert (green). Glasses for your eyes = les lunettes.",
       "examples": [
@@ -25701,7 +25757,6 @@
       "en": "once a week",
       "fr": "une fois par semaine",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "tip": "une fois par jour / par mois / par an; deux fois par semaine",
@@ -25718,7 +25773,7 @@
       "en": "in brackets",
       "fr": "entre parenthèses",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "tip": "une parenthèse = a bracket",
       "examples": [
@@ -25794,7 +25849,7 @@
       "fr": "Qu'est-ce qu'il y a à voir ?",
       "themes": [
         "Questions",
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -25809,7 +25864,7 @@
       "en": "since; for (a length of time)",
       "fr": "depuis",
       "themes": [
-        "Prepositions & linking words",
+        "Prepositions",
         "Time & dates"
       ],
       "examples": [
@@ -25825,7 +25880,7 @@
       "en": "here (in this place)",
       "fr": "ici",
       "themes": [
-        "Prepositions & linking words"
+        "Position words"
       ],
       "tip": "là = there (also here in everyday speech)",
       "examples": [
@@ -25841,8 +25896,8 @@
       "en": "near, close to",
       "fr": "près de",
       "themes": [
-        "Prepositions & linking words",
-        "Home & town"
+        "Position words",
+        "Town & places"
       ],
       "tip": "de + le = du: près du centre",
       "examples": [
@@ -25858,8 +25913,8 @@
       "en": "far from",
       "fr": "loin de",
       "themes": [
-        "Prepositions & linking words",
-        "Home & town"
+        "Position words",
+        "Town & places"
       ],
       "tip": "de + le = du: loin du centre",
       "examples": [
@@ -25875,7 +25930,7 @@
       "en": "really",
       "fr": "vraiment",
       "themes": [
-        "Adverbs"
+        "Quantity & degree"
       ],
       "examples": [
         {
@@ -25890,7 +25945,6 @@
       "en": "both (of us, of you, of them)",
       "fr": "tous les deux",
       "themes": [
-        "Adverbs",
         "Common words"
       ],
       "alt": [
@@ -25910,7 +25964,7 @@
       "en": "to quite like",
       "fr": "aimer bien",
       "themes": [
-        "Opinions"
+        "Likes & opinions"
       ],
       "tip": "J'aime bien is a bit weaker than j'aime; j'adore is stronger.",
       "examples": [
@@ -25926,7 +25980,6 @@
       "en": "yesterday",
       "fr": "hier",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "examples": [
@@ -25942,7 +25995,6 @@
       "en": "the day before yesterday",
       "fr": "avant-hier",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "confusables": [
@@ -25961,7 +26013,6 @@
       "en": "the day after tomorrow",
       "fr": "après-demain",
       "themes": [
-        "Adverbs",
         "Time & dates"
       ],
       "confusables": [
@@ -25980,8 +26031,7 @@
       "en": "this evening, tonight",
       "fr": "ce soir",
       "themes": [
-        "Time & dates",
-        "Adverbs"
+        "Time & dates"
       ],
       "examples": [
         {
@@ -26034,7 +26084,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Describing people"
+        "Body & health"
       ],
       "tip": "être fatigué(e) = to be tired",
       "examples": [
@@ -26098,7 +26148,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "School & studies"
       ],
       "tip": "Double t: littérature.",
       "examples": [
@@ -26117,7 +26167,7 @@
       "article": "les",
       "pluralOnly": true,
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "kindOf": "n-verbe",
       "alt": [
@@ -26139,7 +26189,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Classroom & grammar"
+        "Language & grammar"
       ],
       "examples": [
         {
@@ -26156,7 +26206,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "tip": "un bâtiment = any building; un immeuble = a block of flats or offices",
       "examples": [
@@ -26174,7 +26224,7 @@
       "gender": "f",
       "article": "l'",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "kindOf": "n-batiment",
       "examples": [
@@ -26192,7 +26242,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -26209,7 +26259,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Town & places",
+        "Law & justice"
       ],
       "examples": [
         {
@@ -26226,7 +26277,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "tip": "le centre-ville (town centre) ≠ la banlieue (suburbs). En banlieue = in the suburbs.",
       "examples": [
@@ -26244,7 +26295,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "tip": "un plan = a map of a town; une carte = a map of a country (also a menu or a card)",
       "examples": [
@@ -26262,7 +26313,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
+        "Home & housework",
         "Nature & weather"
       ],
       "confusables": [
@@ -26283,7 +26334,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -26300,7 +26351,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
+        "Town & places",
         "Transport"
       ],
       "examples": [
@@ -26318,7 +26369,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Home & town"
+        "Travel & sightseeing"
       ],
       "examples": [
         {
@@ -26335,7 +26386,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Everyday objects & bag"
+        "Everyday objects"
       ],
       "tip": "le (téléphone) portable = mobile phone; un ordinateur portable = laptop",
       "examples": [
@@ -26354,7 +26405,7 @@
       "article": "la",
       "themes": [
         "Sports",
-        "Home & town"
+        "Town & places"
       ],
       "examples": [
         {
@@ -26389,7 +26440,7 @@
       "article": "la",
       "themes": [
         "Shopping",
-        "Home & town"
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "tip": "Not a library: that is la bibliothèque.",
@@ -26412,7 +26463,7 @@
       "article": "le",
       "themes": [
         "Shopping",
-        "Home & town"
+        "Town & places"
       ],
       "kindOf": "n-magasin",
       "tip": "un jouet = a toy",
@@ -26432,7 +26483,7 @@
       "article": "le",
       "themes": [
         "Shopping",
-        "Home & town"
+        "Town & places"
       ],
       "kindOf": "n-batiment",
       "tip": "No hyphen: un centre commercial (but le centre-ville).",
@@ -26451,7 +26502,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "kindOf": "n-fromage",
       "examples": [
@@ -26469,7 +26520,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "alt": [
         "les sardines"
@@ -26489,7 +26540,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Food & dishes"
       ],
       "examples": [
         {
@@ -26506,7 +26557,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Bakery & desserts"
       ],
       "kindOf": "n-chocolat",
       "examples": [
@@ -26524,7 +26575,7 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Food & drink"
+        "Bakery & desserts"
       ],
       "kindOf": "n-chocolat",
       "examples": [
@@ -26542,8 +26593,8 @@
       "gender": "m",
       "article": "le",
       "themes": [
-        "Home & town",
-        "Food & drink"
+        "Home & housework",
+        "Food & dishes"
       ],
       "acceptedSynonyms": [
         "n-frigo"
@@ -26581,7 +26632,7 @@
       "gender": "f",
       "article": "la",
       "themes": [
-        "Meals, restaurant & café"
+        "Restaurant & café"
       ],
       "acceptedSynonyms": [
         "n-menu"
