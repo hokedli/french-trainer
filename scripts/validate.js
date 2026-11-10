@@ -80,11 +80,10 @@ for (const [index, w] of vocab.words.entries()) {
     if (!Array.isArray(w.conj) || w.conj.length !== 6 || !w.conj.every(isText)) fail('"conj" must be 6 forms (je, tu, il, nous, vous, ils)');
     else if (w.conj.some((f) => /^(je|tu|il|elle|on|ils|elles) /.test(f))) fail('"conj" forms must not include the subject pronoun');
     if (w.conjAlt !== undefined) {
-      if (!Array.isArray(w.conjAlt) || w.conjAlt.length !== 6 || !w.conjAlt.every((forms) => Array.isArray(forms) && forms.every(isText))) {
-        fail('"conjAlt" must be 6 lists of extra accepted forms (je, tu, il, nous, vous, ils); use [] for persons without one');
-      } else if (w.conjAlt.every((forms) => forms.length === 0)) fail('"conjAlt" has no forms — remove it');
-      else if (Array.isArray(w.conj) && w.conjAlt.some((forms, i) => forms.includes(w.conj[i]))) fail('"conjAlt" repeats a form that is already in "conj"');
-      else if (w.conjAlt.flat().some((f) => /^(je|tu|il|elle|on|ils|elles) /.test(f))) fail('"conjAlt" forms must not include the subject pronoun');
+      if (!Array.isArray(w.conjAlt) || w.conjAlt.length !== 6 || !w.conjAlt.every(isText)) {
+        fail('"conjAlt" must be a complete second conjugation: 6 forms (je, tu, il, nous, vous, ils), repeating the "conj" form where a person has no other spelling');
+      } else if (Array.isArray(w.conj) && w.conjAlt.every((form, i) => form === w.conj[i])) fail('"conjAlt" is the same as "conj" — remove it');
+      else if (w.conjAlt.some((f) => /^(je|tu|il|elle|on|ils|elles) /.test(f))) fail('"conjAlt" forms must not include the subject pronoun');
     }
     if (w.rule !== undefined && !RULES.includes(w.rule)) fail(`rule must be one of ${RULES.join(', ')}`);
   }
@@ -163,13 +162,14 @@ for (const id of Object.keys(SEED.boxes)) {
   if (!ids.has(id)) warnings.push(`seed-progress.js: "${id}" is not in vocab.json (its seed is ignored)`);
 }
 
-const fillInCount = vocab.words.filter((w) => buildFillIn(w)).length;
 if (warnings.length && process.argv.includes('--verbose')) console.log(warnings.map((w) => `warning: ${w}`).join('\n'));
 if (errors.length) {
   console.error(errors.map((e) => `error: ${e}`).join('\n'));
   console.error(`\n✗ ${errors.length} error(s) in vocab.json`);
   process.exit(1);
 }
+// Only after the errors: building fill-ins from a broken entry (e.g. a malformed conjAlt) would crash first
+const fillInCount = vocab.words.filter((w) => buildFillIn(w)).length;
 const counts = {};
 for (const w of vocab.words) counts[w.type] = (counts[w.type] || 0) + 1;
 console.log(`✓ vocab.json v${vocab.version}: ${vocab.words.length} words (${Object.entries(counts).map(([t, n]) => `${n} ${t}`).join(', ')})`);

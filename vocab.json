@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 17,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -5169,6 +5169,10 @@
       "themes": [
         "Common words"
       ],
+      "tip": "savoir + a fact or how to do something (je sais nager); connaître + a person or a place (je connais Paris)",
+      "confusables": [
+        "v-connaitre"
+      ],
       "examples": [
         {
           "fr": "Je ne sais pas.",
@@ -7440,20 +7444,12 @@
         "paient"
       ],
       "conjAlt": [
-        [
-          "paye"
-        ],
-        [
-          "payes"
-        ],
-        [
-          "paye"
-        ],
-        [],
-        [],
-        [
-          "payent"
-        ]
+        "paye",
+        "payes",
+        "paye",
+        "payons",
+        "payez",
+        "payent"
       ],
       "rule": "-yer",
       "themes": [
@@ -7488,6 +7484,181 @@
         {
           "fr": "Elle amène le dîner.",
           "en": "She's bringing dinner."
+        }
+      ]
+    },
+    {
+      "id": "v-conjuguer",
+      "type": "verb",
+      "en": "to conjugate",
+      "infinitive": "conjuguer",
+      "conj": [
+        "conjugue",
+        "conjugues",
+        "conjugue",
+        "conjuguons",
+        "conjuguez",
+        "conjuguent"
+      ],
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "tip": "la conjugaison = conjugation",
+      "examples": [
+        {
+          "fr": "Conjuguez le verbe finir.",
+          "en": "Conjugate the verb finir."
+        }
+      ]
+    },
+    {
+      "id": "v-venir",
+      "type": "verb",
+      "en": "to come",
+      "infinitive": "venir",
+      "conj": [
+        "viens",
+        "viens",
+        "vient",
+        "venons",
+        "venez",
+        "viennent"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words"
+      ],
+      "tip": "venir de + city = to come from: je viens de Lyon.",
+      "examples": [
+        {
+          "fr": "Tu viens avec nous au concert ce soir ?",
+          "en": "Are you coming with us to the concert tonight?"
+        }
+      ]
+    },
+    {
+      "id": "v-connaitre",
+      "type": "verb",
+      "en": "to know (a person, a place)",
+      "infinitive": "connaître",
+      "conj": [
+        "connais",
+        "connais",
+        "connaît",
+        "connaissons",
+        "connaissez",
+        "connaissent"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words"
+      ],
+      "tip": "connaître + a person or a place (je connais Paris); savoir + a fact or how to do something (je sais nager)",
+      "confusables": [
+        "v-savoir"
+      ],
+      "examples": [
+        {
+          "fr": "Oliver et Anna ? Tu connais ?",
+          "en": "Oliver and Anna? Do you know them?"
+        }
+      ]
+    },
+    {
+      "id": "v-voir",
+      "type": "verb",
+      "en": "to see",
+      "infinitive": "voir",
+      "conj": [
+        "vois",
+        "vois",
+        "voit",
+        "voyons",
+        "voyez",
+        "voient"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "D'ici, on voit la mairie.",
+          "en": "From here you can see the town hall."
+        }
+      ]
+    },
+    {
+      "id": "v-decrire",
+      "type": "verb",
+      "en": "to describe",
+      "infinitive": "décrire",
+      "conj": [
+        "décris",
+        "décris",
+        "décrit",
+        "décrivons",
+        "décrivez",
+        "décrivent"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "tip": "Like écrire: nous décrivons.",
+      "examples": [
+        {
+          "fr": "Je décris mon quartier.",
+          "en": "I'm describing my neighbourhood."
+        }
+      ]
+    },
+    {
+      "id": "v-fermer",
+      "type": "verb",
+      "en": "to close, to shut",
+      "infinitive": "fermer",
+      "conj": [
+        "ferme",
+        "fermes",
+        "ferme",
+        "fermons",
+        "fermez",
+        "ferment"
+      ],
+      "themes": [
+        "Common words",
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Vous fermez la porte.",
+          "en": "You close the door."
+        }
+      ]
+    },
+    {
+      "id": "v-pique-niquer",
+      "type": "verb",
+      "en": "to have a picnic",
+      "infinitive": "pique-niquer",
+      "conj": [
+        "pique-nique",
+        "pique-niques",
+        "pique-nique",
+        "pique-niquons",
+        "pique-niquez",
+        "pique-niquent"
+      ],
+      "themes": [
+        "Hobbies & music",
+        "Food & drink"
+      ],
+      "tip": "Also spelt piqueniquer.",
+      "examples": [
+        {
+          "fr": "Les gens adorent pique-niquer sur le quai.",
+          "en": "People love having picnics by the river."
         }
       ]
     },
@@ -8134,6 +8305,9 @@
       "fem": "ancienne",
       "themes": [
         "Describing places"
+      ],
+      "confusables": [
+        "adj-vieux"
       ],
       "examples": [
         {
@@ -12441,6 +12615,7 @@
       "themes": [
         "Home & town"
       ],
+      "kindOf": "n-batiment",
       "tip": "l'immeuble = the building / block of flats. One flat inside it = l'appartement.",
       "confusables": [
         "n-appartement"
@@ -13926,6 +14101,9 @@
       "article": "le",
       "themes": [
         "Hobbies & music"
+      ],
+      "confusables": [
+        "n-jardin"
       ],
       "examples": [
         {
@@ -17189,6 +17367,9 @@
         "Home & town",
         "Food & drink"
       ],
+      "acceptedSynonyms": [
+        "n-refrigerateur"
+      ],
       "examples": [
         {
           "fr": "Dans mon frigo, j'ai du lait.",
@@ -18134,6 +18315,7 @@
       "themes": [
         "Meals, restaurant & café"
       ],
+      "tip": "finir son assiette = to eat everything on your plate",
       "examples": [
         {
           "fr": "Une assiette de pâtes.",
@@ -24201,6 +24383,210 @@
       ]
     },
     {
+      "id": "adj-approprie",
+      "type": "adjective",
+      "en": "appropriate, right",
+      "masc": "approprié",
+      "fem": "appropriée",
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "examples": [
+        {
+          "fr": "Complétez avec le pronom tonique approprié.",
+          "en": "Fill in the appropriate stressed pronoun."
+        }
+      ]
+    },
+    {
+      "id": "adj-jeune",
+      "type": "adjective",
+      "en": "young",
+      "masc": "jeune",
+      "fem": "jeune",
+      "themes": [
+        "Describing people"
+      ],
+      "examples": [
+        {
+          "fr": "Hélène a 15 ans. Elle est jeune.",
+          "en": "Hélène is 15. She's young."
+        }
+      ]
+    },
+    {
+      "id": "adj-vieux",
+      "type": "adjective",
+      "en": "old (people, things)",
+      "masc": "vieux",
+      "fem": "vieille",
+      "themes": [
+        "Describing people",
+        "Describing places"
+      ],
+      "tip": "vieil before a vowel: un vieil homme. For buildings, ancien = old (not modern).",
+      "confusables": [
+        "adj-ancien"
+      ],
+      "examples": [
+        {
+          "fr": "Il a 92 ans. C'est un vieux monsieur.",
+          "en": "He's 92. He's an old man."
+        }
+      ]
+    },
+    {
+      "id": "adj-majeur",
+      "type": "adjective",
+      "en": "adult, of age (18 or over)",
+      "masc": "majeur",
+      "fem": "majeure",
+      "themes": [
+        "Describing people",
+        "People & identity"
+      ],
+      "tip": "Under 18 = mineur / mineure.",
+      "examples": [
+        {
+          "fr": "J'ai 18 ans. Je suis majeur.",
+          "en": "I'm 18. I'm an adult."
+        }
+      ]
+    },
+    {
+      "id": "adj-fatigue",
+      "type": "adjective",
+      "en": "tired",
+      "masc": "fatigué",
+      "fem": "fatiguée",
+      "themes": [
+        "Describing people"
+      ],
+      "tip": "la fatigue = tiredness",
+      "examples": [
+        {
+          "fr": "Tu es fatigué ?",
+          "en": "Are you tired?"
+        }
+      ]
+    },
+    {
+      "id": "adj-content",
+      "type": "adjective",
+      "en": "happy, pleased",
+      "masc": "content",
+      "fem": "contente",
+      "themes": [
+        "Describing people"
+      ],
+      "examples": [
+        {
+          "fr": "Elle est contente ?",
+          "en": "Is she happy?"
+        }
+      ]
+    },
+    {
+      "id": "adj-maladroit",
+      "type": "adjective",
+      "en": "clumsy",
+      "masc": "maladroit",
+      "fem": "maladroite",
+      "themes": [
+        "Describing people"
+      ],
+      "examples": [
+        {
+          "fr": "Elle est un peu maladroite.",
+          "en": "She's a bit clumsy."
+        }
+      ]
+    },
+    {
+      "id": "adj-historique",
+      "type": "adjective",
+      "en": "historic, historical",
+      "masc": "historique",
+      "fem": "historique",
+      "themes": [
+        "Describing places"
+      ],
+      "examples": [
+        {
+          "fr": "C'est le quartier historique de la ville.",
+          "en": "It's the historic part of town."
+        }
+      ]
+    },
+    {
+      "id": "adj-agreable",
+      "type": "adjective",
+      "en": "pleasant",
+      "masc": "agréable",
+      "fem": "agréable",
+      "themes": [
+        "Describing places",
+        "Opinions"
+      ],
+      "examples": [
+        {
+          "fr": "Ma rue est agréable, elle est calme.",
+          "en": "My street is pleasant, it's quiet."
+        }
+      ]
+    },
+    {
+      "id": "adj-dynamique",
+      "type": "adjective",
+      "en": "dynamic",
+      "masc": "dynamique",
+      "fem": "dynamique",
+      "themes": [
+        "Describing places",
+        "Describing people"
+      ],
+      "tip": "Close to animé (lively).",
+      "examples": [
+        {
+          "fr": "Mon quartier est agréable et dynamique.",
+          "en": "My neighbourhood is pleasant and dynamic."
+        }
+      ]
+    },
+    {
+      "id": "adj-magnifique",
+      "type": "adjective",
+      "en": "magnificent, beautiful",
+      "masc": "magnifique",
+      "fem": "magnifique",
+      "themes": [
+        "Describing places",
+        "Opinions"
+      ],
+      "examples": [
+        {
+          "fr": "Il y a une église magnifique.",
+          "en": "There's a magnificent church."
+        }
+      ]
+    },
+    {
+      "id": "adj-difficile",
+      "type": "adjective",
+      "en": "difficult, hard",
+      "masc": "difficile",
+      "fem": "difficile",
+      "themes": [
+        "Opinions"
+      ],
+      "examples": [
+        {
+          "fr": "C'est difficile de choisir un quartier.",
+          "en": "It's hard to choose a neighbourhood."
+        }
+      ]
+    },
+    {
       "id": "x-pour-cent",
       "type": "expression",
       "en": "per cent (%)",
@@ -25327,6 +25713,284 @@
       ]
     },
     {
+      "id": "x-entre-parentheses",
+      "type": "expression",
+      "en": "in brackets",
+      "fr": "entre parenthèses",
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "tip": "une parenthèse = a bracket",
+      "examples": [
+        {
+          "fr": "Conjuguez les verbes entre parenthèses.",
+          "en": "Conjugate the verbs in brackets."
+        }
+      ]
+    },
+    {
+      "id": "x-c-est-vrai",
+      "type": "expression",
+      "en": "That's true.",
+      "fr": "C'est vrai.",
+      "themes": [
+        "Greetings & phrases"
+      ],
+      "tip": "C'est vrai ? = Really?",
+      "examples": [
+        {
+          "fr": "– Tu ne bois pas de café le soir ? – C'est vrai, je ne bois pas de café le soir.",
+          "en": "– You don't drink coffee in the evening? – That's true, I don't drink coffee in the evening."
+        }
+      ]
+    },
+    {
+      "id": "x-absolument",
+      "type": "expression",
+      "en": "Absolutely!",
+      "fr": "Absolument !",
+      "themes": [
+        "Greetings & phrases"
+      ],
+      "examples": [
+        {
+          "fr": "– Vous êtes espagnols ? – Absolument !",
+          "en": "– Are you Spanish? – Absolutely!"
+        }
+      ]
+    },
+    {
+      "id": "x-oh-la-la",
+      "type": "expression",
+      "en": "Oh dear! / Wow!",
+      "fr": "Oh là là !",
+      "themes": [
+        "Greetings & phrases"
+      ],
+      "examples": [
+        {
+          "fr": "Oh là là, beaucoup de choses !",
+          "en": "Wow, lots of things!"
+        }
+      ]
+    },
+    {
+      "id": "x-quel-jour-sommes-nous",
+      "type": "expression",
+      "en": "What day is it today?",
+      "fr": "Quel jour sommes-nous ?",
+      "themes": [
+        "Questions",
+        "Time & dates"
+      ],
+      "alt": [
+        "Quel jour on est ?"
+      ]
+    },
+    {
+      "id": "x-qu-est-ce-qu-il-y-a-a-voir",
+      "type": "expression",
+      "en": "What is there to see?",
+      "fr": "Qu'est-ce qu'il y a à voir ?",
+      "themes": [
+        "Questions",
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Qu'est-ce qu'il y a à voir à Toulouse ?",
+          "en": "What is there to see in Toulouse?"
+        }
+      ]
+    },
+    {
+      "id": "x-depuis",
+      "type": "expression",
+      "en": "since; for (a length of time)",
+      "fr": "depuis",
+      "themes": [
+        "Prepositions & linking words",
+        "Time & dates"
+      ],
+      "examples": [
+        {
+          "fr": "J'habite à Toulouse depuis deux ans.",
+          "en": "I've lived in Toulouse for two years."
+        }
+      ]
+    },
+    {
+      "id": "x-ici",
+      "type": "expression",
+      "en": "here (in this place)",
+      "fr": "ici",
+      "themes": [
+        "Prepositions & linking words"
+      ],
+      "tip": "là = there (also here in everyday speech)",
+      "examples": [
+        {
+          "fr": "Un ami habite ici.",
+          "en": "A friend lives here."
+        }
+      ]
+    },
+    {
+      "id": "x-pres-de",
+      "type": "expression",
+      "en": "near, close to",
+      "fr": "près de",
+      "themes": [
+        "Prepositions & linking words",
+        "Home & town"
+      ],
+      "tip": "de + le = du: près du centre",
+      "examples": [
+        {
+          "fr": "Il y a une église près de chez toi.",
+          "en": "There's a church near your place."
+        }
+      ]
+    },
+    {
+      "id": "x-loin-de",
+      "type": "expression",
+      "en": "far from",
+      "fr": "loin de",
+      "themes": [
+        "Prepositions & linking words",
+        "Home & town"
+      ],
+      "tip": "de + le = du: loin du centre",
+      "examples": [
+        {
+          "fr": "Le jardin japonais n'est pas loin du centre.",
+          "en": "The Japanese garden isn't far from the centre."
+        }
+      ]
+    },
+    {
+      "id": "x-vraiment",
+      "type": "expression",
+      "en": "really",
+      "fr": "vraiment",
+      "themes": [
+        "Adverbs"
+      ],
+      "examples": [
+        {
+          "fr": "Je bois vraiment beaucoup de café.",
+          "en": "I really drink a lot of coffee."
+        }
+      ]
+    },
+    {
+      "id": "x-tous-les-deux",
+      "type": "expression",
+      "en": "both (of us, of you, of them)",
+      "fr": "tous les deux",
+      "themes": [
+        "Adverbs",
+        "Common words"
+      ],
+      "alt": [
+        "toutes les deux"
+      ],
+      "tip": "toutes les deux for two women or feminine nouns",
+      "examples": [
+        {
+          "fr": "Vous avez 23 ans tous les deux.",
+          "en": "You're both 23."
+        }
+      ]
+    },
+    {
+      "id": "x-aimer-bien",
+      "type": "expression",
+      "en": "to quite like",
+      "fr": "aimer bien",
+      "themes": [
+        "Opinions"
+      ],
+      "tip": "J'aime bien is a bit weaker than j'aime; j'adore is stronger.",
+      "examples": [
+        {
+          "fr": "J'aime bien le quartier Saint-Cyprien aussi.",
+          "en": "I quite like the Saint-Cyprien district too."
+        }
+      ]
+    },
+    {
+      "id": "x-hier",
+      "type": "expression",
+      "en": "yesterday",
+      "fr": "hier",
+      "themes": [
+        "Adverbs",
+        "Time & dates"
+      ],
+      "examples": [
+        {
+          "fr": "Hier, j'ai mangé du poisson.",
+          "en": "Yesterday I ate fish."
+        }
+      ]
+    },
+    {
+      "id": "x-avant-hier",
+      "type": "expression",
+      "en": "the day before yesterday",
+      "fr": "avant-hier",
+      "themes": [
+        "Adverbs",
+        "Time & dates"
+      ],
+      "confusables": [
+        "x-apres-demain"
+      ],
+      "examples": [
+        {
+          "fr": "Avant-hier, j'ai mangé une pizza.",
+          "en": "The day before yesterday I ate a pizza."
+        }
+      ]
+    },
+    {
+      "id": "x-apres-demain",
+      "type": "expression",
+      "en": "the day after tomorrow",
+      "fr": "après-demain",
+      "themes": [
+        "Adverbs",
+        "Time & dates"
+      ],
+      "confusables": [
+        "x-avant-hier"
+      ],
+      "examples": [
+        {
+          "fr": "Je vais à la piscine après-demain.",
+          "en": "I'm going to the swimming pool the day after tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "x-ce-soir",
+      "type": "expression",
+      "en": "this evening, tonight",
+      "fr": "ce soir",
+      "themes": [
+        "Time & dates",
+        "Adverbs"
+      ],
+      "examples": [
+        {
+          "fr": "Je vais au cinéma ce soir.",
+          "en": "I'm going to the cinema tonight."
+        }
+      ]
+    },
+    {
       "id": "n-pincee",
       "type": "noun",
       "en": "pinch",
@@ -25340,6 +26004,593 @@
         {
           "fr": "Une pincée de sel.",
           "en": "A pinch of salt."
+        }
+      ]
+    },
+    {
+      "id": "n-gens",
+      "type": "noun",
+      "en": "people",
+      "fr": "gens",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "People & identity"
+      ],
+      "tip": "Always plural: les gens. One person = une personne.",
+      "examples": [
+        {
+          "fr": "Les gens adorent pique-niquer sur le quai.",
+          "en": "People love having picnics by the river."
+        }
+      ]
+    },
+    {
+      "id": "n-fatigue",
+      "type": "noun",
+      "en": "tiredness",
+      "fr": "fatigue",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Describing people"
+      ],
+      "tip": "être fatigué(e) = to be tired",
+      "examples": [
+        {
+          "fr": "Avec la fatigue, je suis maladroite.",
+          "en": "When I'm tired, I'm clumsy."
+        }
+      ]
+    },
+    {
+      "id": "n-libraire",
+      "type": "noun",
+      "en": "bookseller",
+      "fr": "libraire",
+      "gender": "mf",
+      "article": "le",
+      "themes": [
+        "Jobs & work",
+        "Shopping"
+      ],
+      "alt": [
+        "la libraire"
+      ],
+      "confusables": [
+        "n-librairie"
+      ],
+      "examples": [
+        {
+          "fr": "La libraire vend des livres.",
+          "en": "The bookseller sells books."
+        }
+      ]
+    },
+    {
+      "id": "n-caviste",
+      "type": "noun",
+      "en": "wine merchant",
+      "fr": "caviste",
+      "gender": "mf",
+      "article": "le",
+      "themes": [
+        "Jobs & work",
+        "Shopping"
+      ],
+      "alt": [
+        "la caviste"
+      ],
+      "tip": "Chez le caviste = at the wine shop.",
+      "examples": [
+        {
+          "fr": "J'achète du vin chez le caviste.",
+          "en": "I buy wine at the wine merchant's."
+        }
+      ]
+    },
+    {
+      "id": "n-litterature",
+      "type": "noun",
+      "en": "literature",
+      "fr": "littérature",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "tip": "Double t: littérature.",
+      "examples": [
+        {
+          "fr": "Vous êtes professeur de littérature ?",
+          "en": "Are you a literature teacher?"
+        }
+      ]
+    },
+    {
+      "id": "n-verbes-du-2e-groupe",
+      "type": "noun",
+      "en": "second-group verbs (-ir verbs like finir)",
+      "fr": "verbes du 2e groupe",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "kindOf": "n-verbe",
+      "alt": [
+        "les verbes du deuxième groupe"
+      ],
+      "tip": "nous finissons, vous finissez, ils finissent: -iss- in the plural",
+      "examples": [
+        {
+          "fr": "Finir est un verbe du 2e groupe.",
+          "en": "Finir is a second-group verb."
+        }
+      ]
+    },
+    {
+      "id": "n-conversation",
+      "type": "noun",
+      "en": "conversation",
+      "fr": "conversation",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Classroom & grammar"
+      ],
+      "examples": [
+        {
+          "fr": "Conversation : complétez avec le pronom tonique.",
+          "en": "Conversation: fill in the stressed pronoun."
+        }
+      ]
+    },
+    {
+      "id": "n-batiment",
+      "type": "noun",
+      "en": "building (in general)",
+      "fr": "bâtiment",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town"
+      ],
+      "tip": "un bâtiment = any building; un immeuble = a block of flats or offices",
+      "examples": [
+        {
+          "fr": "Il y a beaucoup de bâtiments dans le centre-ville.",
+          "en": "There are lots of buildings in the town centre."
+        }
+      ]
+    },
+    {
+      "id": "n-eglise",
+      "type": "noun",
+      "en": "church",
+      "fr": "église",
+      "gender": "f",
+      "article": "l'",
+      "themes": [
+        "Home & town"
+      ],
+      "kindOf": "n-batiment",
+      "examples": [
+        {
+          "fr": "Il y a une église près de chez toi.",
+          "en": "There's a church near your place."
+        }
+      ]
+    },
+    {
+      "id": "n-mairie",
+      "type": "noun",
+      "en": "town hall",
+      "fr": "mairie",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Je commence mon travail à la mairie.",
+          "en": "I'm starting my job at the town hall."
+        }
+      ]
+    },
+    {
+      "id": "n-commissariat",
+      "type": "noun",
+      "en": "police station",
+      "fr": "commissariat",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Un ami habite près de la banque et du commissariat.",
+          "en": "A friend lives near the bank and the police station."
+        }
+      ]
+    },
+    {
+      "id": "n-banlieue",
+      "type": "noun",
+      "en": "suburbs, outskirts",
+      "fr": "banlieue",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Home & town"
+      ],
+      "tip": "le centre-ville (town centre) ≠ la banlieue (suburbs). En banlieue = in the suburbs.",
+      "examples": [
+        {
+          "fr": "J'habite en banlieue.",
+          "en": "I live in the suburbs."
+        }
+      ]
+    },
+    {
+      "id": "n-plan",
+      "type": "noun",
+      "en": "(street) map, plan",
+      "fr": "plan",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town"
+      ],
+      "tip": "un plan = a map of a town; une carte = a map of a country (also a menu or a card)",
+      "examples": [
+        {
+          "fr": "Tu as un plan de Toulouse ?",
+          "en": "Do you have a map of Toulouse?"
+        }
+      ]
+    },
+    {
+      "id": "n-jardin",
+      "type": "noun",
+      "en": "garden; park",
+      "fr": "jardin",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town",
+        "Nature & weather"
+      ],
+      "confusables": [
+        "n-jardinage"
+      ],
+      "examples": [
+        {
+          "fr": "Le jardin japonais n'est pas loin du centre.",
+          "en": "The Japanese garden isn't far from the centre."
+        }
+      ]
+    },
+    {
+      "id": "n-fontaine",
+      "type": "noun",
+      "en": "fountain",
+      "fr": "fontaine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "La place de la Trinité et sa fontaine.",
+          "en": "Trinity Square and its fountain."
+        }
+      ]
+    },
+    {
+      "id": "n-quai",
+      "type": "noun",
+      "en": "quay, riverside; (station) platform",
+      "fr": "quai",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town",
+        "Transport"
+      ],
+      "examples": [
+        {
+          "fr": "Dans mon quartier, il y a le quai de la Daurade.",
+          "en": "In my neighbourhood there is the Daurade quayside."
+        }
+      ]
+    },
+    {
+      "id": "n-visite",
+      "type": "noun",
+      "en": "visit, tour",
+      "fr": "visite",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Merci pour la visite !",
+          "en": "Thanks for the tour!"
+        }
+      ]
+    },
+    {
+      "id": "n-portable",
+      "type": "noun",
+      "en": "mobile phone",
+      "fr": "portable",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects & bag"
+      ],
+      "tip": "le (téléphone) portable = mobile phone; un ordinateur portable = laptop",
+      "examples": [
+        {
+          "fr": "On regarde sur mon portable ?",
+          "en": "Shall we look on my phone?"
+        }
+      ]
+    },
+    {
+      "id": "n-piscine",
+      "type": "noun",
+      "en": "swimming pool",
+      "fr": "piscine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Sports",
+        "Home & town"
+      ],
+      "examples": [
+        {
+          "fr": "Nous allons à la piscine demain.",
+          "en": "We're going to the swimming pool tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "n-capitale",
+      "type": "noun",
+      "en": "capital (city)",
+      "fr": "capitale",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Countries"
+      ],
+      "examples": [
+        {
+          "fr": "Quelle est la capitale de la France ?",
+          "en": "What is the capital of France?"
+        }
+      ]
+    },
+    {
+      "id": "n-librairie",
+      "type": "noun",
+      "en": "bookshop",
+      "fr": "librairie",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Shopping",
+        "Home & town"
+      ],
+      "kindOf": "n-magasin",
+      "tip": "Not a library: that is la bibliothèque.",
+      "confusables": [
+        "n-libraire"
+      ],
+      "examples": [
+        {
+          "fr": "J'achète un livre à la librairie.",
+          "en": "I'm buying a book at the bookshop."
+        }
+      ]
+    },
+    {
+      "id": "n-magasin-de-jouets",
+      "type": "noun",
+      "en": "toy shop",
+      "fr": "magasin de jouets",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Shopping",
+        "Home & town"
+      ],
+      "kindOf": "n-magasin",
+      "tip": "un jouet = a toy",
+      "examples": [
+        {
+          "fr": "Il y a un magasin de jouets dans ma rue.",
+          "en": "There's a toy shop in my street."
+        }
+      ]
+    },
+    {
+      "id": "n-centre-commercial",
+      "type": "noun",
+      "en": "shopping centre, mall",
+      "fr": "centre commercial",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Shopping",
+        "Home & town"
+      ],
+      "kindOf": "n-batiment",
+      "tip": "No hyphen: un centre commercial (but le centre-ville).",
+      "examples": [
+        {
+          "fr": "Il y a un centre commercial en banlieue.",
+          "en": "There's a shopping centre in the suburbs."
+        }
+      ]
+    },
+    {
+      "id": "n-fromage-blanc",
+      "type": "noun",
+      "en": "fromage blanc (soft white cheese, like quark)",
+      "fr": "fromage blanc",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Food & drink"
+      ],
+      "kindOf": "n-fromage",
+      "examples": [
+        {
+          "fr": "Tu préfères le fromage blanc ou le yaourt ?",
+          "en": "Do you prefer fromage blanc or yoghurt?"
+        }
+      ]
+    },
+    {
+      "id": "n-sardine",
+      "type": "noun",
+      "en": "sardine",
+      "fr": "sardine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Food & drink"
+      ],
+      "alt": [
+        "les sardines"
+      ],
+      "examples": [
+        {
+          "fr": "Une boîte de sardines.",
+          "en": "A tin of sardines."
+        }
+      ]
+    },
+    {
+      "id": "n-ketchup",
+      "type": "noun",
+      "en": "ketchup",
+      "fr": "ketchup",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Food & drink"
+      ],
+      "examples": [
+        {
+          "fr": "Tu préfères la moutarde ou le ketchup ?",
+          "en": "Do you prefer mustard or ketchup?"
+        }
+      ]
+    },
+    {
+      "id": "n-chocolat-noir",
+      "type": "noun",
+      "en": "dark chocolate",
+      "fr": "chocolat noir",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Food & drink"
+      ],
+      "kindOf": "n-chocolat",
+      "examples": [
+        {
+          "fr": "Je préfère le chocolat noir.",
+          "en": "I prefer dark chocolate."
+        }
+      ]
+    },
+    {
+      "id": "n-chocolat-au-lait",
+      "type": "noun",
+      "en": "milk chocolate",
+      "fr": "chocolat au lait",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Food & drink"
+      ],
+      "kindOf": "n-chocolat",
+      "examples": [
+        {
+          "fr": "Tu préfères le chocolat noir ou le chocolat au lait ?",
+          "en": "Do you prefer dark chocolate or milk chocolate?"
+        }
+      ]
+    },
+    {
+      "id": "n-refrigerateur",
+      "type": "noun",
+      "en": "refrigerator",
+      "fr": "réfrigérateur",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Home & town",
+        "Food & drink"
+      ],
+      "acceptedSynonyms": [
+        "n-frigo"
+      ],
+      "tip": "Le frigo is the everyday short form.",
+      "examples": [
+        {
+          "fr": "J'ai de la moutarde dans mon réfrigérateur.",
+          "en": "I have mustard in my refrigerator."
+        }
+      ]
+    },
+    {
+      "id": "n-mousse-au-chocolat",
+      "type": "noun",
+      "en": "chocolate mousse",
+      "fr": "mousse au chocolat",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Bakery & desserts"
+      ],
+      "examples": [
+        {
+          "fr": "Vous finissez la mousse au chocolat ?",
+          "en": "Are you finishing the chocolate mousse?"
+        }
+      ]
+    },
+    {
+      "id": "n-formule",
+      "type": "noun",
+      "en": "meal deal (fixed-price combination)",
+      "fr": "formule",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Meals, restaurant & café"
+      ],
+      "acceptedSynonyms": [
+        "n-menu"
+      ],
+      "tip": "Une formule = entrée + plat or plat + dessert at a fixed price.",
+      "examples": [
+        {
+          "fr": "Ils choisissent une formule.",
+          "en": "They choose a meal deal."
         }
       ]
     }

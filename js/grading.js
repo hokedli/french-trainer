@@ -107,8 +107,9 @@ function withPronoun(form, index) {
 
 export const conjugationWithPronouns = (entry) => entry.conj.map(withPronoun);
 
-// The main form for one person (0 = je … 5 = ils) followed by its accepted alternatives from conjAlt.
-export const acceptedVerbForms = (entry, personIndex) => [entry.conj[personIndex], ...(entry.conjAlt?.[personIndex] || [])];
+// The main form for one person (0 = je … 5 = ils), plus that person's form in the alternative conjugation conjAlt
+// when it is spelt differently (payer: paie / paye; nous payons is the same in both).
+export const acceptedVerbForms = (entry, personIndex) => unique([entry.conj[personIndex], entry.conjAlt?.[personIndex]].filter(Boolean));
 
 export function shortName(entry) {
   if (entry.type === 'noun' || entry.type === 'country') return nounDisplay(entry.article, entry.fr, entry.gender);
