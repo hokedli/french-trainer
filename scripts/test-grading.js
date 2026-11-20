@@ -82,7 +82,7 @@ check('n-papa', 'le père', 'wrong', '**le père** = father.');
 check('n-mere', 'la maman', 'correct', 'Also right: **la maman**');
 check('n-maman', 'la mère', 'wrong', '**la mère** = mother.');
 check('x-ca-va', 'Comment allez-vous ?', 'correct', 'Also right');
-check('x-comment-vas-tu', 'Ça va ?', 'wrong', '= How are you?');
+check('x-comment-vas-tu', 'Ça va ?', 'correct', 'Also right: **Ça va ?**');
 check('v-terminer', 'finir, finis, finis, finit, finissons, finissez, finissent', 'correct', 'Also right: **finir**');
 check('v-finir', 'terminer\nje termine\ntu termines\nil termine\nnous terminons\nvous terminez\nils terminent', 'correct', 'Also right: **terminer**');
 check('v-terminer', 'finir', 'partial', 'Also right: **finir**');

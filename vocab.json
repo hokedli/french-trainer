@@ -1,5 +1,5 @@
 {
-  "version": 23,
+  "version": 24,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -327,8 +327,8 @@
       "kindOf": "n-date",
       "examples": [
         {
-          "fr": "Ma date de naissance est le 3 avril 2000.",
-          "en": "My date of birth is 3 April 2000."
+          "fr": "Ma date de naissance est le 7 mai 2006.",
+          "en": "My date of birth is 7 May 2006."
         }
       ]
     },
@@ -381,8 +381,8 @@
       ],
       "examples": [
         {
-          "fr": "Mon anniversaire est le 12 mai.",
-          "en": "My birthday is 12 May."
+          "fr": "Mon anniversaire est le 14 mai.",
+          "en": "My birthday is 14 May."
         }
       ]
     },
@@ -1014,7 +1014,8 @@
         "Jobs & work"
       ],
       "alt": [
-        "être retraité(e)"
+        "être retraité",
+        "être retraitée"
       ],
       "examples": [
         {
@@ -1529,8 +1530,7 @@
       ],
       "examples": [
         {
-          "fr": "Le marchand vend des fruits.",
-          "en": "The shopkeeper sells fruit."
+          "fr": "Le marchand vend des fruits."
         }
       ]
     },
@@ -1726,7 +1726,7 @@
         "Jobs & work"
       ],
       "alt": [
-        "la gérante (f)"
+        "la gérante"
       ],
       "examples": [
         {
@@ -2101,7 +2101,7 @@
         "la chanteuse d'opéra",
         "la cantatrice"
       ],
-      "tip": "For a woman you may also hear \"une cantatrice\" -> a bit formal and has no masculine form.",
+      "tip": "For a woman you may also hear \"une cantatrice\": a bit formal, and it has no masculine form.",
       "examples": [
         {
           "fr": "Il est chanteur d'opéra.",
@@ -2175,8 +2175,7 @@
       ],
       "examples": [
         {
-          "fr": "L'agriculteur habite dans un village.",
-          "en": "The farmer lives in a village."
+          "fr": "L'agriculteur habite dans un village."
         }
       ]
     },
@@ -2329,8 +2328,7 @@
       "tip": "psy = psychologue or psychiatre (informal)",
       "examples": [
         {
-          "fr": "Elle est psy.",
-          "en": "She's a therapist."
+          "fr": "Elle est psy."
         }
       ]
     },
@@ -2520,8 +2518,7 @@
       ],
       "examples": [
         {
-          "fr": "L'ambulancier conduit l'ambulance.",
-          "en": "The paramedic drives the ambulance."
+          "fr": "L'ambulancier conduit l'ambulance."
         }
       ]
     },
@@ -2763,7 +2760,7 @@
       "acceptedSynonyms": [
         "n-maman"
       ],
-      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
+      "tip": "la mer = sea · la mère = mother · le maire = mayor — they all sound the same!",
       "confusables": [
         "n-mer",
         "n-maire"
@@ -2874,8 +2871,8 @@
       ],
       "examples": [
         {
-          "fr": "Ma sœur est née le 12 avril.",
-          "en": "My sister was born on 12 April."
+          "fr": "Ma sœur est née le 2 avril.",
+          "en": "My sister was born on 2 April."
         }
       ]
     },
@@ -3664,7 +3661,7 @@
       ],
       "examples": [
         {
-          "fr": "C'est ma ex-femme.",
+          "fr": "C'est mon ex-femme.",
           "en": "She's my ex-wife."
         }
       ]
@@ -4610,8 +4607,7 @@
       ],
       "examples": [
         {
-          "fr": "Isa prépare un diplôme de droit.",
-          "en": "Isa is working towards a law degree."
+          "fr": "Isa prépare un diplôme de droit."
         }
       ]
     },
@@ -4718,7 +4714,7 @@
       ],
       "examples": [
         {
-          "fr": "Le chiffre après 14 est 15.",
+          "fr": "Le nombre après 14 est 15.",
           "en": "The number after 14 is 15."
         }
       ]
@@ -5020,8 +5016,8 @@
       ],
       "examples": [
         {
-          "fr": "Ce sera tout ? : c'est le futur.",
-          "en": "Ce sera tout ?: that's the future tense."
+          "fr": "« Ce sera tout ? » : c'est le futur.",
+          "en": "\"Ce sera tout ?\": that's the future tense."
         }
       ]
     },
@@ -5078,8 +5074,7 @@
       ],
       "examples": [
         {
-          "fr": "Je suis hongroise.",
-          "en": "I'm Hungarian."
+          "fr": "Je suis canadienne."
         }
       ]
     },
@@ -5102,8 +5097,8 @@
       ],
       "examples": [
         {
-          "fr": "J'ai 26 ans.",
-          "en": "I'm 26."
+          "fr": "J'ai 66 ans.",
+          "en": "I'm 66."
         }
       ]
     },
@@ -5539,8 +5534,8 @@
       "tip": "Past tense of naître, formed with être: il est né, elle est née",
       "examples": [
         {
-          "fr": "Je suis née le 12 mai 1995.",
-          "en": "I was born on 12 May 1995."
+          "fr": "Je suis née le 22 septembre 1998.",
+          "en": "I was born on 22 September 1998."
         }
       ]
     },
@@ -5763,8 +5758,8 @@
       ],
       "examples": [
         {
-          "fr": "J'habite à Budapest, en Hongrie.",
-          "en": "I live in Budapest, Hungary."
+          "fr": "J'habite à Paris, en France.",
+          "en": "I live in Paris, France."
         }
       ]
     },
@@ -6410,8 +6405,7 @@
       ],
       "examples": [
         {
-          "fr": "Isa prépare un diplôme de droit.",
-          "en": "Isa is studying for a law degree."
+          "fr": "Isa prépare un diplôme de droit."
         }
       ]
     },
@@ -6674,6 +6668,7 @@
         "voulez dire",
         "veulent dire"
       ],
+      "rule": "irregular",
       "themes": [
         "Common words"
       ],
@@ -9513,6 +9508,9 @@
         "Questions",
         "Greetings & phrases"
       ],
+      "acceptedSynonyms": [
+        "x-ca-va"
+      ],
       "alt": [
         "Comment allez-vous ?"
       ],
@@ -9679,8 +9677,8 @@
     {
       "id": "x-oui",
       "type": "expression",
-      "en": "yes",
-      "fr": "oui",
+      "en": "Yes",
+      "fr": "Oui",
       "themes": [
         "Greetings & phrases"
       ]
@@ -9688,8 +9686,8 @@
     {
       "id": "x-non",
       "type": "expression",
-      "en": "no",
-      "fr": "non",
+      "en": "No",
+      "fr": "Non",
       "themes": [
         "Greetings & phrases"
       ]
@@ -10097,7 +10095,7 @@
         "Questions",
         "Family & relationships"
       ],
-      "tip": "'Quels sont les noms de tes parents ?' is correct but unnatural, and nom often means surname. For first names: \"Quels sont les prénoms de tes parents ?\""
+      "tip": "\"Quels sont les noms de tes parents ?\" is correct but unnatural, and nom often means surname. For first names: \"Quels sont les prénoms de tes parents ?\""
     },
     {
       "id": "x-ou-habitent-tes-parents",
@@ -10285,10 +10283,12 @@
       "themes": [
         "Questions"
       ],
+      "alt": [
+        "Où es-tu ?"
+      ],
       "examples": [
         {
-          "fr": "Allô, tu es où ? – Je suis chez la fromagère.",
-          "en": "Hello, where are you? – I'm at the cheesemonger's."
+          "fr": "Allô, tu es où ? – Je suis chez la fromagère."
         }
       ]
     },
@@ -10436,6 +10436,9 @@
       ],
       "acceptedSynonyms": [
         "x-qu-est-ce-que-tu-aimes-faire-le-week-end"
+      ],
+      "alt": [
+        "Quelles activités tu aimes faire le week-end ?"
       ]
     },
     {
@@ -10572,8 +10575,8 @@
       ],
       "examples": [
         {
-          "fr": "J'habite à Budapest.",
-          "en": "I live in Budapest."
+          "fr": "J'habite à Berlin.",
+          "en": "I live in Berlin."
         },
         {
           "fr": "Le cours est à 8 heures.",
@@ -10602,8 +10605,8 @@
       ],
       "examples": [
         {
-          "fr": "Je suis née en avril.",
-          "en": "I was born in April."
+          "fr": "Je suis née en janvier.",
+          "en": "I was born in January."
         }
       ]
     },
@@ -10751,7 +10754,7 @@
       ],
       "examples": [
         {
-          "fr": "Le chiffre entre 12 et 14 est 13.",
+          "fr": "Le nombre entre 12 et 14 est 13.",
           "en": "The number between 12 and 14 is 13."
         }
       ]
@@ -15582,7 +15585,7 @@
       "examples": [
         {
           "fr": "Je mange des fruits.",
-          "en": "I eat fruits."
+          "en": "I eat fruit."
         }
       ]
     },
@@ -18529,7 +18532,7 @@
       "kindOf": "n-cafe",
       "examples": [
         {
-          "fr": "Je voudrais un café au lait avec du sirop au caramel.",
+          "fr": "Je voudrais un café au lait avec du sirop de caramel.",
           "en": "I'd like a coffee with milk and caramel syrup."
         }
       ]
@@ -20290,7 +20293,7 @@
       "themes": [
         "Nature & weather"
       ],
-      "tip": "la mer = sea · la mère = mother · la mare = pond — they all sound the same!",
+      "tip": "la mer = sea · la mère = mother · le maire = mayor — they all sound the same!",
       "confusables": [
         "n-mere",
         "n-maire"
@@ -21942,8 +21945,7 @@
       ],
       "examples": [
         {
-          "fr": "Votre code, s'il vous plaît.",
-          "en": "Your PIN, please."
+          "fr": "Votre code, s'il vous plaît."
         }
       ]
     },
@@ -22350,7 +22352,7 @@
         "Countries"
       ],
       "alt": [
-        "les Pays-Bas (m)"
+        "les Pays-Bas"
       ],
       "examples": [
         {
@@ -24196,16 +24198,16 @@
       "id": "c-belize",
       "type": "country",
       "en": "Belize",
-      "fr": "Bélize",
+      "fr": "Belize",
       "gender": "m",
       "article": "le",
-      "inTo": "au Bélize",
+      "inTo": "au Belize",
       "themes": [
         "Countries"
       ],
       "examples": [
         {
-          "fr": "J'habite au Bélize.",
+          "fr": "J'habite au Belize.",
           "en": "I live in Belize."
         }
       ]
@@ -24748,9 +24750,6 @@
       "fr": "pour cent",
       "themes": [
         "Numbers"
-      ],
-      "alt": [
-        "pour cent (%)"
       ],
       "examples": [
         {
@@ -25606,7 +25605,7 @@
     {
       "id": "x-comment-je-peux-vous-aider",
       "type": "expression",
-      "en": "How can I help you (formal)?",
+      "en": "How can I help you? (formal)",
       "fr": "Comment je peux vous aider ?",
       "themes": [
         "Questions",
@@ -25684,11 +25683,14 @@
     {
       "id": "x-vous-avez-des",
       "type": "expression",
-      "en": "Do you have any…? (to a seller)",
+      "en": "Do you have any…?",
       "fr": "Vous avez des… ?",
       "themes": [
         "Questions",
         "Shopping"
+      ],
+      "alt": [
+        "Tu as des… ?"
       ],
       "examples": [
         {
@@ -30329,7 +30331,7 @@
       ],
       "examples": [
         {
-          "fr": "Il y a un peu d'espaces verts dans mon quartier.",
+          "fr": "Il y a quelques espaces verts dans mon quartier.",
           "en": "There are a few green spaces in my neighbourhood."
         }
       ]
@@ -32977,7 +32979,7 @@
       "en": "to wait (for)",
       "infinitive": "attendre",
       "conj": [
-        "attends",
+        "j'attends",
         "attends",
         "attend",
         "attendons",
@@ -33148,7 +33150,7 @@
       "en": "to send",
       "infinitive": "envoyer",
       "conj": [
-        "envoie",
+        "j'envoie",
         "envoies",
         "envoie",
         "envoyons",
@@ -33174,7 +33176,7 @@
       "en": "to go in, to enter",
       "infinitive": "entrer",
       "conj": [
-        "entre",
+        "j'entre",
         "entres",
         "entre",
         "entrons",
