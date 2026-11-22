@@ -1,5 +1,5 @@
 {
-  "version": 24,
+  "version": 25,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -192,6 +192,9 @@
         "People & identity"
       ],
       "kindOf": "n-adresse",
+      "alt": [
+        "adresse email"
+      ],
       "examples": [
         {
           "fr": "Mon adresse e-mail est …",
@@ -211,7 +214,7 @@
       ],
       "alt": [
         "le courriel",
-        "le mail"
+        "l'email (m)"
       ],
       "confusables": [
         "n-courrier"
@@ -5121,8 +5124,7 @@
       ],
       "examples": [
         {
-          "fr": "Je vais bien, merci.",
-          "en": "I'm fine, thanks."
+          "fr": "Je vais bien, merci."
         }
       ]
     },
@@ -9354,8 +9356,7 @@
       ],
       "examples": [
         {
-          "fr": "Bonjour Isabelle, ça va ?",
-          "en": "Hello Isabelle, how are you?"
+          "fr": "Bonjour Isabelle, ça va ?"
         }
       ]
     },
@@ -9384,15 +9385,14 @@
       ],
       "examples": [
         {
-          "fr": "Salut, tu vas bien ?",
-          "en": "Hi, are you OK?"
+          "fr": "Salut, tu vas bien ?"
         }
       ]
     },
     {
       "id": "x-coucou",
       "type": "expression",
-      "en": "Hi there (very informal, = salut)",
+      "en": "Hi there (very informal, ≈ salut)",
       "fr": "Coucou",
       "themes": [
         "Greetings & phrases"
@@ -9431,6 +9431,9 @@
       "acceptedSynonyms": [
         "x-comment-vas-tu"
       ],
+      "alt": [
+        "Comment ça va ?"
+    ],
       "examples": [
         {
           "fr": "– Ça va ? – Ça va, merci.",
@@ -9466,6 +9469,9 @@
       "fr": "Ça va très bien.",
       "themes": [
         "Greetings & phrases"
+      ],
+      "alt": [
+        "Je vais très bien."
       ]
     },
     {
@@ -9484,6 +9490,9 @@
       "fr": "Ça ne va pas.",
       "themes": [
         "Greetings & phrases"
+      ],
+      "alt": [
+        "Je ne vais pas bien."
       ]
     },
     {
@@ -9496,13 +9505,15 @@
         "Greetings & phrases"
       ],
       "alt": [
-        "Vous allez bien ?"
+        "Vas-tu bien ?",
+        "Vous allez bien ?",
+        "Allez-vous bien ?"
       ]
     },
     {
       "id": "x-comment-vas-tu",
       "type": "expression",
-      "en": "How are you? (informal / formal)",
+      "en": "How are you? (informal)",
       "fr": "Comment vas-tu ?",
       "themes": [
         "Questions",
@@ -9512,7 +9523,9 @@
         "x-ca-va"
       ],
       "alt": [
-        "Comment allez-vous ?"
+        "Comment tu vas ?",
+        "Comment allez-vous ?",
+        "Comment vous allez ?"
       ],
       "examples": [
         {
@@ -9749,8 +9762,7 @@
       ],
       "examples": [
         {
-          "fr": "Bisous, Fiona",
-          "en": "Love, Fiona"
+          "fr": "Bisous, Fiona"
         }
       ]
     },
@@ -9885,12 +9897,13 @@
         "Greetings & phrases"
       ],
       "alt": [
-        "Je suis désolée."
+        "Je suis désolée.",
+        "Désolé.", 
+        "Désolée."
       ],
       "examples": [
         {
-          "fr": "Je suis désolé, nous n'avons pas de macarons à la pistache.",
-          "en": "I'm sorry, we don't have any pistachio macarons."
+          "fr": "Je suis désolé, nous n'avons pas de macarons à la pistache."
         }
       ]
     },
@@ -9904,7 +9917,10 @@
         "People & identity"
       ],
       "alt": [
-        "Comment vous vous appelez ?"
+        "Comment vous vous appelez ?",
+        "Comment vous appelez-vous ?",
+        "Tu t'appelles comment ?",
+        "Comment t'appelles-tu ?"
       ]
     },
     {
@@ -9928,6 +9944,9 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quel est votre prénom ?"
       ]
     },
     {
@@ -9948,6 +9967,9 @@
       "themes": [
         "Questions",
         "Language & grammar"
+      ],
+      "alt": [
+        "Vous pouvez épeler, s'il vous plaît ?"
       ]
     },
     {
@@ -9958,6 +9980,9 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quel est votre numéro de téléphone ?"
       ]
     },
     {
@@ -9968,6 +9993,9 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quelle est votre adresse ?"
       ]
     },
     {
@@ -9978,6 +10006,10 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quelle est ton adresse email ?",
+        "Quelle est votre adresse e-mail ?"
       ]
     },
     {
@@ -9988,6 +10020,9 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quelle est votre nationalité ?"
       ]
     },
     {
@@ -10000,7 +10035,9 @@
         "People & identity"
       ],
       "alt": [
-        "Tu as quel âge ?"
+        "Tu as quel âge ?",
+        "Quel âge avez-vous ?",
+        "Vous avez quel âge ?"
       ]
     },
     {
@@ -10011,6 +10048,9 @@
       "themes": [
         "Questions",
         "People & identity"
+      ],
+      "alt": [
+        "Quand est votre anniversaire ?"
       ]
     },
     {
@@ -10033,7 +10073,11 @@
         "Town & places"
       ],
       "alt": [
-        "Où tu habites ?"
+        "Où tu habites ?",
+        "Où habites-tu ?",
+        "Vous habitez où ?",
+        "Où vous habitez ?",
+        "Où habitez-vous ?"
       ]
     },
     {
@@ -10044,6 +10088,9 @@
       "themes": [
         "Questions",
         "Town & places"
+      ],
+      "alt": [
+        "Comment est votre quartier ?"
       ]
     },
     {
@@ -10054,6 +10101,9 @@
       "themes": [
         "Questions",
         "Hobbies & free time"
+      ],
+      "alt": [
+        "Qu'est-ce que vous aimez ?"
       ]
     },
     {
@@ -10064,6 +10114,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous êtes enfant unique ?"
       ]
     },
     {
@@ -10074,6 +10127,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous avez un frère ou une sœur ?"
       ]
     },
     {
@@ -10084,6 +10140,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous pouvez présenter votre frère ou votre sœur ?"
       ]
     },
     {
@@ -10095,6 +10154,9 @@
         "Questions",
         "Family & relationships"
       ],
+      "alt": [
+        "Comment s'appellent vos parents ?"
+      ],
       "tip": "\"Quels sont les noms de tes parents ?\" is correct but unnatural, and nom often means surname. For first names: \"Quels sont les prénoms de tes parents ?\""
     },
     {
@@ -10105,6 +10167,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Où habitent vos parents ?"
       ]
     },
     {
@@ -10115,6 +10180,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Quel âge ont vos parents ?"
       ]
     },
     {
@@ -10125,6 +10193,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Quelle est la date de naissance de votre mère ?"
       ]
     },
     {
@@ -10135,6 +10206,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Quel est le nom de naissance de votre mère ?"
       ]
     },
     {
@@ -10199,6 +10273,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous avez des frères et des sœurs ?"
       ]
     },
     {
@@ -10231,7 +10308,8 @@
       ],
       "alt": [
         "Quel est votre métier ?",
-        "Quel est ton travail ?"
+        "Quel est ton travail ?",
+        "Quel est votre travail ?"
       ]
     },
     {
@@ -10284,7 +10362,9 @@
         "Questions"
       ],
       "alt": [
-        "Où es-tu ?"
+        "Où es-tu ?",
+        "Vous êtes où ?",
+        "Où êtes-vous ?"
       ],
       "examples": [
         {
@@ -10303,7 +10383,8 @@
       ],
       "alt": [
         "Quels magasins il y a dans ton quartier ?",
-        "Quels commerces il y a dans votre quartier ?"
+        "Quels commerces il y a dans votre quartier ?",
+        "Quels magasins il y a dans votre quartier ?"
       ]
     },
     {
@@ -10328,6 +10409,9 @@
         "Questions",
         "Time & dates",
         "People & identity"
+      ],
+      "alt": [
+        "Quelle est votre date de naissance ?"
       ]
     },
     {
@@ -10345,7 +10429,13 @@
         "Où tu es née ?",
         "Où es-tu né(e) ?",
         "Où es-tu né ?",
-        "Où es-tu née ?"
+        "Où es-tu née ?",
+        "Où vous êtes né(e) ?",
+        "Où vous êtes né ?",
+        "Où vous êtes née ?",
+        "Où êtes-vous né(e) ?",
+        "Où êtes-vous né ?",
+        "Où êtes-vous née ?"
       ]
     },
     {
@@ -10357,6 +10447,9 @@
         "Questions",
         "Nationalities",
         "People & identity"
+      ],
+      "alt": [
+        "Quelles langues vous parlez ?"
       ]
     },
     {
@@ -10368,6 +10461,9 @@
         "Questions",
         "Town & places",
         "School & studies"
+      ],
+      "alt": [
+        "Où vous étudiez ?"
       ]
     },
     {
@@ -10382,7 +10478,10 @@
       ],
       "alt": [
         "Tu habites seul ou avec ta famille ?",
-        "Tu habites seule ou avec ta famille ?"
+        "Tu habites seule ou avec ta famille ?",
+        "Vous habitez seul(e) ou avec votre famille ?",
+        "Vous habitez seul ou avec votre famille ?",
+        "Vous habitez seule ou avec votre famille ?"
       ]
     },
     {
@@ -10397,7 +10496,10 @@
       ],
       "alt": [
         "Tu es marié ?",
-        "Tu es mariée ?"
+        "Tu es mariée ?",
+        "Vous êtes marié(e) ?",
+        "Vous êtes marié ?",
+        "Vous êtes mariée ?"
       ]
     },
     {
@@ -10411,7 +10513,9 @@
         "Animals"
       ],
       "alt": [
-        "Tu as un animal ?"
+        "Tu as un animal ?",
+        "Vous avez un animal de compagnie ?",
+        "Vous avez un animal ?"
       ]
     },
     {
@@ -10422,6 +10526,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous avez des enfants ?"
       ]
     },
     {
@@ -10438,7 +10545,9 @@
         "x-qu-est-ce-que-tu-aimes-faire-le-week-end"
       ],
       "alt": [
-        "Quelles activités tu aimes faire le week-end ?"
+        "Quelles activités tu aimes faire le week-end ?",
+        "Quelles activités vous aimez faire pendant le week-end ?",
+        "Quelles activités vous aimez faire le week-end ?"
       ]
     },
     {
@@ -10455,7 +10564,9 @@
         "x-quelles-activites-tu-aimes-faire-pendant-le-week-end"
       ],
       "alt": [
-        "Qu'est-ce que tu aimes faire pendant le week-end ?"
+        "Qu'est-ce que tu aimes faire pendant le week-end ?",
+        "Qu'est-ce que vous aimez faire le week-end ?",
+        "Qu'est-ce que vous aimez faire pendant le week-end ?"
       ]
     },
     {
@@ -10467,6 +10578,9 @@
         "Questions",
         "Likes & opinions",
         "Nature & weather"
+      ],
+      "alt": [
+        "En été, vous préférez la mer ou la montagne ?"
       ]
     },
     {
@@ -10478,6 +10592,9 @@
         "Questions",
         "Likes & opinions",
         "Hobbies & free time"
+      ],
+      "alt": [
+        "Vous préférez jardiner ou regarder un film ?"
       ]
     },
     {
@@ -10491,7 +10608,9 @@
         "Hobbies & free time"
       ],
       "alt": [
-        "Tu regardes souvent la télé ?"
+        "Tu regardes souvent la télé ?",
+        "Vous regardez souvent la télévision ?",
+        "Vous regardez souvent la télé ?"
       ]
     },
     {
@@ -10503,6 +10622,9 @@
         "Questions",
         "Likes & opinions",
         "Transport"
+      ],
+      "alt": [
+        "Vous préférez le vélo ou la trottinette ?"
       ]
     },
     {
@@ -10514,6 +10636,9 @@
         "Questions",
         "Hobbies & free time",
         "Sports"
+      ],
+      "alt": [
+        "Vous pratiquez un sport ?"
       ]
     },
     {
@@ -10524,6 +10649,9 @@
       "themes": [
         "Questions",
         "Hobbies & free time"
+      ],
+      "alt": [
+        "Vous utilisez Instagram ?"
       ]
     },
     {
@@ -10535,6 +10663,9 @@
         "Questions",
         "Hobbies & free time",
         "Family & relationships"
+      ],
+      "alt": [
+        "Quelles activités vos enfants aiment ?"
       ]
     },
     {
@@ -10546,6 +10677,9 @@
         "Questions",
         "Numbers",
         "Family & relationships"
+      ],
+      "alt": [
+        "Quel âge a votre frère ?"
       ]
     },
     {
@@ -10556,6 +10690,9 @@
       "themes": [
         "Questions",
         "Family & relationships"
+      ],
+      "alt": [
+        "Vous avez des oncles ou des tantes ?"
       ]
     },
     {
@@ -25648,7 +25785,7 @@
     {
       "id": "x-combien-de-vous-voulez",
       "type": "expression",
-      "en": "How many… do you want?",
+      "en": "How many… do you want? (seller)",
       "fr": "Combien de… vous voulez ?",
       "themes": [
         "Questions",
@@ -25667,7 +25804,7 @@
     {
       "id": "x-vous-voulez-un-sac",
       "type": "expression",
-      "en": "Do you want a bag?",
+      "en": "Do you want a bag? (seller)",
       "fr": "Vous voulez un sac ?",
       "themes": [
         "Questions",
@@ -25859,7 +25996,7 @@
     {
       "id": "x-comment-vous-preferez-payer",
       "type": "expression",
-      "en": "How would you like to pay?",
+      "en": "How would you like to pay? (seller)",
       "fr": "Comment vous préférez payer ?",
       "themes": [
         "Questions",
@@ -25945,8 +26082,7 @@
       ],
       "examples": [
         {
-          "fr": "Oh là là, beaucoup de choses !",
-          "en": "Wow, lots of things!"
+          "fr": "Oh là là, beaucoup de choses !"
         }
       ]
     },
@@ -28714,7 +28850,7 @@
       ]
     },
     {
-      "id": "n-changement",
+      "id": "n-changement-transport",
       "type": "noun",
       "en": "change (of train or line)",
       "fr": "changement",
@@ -28726,7 +28862,7 @@
       "acceptedSynonyms": [
         "n-correspondance"
       ],
-      "tip": "faire un changement = to change (trains, lines)",
+      "tip": "faire un changement = to change (trains, lines). In speech, je change is more common than je fais un changement. Changement also means change in general: un changement de travail.",
       "examples": [
         {
           "fr": "Le trajet n'est pas direct, il y a un changement.",
@@ -29426,7 +29562,7 @@
     {
       "id": "v-changer",
       "type": "verb",
-      "en": "to change (trains, lines)",
+      "en": "to change",
       "infinitive": "changer",
       "conj": [
         "change",
@@ -29439,12 +29575,18 @@
       "rule": "-ger",
       "themes": [
         "Transport",
-        "Common words"
+        "Common words",
+        "Jobs & work"
       ],
+      "tip": "To change something for another: changer de + noun, no article: changer de ligne, changer de travail.",
       "examples": [
         {
           "fr": "Tu changes à la station Gare Lille-Flandres.",
           "en": "You change at Gare Lille-Flandres station."
+        },
+        {
+          "fr": "Le temps change.",
+          "en": "The weather is changing."
         }
       ]
     },
@@ -33692,7 +33834,9 @@
         "Sports"
       ],
       "alt": [
-        "Tu marches beaucoup ?"
+        "Tu marches beaucoup ?",
+        "Est-ce que vous marchez beaucoup ?",
+        "Vous marchez beaucoup ?"
       ],
       "examples": [
         {
