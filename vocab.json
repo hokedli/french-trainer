@@ -1,5 +1,5 @@
 {
-  "version": 25,
+  "version": 26,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -502,7 +502,8 @@
       ],
       "examples": [
         {
-          "fr": "J'habite avec mon petit copain."
+          "fr": "J'habite avec mon petit copain.",
+          "en": "I live with my boyfriend."
         }
       ]
     },
@@ -525,7 +526,8 @@
       ],
       "examples": [
         {
-          "fr": "J'habite avec ma petite copine."
+          "fr": "J'habite avec ma petite copine.",
+          "en": "I live with my girlfriend."
         }
       ]
     },
@@ -546,7 +548,8 @@
       "examples": [
         {
           "fr": "Moi et mes voisins.",
-          "en": "Me and my neighbours."
+          "en": "Me and my neighbours.",
+          "eitherGender": true
         }
       ]
     },
@@ -1440,7 +1443,8 @@
       "examples": [
         {
           "fr": "Je suis professeure.",
-          "en": "I'm a teacher."
+          "en": "I'm a teacher.",
+          "eitherGender": true
         }
       ]
     },
@@ -1931,7 +1935,8 @@
       "examples": [
         {
           "fr": "Tu es pharmacienne.",
-          "en": "You're a pharmacist."
+          "en": "You're a pharmacist.",
+          "eitherGender": true
         }
       ]
     },
@@ -2178,7 +2183,9 @@
       ],
       "examples": [
         {
-          "fr": "L'agriculteur habite dans un village."
+          "fr": "L'agriculteur habite dans un village.",
+          "en": "The farmer lives in a village.",
+          "eitherGender": true
         }
       ]
     },
@@ -2521,7 +2528,9 @@
       ],
       "examples": [
         {
-          "fr": "L'ambulancier conduit l'ambulance."
+          "fr": "L'ambulancier conduit l'ambulance.",
+          "en": "The ambulance driver drives the ambulance.",
+          "eitherGender": true
         }
       ]
     },
@@ -2541,7 +2550,8 @@
       "examples": [
         {
           "fr": "Je travaille comme développeuse.",
-          "en": "I work as a developer."
+          "en": "I work as a developer.",
+          "eitherGender": true
         }
       ]
     },
@@ -2587,7 +2597,8 @@
       "examples": [
         {
           "fr": "Bonjour, Docteur Martin !",
-          "en": "Hello, Doctor Martin!"
+          "en": "Hello, Doctor Martin!",
+          "eitherGender": true
         }
       ]
     },
@@ -4610,7 +4621,8 @@
       ],
       "examples": [
         {
-          "fr": "Isa prépare un diplôme de droit."
+          "fr": "Isa prépare un diplôme de droit.",
+          "en": "Isa is studying for a law degree."
         }
       ]
     },
@@ -5077,7 +5089,8 @@
       ],
       "examples": [
         {
-          "fr": "Je suis canadienne."
+          "fr": "Je suis canadienne.",
+          "en": "I'm Canadian."
         }
       ]
     },
@@ -6381,7 +6394,7 @@
       "tip": "penser à = to think about; to remember to: Pense à acheter du pain !",
       "examples": [
         {
-          "fr": "Il pense que l'art moderne, c'est génial.",
+          "fr": "Il pense que l'art moderne est génial.",
           "en": "He thinks modern art is great."
         }
       ]
@@ -6407,7 +6420,8 @@
       ],
       "examples": [
         {
-          "fr": "Isa prépare un diplôme de droit."
+          "fr": "Isa prépare un diplôme de droit.",
+          "en": "Isa is studying for a law degree."
         }
       ]
     },
@@ -7937,7 +7951,7 @@
       ],
       "examples": [
         {
-          "fr": "L'art moderne, c'est génial.",
+          "fr": "L'art moderne est génial.",
           "en": "Modern art is great."
         }
       ]
@@ -8105,8 +8119,9 @@
       ],
       "examples": [
         {
-          "fr": "Je suis divorcé(e).",
-          "en": "I'm divorced."
+          "fr": "Je suis divorcé.",
+          "en": "I'm divorced.",
+          "eitherGender": true
         }
       ]
     },
@@ -8240,7 +8255,8 @@
       "examples": [
         {
           "fr": "Bonjour, enchantée !",
-          "en": "Hello, pleased to meet you!"
+          "en": "Hello, pleased to meet you!",
+          "eitherGender": true
         }
       ]
     },
@@ -8928,7 +8944,8 @@
       "examples": [
         {
           "fr": "Je suis végétarienne, je ne mange pas de viande.",
-          "en": "I'm vegetarian, I don't eat meat."
+          "en": "I'm vegetarian, I don't eat meat.",
+          "eitherGender": true
         }
       ]
     },
@@ -9610,7 +9627,8 @@
       ],
       "examples": [
         {
-          "fr": "Tu peux épeler, s'il te plaît ?"
+          "fr": "Tu peux épeler, s'il te plaît ?",
+          "en": "Can you spell it, please (informal)?"
         }
       ]
     },
@@ -9748,7 +9766,8 @@
       ],
       "examples": [
         {
-          "fr": "Attention à la prononciation !"
+          "fr": "Attention à la prononciation !",
+          "en": "Pay attention to the pronunciation!"
         }
       ]
     },
@@ -9903,7 +9922,9 @@
       ],
       "examples": [
         {
-          "fr": "Je suis désolé, nous n'avons pas de macarons à la pistache."
+          "fr": "Je suis désolé, nous n'avons pas de macarons à la pistache.",
+          "en": "I'm sorry, we don't have any pistachio macarons.",
+          "anyWording": true
         }
       ]
     },
@@ -10368,7 +10389,9 @@
       ],
       "examples": [
         {
-          "fr": "Allô, tu es où ? – Je suis chez la fromagère."
+          "fr": "Allô, tu es où ? – Je suis chez la fromagère.",
+          "en": "Hello, where are you? – I'm at the cheese shop.",
+          "anyWording": true
         }
       ]
     },
@@ -10972,7 +10995,8 @@
       ],
       "examples": [
         {
-          "fr": "J'aime le cinéma et la musique."
+          "fr": "J'ai un frère et une sœur.",
+          "en": "I have a brother and a sister."
         }
       ]
     },
@@ -10989,7 +11013,8 @@
       ],
       "examples": [
         {
-          "fr": "Il s'appelle Igor ou Chat."
+          "fr": "Tu préfères le thé ou le café ?",
+          "en": "Do you prefer tea or coffee?"
         }
       ]
     },
@@ -11003,7 +11028,8 @@
       ],
       "examples": [
         {
-          "fr": "J'aime le volley-ball, mais je préfère le badminton."
+          "fr": "J'aime le volley-ball, mais je préfère le badminton.",
+          "en": "I like volleyball, but I prefer badminton."
         }
       ]
     },
@@ -11035,7 +11061,8 @@
       "tip": "parce qu' before a vowel: parce qu'il est calme. parce que + sentence = the reason; pour + infinitive = the aim.",
       "examples": [
         {
-          "fr": "Je parle bien français parce que c'est ma langue maternelle."
+          "fr": "Je parle bien français parce que c'est ma langue maternelle.",
+          "en": "I speak French well because it's my mother tongue."
         }
       ]
     },
@@ -11064,7 +11091,8 @@
       ],
       "examples": [
         {
-          "fr": "Il pense que l'art moderne, c'est génial."
+          "fr": "Il pense que l'art moderne est génial.",
+          "en": "He thinks modern art is great."
         }
       ]
     },
@@ -11096,7 +11124,8 @@
       ],
       "examples": [
         {
-          "fr": "Quand est ton anniversaire ?"
+          "fr": "Quand est ton anniversaire ?",
+          "en": "When is your birthday?"
         }
       ]
     },
@@ -11406,7 +11435,9 @@
       ],
       "examples": [
         {
-          "fr": "Je parle un petit peu espagnol."
+          "fr": "Je parle un petit peu espagnol.",
+          "en": "I speak a little bit of Spanish.",
+          "anyWording": true
         }
       ]
     },
@@ -11457,7 +11488,8 @@
       ],
       "examples": [
         {
-          "fr": "Quelle est la date aujourd'hui ?"
+          "fr": "Quelle est la date aujourd'hui ?",
+          "en": "What's the date today?"
         }
       ]
     },
@@ -12017,6 +12049,11 @@
       "fr": "il y a du monde",
       "themes": [
         "Common words"
+      ],
+      "alt": [
+        "il y a beaucoup de monde",
+        "il y a beaucoup de personnes",
+        "il y a beaucoup de gens"
       ],
       "tip": "= il y a beaucoup de personnes. Le monde = the world.",
       "examples": [
@@ -20951,7 +20988,8 @@
       "examples": [
         {
           "fr": "Nous avons des posters.",
-          "en": "We have posters."
+          "en": "We have posters.",
+          "eitherGender": true
         }
       ]
     },
@@ -22127,7 +22165,8 @@
       "examples": [
         {
           "fr": "En France, on aime faire ses courses chez les commerçants.",
-          "en": "In France, people like shopping at local shops."
+          "en": "In France, people like shopping at local shops.",
+          "eitherGender": true
         }
       ]
     },
@@ -22160,16 +22199,31 @@
       "themes": [
         "Shopping"
       ],
-      "alt": [
-        "pas cher / pas chère"
-      ],
-      "tip": "Never changes: une jupe bon marché.",
+      "tip": "Never changes: \"une jupe bon marché\". Rarely used. Use \"pas cher / pas chère\" instead.",
       "confusables": [
         "adj-cher"
       ],
       "examples": [
         {
-          "fr": "Le supermarché est bon marché.",
+          "fr": "Le supermarché est bon marché."
+        }
+      ]
+    },
+    {
+      "id": "adj-pas-cher",
+      "type": "adjective",
+      "en": "inexpensive, cheap",
+      "masc": "pas cher",
+      "fem": "pas chère",
+      "themes": [
+        "Shopping"
+      ],
+      "confusables": [
+        "adj-cher"
+      ],
+      "examples": [
+        {
+          "fr": "Le supermarché est pas cher.",
           "en": "The supermarket is cheap."
         }
       ]
@@ -24740,7 +24794,8 @@
       "examples": [
         {
           "fr": "J'ai 18 ans. Je suis majeur.",
-          "en": "I'm 18. I'm an adult."
+          "en": "I'm 18. I'm an adult.",
+          "eitherGender": true
         }
       ]
     },
@@ -24758,7 +24813,8 @@
       "examples": [
         {
           "fr": "Tu es fatigué ?",
-          "en": "Are you tired?"
+          "en": "Are you tired?",
+          "eitherGender": true
         }
       ]
     },
@@ -24859,8 +24915,7 @@
       ],
       "examples": [
         {
-          "fr": "Il y a une église magnifique.",
-          "en": "There's a magnificent church."
+          "fr": "Il y a une église magnifique."
         }
       ]
     },
@@ -27870,7 +27925,8 @@
       "examples": [
         {
           "fr": "Je n'ai pas de carte de transport.",
-          "en": "I don't have a travel card."
+          "en": "I don't have a travel card.",
+          "eitherGender": true
         }
       ]
     },
@@ -31796,7 +31852,7 @@
         "Transport"
       ],
       "acceptedSynonyms": [
-        "n-changement"
+        "n-changement-transport"
       ],
       "examples": [
         {
@@ -32179,7 +32235,8 @@
       "examples": [
         {
           "fr": "Tu vas jouer au football avec tes copains.",
-          "en": "You're going to play football with your mates."
+          "en": "You're going to play football with your mates.",
+          "eitherGender": true
         }
       ]
     },

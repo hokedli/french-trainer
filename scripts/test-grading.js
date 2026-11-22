@@ -162,6 +162,90 @@ check('v-payer', 'paye', 'correct', '', true);
 check('v-payer', 'payons', 'partial', 'nous', true);
 check('x-a', 'a', 'wrong', 'here you need **à**', true);
 check('x-ou-where', 'ou', 'wrong', 'here you need **où**', true);
+// Fill-ins accept alts and acceptedSynonyms only when they fit the blank: the same gender (the one the sentence was written
+// with), number and elision (l'___); verbs the same person
+checkFillIn('n-evenement', 'photos de l', 'évènement', 'correct');
+checkFillIn('n-evenement', 'photos de l', "l'évènement", 'correct');
+checkFillIn('n-evenement', 'photos de l', 'evenement', 'partial', 'Accent');
+checkFillIn('n-cle', 'Ce sont nos', 'clefs', 'correct');
+checkFillIn('n-cle', 'Ce sont nos', 'clef', 'partial', 'singular / plural');
+checkFillIn('n-foot', 'Ils jouent', 'football', 'correct');
+checkFillIn('n-e-mail', "beaucoup d'", 'courriels', 'partial', "doesn't fit after **d'**");
+checkFillIn('n-plombier', 'la douche', 'plombière', 'partial', 'The sentence uses the masculine: **plombier**.');
+checkFillIn('nat-hollandais', 'elle est', 'néerlandaise', 'correct');
+checkFillIn('nat-hollandais', 'elle est', 'néerlandais', 'partial', 'must agree');
+// examples with only an alt become fill-ins, and the alt's gender is the one the sentence needs
+checkFillIn('n-avocat', 'Elle est avocate', 'avocate', 'correct');
+checkFillIn('n-avocat', 'Elle est avocate', 'avocat', 'partial', 'The sentence uses the feminine: **avocate**.');
+checkFillIn('x-tous-les', 'champignons', 'toutes les', 'partial', 'another form of this expression, but the sentence uses **tous les**');
+checkFillIn('x-s-il-te-plait', 'épeler', "s'il vous plaît", 'partial', 'the sentence uses **s\'il te plaît**');
+// anyWording: every wording of the expression is right in that sentence
+checkFillIn('x-je-suis-desole', 'macarons', 'Je suis désolée', 'correct');
+checkFillIn('x-tu-es-ou', 'fromagère', 'Où es-tu ?', 'correct');
+checkFillIn('x-un-peu', 'espagnol', 'un peu', 'correct');
+// acceptedSynonyms in fill-ins
+checkFillIn('n-frigo', 'Dans mon', 'réfrigérateur', 'correct', 'Also right: **le réfrigérateur**');
+checkFillIn('n-lieu', 'très calme', 'endroit', 'correct', 'Also right');
+checkFillIn('n-menu', 'Voici le', 'carte', 'partial', "it's feminine and the sentence uses the masculine: here it's **menu**");
+checkFillIn('n-objet', "beaucoup d'", 'choses', 'partial', 'feminine');
+checkFillIn('v-finir', 'Le cours', 'termine', 'correct', 'Also right: **terminer**');
+checkFillIn('v-terminer', 'On ', 'finit', 'correct', 'Also right: **finir**');
+checkFillIn('v-terminer', 'On ', 'finis', 'partial', 'the **je** form');
+checkFillIn('v-pratiquer', 'Quel sport', 'faites', 'correct', 'Also right');
+checkFillIn('adj-decede', 'paternels', 'morts', 'correct', 'Also right: **mort**');
+checkFillIn('adj-decede', 'paternels', 'mort', 'partial', 'the sentence needs the plural');
+checkFillIn('adj-super', 'Saint-Laurent', 'géniale', 'partial', 'the same in both genders');
+checkFillIn('x-alors', 'fraises', 'donc', 'correct', 'Also right: **donc**');
+// The sentence decides the gender even when the article doesn't (l'assistant / l'assistante); eitherGender opens it up
+{
+  const assistant = {
+    id: 'n-test-assistant', type: 'noun', en: 'assistant', fr: 'assistant', gender: 'm', article: "l'", themes: ['Jobs & work'],
+    alt: ["l'assistante (f)"],
+    examples: [
+      { fr: "L'assistante de mon ami s'appelle Julia.", en: "My friend's assistant is called Julia." },
+      { fr: "L'assistant de mon ami s'appelle Peter.", en: "My friend's assistant is called Peter." },
+      { fr: "J'ai parlé avec l'assistant.", en: 'I spoke to the assistant.', eitherGender: true },
+    ],
+  };
+  const vegetarian = {
+    id: 'adj-test-vegetarien', type: 'adjective', en: 'vegetarian', masc: 'végétarien', fem: 'végétarienne', themes: ['Food & drink'],
+    examples: [
+      { fr: 'Je suis végétarienne.', en: "I'm vegetarian.", eitherGender: true },
+      { fr: 'Ma sœur est végétarienne.', en: 'My sister is vegetarian.' },
+    ],
+  };
+  const testCtx = { lookup: buildLookup([assistant, vegetarian]) };
+  checkFillIn(assistant, 'Julia', 'assistante', 'correct', '', testCtx);
+  checkFillIn(assistant, 'Julia', 'assistant', 'partial', 'The sentence uses the feminine: **assistante**.', testCtx);
+  checkFillIn(assistant, 'Peter', 'assistant', 'correct', '', testCtx);
+  checkFillIn(assistant, 'Peter', 'assistante', 'partial', 'The sentence uses the masculine: **assistant**.', testCtx);
+  checkFillIn(assistant, 'parlé', 'assistant', 'correct', '', testCtx);
+  checkFillIn(assistant, 'parlé', 'assistante', 'correct', 'Either gender works in this sentence.', testCtx);
+  checkFillIn(vegetarian, 'Je suis', 'végétarien', 'correct', 'Either gender works in this sentence.', testCtx);
+  checkFillIn(vegetarian, 'Je suis', 'végétariens', 'partial', 'must agree', testCtx);
+  checkFillIn(vegetarian, 'Ma sœur', 'végétarien', 'partial', 'must agree', testCtx);
+  const julia = buildFillIn({ ...assistant, examples: [assistant.examples[0]] });
+  const ok = julia.answer === 'assistante' && julia.sentence === "L'______ de mon ami s'appelle Julia.";
+  if (!ok) failures++;
+  console.log(`${ok ? '✓' : '✗'} fill-in blanks the whole word "assistante", not "assistant" inside it (${julia.sentence})`);
+}
+
+// Grades a fill-in built from the one example that contains exampleFragment
+function checkFillIn(idOrEntry, exampleFragment, answer, expectedResult, expectedNoteFragment = '', gradeCtx = ctx) {
+  const entry = typeof idOrEntry === 'string' ? byId.get(idOrEntry) : idOrEntry;
+  const example = (entry.examples || []).find((e) => e.fr.includes(exampleFragment));
+  const fillIn = example && buildFillIn({ ...entry, examples: [example] });
+  if (!fillIn) {
+    failures++;
+    console.log(`✗ ${entry.id}: no fill-in from an example containing "${exampleFragment}"`);
+    return;
+  }
+  const graded = gradeItem({ entry, fillIn, example }, answer, gradeCtx);
+  const notes = graded.notes.join(' | ');
+  const ok = graded.result === expectedResult && notes.includes(expectedNoteFragment);
+  if (!ok) failures++;
+  console.log(`${ok ? '✓' : '✗'} ${entry.id} [${fillIn.sentence}] "${answer}" → ${graded.result}${ok ? '' : ` (expected ${expectedResult}${expectedNoteFragment ? ` + "${expectedNoteFragment}"` : ''})`}\n    ${notes}`);
+}
 
 // kindOf: base word answered correctly lists its kinds
 check('n-sac', 'le sac', 'correct', 'Also: **le sac à dos** (backpack, rucksack) · **le sac de sport** (sports bag) · **le sac à main** (handbag) · **le sac à ordinateur** (laptop bag)');

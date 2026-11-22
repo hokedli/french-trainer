@@ -1,5 +1,5 @@
 // Leitner boxes computed from the attempt log, and choosing the next set of prompts.
-import { acceptedVerbForms } from './grading.js';
+import { BLANK, fillInForms, blankSlot } from './grading.js';
 
 export const SET_SIZE = 10;
 const BOX_WEIGHT = { 1: 16, 2: 8, 3: 4, 4: 2, 5: 1 };
@@ -82,40 +82,23 @@ export function chooseWords({ words, progress, previousSetIds = [], now = Date.n
 // ---------- sentence fill-ins ----------
 
 const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-export const BLANK = '______';
+export { BLANK };
 
-function fillInForms(entry) {
-  switch (entry.type) {
-    case 'verb':
-      return entry.conj.flatMap((_, index) => acceptedVerbForms(entry, index).map((form) => ({ form: form.replace(/^j'/, ''), formIndex: index })))
-        .concat([{ form: entry.infinitive, formIndex: 'infinitive' }]);
-    case 'adjective':
-      return [entry.fem && `${entry.fem}s`, entry.masc && `${entry.masc}s`, entry.fem, entry.masc]
-        .filter(Boolean).map((form) => ({ form }));
-    case 'noun':
-    case 'country':
-      return [`${entry.fr}s`, `${entry.fr}x`, entry.fr].map((form) => ({ form }));
-    case 'expression':
-      return [{ form: entry.fr.replace(/…/g, '').replace(/[\s.!?]+$/, '') }];
-    default:
-      return [];
-  }
-}
-
-// Blanks the vocab word (or the conjugated form) out of one example sentence; null if not possible.
+// Blanks the vocab word (or the conjugated form, or an alt such as "avocate") out of one example sentence; null if not possible.
+// The entry's own forms are tried before its alts, longest first; a match must not run on into a letter, so "assistant"
+// is never found inside "assistante". The fill-in keeps the slot of the blanked form (its gender, number, person…).
 function blankExample(entry, example) {
   if (!example.fr || !example.en) return null;
   const sentence = example.fr;
-  const forms = fillInForms(entry).sort((a, b) => b.form.length - a.form.length);
-  for (const { form, formIndex } of forms) {
+  const forms = fillInForms(entry).sort((a, b) => a.fromAlt - b.fromAlt || b.form.length - a.form.length);
+  for (const { form, slot, hint } of forms) {
     if (form.length < 2) continue;
     const match = new RegExp(`(^|[^\\p{L}])(${escapeRegExp(form)})(?![\\p{L}])`, 'iu').exec(sentence);
     if (!match) continue;
     const start = match.index + match[1].length;
     const blanked = sentence.slice(0, start) + BLANK + sentence.slice(start + match[2].length);
     if (blanked.replace(BLANK, '').replace(/[^\p{L}]/gu, '').length < 4) continue;
-    const hint = entry.type === 'verb' ? entry.infinitive : entry.type === 'adjective' ? entry.masc || entry.fem : null;
-    return { example, sentence: blanked, answer: match[2], hint, formIndex };
+    return { example, sentence: blanked, answer: match[2], hint, slot: blankSlot(entry, match[2], slot, blanked) };
   }
   return null;
 }

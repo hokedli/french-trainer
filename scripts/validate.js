@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import { SEED } from '../js/seed-progress.js';
 import { buildFillIn } from '../js/selection.js';
-import { lookupKey, ownForms, altForms, synonymLinkProblem } from '../js/grading.js';
+import { lookupKey, ownForms, altForms, synonymLinkProblem, fillInForms, wordBeforeBlank, BLANK } from '../js/grading.js';
 
 const vocabPath = new URL('../vocab.json', import.meta.url);
 const errors = [];
@@ -27,6 +27,11 @@ const FIELDS_BY_TYPE = {
   expression: ['fr'],
   number: ['fr'],
 };
+const EXAMPLE_FIELDS = ['fr', 'en', 'eitherGender', 'anyWording'];
+const GENDER_FLEXIBLE_TYPES = ['noun', 'country', 'adjective'];
+// Right before the blank, these already show the gender, so an eitherGender flag there would accept a wrong agreement
+const GENDERED_WORDS_BEFORE_BLANK = new Set(['le', 'la', 'un', 'une', 'ce', 'cet', 'cette', 'du', 'au', 'ma', 'ta', 'sa', 'quel', 'quelle']);
+const GENDERED_SUBJECT_BEFORE_BLANK = /\b(il|elle|ils|elles)\s+(?:ne\s+|n')?(?:est|sont)(?:\s+pas)?\s*$/i;
 const isText = (v) => typeof v === 'string' && v.trim().length > 0;
 
 if (!Number.isInteger(vocab.version) || vocab.version < 1) errors.push('"version" must be a positive integer');
@@ -95,7 +100,15 @@ for (const [index, w] of vocab.words.entries()) {
     else w.examples.forEach((example, i) => {
       if (!isText(example?.fr)) fail(`"examples[${i}].fr" missing`);
       if (example?.en !== undefined && typeof example.en !== 'string') fail(`"examples[${i}].en" must be text`);
-      for (const key of Object.keys(example || {})) if (key !== 'fr' && key !== 'en') fail(`unknown field "${key}" in examples[${i}]`);
+      if (example?.eitherGender !== undefined) {
+        if (example.eitherGender !== true) fail(`"examples[${i}].eitherGender" must be true (leave it out otherwise)`);
+        else if (!GENDER_FLEXIBLE_TYPES.includes(w.type)) fail(`"examples[${i}].eitherGender" only works for ${GENDER_FLEXIBLE_TYPES.join(', ')} entries`);
+      }
+      if (example?.anyWording !== undefined) {
+        if (example.anyWording !== true) fail(`"examples[${i}].anyWording" must be true (leave it out otherwise)`);
+        else if (w.type !== 'expression') fail(`"examples[${i}].anyWording" only works for expression entries`);
+      }
+      for (const key of Object.keys(example || {})) if (!EXAMPLE_FIELDS.includes(key)) fail(`unknown field "${key}" in examples[${i}]`);
     });
   }
   if (w.tip !== undefined && !isText(w.tip)) fail('"tip" must be text');
@@ -162,14 +175,41 @@ for (const id of Object.keys(SEED.boxes)) {
   if (!ids.has(id)) warnings.push(`seed-progress.js: "${id}" is not in vocab.json (its seed is ignored)`);
 }
 
-if (warnings.length && process.argv.includes('--verbose')) console.log(warnings.map((w) => `warning: ${w}`).join('\n'));
+const printWarnings = () => { if (warnings.length && process.argv.includes('--verbose')) console.log(warnings.map((w) => `warning: ${w}`).join('\n')); };
 if (errors.length) {
+  printWarnings();
   console.error(errors.map((e) => `error: ${e}`).join('\n'));
   console.error(`\n✗ ${errors.length} error(s) in vocab.json`);
   process.exit(1);
 }
 // Only after the errors: building fill-ins from a broken entry (e.g. a malformed conjAlt) would crash first
 const fillInCount = vocab.words.filter((w) => buildFillIn(w)).length;
+
+// eitherGender / anyWording flags that do nothing, or that the sentence contradicts
+for (const w of vocab.words) {
+  for (const [i, example] of (w.examples || []).entries()) {
+    if (example.anyWording === true) {
+      const where = `${w.id} examples[${i}] (anyWording)`;
+      if (!buildFillIn({ ...w, examples: [example] })) warnings.push(`${where}: never becomes a fill-in (it needs "en" and the expression in the sentence), so the flag does nothing`);
+      else if (!w.alt?.length) warnings.push(`${where}: ${w.id} has no alt wordings, so the flag does nothing`);
+    }
+    if (example.eitherGender !== true) continue;
+    const where = `${w.id} examples[${i}] (eitherGender)`;
+    const fillIn = buildFillIn({ ...w, examples: [example] });
+    if (!fillIn) { warnings.push(`${where}: never becomes a fill-in (it needs "en" and the word in the sentence), so the flag does nothing`); continue; }
+    const synonyms = (w.acceptedSynonyms || []).map((id) => wordsById.get(id)).filter(Boolean);
+    const blanked = fillIn.answer.toLowerCase();
+    const sameNumber = (slot) => slot.plural == null || fillIn.slot.plural == null || slot.plural === fillIn.slot.plural;
+    const hasOtherGender = [w, ...synonyms].flatMap(fillInForms)
+      .some((f) => f.slot.gender !== 'mf' && f.slot.gender !== fillIn.slot.gender && f.form.toLowerCase() !== blanked && sameNumber(f.slot));
+    if (!hasOtherGender) warnings.push(`${where}: "${fillIn.answer}" has no form of the other gender (in the entry, its alts or acceptedSynonyms), so the flag does nothing`);
+    const textBefore = fillIn.sentence.slice(0, fillIn.sentence.indexOf(BLANK));
+    if (GENDERED_WORDS_BEFORE_BLANK.has(wordBeforeBlank(fillIn.sentence)) || GENDERED_SUBJECT_BEFORE_BLANK.test(textBefore)) {
+      warnings.push(`${where}: "${fillIn.sentence}" already shows the gender before the blank — remove the flag`);
+    }
+  }
+}
+printWarnings();
 const counts = {};
 for (const w of vocab.words) counts[w.type] = (counts[w.type] || 0) + 1;
 console.log(`✓ vocab.json v${vocab.version}: ${vocab.words.length} words (${Object.entries(counts).map(([t, n]) => `${n} ${t}`).join(', ')})`);

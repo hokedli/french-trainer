@@ -234,6 +234,7 @@ export function buildLookup(words) {
     baseOf: (entry) => byId.get(baseIdByKindId.get(entry.id)) || null,
     kindsOf: (entry) => kindsByBaseId.get(entry.id) || [],
     synonymIdsOf: (entry) => synonymIdsById.get(entry.id) || new Set(),
+    synonymsOf: (entry) => [...(synonymIdsById.get(entry.id) || [])].map((id) => byId.get(id)),
   };
 }
 
@@ -259,20 +260,20 @@ function otherWordNote(entry, other, lookup) {
   return `**${shortName(other)}** = ${other.en}.`;
 }
 
+const synonymNote = (entry, other) => `Also right: **${shortName(other)}** = ${other.en}. The word we were after: **${shortName(entry)}**.`;
+
 // The answer is another entry. If this entry's acceptedSynonyms links to it, it is graded with that entry's own rules
 // (a full answer counts as correct, with "Also right: …"); otherwise it is wrong and the note says what it means.
-function gradeAsOtherWord(entry, raw, form, ctx, type) {
+// Fill-ins grade synonyms themselves (they must fit the sentence), so they pass acceptSynonyms = false.
+function gradeAsOtherWord(entry, raw, form, ctx, type, acceptSynonyms = true) {
   if (!ctx.lookup || ctx.isNestedLookup) return null;
   const others = ctx.lookup.findAll(form, entry.id, type);
   if (!others.length) return null;
-  const synonymIds = ctx.lookup.synonymIdsOf(entry);
+  const synonymIds = acceptSynonyms ? ctx.lookup.synonymIdsOf(entry) : new Set();
   for (const other of others.filter((o) => synonymIds.has(o.id))) {
     const otherGrade = gradeEntry(other, raw, { ...ctx, isNestedLookup: true });
     if (otherGrade && otherGrade.result !== 'wrong') {
-      return {
-        result: otherGrade.result,
-        notes: [`Also right: **${shortName(other)}** = ${other.en}. The word we were after: **${shortName(entry)}**.`, ...otherGrade.notes],
-      };
+      return { result: otherGrade.result, notes: [synonymNote(entry, other), ...otherGrade.notes] };
     }
   }
   return { result: 'wrong', notes: others.map((other) => otherWordNote(entry, other, ctx.lookup)) };
@@ -677,47 +678,223 @@ function gradePlain(entry, raw, ctx) {
 }
 
 // ---------- sentence fill-ins ----------
+// Every form of an entry that can stand in a sentence, with its "slot": what the sentence needs from the word there.
+//   nouns, countries: { gender: m|f|mf, plural, elides }   adjectives: { gender: m|f|mf, plural }
+//   verbs: { person: 0–5 | 'infinitive' }                   expressions: {}
+// plural null = the same spelling in the singular and plural (le bus / les bus); elides = starts with a vowel or silent h
+// (l'ami), null when unknown (an h with no article to tell). Gender mf = one spelling for both genders.
+// The blank of a fill-in has the slot of the form that was cut out of the sentence: that form's gender is the
+// gender the sentence uses, so other forms are only accepted when they fit the same slot.
+
+export const BLANK = '______';
+const VOWEL_START = /^[aeiouyâàäéèêëîïôöûùüœæ]/;
+const GENDER_FLEXIBLE_TYPES = new Set(['noun', 'country', 'adjective']);
+// Words that change before a vowel (le → l', de → d', ce → cet, ma → mon…): after them the blank can't start with one
+const WORDS_THAT_CHANGE_BEFORE_A_VOWEL = new Set(['le', 'la', 'de', 'du', 'au', 'ce', 'ma', 'ta', 'sa', 'que', 'je', 'ne', 'me', 'te', 'se']);
+const SUBJECT_PRONOUN_OF_PERSON = { 0: 'je', 1: 'tu', 3: 'nous', 4: 'vous' };
+
+// Plural spellings: +s; +x or +s after -au / -eu / -ou; unchanged after -s / -x / -z
+function pluralForms(word) {
+  if (/[sxz]$/i.test(word)) return [word];
+  if (/(au|eu|ou)$/i.test(word)) return [`${word}x`, `${word}s`];
+  return [`${word}s`];
+}
+
+function elides(article, word) {
+  if (article === "l'") return true;
+  if (['le', 'la', 'le/la'].includes(article)) return false;
+  if (/^h/i.test(word)) return null;
+  return VOWEL_START.test(word.toLowerCase());
+}
+
+// The singular and its plurals; a spelling that is both gets plural: null
+function withPlurals(word, slot) {
+  const forms = [{ form: word, slot: { ...slot, plural: false } }];
+  for (const plural of pluralForms(word)) {
+    const same = forms.find((f) => f.form === plural);
+    if (same) same.slot.plural = null;
+    else forms.push({ form: plural, slot: { ...slot, plural: true } });
+  }
+  return forms;
+}
+
+function nounFillInForms(entry) {
+  const main = { article: entry.article, word: entry.fr, gender: entry.gender, fromAlt: false };
+  const alternatives = (entry.alt || []).map((altText) => {
+    const parsed = parseNounAnswer(normalizeText(altText));
+    return { article: parsed.article ?? '', word: parsed.word, gender: parsed.gender || ARTICLE_GENDER[parsed.article] || entry.gender, fromAlt: true };
+  });
+  return [main, ...alternatives].flatMap(({ article, word, gender, fromAlt }) => {
+    const slot = { gender, elides: elides(article, word) };
+    const forms = ['les', 'des'].includes(article) ? [{ form: word, slot: { ...slot, plural: true } }]
+      : entry.type === 'country' ? [{ form: word, slot: { ...slot, plural: false } }]
+      : withPlurals(word, slot);
+    return forms.map((f) => ({ ...f, hint: null, fromAlt }));
+  });
+}
+
+function adjectiveFillInForms(entry) {
+  const main = { masc: entry.masc, fem: entry.fem, fromAlt: false };
+  const alternatives = (entry.alt || []).map((altText) => {
+    const [masc, fem] = withoutGenderMarkers(altText).split('/').map((s) => s.trim());
+    return { masc, fem: fem || masc, fromAlt: true };
+  });
+  return [main, ...alternatives].flatMap(({ masc, fem, fromAlt }) => {
+    const byGender = !masc ? [[fem, 'f']] : masc === fem ? [[masc, 'mf']] : [[masc, 'm'], [fem, 'f']];
+    return byGender.flatMap(([word, gender]) => withPlurals(word, { gender }).map((f) => ({ ...f, hint: masc || fem, fromAlt })));
+  });
+}
+
+// { form, slot, hint, fromAlt } for every spelling of the entry that a sentence can contain
+export function fillInForms(entry) {
+  switch (entry.type) {
+    case 'verb':
+      return entry.conj.flatMap((_, person) => acceptedVerbForms(entry, person).map((form) => ({ form: form.replace(/^j'/, ''), slot: { person } })))
+        .concat([{ form: entry.infinitive, slot: { person: 'infinitive' } }])
+        .map((f) => ({ ...f, hint: entry.infinitive, fromAlt: false }));
+    case 'adjective':
+      return adjectiveFillInForms(entry);
+    case 'noun':
+    case 'country':
+      return nounFillInForms(entry);
+    case 'expression':
+      return [entry.fr, ...(entry.alt || [])].map((text, index) => ({
+        form: text.replace(/…/g, '').replace(/[\s.!?]+$/, ''), slot: {}, hint: null, fromAlt: index > 0,
+      }));
+    default:
+      return [];
+  }
+}
+
+// The slot of the blank, from the form that was cut out. A verb form can be several persons (mange: je and il);
+// persons whose subject pronoun isn't in the sentence are dropped ("On ______ à midi" is not the je form).
+export function blankSlot(entry, blankedText, formSlot, sentence) {
+  if (entry.type !== 'verb') return formSlot;
+  const blanked = normalizeText(blankedText);
+  const persons = fillInForms(entry).filter((f) => normalizeText(f.form) === blanked).map((f) => f.slot.person);
+  const words = normalizeText(sentence).split(/[^\p{L}']+/u);
+  const pronounInSentence = (pronoun) => words.includes(pronoun) || (pronoun === 'je' && words.some((w) => w.startsWith("j'")));
+  const narrowed = persons.filter((p) => !SUBJECT_PRONOUN_OF_PERSON[p] || pronounInSentence(SUBJECT_PRONOUN_OF_PERSON[p]));
+  return { persons: unique(narrowed.length ? narrowed : persons) };
+}
+
+// The word right before the blank as written ("l'", "d'", "le", "mon"), or null
+export function wordBeforeBlank(sentence) {
+  const before = normalizeText(sentence.slice(0, sentence.indexOf(BLANK)));
+  return before.match(/(\p{L}+'?)$/u)?.[1] ?? null;
+}
+
+// true: the blank needs a word starting with a vowel or silent h (l'___, d'___); false: one that doesn't (le ___); null: either
+function elisionAfter(word) {
+  if (!word) return null;
+  if (word.endsWith("'")) return true;
+  return WORDS_THAT_CHANGE_BEFORE_A_VOWEL.has(word) ? false : null;
+}
+
+// Why a form doesn't fit the blank (person | number | gender | elision), or null if it fits
+function slotMismatch(formSlot, blank, sentenceContext) {
+  if ('persons' in blank) return blank.persons.includes(formSlot.person) ? null : 'person';
+  if (formSlot.plural != null && blank.plural != null && formSlot.plural !== blank.plural) return 'number';
+  if (!sentenceContext.eitherGender && formSlot.gender !== 'mf' && formSlot.gender !== blank.gender) return 'gender';
+  if (sentenceContext.needsElision != null && formSlot.elides != null && formSlot.elides !== sentenceContext.needsElision) return 'elision';
+  return null;
+}
+
+// The entry's own forms and those of its acceptedSynonyms, each with mismatch = why it doesn't fit (null if it does).
+// Expressions: only the wording in the sentence is this entry's answer, unless the example has anyWording (then all
+// its wordings are); a synonym expression replaces it whole.
+function fillInCandidates(entry, fillIn, sentenceContext, ctx) {
+  const blanked = normalizeText(fillIn.answer);
+  const anyWording = fillIn.example?.anyWording === true;
+  const describe = (owner, isSynonym) => (f) => {
+    const text = normalizeText(f.form);
+    const mismatch = entry.type === 'expression'
+      ? (isSynonym || anyWording || text === blanked ? null : 'form')
+      : slotMismatch(f.slot, fillIn.slot, sentenceContext);
+    return { ...f, text, owner, isSynonym, mismatch };
+  };
+  const own = fillInForms(entry).map(describe(entry, false));
+  const synonyms = (ctx.lookup?.synonymsOf(entry) || []).flatMap((other) => fillInForms(other).map(describe(other, true)));
+  return [...own, ...synonyms];
+}
+
+function bestCandidateMatch(typed, candidates) {
+  return candidates.map((candidate) => ({ candidate, cmp: compareText(typed, candidate.text, candidate.form) }))
+    .reduce((best, match) => (!best || KIND_RANK[match.cmp.kind] > KIND_RANK[best.cmp.kind] ? match : best), null);
+}
+const matchRank = (match) => (match ? KIND_RANK[match.cmp.kind] : -1);
+
+// The note for a right word that doesn't fit this sentence
+function fillInMismatchNote(entry, fillIn, candidate, before) {
+  const answer = `**${fillIn.answer}**`;
+  const blank = fillIn.slot;
+  const personName = (person) => (person === 'infinitive' ? 'the infinitive' : `the **${PRONOUNS[person]}** form`);
+  if (candidate.isSynonym) {
+    const reason = {
+      person: `that's ${personName(candidate.slot.person)}`,
+      number: `the sentence needs the ${blank.plural ? 'plural' : 'singular'}`,
+      gender: blank.gender === 'mf' ? `${answer} is the same in both genders, so this sentence can't check the gender of **${candidate.form}**`
+        : `it's ${genderName(candidate.slot.gender)} and the sentence uses the ${genderName(blank.gender)}`,
+      elision: `it doesn't fit after **${before}**`,
+    }[candidate.mismatch];
+    return `**${shortName(candidate.owner)}** (${candidate.owner.en}) is also right on its own, but ${reason}: here it's ${answer}.`;
+  }
+  switch (candidate.mismatch) {
+    case 'person':
+      return `That's ${personName(candidate.slot.person)} of ${entry.infinitive}. Here you need ${answer}.`;
+    case 'form':
+      return `**${candidate.form}** is another form of this expression, but the sentence uses ${answer}.`;
+    case 'elision':
+      return `**${candidate.form}** is right, but it doesn't fit after **${before}**: here it's ${answer}.`;
+    default:
+      if (entry.type === 'adjective') {
+        const femNote = entry.masc && entry.masc !== entry.fem ? ` Feminine: ${feminineRule(entry.masc, entry.fem)}` : '';
+        return `Right word, but it must agree with the noun here: ${answer}.${femNote}`;
+      }
+      if (candidate.mismatch === 'number') return `Right word — but here it's ${answer} (singular / plural).`;
+      return blank.gender === 'mf' ? `Here it's ${answer}.` : `The sentence uses the ${genderName(blank.gender)}: ${answer}.`;
+  }
+}
 
 function gradeFillIn(entry, fillIn, raw, ctx) {
-  let text = withoutTrailingPunctuation(normalizeText(raw));
-  const expected = normalizeText(fillIn.answer);
-  if (entry.type === 'noun' || entry.type === 'country') {
-    const withoutArticle = text.replace(/^(le|la|les|l')\s*/, '');
-    if (withoutArticle === expected) text = withoutArticle;
+  const isNoun = entry.type === 'noun' || entry.type === 'country';
+  const before = wordBeforeBlank(fillIn.sentence);
+  const sentenceContext = {
+    eitherGender: fillIn.example?.eitherGender === true && GENDER_FLEXIBLE_TYPES.has(entry.type),
+    needsElision: isNoun ? elisionAfter(before) : null,
+  };
+  const candidates = fillInCandidates(entry, fillIn, sentenceContext, ctx);
+  const fitting = candidates.filter((c) => !c.mismatch);
+  let typed = withoutTrailingPunctuation(normalizeText(raw));
+  if (isNoun) {
+    // The article is already in the sentence, but typing it too is fine: "l'évènement"
+    const withoutArticle = typed.replace(/^(?:(?:le|la|les)\s+|l')/, '');
+    if (withoutArticle !== typed && matchRank(bestCandidateMatch(withoutArticle, candidates)) >= matchRank(bestCandidateMatch(typed, candidates))) {
+      typed = withoutArticle;
+    }
   }
-  const isConjugatedVerbBlank = entry.type === 'verb' && Number.isInteger(fillIn.formIndex);
-  // A conjugated verb blank also accepts the other spellings of that person (conjAlt), e.g. paie / paye.
-  const acceptedAnswers = isConjugatedVerbBlank
-    ? unique([expected, ...acceptedVerbForms(entry, fillIn.formIndex).map((f) => normalizeText(f).replace(/^j'/, ''))])
-    : [expected];
-  const cmp = bestComparison(acceptedAnswers.map((answer) => compareText(text, answer, answer === expected ? fillIn.answer : answer)));
-  if (cmp.kind === 'exact') return { result: 'correct', notes: comparisonNotes(cmp) };
-  const accentPairGrade = cmp.kind === 'accent' && gradeAsAccentPairWord(text, expected);
-  if (accentPairGrade) return accentPairGrade;
-  const rule = isConjugatedVerbBlank ? verbRuleNote(entry, [fillIn.formIndex]) : null;
+  const persons = fillIn.slot.persons?.filter(Number.isInteger) || [];
+  const rule = persons.length ? verbRuleNote(entry, persons) : null;
 
-  // Another form of the same word: right verb in the wrong person, adjective without agreement, singular/plural
-  if (entry.type === 'verb') {
-    const stripJ = (f) => normalizeText(f).replace(/^j'/, '');
-    const formsByPosition = [[entry.infinitive], ...entry.conj.map((_, i) => acceptedVerbForms(entry, i))];
-    const index = formsByPosition.findIndex((group) => group.map(stripJ).includes(stripJ(text)));
-    if (index >= 0) {
-      const which = index === 0 ? 'the infinitive' : `the **${PRONOUNS[index - 1]}** form`;
-      return { result: 'partial', notes: [`That's ${which} of ${entry.infinitive}. Here you need **${fillIn.answer}**.`, rule].filter(Boolean) };
-    }
+  const match = bestCandidateMatch(typed, fitting);
+  if (match?.cmp.kind === 'exact') {
+    const { candidate } = match;
+    if (candidate.isSynonym) return { result: 'correct', notes: [synonymNote(entry, candidate.owner), ...comparisonNotes(match.cmp)] };
+    const otherGender = sentenceContext.eitherGender && candidate.slot.gender !== 'mf' && candidate.slot.gender !== fillIn.slot.gender;
+    return { result: 'correct', notes: [...comparisonNotes(match.cmp), otherGender && 'Either gender works in this sentence.'].filter(Boolean) };
   }
-  if (entry.type === 'adjective') {
-    const forms = [entry.masc, entry.fem, entry.masc && `${entry.masc}s`, `${entry.fem}s`].filter(Boolean).map(normalizeText);
-    if (forms.includes(text)) {
-      const femNote = entry.masc && entry.masc !== entry.fem ? ` Feminine: ${feminineRule(entry.masc, entry.fem)}` : '';
-      return { result: 'partial', notes: [`Right word, but it must agree with the noun here: **${fillIn.answer}**.${femNote}`] };
-    }
+  const accentPairGrade = match?.cmp.kind === 'accent' && gradeAsAccentPairWord(typed, normalizeText(fillIn.answer));
+  if (accentPairGrade) return accentPairGrade;
+
+  // A right word that doesn't fit the sentence: wrong person, gender, number, or elision (l'___), or another wording
+  const unfitting = candidates.find((c) => c.mismatch && compareText(typed, c.text).kind === 'exact');
+  if (unfitting) {
+    return { result: 'partial', notes: [fillInMismatchNote(entry, fillIn, unfitting, before), unfitting.isSynonym ? null : rule].filter(Boolean) };
   }
-  if ((entry.type === 'noun' || entry.type === 'country') && (`${text}s` === expected || text === `${expected}s` || `${text}x` === expected)) {
-    return { result: 'partial', notes: [`Right word — but here it's **${fillIn.answer}** (singular / plural).`] };
+  if (match && match.cmp.kind !== 'different') {
+    return { result: 'partial', notes: [match.candidate.isSynonym && synonymNote(entry, match.candidate.owner), ...comparisonNotes(match.cmp), rule].filter(Boolean) };
   }
-  if (cmp.kind !== 'different') return { result: 'partial', notes: [...comparisonNotes(cmp), rule].filter(Boolean) };
-  return gradeAsOtherWord(entry, raw, text, ctx, entry.type === 'verb' ? 'verb' : undefined) || { result: 'wrong', notes: [rule].filter(Boolean) };
+  return gradeAsOtherWord(entry, raw, typed, ctx, entry.type === 'verb' ? 'verb' : undefined, false) || { result: 'wrong', notes: [rule].filter(Boolean) };
 }
 
 // ---------- entry points ----------
