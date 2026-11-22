@@ -195,7 +195,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 16px; padding-bottom: max(32p
 .theme-select-all { font-weight: 600; margin: 8px 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
 .theme-filter-body p { margin: 10px 0 0; }
 
-.results-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.set-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .secondary {
   display: inline-block;
   padding: 12px 28px;

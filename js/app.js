@@ -290,11 +290,16 @@ function renderPractice() {
   main.innerHTML = `
     <form id="practice-form" class="practice" novalidate>
       <ol class="prompts">${state.items.map(promptHtml).join('')}</ol>
-      <button type="submit" class="primary">Check</button>
-      <p class="muted">Type <b>?</b> or leave a field blank if you don't know. Ctrl+Enter = Check.</p>
+      <div class="set-actions">
+        <button type="submit" class="primary">Check</button>
+        <button type="button" class="secondary" id="skip-set">Skip</button>
+      </div>
+      <p class="muted">Type <b>?</b> or leave a field blank if you don't know. Ctrl+Enter = Check. Skip moves on to a new set without recording anything.</p>
     </form>`;
   const form = document.getElementById('practice-form');
   form.addEventListener('submit', (event) => { event.preventDefault(); checkAnswers(form); });
+  // No keyboard shortcut on purpose: a stray N typed outside an answer field mustn't throw the set away.
+  document.getElementById('skip-set').addEventListener('click', startNewSet);
   form.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter' || event.target.tagName !== 'INPUT' || event.ctrlKey || event.metaKey) return;
     event.preventDefault();
@@ -344,7 +349,7 @@ function renderResults(results) {
         <thead><tr><th>#</th><th>English</th><th>You wrote</th><th>Correct answer</th><th>Explanation</th></tr></thead>
         <tbody>${results.map(resultRowHtml).join('')}</tbody>
       </table>
-      <div class="results-actions">
+      <div class="set-actions">
         <button type="button" class="primary" id="next-set">Next set <kbd>N</kbd></button>
         <button type="button" class="secondary" id="redo-set">Redo this set <kbd>R</kbd></button>
       </div>
