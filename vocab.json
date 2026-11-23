@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -193,7 +193,7 @@
       ],
       "kindOf": "n-adresse",
       "alt": [
-        "adresse email"
+        "l'adresse email (f)"
       ],
       "examples": [
         {
@@ -912,7 +912,7 @@
       "themes": [
         "Jobs & work"
       ],
-      "tip": "une entreprise d'informatique = an IT company",
+      "tip": "une entreprise d'informatique = an IT company.",
       "examples": [
         {
           "fr": "Je travaille pour des entreprises.",
@@ -1413,7 +1413,7 @@
       "alt": [
         "l'enseignante (f)"
       ],
-      "tip": "enseignant, professeur and prof all mean teacher",
+      "tip": "enseignant, professeur and prof all mean teacher.",
       "examples": [
         {
           "fr": "Il est enseignant.",
@@ -1485,7 +1485,7 @@
       "alt": [
         "l'ingénieure (f)"
       ],
-      "tip": "ingénieur civil = civil engineer",
+      "tip": "ingénieur civil = civil engineer.",
       "examples": [
         {
           "fr": "Ma sœur est ingénieure civile.",
@@ -2242,7 +2242,7 @@
       "alt": [
         "la directrice"
       ],
-      "tip": "directeur pédagogique = director of studies",
+      "tip": "directeur pédagogique = director of studies.",
       "examples": [
         {
           "fr": "Mon père est directeur pédagogique.",
@@ -2254,16 +2254,19 @@
       "id": "n-cabinet-d-avocat",
       "type": "noun",
       "en": "law firm",
-      "fr": "cabinet d'avocat",
+      "fr": "cabinet d'avocats",
       "gender": "m",
       "article": "le",
       "themes": [
         "Jobs & work",
         "Law & justice"
       ],
+      "alt": [
+        "le cabinet d'avocat"
+      ],
       "examples": [
         {
-          "fr": "Elle travaille dans un cabinet d'avocat.",
+          "fr": "Elle travaille dans un cabinet d'avocats.",
           "en": "She works at a law firm."
         }
       ]
@@ -2501,7 +2504,6 @@
       "alt": [
         "la menuisière"
       ],
-      "tip": "Le menuisier travaille avec le bois.",
       "confusables": [
         "n-charpentier"
       ],
@@ -2549,9 +2551,8 @@
       ],
       "examples": [
         {
-          "fr": "Je travaille comme développeuse.",
-          "en": "I work as a developer.",
-          "eitherGender": true
+          "fr": "Elle travaille comme développeuse.",
+          "en": "She works as a developer."
         }
       ]
     },
@@ -2611,7 +2612,7 @@
       "themes": [
         "Jobs & work"
       ],
-      "tip": "être retraité(e) = être à la retraite",
+      "tip": "être retraité(e) = être à la retraite.",
       "examples": [
         {
           "fr": "Ils sont retraités.",
@@ -2868,8 +2869,8 @@
       ],
       "examples": [
         {
-          "fr": "Mon frère a 21 ans.",
-          "en": "My brother is 21."
+          "fr": "Mon frère a 30 ans.",
+          "en": "My brother is 30."
         }
       ]
     },
@@ -3352,7 +3353,7 @@
     {
       "id": "n-animal",
       "type": "noun",
-      "en": "animal / animals",
+      "en": "animal",
       "fr": "animal",
       "gender": "m",
       "article": "l'",
@@ -3533,7 +3534,7 @@
         "Family & relationships"
       ],
       "kindOf": "n-grands-parents",
-      "tip": "les grands-parents paternels = your father's parents",
+      "tip": "les grands-parents paternels = your father's parents.",
       "examples": [
         {
           "fr": "Les parents de ta mère sont tes grands-parents maternels.",
@@ -3778,8 +3779,8 @@
       ],
       "examples": [
         {
-          "fr": "Remplir l'exercice.",
-          "en": "Fill in the exercise."
+          "fr": "Faites l'exercice.",
+          "en": "Do the exercise."
         }
       ]
     },
@@ -4043,7 +4044,7 @@
       "themes": [
         "Language & grammar"
       ],
-      "tip": "é = accent aigu, è = accent grave, ê = accent circonflexe",
+      "tip": "é = accent aigu, è = accent grave, ê = accent circonflexe.",
       "examples": [
         {
           "fr": "« É », c'est « e accent aigu ».",
@@ -4390,6 +4391,10 @@
       "themes": [
         "Language & grammar"
       ],
+      "alt": [
+        "la forme affirmative"
+      ],
+      "tip": "Grammar books usually say la forme affirmative.",
       "examples": [
         {
           "fr": "Je regarde : c'est la forme positive.",
@@ -4729,8 +4734,8 @@
       ],
       "examples": [
         {
-          "fr": "Le nombre après 14 est 15.",
-          "en": "The number after 14 is 15."
+          "fr": "Le nombre 25 a deux chiffres.",
+          "en": "The number 25 has two digits."
         }
       ]
     },
@@ -4766,7 +4771,7 @@
       "themes": [
         "Hobbies & free time"
       ],
-      "tip": "le jeu du pendu = hangman",
+      "tip": "le jeu du pendu = hangman.",
       "examples": [
         {
           "fr": "On joue au jeu du pendu.",
@@ -4846,8 +4851,8 @@
       ],
       "examples": [
         {
-          "fr": "Habiter est un verbe du 1er groupe.",
-          "en": "Habiter is a first-group verb."
+          "fr": "Habiter et parler sont des verbes du 1er groupe.",
+          "en": "Habiter and parler are first-group verbs."
         }
       ]
     },
@@ -5546,7 +5551,7 @@
         "je suis né",
         "je suis née"
       ],
-      "tip": "Past tense of naître, formed with être: il est né, elle est née",
+      "tip": "Past tense of naître, formed with être: il est né, elle est née.",
       "examples": [
         {
           "fr": "Je suis née le 22 septembre 1998.",
@@ -5598,7 +5603,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "vendre ≠ acheter",
+      "tip": "vendre ≠ acheter.",
       "examples": [
         {
           "fr": "Le vendeur vend des fruits.",
@@ -5671,7 +5676,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "perdre ≠ trouver",
+      "tip": "perdre ≠ trouver.",
       "confusables": [
         "v-trouver"
       ],
@@ -6420,8 +6425,8 @@
       ],
       "examples": [
         {
-          "fr": "Isa prépare un diplôme de droit.",
-          "en": "Isa is studying for a law degree."
+          "fr": "Je prépare le dîner.",
+          "en": "I'm preparing dinner."
         }
       ]
     },
@@ -7373,8 +7378,8 @@
       ],
       "examples": [
         {
-          "fr": "Ils divorcent.",
-          "en": "They're getting divorced."
+          "fr": "Mes voisins divorcent.",
+          "en": "My neighbours are getting divorced."
         }
       ]
     },
@@ -7531,7 +7536,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "je paye, tu payes, il paye, ils payent are also correct",
+      "tip": "je paye, tu payes, il paye, ils payent are also correct.",
       "examples": [
         {
           "fr": "Je paie par carte.",
@@ -7542,7 +7547,7 @@
     {
       "id": "v-amener",
       "type": "verb",
-      "en": "to bring (along)",
+      "en": "to bring (someone) along",
       "infinitive": "amener",
       "conj": [
         "j'amène",
@@ -7556,10 +7561,14 @@
       "themes": [
         "Common words"
       ],
+      "tip": "amener + a person or an animal; apporter + a thing: j'amène un ami, j'apporte un gâteau.",
+      "confusables": [
+        "v-apporter"
+      ],
       "examples": [
         {
-          "fr": "Elle amène le dîner.",
-          "en": "She's bringing dinner."
+          "fr": "Ce soir, j'amène un ami à la fête.",
+          "en": "Tonight I'm bringing a friend to the party."
         }
       ]
     },
@@ -7579,7 +7588,7 @@
       "themes": [
         "Language & grammar"
       ],
-      "tip": "la conjugaison = conjugation",
+      "tip": "la conjugaison = conjugation.",
       "examples": [
         {
           "fr": "Conjuguez le verbe finir.",
@@ -7767,7 +7776,7 @@
         "Describing",
         "Likes & opinions"
       ],
-      "tip": "bel before a vowel",
+      "tip": "bel before a vowel.",
       "examples": [
         {
           "fr": "Mon quartier est très beau.",
@@ -7896,8 +7905,8 @@
       ],
       "examples": [
         {
-          "fr": "Mon quartier est animé avec des cafés.",
-          "en": "My neighbourhood is lively, with cafés."
+          "fr": "Mon quartier est animé : il y a beaucoup de cafés.",
+          "en": "My neighbourhood is lively: there are lots of cafés."
         }
       ]
     },
@@ -7912,8 +7921,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est intéressant avec des monuments.",
-          "en": "It's interesting, with monuments."
+          "fr": "Mon quartier est intéressant : il y a des monuments.",
+          "en": "My neighbourhood is interesting: there are monuments."
         }
       ]
     },
@@ -8016,6 +8025,9 @@
       "fem": "grande",
       "themes": [
         "Describing"
+      ],
+      "confusables": [
+        "adj-large"
       ],
       "examples": [
         {
@@ -8235,7 +8247,7 @@
       "themes": [
         "Describing"
       ],
-      "tip": "tout seul; toute seule",
+      "tip": "tout seul; toute seule.",
       "examples": [
         {
           "fr": "J'habite toute seule.",
@@ -8589,7 +8601,7 @@
       "acceptedSynonyms": [
         "adj-decede"
       ],
-      "tip": "= décédé",
+      "tip": "= décédé.",
       "examples": [
         {
           "fr": "Il est décédé = il est mort.",
@@ -8606,7 +8618,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "nouvel before a vowel",
+      "tip": "nouvel before a vowel.",
       "confusables": [
         "n-nouvelle",
         "adj-neuf"
@@ -8644,7 +8656,8 @@
         "Describing"
       ],
       "confusables": [
-        "n-fraise"
+        "n-fraise",
+        "n-frais"
       ],
       "examples": [
         {
@@ -8665,7 +8678,7 @@
       "alt": [
         "biologique / biologique"
       ],
-      "tip": "bio = biologique; never changes",
+      "tip": "bio = biologique; never changes.",
       "examples": [
         {
           "fr": "Les paniers bio.",
@@ -8682,7 +8695,7 @@
       "themes": [
         "Describing"
       ],
-      "tip": "plural: locaux / locales",
+      "tip": "plural: locaux / locales.",
       "examples": [
         {
           "fr": "C'est 100 % local !",
@@ -8737,8 +8750,8 @@
       ],
       "examples": [
         {
-          "fr": "Parfait !",
-          "en": "Perfect!"
+          "fr": "Ce gâteau est parfait !",
+          "en": "This cake is perfect!"
         }
       ]
     },
@@ -8883,7 +8896,7 @@
       "themes": [
         "Describing"
       ],
-      "tip": "le sucré / le salé = sweet / savoury food",
+      "tip": "le sucré / le salé = sweet / savoury food.",
       "confusables": [
         "adj-sale-salty"
       ],
@@ -9166,7 +9179,7 @@
       "themes": [
         "Colours"
       ],
-      "tip": "never changes",
+      "tip": "never changes.",
       "examples": [
         {
           "fr": "Une carotte orange.",
@@ -9282,7 +9295,7 @@
         "Colours",
         "Describing"
       ],
-      "tip": "never changes",
+      "tip": "never changes.",
       "confusables": [
         "adj-brun"
       ],
@@ -9355,7 +9368,7 @@
         "Colours"
       ],
       "kindOf": "adj-bleu",
-      "tip": "Compound colour: never changes",
+      "tip": "Compound colour: never changes.",
       "examples": [
         {
           "fr": "Mon portefeuille est bleu-gris.",
@@ -9450,11 +9463,11 @@
       ],
       "alt": [
         "Comment ça va ?"
-    ],
+      ],
       "examples": [
         {
-          "fr": "– Ça va ? – Ça va, merci.",
-          "en": "– How are you? – Fine, thanks."
+          "fr": "– Ça va ? – Oui, très bien, merci.",
+          "en": "– How are you? – Very well, thanks."
         }
       ]
     },
@@ -9530,7 +9543,7 @@
     {
       "id": "x-comment-vas-tu",
       "type": "expression",
-      "en": "How are you? (informal)",
+      "en": "How are you? (informal / formal)",
       "fr": "Comment vas-tu ?",
       "themes": [
         "Questions",
@@ -9576,7 +9589,7 @@
         "Questions",
         "Greetings & phrases"
       ],
-      "tip": "toi = informal (tu) · vous = formal, or to several people",
+      "tip": "toi = informal (tu) · vous = formal, or to several people.",
       "examples": [
         {
           "fr": "Ça va, et toi ?",
@@ -9660,7 +9673,7 @@
       "alt": [
         "Je vous présente…"
       ],
-      "tip": "te = to a friend (tu) · vous = formal, or to several people",
+      "tip": "te = to a friend (tu) · vous = formal, or to several people.",
       "examples": [
         {
           "fr": "Je te présente mon amie.",
@@ -9695,13 +9708,14 @@
         "Greetings & phrases",
         "Shopping"
       ],
+      "tip": "Also points at something further away: voilà… = there's… (voici… = here's…).",
       "confusables": [
         "x-voici"
       ],
       "examples": [
         {
-          "fr": "Voilà ma carte de visite.",
-          "en": "Here's my business card."
+          "fr": "Ah, voilà le bus !",
+          "en": "Ah, there's the bus!"
         }
       ]
     },
@@ -9828,8 +9842,8 @@
       ],
       "examples": [
         {
-          "fr": "Ah, d'accord.",
-          "en": "Ah, OK."
+          "fr": "D'accord, à demain !",
+          "en": "OK, see you tomorrow!"
         }
       ]
     },
@@ -9917,7 +9931,7 @@
       ],
       "alt": [
         "Je suis désolée.",
-        "Désolé.", 
+        "Désolé.",
         "Désolée."
       ],
       "examples": [
@@ -10929,8 +10943,8 @@
       ],
       "examples": [
         {
-          "fr": "Devant une voyelle, on utilise l'.",
-          "en": "Before a vowel, we use l'."
+          "fr": "Il y a un arrêt de bus devant l'école.",
+          "en": "There's a bus stop in front of the school."
         }
       ]
     },
@@ -11184,7 +11198,7 @@
       "themes": [
         "Prepositions"
       ],
-      "tip": "sans ≠ avec",
+      "tip": "sans ≠ avec.",
       "examples": [
         {
           "fr": "J'habite avec ma famille, sans animaux.",
@@ -11200,7 +11214,7 @@
       "themes": [
         "Prepositions"
       ],
-      "tip": "une fois par semaine; payer par carte",
+      "tip": "une fois par semaine; payer par carte.",
       "examples": [
         {
           "fr": "Une fois par semaine.",
@@ -11218,8 +11232,8 @@
       ],
       "examples": [
         {
-          "fr": "Je travaille comme informaticienne.",
-          "en": "I work as an IT specialist."
+          "fr": "Il travaille comme serveur.",
+          "en": "He works as a waiter."
         }
       ]
     },
@@ -11271,8 +11285,8 @@
           "en": "Shall we go to the market on Saturday? – No, I'm away on Saturday."
         },
         {
-          "fr": "Tu es là ? – Oui, je suis là !",
-          "en": "Are you there? – Yes, I'm here!"
+          "fr": "Tu es là ? – Oui, j'arrive !",
+          "en": "Are you there? – Yes, I'm coming!"
         },
         {
           "fr": "Martin n'est pas là.",
@@ -11338,7 +11352,7 @@
       "themes": [
         "Linking words"
       ],
-      "tip": "si + il = s'il",
+      "tip": "si + il = s'il.",
       "examples": [
         {
           "fr": "Je vais à l'épicerie si j'oublie quelque chose.",
@@ -11589,7 +11603,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "100 %",
+      "tip": "100 %.",
       "examples": [
         {
           "fr": "Je mange toujours à midi.",
@@ -11605,7 +11619,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "70 %",
+      "tip": "70 %.",
       "examples": [
         {
           "fr": "Tu cuisines souvent ? – Oui, je cuisine souvent."
@@ -11623,7 +11637,7 @@
       "acceptedSynonyms": [
         "x-de-temps-en-temps"
       ],
-      "tip": "50 %",
+      "tip": "50 %.",
       "confusables": [
         "adj-parfait"
       ],
@@ -11641,7 +11655,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "30 %",
+      "tip": "30 %.",
       "examples": [
         {
           "fr": "Je regarde rarement la télé.",
@@ -11657,7 +11671,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "0 % — ne + verb + jamais",
+      "tip": "0 % — ne + verb + jamais.",
       "examples": [
         {
           "fr": "Je ne mange jamais d'escargots."
@@ -11672,7 +11686,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "ne + verb + pas"
+      "tip": "ne + verb + pas."
     },
     {
       "id": "x-ensemble",
@@ -11733,7 +11747,7 @@
       "themes": [
         "Quantity & degree"
       ],
-      "tip": "beaucoup de + noun, no article",
+      "tip": "beaucoup de + noun, no article.",
       "confusables": [
         "x-peu-de",
         "x-beaucoup"
@@ -11753,7 +11767,7 @@
       "themes": [
         "Quantity & degree"
       ],
-      "tip": "peu de + noun, no article",
+      "tip": "peu de + noun, no article.",
       "confusables": [
         "x-beaucoup-de"
       ],
@@ -11902,7 +11916,7 @@
       "alt": [
         "toutes les"
       ],
-      "tip": "toutes les + feminine noun: toutes les semaines",
+      "tip": "toutes les + feminine noun: toutes les semaines.",
       "examples": [
         {
           "fr": "J'aime tous les plats avec des champignons.",
@@ -12450,7 +12464,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "fois (time(s)) / foi (faith) / foie (liver) all sound the same",
+      "tip": "fois (time(s)) / foi (faith) / foie (liver) all sound the same.",
       "confusables": [
         "n-foie-gras",
         "n-temps"
@@ -12993,8 +13007,8 @@
       ],
       "examples": [
         {
-          "fr": "Une avenue est grande.",
-          "en": "An avenue is wide."
+          "fr": "J'habite sur une grande avenue.",
+          "en": "I live on a big avenue."
         }
       ]
     },
@@ -13162,7 +13176,7 @@
       "themes": [
         "Countries"
       ],
-      "tip": "Same in the plural: les pays",
+      "tip": "Same in the plural: les pays.",
       "examples": [
         {
           "fr": "Tu habites dans quel pays ?",
@@ -13182,8 +13196,8 @@
       ],
       "examples": [
         {
-          "fr": "Mon quartier est intéressant avec des monuments.",
-          "en": "My neighbourhood is interesting, with monuments."
+          "fr": "Il y a des monuments dans mon quartier.",
+          "en": "There are monuments in my neighbourhood."
         }
       ]
     },
@@ -13500,8 +13514,8 @@
       ],
       "examples": [
         {
-          "fr": "Ma rue est bruyante, avec du bruit.",
-          "en": "My street is noisy, with noise."
+          "fr": "Il y a beaucoup de bruit dans ma rue.",
+          "en": "There's a lot of noise in my street."
         }
       ]
     },
@@ -13696,7 +13710,7 @@
         "Home & housework"
       ],
       "kindOf": "n-maison",
-      "tip": "-ette = small: une maison → une maisonnette",
+      "tip": "-ette = small: une maison → une maisonnette.",
       "examples": [
         {
           "fr": "Une maisonnette, c'est une petite maison.",
@@ -13800,7 +13814,7 @@
       "themes": [
         "Town & places"
       ],
-      "tip": "une place assise = a seat (on a train); la place du Capitole = a square",
+      "tip": "une place assise = a seat (on a train); la place du Capitole = a square.",
       "confusables": [
         "n-lieu",
         "n-endroit"
@@ -14074,8 +14088,8 @@
       ],
       "examples": [
         {
-          "fr": "Tu utilises le tram ? – Oui, j'utilise le tram.",
-          "en": "Do you use the tram? – Yes, I use the tram."
+          "fr": "Tu utilises le tram ? – Oui, tous les jours.",
+          "en": "Do you use the tram? – Yes, every day."
         }
       ]
     },
@@ -14107,7 +14121,7 @@
         "Transport"
       ],
       "kindOf": "n-camion",
-      "tip": "-ette = small: un camion → une camionnette",
+      "tip": "-ette = small: un camion → une camionnette.",
       "examples": [
         {
           "fr": "Une camionnette, c'est un petit camion.",
@@ -14177,7 +14191,7 @@
       "themes": [
         "Hobbies & free time"
       ],
-      "tip": "un film d'action / d'horreur = an action / horror film",
+      "tip": "un film d'action / d'horreur = an action / horror film.",
       "examples": [
         {
           "fr": "Tu regardes souvent des films d'horreur ?",
@@ -15173,6 +15187,9 @@
       "themes": [
         "Sports"
       ],
+      "acceptedSynonyms": [
+        "n-randonnee"
+      ],
       "confusables": [
         "n-marche-market"
       ],
@@ -15214,7 +15231,7 @@
       "alt": [
         "le bloc"
       ],
-      "tip": "faire du bloc = to go bouldering",
+      "tip": "faire du bloc = to go bouldering.",
       "examples": [
         {
           "fr": "Je fais du bloc.",
@@ -15402,7 +15419,7 @@
       "themes": [
         "Drinks"
       ],
-      "tip": "le vin rouge = red wine",
+      "tip": "le vin rouge = red wine.",
       "examples": [
         {
           "fr": "Le vin rouge est français.",
@@ -15582,7 +15599,7 @@
       "themes": [
         "Food & dishes"
       ],
-      "tip": "le fromage de vache / de chèvre / de brebis = cow's / goat's / sheep's cheese",
+      "tip": "le fromage de vache / de chèvre / de brebis = cow's / goat's / sheep's cheese.",
       "examples": [
         {
           "fr": "Elle adore le fromage.",
@@ -15844,7 +15861,7 @@
       "alt": [
         "la laitue"
       ],
-      "tip": "la salade also means salad",
+      "tip": "la salade also means salad.",
       "confusables": [
         "n-salade-de-fruits"
       ],
@@ -15999,8 +16016,8 @@
       ],
       "examples": [
         {
-          "fr": "Des champignons.",
-          "en": "Mushrooms."
+          "fr": "J'aime la pizza aux champignons.",
+          "en": "I like mushroom pizza."
         }
       ]
     },
@@ -16016,8 +16033,8 @@
       ],
       "examples": [
         {
-          "fr": "Un poireau.",
-          "en": "A leek."
+          "fr": "J'achète un poireau pour la soupe.",
+          "en": "I'm buying a leek for the soup."
         }
       ]
     },
@@ -16145,7 +16162,7 @@
       "themes": [
         "Fruit & vegetables"
       ],
-      "tip": "Aspirated h: de haricots, not d'haricots",
+      "tip": "Aspirated h: de haricots, not d'haricots.",
       "examples": [
         {
           "fr": "Une boîte de haricots rouges.",
@@ -16556,8 +16573,8 @@
       ],
       "examples": [
         {
-          "fr": "Une noix de coco.",
-          "en": "A coconut."
+          "fr": "J'achète une noix de coco au marché.",
+          "en": "I buy a coconut at the market."
         }
       ]
     },
@@ -16670,8 +16687,7 @@
       ],
       "examples": [
         {
-          "fr": "Je n'aime pas les gâteaux.",
-          "en": "I don't like cakes."
+          "fr": "Je n'aime pas les gâteaux."
         }
       ]
     },
@@ -16764,8 +16780,8 @@
       "kindOf": "n-croissant",
       "examples": [
         {
-          "fr": "Un croissant aux amandes.",
-          "en": "An almond croissant."
+          "fr": "Je voudrais un croissant aux amandes.",
+          "en": "I'd like an almond croissant."
         }
       ]
     },
@@ -16784,8 +16800,8 @@
       ],
       "examples": [
         {
-          "fr": "Un pain aux raisins.",
-          "en": "A raisin pastry."
+          "fr": "Au petit-déjeuner, je mange un pain aux raisins.",
+          "en": "For breakfast I eat a raisin pastry."
         }
       ]
     },
@@ -16799,10 +16815,13 @@
       "themes": [
         "Bakery & desserts"
       ],
+      "confusables": [
+        "n-chausson"
+      ],
       "examples": [
         {
-          "fr": "Un chausson aux pommes.",
-          "en": "An apple turnover."
+          "fr": "Le chausson aux pommes est délicieux.",
+          "en": "The apple turnover is delicious."
         }
       ]
     },
@@ -16819,8 +16838,8 @@
       ],
       "examples": [
         {
-          "fr": "Des chouquettes.",
-          "en": "Choux buns."
+          "fr": "J'achète des chouquettes à la boulangerie.",
+          "en": "I buy choux buns at the bakery."
         }
       ]
     },
@@ -16837,8 +16856,8 @@
       ],
       "examples": [
         {
-          "fr": "Des cannelés.",
-          "en": "Cannelés."
+          "fr": "Les cannelés sont délicieux.",
+          "en": "Cannelés are delicious."
         }
       ]
     },
@@ -16854,8 +16873,8 @@
       ],
       "examples": [
         {
-          "fr": "Une brioche.",
-          "en": "A brioche."
+          "fr": "Je mange une brioche au petit-déjeuner.",
+          "en": "I eat a brioche for breakfast."
         }
       ]
     },
@@ -16869,7 +16888,7 @@
       "themes": [
         "Bakery & desserts"
       ],
-      "tip": "une tarte aux fraises / aux framboises / aux abricots",
+      "tip": "une tarte aux fraises / aux framboises / aux abricots.",
       "examples": [
         {
           "fr": "La tarte aux abricots est pour 12 personnes.",
@@ -16909,7 +16928,7 @@
       "alt": [
         "la tarte citron meringuée"
       ],
-      "tip": "meringuée = with meringue",
+      "tip": "meringuée = with meringue.",
       "examples": [
         {
           "fr": "Une tarte citron meringuée pour 6 personnes.",
@@ -16927,7 +16946,7 @@
       "themes": [
         "Bakery & desserts"
       ],
-      "tip": "une part de flan = a slice of flan",
+      "tip": "une part de flan = a slice of flan.",
       "examples": [
         {
           "fr": "Une part de flan.",
@@ -16947,8 +16966,8 @@
       ],
       "examples": [
         {
-          "fr": "Un éclair au chocolat.",
-          "en": "A chocolate éclair."
+          "fr": "Je voudrais un éclair au chocolat, s'il vous plaît.",
+          "en": "I'd like a chocolate éclair, please."
         }
       ]
     },
@@ -16964,8 +16983,8 @@
       ],
       "examples": [
         {
-          "fr": "Un millefeuille.",
-          "en": "A mille-feuille."
+          "fr": "Je voudrais un millefeuille, s'il vous plaît.",
+          "en": "I'd like a mille-feuille, please."
         }
       ]
     },
@@ -16982,8 +17001,8 @@
       ],
       "examples": [
         {
-          "fr": "Des financiers.",
-          "en": "Financiers."
+          "fr": "J'achète des financiers à la pâtisserie.",
+          "en": "I buy financiers at the cake shop."
         }
       ]
     },
@@ -17018,7 +17037,7 @@
       "themes": [
         "Bakery & desserts"
       ],
-      "tip": "un macaron à la vanille",
+      "tip": "un macaron à la vanille.",
       "examples": [
         {
           "fr": "Un macaron à la vanille.",
@@ -17036,7 +17055,7 @@
       "themes": [
         "Bakery & desserts"
       ],
-      "tip": "un macaron à la pistache",
+      "tip": "un macaron à la pistache.",
       "examples": [
         {
           "fr": "Un macaron à la pistache.",
@@ -17055,7 +17074,7 @@
         "Bakery & desserts"
       ],
       "kindOf": "n-tarte",
-      "tip": "-ette = small: une tarte → une tartelette",
+      "tip": "-ette = small: une tarte → une tartelette.",
       "examples": [
         {
           "fr": "Une tartelette au citron.",
@@ -17155,7 +17174,7 @@
     {
       "id": "n-glacon",
       "type": "noun",
-      "en": "ice cube(s)",
+      "en": "ice cube",
       "fr": "glaçon",
       "gender": "m",
       "article": "le",
@@ -17223,7 +17242,7 @@
       "alt": [
         "les œufs"
       ],
-      "tip": "un œuf rhymes with neuf; in des œufs the f is silent",
+      "tip": "un œuf rhymes with neuf; in des œufs the f is silent.",
       "examples": [
         {
           "fr": "Je voudrais six œufs.",
@@ -17279,7 +17298,7 @@
       "themes": [
         "Food & dishes"
       ],
-      "tip": "la crème fouettée = whipped cream",
+      "tip": "la crème fouettée = whipped cream.",
       "examples": [
         {
           "fr": "Une glace avec de la crème fouettée.",
@@ -18083,7 +18102,7 @@
       "themes": [
         "Food & dishes"
       ],
-      "tip": "le poivre = black pepper; le poivron = a (bell) pepper; le piment = chilli",
+      "tip": "le poivre = black pepper; le poivron = a (bell) pepper; le piment = chilli.",
       "confusables": [
         "n-poivron",
         "n-piment"
@@ -18142,7 +18161,7 @@
       "alt": [
         "les olives"
       ],
-      "tip": "des olives vertes / noires = green / black olives",
+      "tip": "des olives vertes / noires = green / black olives.",
       "examples": [
         {
           "fr": "Des olives noires, s'il vous plaît.",
@@ -18233,7 +18252,7 @@
       "themes": [
         "Food & dishes"
       ],
-      "tip": "les chips = crisps",
+      "tip": "les chips = crisps.",
       "confusables": [
         "n-chips"
       ],
@@ -18586,7 +18605,7 @@
       "themes": [
         "Restaurant & café"
       ],
-      "tip": "finir son assiette = to eat everything on your plate",
+      "tip": "finir son assiette = to eat everything on your plate.",
       "examples": [
         {
           "fr": "Une assiette de pâtes.",
@@ -18781,7 +18800,7 @@
       "acceptedSynonyms": [
         "n-tisane"
       ],
-      "tip": "thé ou infusion = tea or herbal tea",
+      "tip": "thé ou infusion = tea or herbal tea.",
       "examples": [
         {
           "fr": "Une infusion à la menthe.",
@@ -19391,7 +19410,7 @@
         "Drinks",
         "Restaurant & café"
       ],
-      "tip": "le thé vert / noir / blanc / à la menthe = green / black / white / mint tea",
+      "tip": "le thé vert / noir / blanc / à la menthe = green / black / white / mint tea.",
       "examples": [
         {
           "fr": "Au petit-déjeuner, je bois du thé.",
@@ -20346,7 +20365,7 @@
       "themes": [
         "Nature & weather"
       ],
-      "tip": "une plante verte = a houseplant",
+      "tip": "une plante verte = a houseplant.",
       "examples": [
         {
           "fr": "Tu as des plantes vertes.",
@@ -20813,7 +20832,7 @@
     {
       "id": "n-bijou",
       "type": "noun",
-      "en": "piece of jewellery / jewellery",
+      "en": "piece of jewellery",
       "fr": "bijou",
       "gender": "m",
       "article": "le",
@@ -20823,10 +20842,10 @@
       "alt": [
         "les bijoux"
       ],
+      "tip": "les bijoux = jewellery.",
       "examples": [
         {
-          "fr": "J'aime les bijoux.",
-          "en": "I like jewellery."
+          "fr": "J'aime les bijoux."
         }
       ]
     },
@@ -20984,7 +21003,7 @@
       "alt": [
         "l'affiche (f)"
       ],
-      "tip": "un poster = une affiche",
+      "tip": "un poster = une affiche.",
       "examples": [
         {
           "fr": "Nous avons des posters.",
@@ -21005,8 +21024,8 @@
       ],
       "examples": [
         {
-          "fr": "Il a une idée. C'est son idée.",
-          "en": "He has an idea. It's his idea."
+          "fr": "J'ai une idée !",
+          "en": "I have an idea!"
         }
       ]
     },
@@ -21030,7 +21049,7 @@
     {
       "id": "n-cadeau",
       "type": "noun",
-      "en": "present(s), gift(s)",
+      "en": "present, gift",
       "fr": "cadeau",
       "gender": "m",
       "article": "le",
@@ -21042,8 +21061,7 @@
       ],
       "examples": [
         {
-          "fr": "Les cadeaux d'anniversaire.",
-          "en": "The birthday presents."
+          "fr": "Les cadeaux d'anniversaire."
         }
       ]
     },
@@ -21312,7 +21330,7 @@
       "themes": [
         "Body & health"
       ],
-      "tip": "same œ sound as sœur",
+      "tip": "same œ sound as sœur.",
       "examples": [
         {
           "fr": "Le cœur est rouge.",
@@ -21549,7 +21567,7 @@
         "Everyday objects",
         "School & studies"
       ],
-      "tip": "Google Agenda = Google Calendar",
+      "tip": "Google Agenda = Google Calendar.",
       "examples": [
         {
           "fr": "J'utilise souvent mon agenda.",
@@ -21607,6 +21625,9 @@
       "article": "le",
       "themes": [
         "Everyday objects"
+      ],
+      "alt": [
+        "le porte-clés"
       ],
       "examples": [
         {
@@ -21772,7 +21793,7 @@
         "Everyday objects"
       ],
       "kindOf": "n-bouteille",
-      "tip": "non réutilisable = single-use",
+      "tip": "non réutilisable = single-use.",
       "confusables": [
         "n-gourde"
       ],
@@ -21795,7 +21816,7 @@
         "Everyday objects"
       ],
       "kindOf": "n-objet",
-      "tip": "perdre = to lose",
+      "tip": "perdre = to lose.",
       "examples": [
         {
           "fr": "Mon parapluie est aux objets perdus.",
@@ -21897,7 +21918,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "le cours = lesson; les courses = shopping",
+      "tip": "le cours = lesson; les courses = shopping.",
       "confusables": [
         "n-cours"
       ],
@@ -21982,7 +22003,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "un panier bio = an organic veg box",
+      "tip": "un panier bio = an organic veg box.",
       "examples": [
         {
           "fr": "J'achète un panier par semaine.",
@@ -22057,7 +22078,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "une caisse automatique = a self-checkout",
+      "tip": "une caisse automatique = a self-checkout.",
       "examples": [
         {
           "fr": "Je paie à la caisse.",
@@ -22078,11 +22099,11 @@
       "alt": [
         "la carte bleue"
       ],
-      "tip": "payer par carte = to pay by card",
+      "tip": "payer par carte = to pay by card.",
       "examples": [
         {
-          "fr": "Je paie par carte.",
-          "en": "I pay by card."
+          "fr": "Je paie avec ma carte bancaire.",
+          "en": "I pay with my bank card."
         }
       ]
     },
@@ -22097,7 +22118,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "payer en espèces = to pay in cash",
+      "tip": "payer en espèces = to pay in cash.",
       "examples": [
         {
           "fr": "Vous payez par carte ou en espèces ?",
@@ -22179,7 +22200,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "Also \"dear\" in a letter: Chère Anna",
+      "tip": "Also \"dear\" in a letter: Chère Anna.",
       "confusables": [
         "adj-bon-marche"
       ],
@@ -22223,7 +22244,7 @@
       ],
       "examples": [
         {
-          "fr": "Le supermarché est pas cher.",
+          "fr": "Le supermarché n'est pas cher.",
           "en": "The supermarket is cheap."
         }
       ]
@@ -22543,7 +22564,7 @@
         "Countries"
       ],
       "alt": [
-        "les Pays-Bas"
+        "les Pays-Bas (m)"
       ],
       "examples": [
         {
@@ -22888,7 +22909,7 @@
       "themes": [
         "Countries"
       ],
-      "tip": "No article: à Malte",
+      "tip": "No article: à Malte.",
       "examples": [
         {
           "fr": "J'habite à Malte.",
@@ -23740,7 +23761,7 @@
       "themes": [
         "Countries"
       ],
-      "tip": "la Corée du Sud / du Nord = South / North Korea",
+      "tip": "la Corée du Sud / du Nord = South / North Korea.",
       "examples": [
         {
           "fr": "J'habite en Corée.",
@@ -23830,8 +23851,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est belge, elle est belge.",
-          "en": "He is Belgian, she is Belgian."
+          "fr": "Il est belge.",
+          "en": "He is Belgian."
         }
       ]
     },
@@ -23864,8 +23885,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est suisse, elle est suisse.",
-          "en": "He is Swiss, she is Swiss."
+          "fr": "Il est suisse.",
+          "en": "He is Swiss."
         }
       ]
     },
@@ -23898,8 +23919,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est russe, elle est russe.",
-          "en": "He is Russian, she is Russian."
+          "fr": "Il est russe.",
+          "en": "He is Russian."
         }
       ]
     },
@@ -23932,8 +23953,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est croate, elle est croate.",
-          "en": "He is Croatian, she is Croatian."
+          "fr": "Il est croate.",
+          "en": "He is Croatian."
         }
       ]
     },
@@ -23966,8 +23987,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est serbe, elle est serbe.",
-          "en": "He is Serbian, she is Serbian."
+          "fr": "Il est serbe.",
+          "en": "He is Serbian."
         }
       ]
     },
@@ -24000,8 +24021,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est slovaque, elle est slovaque.",
-          "en": "He is Slovak, she is Slovak."
+          "fr": "Il est slovaque.",
+          "en": "He is Slovak."
         }
       ]
     },
@@ -24034,8 +24055,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est slovène, elle est slovène.",
-          "en": "He is Slovenian, she is Slovenian."
+          "fr": "Il est slovène.",
+          "en": "He is Slovenian."
         }
       ]
     },
@@ -24068,8 +24089,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est bulgare, elle est bulgare.",
-          "en": "He is Bulgarian, she is Bulgarian."
+          "fr": "Il est bulgare.",
+          "en": "He is Bulgarian."
         }
       ]
     },
@@ -24105,8 +24126,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est tchèque, elle est tchèque.",
-          "en": "He is Czech, she is Czech."
+          "fr": "Il est tchèque.",
+          "en": "He is Czech."
         }
       ]
     },
@@ -24121,7 +24142,7 @@
       "themes": [
         "Countries"
       ],
-      "tip": "No article: à Chypre",
+      "tip": "No article: à Chypre.",
       "examples": [
         {
           "fr": "J'habite à Chypre.",
@@ -24140,8 +24161,8 @@
       ],
       "examples": [
         {
-          "fr": "Il est chypriote, elle est chypriote.",
-          "en": "He is Cypriot, she is Cypriot."
+          "fr": "Il est chypriote.",
+          "en": "He is Cypriot."
         }
       ]
     },
@@ -24720,7 +24741,7 @@
         "Numbers",
         "Time & dates"
       ],
-      "tip": "le premier / le dernier = the first / the last",
+      "tip": "le premier / le dernier = the first / the last.",
       "examples": [
         {
           "fr": "Décembre est le dernier mois de l'année.",
@@ -24809,7 +24830,7 @@
         "Describing",
         "Body & health"
       ],
-      "tip": "la fatigue = tiredness",
+      "tip": "la fatigue = tiredness.",
       "examples": [
         {
           "fr": "Tu es fatigué ?",
@@ -25142,11 +25163,11 @@
       "id": "num-21",
       "type": "number",
       "en": "21",
-      "fr": "vingt et un",
+      "fr": "vingt-et-un",
       "themes": [
         "Numbers"
       ],
-      "tip": "21, 31, 41, 51, 61, 71 use \"et\""
+      "tip": "21, 31, 41, 51, 61, 71 use \"et\": vingt-et-un. The older spelling, without hyphens, is vingt et un."
     },
     {
       "id": "num-22",
@@ -25170,7 +25191,7 @@
       "id": "num-31",
       "type": "number",
       "en": "31",
-      "fr": "trente et un",
+      "fr": "trente-et-un",
       "themes": [
         "Numbers"
       ]
@@ -25188,7 +25209,7 @@
       "id": "num-41",
       "type": "number",
       "en": "41",
-      "fr": "quarante et un",
+      "fr": "quarante-et-un",
       "themes": [
         "Numbers"
       ]
@@ -25206,7 +25227,7 @@
       "id": "num-51",
       "type": "number",
       "en": "51",
-      "fr": "cinquante et un",
+      "fr": "cinquante-et-un",
       "themes": [
         "Numbers"
       ]
@@ -25224,7 +25245,7 @@
       "id": "num-61",
       "type": "number",
       "en": "61",
-      "fr": "soixante et un",
+      "fr": "soixante-et-un",
       "themes": [
         "Numbers"
       ]
@@ -25237,17 +25258,17 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "60 + 10"
+      "tip": "60 + 10."
     },
     {
       "id": "num-71",
       "type": "number",
       "en": "71",
-      "fr": "soixante et onze",
+      "fr": "soixante-et-onze",
       "themes": [
         "Numbers"
       ],
-      "tip": "60 + 11"
+      "tip": "60 + 11."
     },
     {
       "id": "num-72",
@@ -25275,7 +25296,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "4 × 20 — with s"
+      "tip": "4 × 20 — with s."
     },
     {
       "id": "num-81",
@@ -25285,7 +25306,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "No \"et\" and no s from 81"
+      "tip": "No \"et\" and no s from 81."
     },
     {
       "id": "num-82",
@@ -25304,7 +25325,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "4 × 20 + 10"
+      "tip": "4 × 20 + 10."
     },
     {
       "id": "num-91",
@@ -25314,7 +25335,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "No \"et\" in 81 and 91"
+      "tip": "No \"et\" in 81 and 91."
     },
     {
       "id": "num-99",
@@ -25351,7 +25372,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "cent takes an s when multiplied and nothing follows"
+      "tip": "cent takes an s when multiplied and nothing follows."
     },
     {
       "id": "num-236",
@@ -25375,7 +25396,7 @@
       "id": "num-361",
       "type": "number",
       "en": "361",
-      "fr": "trois-cent-soixante et un",
+      "fr": "trois-cent-soixante-et-un",
       "themes": [
         "Numbers"
       ]
@@ -25388,7 +25409,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "mille never takes an s"
+      "tip": "mille never takes an s."
     },
     {
       "id": "num-1500",
@@ -25407,7 +25428,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "mille never takes an s"
+      "tip": "mille never takes an s."
     },
     {
       "id": "num-1000000",
@@ -25457,7 +25478,7 @@
         "School & studies"
       ],
       "kindOf": "n-ecole",
-      "tip": "Classes: petite section, moyenne section, grande section",
+      "tip": "Classes: petite section, moyenne section, grande section.",
       "examples": [
         {
           "fr": "Il va à l'école maternelle.",
@@ -25476,7 +25497,7 @@
         "School & studies"
       ],
       "kindOf": "n-ecole",
-      "tip": "Classes: CP, CE1, CE2, CM1, CM2",
+      "tip": "Classes: CP, CE1, CE2, CM1, CM2.",
       "examples": [
         {
           "fr": "Elle va à l'école primaire.",
@@ -25518,7 +25539,7 @@
       "alt": [
         "le kilogramme"
       ],
-      "tip": "quantity + de: un kilo de pommes",
+      "tip": "quantity + de: un kilo de pommes.",
       "examples": [
         {
           "fr": "Un kilo de pêches.",
@@ -25666,8 +25687,8 @@
       ],
       "examples": [
         {
-          "fr": "Une boîte de haricots verts.",
-          "en": "A tin of green beans."
+          "fr": "Il y a une boîte de conserve sur la table.",
+          "en": "There's a tin on the table."
         }
       ]
     },
@@ -26021,14 +26042,13 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "Voici = here is (close); voilà = there you go",
+      "tip": "Voici = here is (close); voilà = there you go.",
       "confusables": [
         "x-voila"
       ],
       "examples": [
         {
-          "fr": "Voici un concombre.",
-          "en": "Here's a cucumber."
+          "fr": "Voici un concombre."
         }
       ]
     },
@@ -26072,7 +26092,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "une fois par jour / par mois / par an; deux fois par semaine",
+      "tip": "une fois par jour / par mois / par an; deux fois par semaine.",
       "examples": [
         {
           "fr": "J'achète des légumes une fois par semaine.",
@@ -26088,7 +26108,7 @@
       "themes": [
         "Language & grammar"
       ],
-      "tip": "une parenthèse = a bracket",
+      "tip": "une parenthèse = a bracket.",
       "examples": [
         {
           "fr": "Conjuguez les verbes entre parenthèses.",
@@ -26211,7 +26231,7 @@
         "Position words",
         "Town & places"
       ],
-      "tip": "de + le = du: près du centre",
+      "tip": "de + le = du: près du centre.",
       "examples": [
         {
           "fr": "Il y a une église près de chez toi.",
@@ -26228,11 +26248,11 @@
         "Position words",
         "Town & places"
       ],
-      "tip": "de + le = du: loin du centre",
+      "tip": "de + le = du: loin du centre.",
       "examples": [
         {
-          "fr": "Le jardin japonais n'est pas loin du centre.",
-          "en": "The Japanese garden isn't far from the centre."
+          "fr": "L'aéroport est loin de chez moi.",
+          "en": "The airport is far from my place."
         }
       ]
     },
@@ -26262,7 +26282,7 @@
       "alt": [
         "toutes les deux"
       ],
-      "tip": "toutes les deux for two women or feminine nouns",
+      "tip": "toutes les deux for two women or feminine nouns.",
       "examples": [
         {
           "fr": "Vous avez 23 ans tous les deux.",
@@ -26398,7 +26418,7 @@
       "themes": [
         "Body & health"
       ],
-      "tip": "être fatigué(e) = to be tired",
+      "tip": "être fatigué(e) = to be tired.",
       "examples": [
         {
           "fr": "Avec la fatigue, je suis maladroite.",
@@ -26485,11 +26505,11 @@
       "alt": [
         "les verbes du deuxième groupe"
       ],
-      "tip": "nous finissons, vous finissez, ils finissent: -iss- in the plural",
+      "tip": "nous finissons, vous finissez, ils finissent: -iss- in the plural.",
       "examples": [
         {
-          "fr": "Finir est un verbe du 2e groupe.",
-          "en": "Finir is a second-group verb."
+          "fr": "Finir et choisir sont des verbes du 2e groupe.",
+          "en": "Finir and choisir are second-group verbs."
         }
       ]
     },
@@ -26520,7 +26540,7 @@
       "themes": [
         "Town & places"
       ],
-      "tip": "un bâtiment = any building; un immeuble = a block of flats or offices",
+      "tip": "un bâtiment = any building; un immeuble = a block of flats or offices.",
       "examples": [
         {
           "fr": "Il y a beaucoup de bâtiments dans le centre-ville.",
@@ -26712,7 +26732,7 @@
       "themes": [
         "Everyday objects"
       ],
-      "tip": "le (téléphone) portable = mobile phone; un ordinateur portable = laptop",
+      "tip": "le (téléphone) portable = mobile phone; un ordinateur portable = laptop.",
       "examples": [
         {
           "fr": "On regarde sur mon portable ?",
@@ -26791,7 +26811,7 @@
         "Town & places"
       ],
       "kindOf": "n-magasin",
-      "tip": "un jouet = a toy",
+      "tip": "un jouet = a toy.",
       "examples": [
         {
           "fr": "Il y a un magasin de jouets dans ma rue.",
@@ -26984,7 +27004,7 @@
       "alt": [
         "l'apéro (m)"
       ],
-      "tip": "l'apéro = informal",
+      "tip": "l'apéro = informal.",
       "examples": [
         {
           "fr": "L'apéritif est avant l'entrée.",
@@ -27105,7 +27125,7 @@
       "acceptedSynonyms": [
         "n-infusion"
       ],
-      "tip": "= une infusion",
+      "tip": "= une infusion.",
       "examples": [
         {
           "fr": "Une tisane à la camomille.",
@@ -27257,7 +27277,7 @@
       "acceptedSynonyms": [
         "n-chose"
       ],
-      "tip": "une tasse à café = the object; une tasse de café = the drink",
+      "tip": "une tasse à café = the object; une tasse de café = the drink.",
       "examples": [
         {
           "fr": "Il y a beaucoup d'objets dans mon sac.",
@@ -27276,7 +27296,7 @@
       "themes": [
         "Restaurant & café"
       ],
-      "tip": "= la fourchette + le couteau + la cuillère",
+      "tip": "= la fourchette + le couteau + la cuillère.",
       "examples": [
         {
           "fr": "Les couverts sont sales.",
@@ -27295,7 +27315,7 @@
         "Restaurant & café",
         "Shopping"
       ],
-      "tip": "à livrer = for delivery; le livreur = the delivery person",
+      "tip": "à livrer = for delivery; le livreur = the delivery person.",
       "examples": [
         {
           "fr": "La livraison est gratuite.",
@@ -27331,7 +27351,7 @@
       "themes": [
         "Home & housework"
       ],
-      "tip": "laver = to wash; la vaisselle = the dishes",
+      "tip": "laver = to wash; la vaisselle = the dishes.",
       "examples": [
         {
           "fr": "Nous n'avons pas de lave-vaisselle.",
@@ -27385,7 +27405,7 @@
         "Nature & weather",
         "Town & places"
       ],
-      "tip": "un fleuve = une grande rivière",
+      "tip": "un fleuve = une grande rivière.",
       "confusables": [
         "n-riviere"
       ],
@@ -27427,7 +27447,7 @@
         "Transport",
         "Town & places"
       ],
-      "tip": "la gare = trains; la station = metro",
+      "tip": "la gare = trains; la station = metro.",
       "confusables": [
         "n-station"
       ],
@@ -27448,7 +27468,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "la station de métro; for trains: la gare",
+      "tip": "la station de métro; for trains: la gare.",
       "confusables": [
         "n-gare"
       ],
@@ -27487,7 +27507,7 @@
         "Transport",
         "Town & places"
       ],
-      "tip": "une place de parking = a parking space",
+      "tip": "une place de parking = a parking space.",
       "examples": [
         {
           "fr": "Il y a un parking près de la gare.",
@@ -27806,7 +27826,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "le quartier de mes rêves = my dream neighbourhood",
+      "tip": "le quartier de mes rêves = my dream neighbourhood.",
       "examples": [
         {
           "fr": "C'est le quartier de mes rêves.",
@@ -27824,7 +27844,7 @@
       "themes": [
         "Countries"
       ],
-      "tip": "le nord, le sud, l'est, l'ouest",
+      "tip": "le nord, le sud, l'est, l'ouest.",
       "examples": [
         {
           "fr": "Elles vont dans le sud de la France.",
@@ -27863,7 +27883,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "l'arrêt de bus / l'arrêt de tram",
+      "tip": "l'arrêt de bus / l'arrêt de tram.",
       "examples": [
         {
           "fr": "Il y a un arrêt de bus dans ta rue ?",
@@ -27940,7 +27960,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "en ligne = online",
+      "tip": "en ligne = online.",
       "examples": [
         {
           "fr": "Prenez la ligne T1.",
@@ -27958,7 +27978,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "km",
+      "tip": "km.",
       "examples": [
         {
           "fr": "Loin, c'est beaucoup de kilomètres.",
@@ -28143,7 +28163,7 @@
         "Restaurant & café",
         "Travel & sightseeing"
       ],
-      "tip": "= faire une réservation",
+      "tip": "= faire une réservation.",
       "examples": [
         {
           "fr": "Je réserve une table pour deux personnes.",
@@ -28214,7 +28234,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "monter dans le bus = to get on the bus",
+      "tip": "monter dans le bus = to get on the bus.",
       "examples": [
         {
           "fr": "Je monte dans le tram.",
@@ -28239,7 +28259,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "descendre à l'arrêt = to get off at the stop",
+      "tip": "descendre à l'arrêt = to get off at the stop.",
       "examples": [
         {
           "fr": "Il descend à la station Opéra.",
@@ -28264,7 +28284,7 @@
       "themes": [
         "Family & relationships"
       ],
-      "tip": "rendre visite à + a person; visiter + a place",
+      "tip": "rendre visite à + a person; visiter + a place.",
       "confusables": [
         "v-visiter"
       ],
@@ -28544,7 +28564,7 @@
         "Shopping",
         "Transport"
       ],
-      "tip": "free time = le temps libre",
+      "tip": "free time = le temps libre.",
       "examples": [
         {
           "fr": "Les transports en commun sont gratuits.",
@@ -28694,7 +28714,7 @@
       "acceptedSynonyms": [
         "x-parfois"
       ],
-      "tip": "= parfois",
+      "tip": "= parfois.",
       "examples": [
         {
           "fr": "Je fais la fête de temps en temps.",
@@ -28762,7 +28782,7 @@
       "themes": [
         "Quantity & degree"
       ],
-      "tip": "assez de + noun = enough: assez de temps",
+      "tip": "assez de + noun = enough: assez de temps.",
       "examples": [
         {
           "fr": "Mon quartier est assez calme.",
@@ -28810,7 +28830,7 @@
         "Position words",
         "Town & places"
       ],
-      "tip": "à côté de + place = next to: à côté de la gare",
+      "tip": "à côté de + place = next to: à côté de la gare.",
       "examples": [
         {
           "fr": "Et là, à côté, ce sont les jardins.",
@@ -28826,7 +28846,7 @@
       "themes": [
         "Position words"
       ],
-      "tip": "ici = here; là-bas = over there",
+      "tip": "ici = here; là-bas = over there.",
       "examples": [
         {
           "fr": "Le bâtiment là-bas ? C'est une banque.",
@@ -29068,7 +29088,7 @@
         "Travel & sightseeing"
       ],
       "kindOf": "n-billet",
-      "tip": "un aller-retour = a return ticket",
+      "tip": "un aller-retour = a return ticket.",
       "examples": [
         {
           "fr": "Combien coûte l'aller simple Paris-Amboise ?",
@@ -29163,7 +29183,7 @@
         "Home & housework",
         "Transport"
       ],
-      "tip": "une place côté fenêtre = a window seat",
+      "tip": "une place côté fenêtre = a window seat.",
       "examples": [
         {
           "fr": "Isabelle est près de la fenêtre.",
@@ -29182,7 +29202,7 @@
         "Home & housework",
         "Transport"
       ],
-      "tip": "côté couloir = aisle seat; côté fenêtre = window seat",
+      "tip": "côté couloir = aisle seat; côté fenêtre = window seat.",
       "examples": [
         {
           "fr": "Je voudrais une place côté couloir.",
@@ -29242,7 +29262,7 @@
         "Town & places",
         "Travel & sightseeing"
       ],
-      "tip": "une église / une basilique / une cathédrale",
+      "tip": "une église / une basilique / une cathédrale.",
       "examples": [
         {
           "fr": "Le Sacré-Cœur est une basilique.",
@@ -29305,7 +29325,7 @@
         "Town & places",
         "Transport"
       ],
-      "tip": "le / la garagiste = the person who runs it",
+      "tip": "le / la garagiste = the person who runs it.",
       "confusables": [
         "n-garagiste"
       ],
@@ -29337,7 +29357,7 @@
     {
       "id": "n-vetement",
       "type": "noun",
-      "en": "piece of clothing; (plural) clothes",
+      "en": "piece of clothing",
       "fr": "vêtement",
       "gender": "m",
       "article": "le",
@@ -29347,6 +29367,7 @@
       "alt": [
         "les vêtements"
       ],
+      "tip": "les vêtements = clothes.",
       "examples": [
         {
           "fr": "Je vais au centre commercial quand j'achète des vêtements.",
@@ -29443,7 +29464,7 @@
         "Body & health",
         "Shopping"
       ],
-      "tip": "le médecin = the doctor; la médecine = medicine as a subject",
+      "tip": "le médecin = the doctor; la médecine = medicine as a subject.",
       "confusables": [
         "n-medecin"
       ],
@@ -29518,7 +29539,7 @@
         "Drinks",
         "Home & housework"
       ],
-      "tip": "la cave = cellar",
+      "tip": "la cave = cellar.",
       "examples": [
         {
           "fr": "Le caviste a une grande cave à vin.",
@@ -29608,6 +29629,9 @@
         "Transport"
       ],
       "tip": "Like dormir: je pars, nous partons. Partir plus tôt / plus tard = to leave earlier / later.",
+      "confusables": [
+        "v-laisser"
+      ],
       "examples": [
         {
           "fr": "Je pars à 9 h 19 et j'arrive à 9 h 33.",
@@ -29690,7 +29714,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "un billet à composter = a ticket you must stamp before boarding",
+      "tip": "un billet à composter = a ticket you must stamp before boarding.",
       "examples": [
         {
           "fr": "Je composte mon billet avant le train.",
@@ -29742,9 +29766,6 @@
       "themes": [
         "Shopping"
       ],
-      "acceptedSynonyms": [
-        "v-enlever"
-      ],
       "examples": [
         {
           "fr": "Je retire de l'argent à la banque.",
@@ -29778,7 +29799,7 @@
         "Position words",
         "Town & places"
       ],
-      "tip": "proche de = près de; ≠ loin de",
+      "tip": "proche de = près de; ≠ loin de.",
       "examples": [
         {
           "fr": "Le centre commercial est très proche de chez moi.",
@@ -29795,7 +29816,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "quatre loses its e: quatrième",
+      "tip": "quatre loses its e: quatrième.",
       "examples": [
         {
           "fr": "J'habite au quatrième étage.",
@@ -29812,7 +29833,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "cinq takes a u: cinquième",
+      "tip": "cinq takes a u: cinquième.",
       "examples": [
         {
           "fr": "Elle arrive cinquième.",
@@ -29878,7 +29899,7 @@
       "themes": [
         "Numbers"
       ],
-      "tip": "neuf changes f to v: neuvième",
+      "tip": "neuf changes f to v: neuvième.",
       "examples": [
         {
           "fr": "Il arrive neuvième.",
@@ -29910,7 +29931,10 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "plus tôt = earlier",
+      "tip": "plus tôt = earlier.",
+      "confusables": [
+        "x-en-avance"
+      ],
       "examples": [
         {
           "fr": "Je pars tôt le matin.",
@@ -29926,7 +29950,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "plus tard = later",
+      "tip": "plus tard = later.",
       "confusables": [
         "x-en-retard"
       ],
@@ -30230,7 +30254,7 @@
         "Law & justice",
         "Town & places"
       ],
-      "tip": "le commissariat (de police) = the police station",
+      "tip": "le commissariat (de police) = the police station.",
       "examples": [
         {
           "fr": "La police est au commissariat.",
@@ -30391,7 +30415,7 @@
       "alt": [
         "la propriétaire"
       ],
-      "tip": "acheter un appartement → être propriétaire; louer → être locataire",
+      "tip": "acheter un appartement → être propriétaire; louer → être locataire.",
       "examples": [
         {
           "fr": "Il est propriétaire de son appartement.",
@@ -30449,7 +30473,7 @@
         "Town & places",
         "Transport"
       ],
-      "tip": "le travail = work, job; les travaux = building work, roadworks",
+      "tip": "le travail = work, job; les travaux = building work, roadworks.",
       "confusables": [
         "n-travail"
       ],
@@ -30742,7 +30766,7 @@
       "themes": [
         "People & identity"
       ],
-      "tip": "l'homme = a man; also mankind",
+      "tip": "l'homme = a man; also mankind.",
       "examples": [
         {
           "fr": "Le premier pas de l'homme sur la Lune, c'est en 1969.",
@@ -30796,7 +30820,7 @@
         "Countries",
         "Common words"
       ],
-      "tip": "il y a du monde = it's busy",
+      "tip": "il y a du monde = it's busy.",
       "confusables": [
         "x-tout-le-monde"
       ],
@@ -30835,7 +30859,7 @@
         "Common words",
         "Numbers"
       ],
-      "tip": "h aspiré: la hauteur, not l'hauteur",
+      "tip": "h aspiré: la hauteur, not l'hauteur.",
       "examples": [
         {
           "fr": "Quelle est la hauteur de la tour Eiffel ?",
@@ -31026,7 +31050,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "garer la voiture = to park the car; une place de parking = a parking space",
+      "tip": "garer la voiture = to park the car; une place de parking = a parking space.",
       "examples": [
         {
           "fr": "Je me gare près de mon immeuble.",
@@ -31050,7 +31074,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "le rêve = the dream; rêver de = to dream of",
+      "tip": "le rêve = the dream; rêver de = to dream of.",
       "examples": [
         {
           "fr": "Je rêve d'un grand appartement.",
@@ -31123,7 +31147,7 @@
         "Town & places",
         "Common words"
       ],
-      "tip": "passer devant = to go past; passer un examen = to take an exam",
+      "tip": "passer devant = to go past; passer un examen = to take an exam.",
       "examples": [
         {
           "fr": "Passez devant la boulangerie.",
@@ -31196,7 +31220,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "chercher = to look for; trouver = to find",
+      "tip": "chercher = to look for; trouver = to find.",
       "examples": [
         {
           "fr": "Cherchez l'itinéraire sur Internet.",
@@ -31270,7 +31294,7 @@
       "themes": [
         "Describing"
       ],
-      "tip": "similaire à = similar to",
+      "tip": "similaire à = similar to.",
       "examples": [
         {
           "fr": "L'île est similaire à un grand parc.",
@@ -31350,7 +31374,7 @@
         "Position words",
         "Town & places"
       ],
-      "tip": "tout droit = straight on; à droite = (to the) right",
+      "tip": "tout droit = straight on; à droite = (to the) right.",
       "confusables": [
         "x-a-droite"
       ],
@@ -31404,7 +31428,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "fort = loud; strong",
+      "tip": "fort = loud; strong.",
       "examples": [
         {
           "fr": "Parle plus fort !",
@@ -31435,7 +31459,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "en retard = late for something; tard = late in the day",
+      "tip": "en retard = late for something; tard = late in the day.",
       "confusables": [
         "x-tard"
       ],
@@ -31469,7 +31493,7 @@
       "themes": [
         "Quantity & degree"
       ],
-      "tip": "trop de + noun = too much, too many",
+      "tip": "trop de + noun = too much, too many.",
       "examples": [
         {
           "fr": "Il fait trop froid dehors.",
@@ -31528,7 +31552,7 @@
         "Prepositions",
         "Time & dates"
       ],
-      "tip": "avant de + infinitive; avant + noun: avant le cours",
+      "tip": "avant de + infinitive; avant + noun: avant le cours.",
       "confusables": [
         "x-avant"
       ],
@@ -31547,7 +31571,7 @@
       "themes": [
         "Nature & weather"
       ],
-      "tip": "il fait chaud = it's hot",
+      "tip": "il fait chaud = it's hot.",
       "examples": [
         {
           "fr": "Il fait froid en hiver.",
@@ -31563,7 +31587,7 @@
       "themes": [
         "Nature & weather"
       ],
-      "tip": "la neige = snow",
+      "tip": "la neige = snow.",
       "examples": [
         {
           "fr": "Il neige beaucoup en hiver.",
@@ -31613,7 +31637,7 @@
         "Language & grammar",
         "Common words"
       ],
-      "tip": "pour + infinitive = le but (why you do it); parce que + sentence = la cause",
+      "tip": "pour + infinitive = le but (why you do it); parce que + sentence = la cause.",
       "examples": [
         {
           "fr": "« Pour » + infinitif exprime le but.",
@@ -31720,7 +31744,7 @@
       "themes": [
         "Transport"
       ],
-      "tip": "faire du covoiturage = to car-share; voyager avec d'autres personnes",
+      "tip": "faire du covoiturage = to car-share; voyager avec d'autres personnes.",
       "examples": [
         {
           "fr": "Pour être écologique, je fais du covoiturage.",
@@ -31774,7 +31798,7 @@
       "themes": [
         "Nature & weather"
       ],
-      "tip": "écologique = eco-friendly",
+      "tip": "écologique = eco-friendly.",
       "examples": [
         {
           "fr": "Tu fais attention à l'écologie ?",
@@ -31814,7 +31838,7 @@
         "Time & dates",
         "Transport"
       ],
-      "tip": "durer = to last → la durée",
+      "tip": "durer = to last → la durée.",
       "examples": [
         {
           "fr": "Quelle est la durée du trajet ?",
@@ -31833,7 +31857,7 @@
         "Position words",
         "Transport"
       ],
-      "tip": "côté fenêtre / côté couloir = window / aisle seat; à côté de = next to",
+      "tip": "côté fenêtre / côté couloir = window / aisle seat; à côté de = next to.",
       "examples": [
         {
           "fr": "Je voudrais une place côté fenêtre.",
@@ -31895,7 +31919,7 @@
       "acceptedSynonyms": [
         "n-poste"
       ],
-      "tip": "= la poste",
+      "tip": "= la poste.",
       "examples": [
         {
           "fr": "Le bureau de poste est à côté de la banque.",
@@ -31932,7 +31956,7 @@
       "themes": [
         "Town & places"
       ],
-      "tip": "du coin = local, round the corner",
+      "tip": "du coin = local, round the corner.",
       "examples": [
         {
           "fr": "Il va acheter un gâteau à la pâtisserie du coin.",
@@ -31970,7 +31994,7 @@
         "Town & places",
         "Drinks"
       ],
-      "tip": "la pub (feminine) = an advert, informal for la publicité",
+      "tip": "la pub (feminine) = an advert, informal for la publicité.",
       "examples": [
         {
           "fr": "Le samedi soir, je vais au pub avec mes amis.",
@@ -32061,7 +32085,7 @@
         "Home & housework",
         "Body & health"
       ],
-      "tip": "prendre une douche = to have a shower",
+      "tip": "prendre une douche = to have a shower.",
       "examples": [
         {
           "fr": "Tu ne vas pas prendre de douche ce soir ?",
@@ -32133,7 +32157,7 @@
         "n-brocante",
         "n-vide-grenier"
       ],
-      "tip": "la puce = flea",
+      "tip": "la puce = flea.",
       "examples": [
         {
           "fr": "Au marché aux puces, on achète des petits objets.",
@@ -32228,7 +32252,7 @@
       "alt": [
         "la copine"
       ],
-      "tip": "un copain = a friend; mon petit copain = my boyfriend",
+      "tip": "un copain = a friend; mon petit copain = my boyfriend.",
       "confusables": [
         "n-petit-copain"
       ],
@@ -32308,7 +32332,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "d'occasion = second-hand",
+      "tip": "d'occasion = second-hand.",
       "examples": [
         {
           "fr": "Ses amis vont se déguiser pour l'occasion.",
@@ -32327,7 +32351,7 @@
         "Everyday objects",
         "Town & places"
       ],
-      "tip": "le courrier = letters; le courriel = email",
+      "tip": "le courrier = letters; le courriel = email.",
       "confusables": [
         "n-e-mail"
       ],
@@ -32370,7 +32394,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "le jour = the day as a date or unit (7 jours); la journée = the whole day, what you do in it: toute la journée, bonne journée",
+      "tip": "le jour = the day as a date or unit (7 jours); la journée = the whole day, what you do in it: toute la journée, bonne journée.",
       "confusables": [
         "n-jour"
       ],
@@ -32499,6 +32523,9 @@
       "article": "la",
       "themes": [
         "Clothes & accessories"
+      ],
+      "confusables": [
+        "n-robe-de-chambre"
       ],
       "examples": [
         {
@@ -32637,7 +32664,8 @@
         "Jobs & work"
       ],
       "confusables": [
-        "n-costume"
+        "n-costume",
+        "n-taille"
       ],
       "examples": [
         {
@@ -32673,7 +32701,7 @@
       "themes": [
         "Clothes & accessories"
       ],
-      "tip": "le nœud = knot, le papillon = butterfly",
+      "tip": "le nœud = knot, le papillon = butterfly.",
       "examples": [
         {
           "fr": "Il porte un nœud papillon jaune.",
@@ -32726,7 +32754,7 @@
       "themes": [
         "Clothes & accessories"
       ],
-      "tip": "la chaussette = sock; la chaussure = shoe",
+      "tip": "la chaussette = sock; la chaussure = shoe.",
       "confusables": [
         "n-chaussure"
       ],
@@ -32788,7 +32816,7 @@
       "alt": [
         "les baskets"
       ],
-      "tip": "la basket, les baskets = trainers; le basket = basketball",
+      "tip": "la basket, les baskets = trainers; le basket = basketball.",
       "confusables": [
         "n-basket"
       ],
@@ -32812,7 +32840,7 @@
       "alt": [
         "les talons"
       ],
-      "tip": "des chaussures à talons = high heels",
+      "tip": "des chaussures à talons = high heels.",
       "examples": [
         {
           "fr": "Elle porte des chaussures à talons.",
@@ -32833,7 +32861,7 @@
       "alt": [
         "les collants"
       ],
-      "tip": "un collant or des collants = (a pair of) tights",
+      "tip": "Singular in French: un collant = a pair of tights (you will also hear des collants).",
       "examples": [
         {
           "fr": "Elle porte des collants noirs.",
@@ -32978,7 +33006,7 @@
       "themes": [
         "Clothes & accessories"
       ],
-      "tip": "en cuir = (made of) leather",
+      "tip": "en cuir = (made of) leather.",
       "examples": [
         {
           "fr": "Ma veste est en cuir.",
@@ -32996,7 +33024,7 @@
       "themes": [
         "Clothes & accessories"
       ],
-      "tip": "en coton = (made of) cotton",
+      "tip": "en coton = (made of) cotton.",
       "examples": [
         {
           "fr": "Mon tee-shirt est en coton.",
@@ -33116,7 +33144,7 @@
         "Nature & weather",
         "Transport"
       ],
-      "tip": "la pollution, pollué = polluted",
+      "tip": "la pollution, pollué = polluted.",
       "examples": [
         {
           "fr": "Comment se déplacer sans polluer ?",
@@ -33287,7 +33315,7 @@
       "themes": [
         "Common words"
       ],
-      "tip": "proposer à quelqu'un de + infinitive",
+      "tip": "proposer à quelqu'un de + infinitive.",
       "examples": [
         {
           "fr": "Je propose à un ami de venir avec moi.",
@@ -33312,7 +33340,7 @@
         "Home & housework",
         "Hobbies & free time"
       ],
-      "tip": "la décoration = decor",
+      "tip": "la décoration = decor.",
       "examples": [
         {
           "fr": "Vous allez décorer le salon pour la fête.",
@@ -33386,7 +33414,7 @@
         "Common words",
         "Town & places"
       ],
-      "tip": "entrer dans + place",
+      "tip": "entrer dans + place.",
       "examples": [
         {
           "fr": "Ils vont entrer dans la cathédrale.",
@@ -33412,7 +33440,7 @@
         "Common words",
         "Hobbies & free time"
       ],
-      "tip": "Like partir: je sors, nous sortons. sortir ≠ entrer",
+      "tip": "Like partir: je sors, nous sortons. sortir ≠ entrer.",
       "examples": [
         {
           "fr": "Le samedi soir, je sors avec mes amis.",
@@ -33590,7 +33618,7 @@
       "themes": [
         "Everyday objects"
       ],
-      "tip": "Plural: postaux. le code postal = postcode",
+      "tip": "Plural: postaux. le code postal = postcode.",
       "examples": [
         {
           "fr": "Elle envoie les invitations par courrier postal.",
@@ -33697,7 +33725,7 @@
         "Prepositions",
         "Time & dates"
       ],
-      "tip": "de… jusqu'à = from… to: de 9 h jusqu'à 18 h",
+      "tip": "de… jusqu'à = from… to: de 9 h jusqu'à 18 h.",
       "examples": [
         {
           "fr": "Pour aller de la gare jusqu'à chez moi, c'est très facile.",
@@ -33777,7 +33805,7 @@
         "Common words",
         "People & identity"
       ],
-      "tip": "Singular verb: tout le monde est là.",
+      "tip": "Singular verb: \"tout le monde est là\". \"Tous les gens\" = all the people (of a group).",
       "confusables": [
         "n-monde"
       ],
@@ -33811,7 +33839,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "cet before a vowel: cet après-midi, cet été",
+      "tip": "cet before a vowel: cet après-midi, cet été.",
       "examples": [
         {
           "fr": "On va faire les courses cet après-midi.",
@@ -33827,7 +33855,7 @@
       "themes": [
         "Time & dates"
       ],
-      "tip": "le week-end = at weekends (every weekend); ce week-end = this one",
+      "tip": "le week-end = at weekends (every weekend); ce week-end = this one.",
       "examples": [
         {
           "fr": "Vous allez à un festival de musique ce week-end.",
@@ -33873,7 +33901,7 @@
       "themes": [
         "Shopping"
       ],
-      "tip": "= économiser",
+      "tip": "= économiser.",
       "examples": [
         {
           "fr": "Avec le pass, on fait des économies.",
@@ -33910,6 +33938,9 @@
       "themes": [
         "Shopping",
         "Clothes & accessories"
+      ],
+      "acceptedSynonyms": [
+        "x-de-seconde-main"
       ],
       "tip": "Never changes: une voiture d'occasion, des livres d'occasion.",
       "examples": [
@@ -34003,6 +34034,1336 @@
         {
           "fr": "J'habite en Afrique.",
           "en": "I live in Africa."
+        }
+      ]
+    },
+    {
+      "id": "n-manteau",
+      "type": "noun",
+      "en": "coat",
+      "fr": "manteau",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "Plural: les manteaux.",
+      "examples": [
+        {
+          "fr": "Ce manteau est trop long.",
+          "en": "This coat is too long."
+        }
+      ]
+    },
+    {
+      "id": "n-debardeur",
+      "type": "noun",
+      "en": "vest top, tank top",
+      "fr": "débardeur",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "En été, je porte un débardeur.",
+          "en": "In summer I wear a vest top."
+        }
+      ]
+    },
+    {
+      "id": "n-trench",
+      "type": "noun",
+      "en": "trench coat",
+      "fr": "trench",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-impermeable",
+      "alt": [
+        "le trench-coat"
+      ],
+      "examples": [
+        {
+          "fr": "Il pleut, je mets mon trench.",
+          "en": "It's raining, I'm putting on my trench coat."
+        }
+      ]
+    },
+    {
+      "id": "n-doudoune",
+      "type": "noun",
+      "en": "puffer jacket, down coat",
+      "fr": "doudoune",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-manteau",
+      "examples": [
+        {
+          "fr": "En hiver, je porte une doudoune.",
+          "en": "In winter I wear a puffer jacket."
+        }
+      ]
+    },
+    {
+      "id": "n-escarpin",
+      "type": "noun",
+      "en": "court shoe, pump (high heel)",
+      "fr": "escarpin",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les escarpins"
+      ],
+      "examples": [
+        {
+          "fr": "Pour le mariage, elle porte des escarpins rouges.",
+          "en": "For the wedding she's wearing red court shoes."
+        }
+      ]
+    },
+    {
+      "id": "n-tong",
+      "type": "noun",
+      "en": "flip-flop",
+      "fr": "tong",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les tongs"
+      ],
+      "examples": [
+        {
+          "fr": "À la plage, je porte des tongs.",
+          "en": "At the beach I wear flip-flops."
+        }
+      ]
+    },
+    {
+      "id": "n-ballerine",
+      "type": "noun",
+      "en": "ballet flat (shoe)",
+      "fr": "ballerine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les ballerines"
+      ],
+      "tip": "Also a ballerina (the dancer).",
+      "examples": [
+        {
+          "fr": "Elle porte des ballerines noires.",
+          "en": "She's wearing black ballet flats."
+        }
+      ]
+    },
+    {
+      "id": "n-combinaison",
+      "type": "noun",
+      "en": "jumpsuit",
+      "fr": "combinaison",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "Also a ski suit: une combinaison de ski.",
+      "examples": [
+        {
+          "fr": "Je porte une jolie combinaison noire à fleurs.",
+          "en": "I'm wearing a pretty black flowery jumpsuit."
+        }
+      ]
+    },
+    {
+      "id": "n-manche",
+      "type": "noun",
+      "en": "sleeve",
+      "fr": "manche",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "sans manches = sleeveless. La Manche = the English Channel.",
+      "examples": [
+        {
+          "fr": "Je porte un tee-shirt à manches courtes.",
+          "en": "I'm wearing a short-sleeved T-shirt."
+        }
+      ]
+    },
+    {
+      "id": "n-sweat",
+      "type": "noun",
+      "en": "sweatshirt",
+      "fr": "sweat",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "alt": [
+        "le sweat-shirt"
+      ],
+      "tip": "Said like \"sweet\".",
+      "examples": [
+        {
+          "fr": "Mon sweat est violet.",
+          "en": "My sweatshirt is purple."
+        }
+      ]
+    },
+    {
+      "id": "n-sweat-a-capuche",
+      "type": "noun",
+      "en": "hoodie",
+      "fr": "sweat à capuche",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-sweat",
+      "examples": [
+        {
+          "fr": "Mon vêtement préféré est mon vieux sweat à capuche violet.",
+          "en": "My favourite item of clothing is my old purple hoodie."
+        }
+      ]
+    },
+    {
+      "id": "n-capuche",
+      "type": "noun",
+      "en": "hood",
+      "fr": "capuche",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Il pleut, je mets ma capuche.",
+          "en": "It's raining, I'm putting my hood up."
+        }
+      ]
+    },
+    {
+      "id": "n-legging",
+      "type": "noun",
+      "en": "leggings",
+      "fr": "legging",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories",
+        "Sports"
+      ],
+      "alt": [
+        "les leggings"
+      ],
+      "tip": "Singular in French, like un jean: un legging = a pair of leggings.",
+      "examples": [
+        {
+          "fr": "Pour faire du sport, je porte un legging.",
+          "en": "To do sport I wear leggings."
+        }
+      ]
+    },
+    {
+      "id": "n-mariniere",
+      "type": "noun",
+      "en": "Breton top (striped)",
+      "fr": "marinière",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "La marinière est un tee-shirt à rayures.",
+          "en": "A Breton top is a striped T-shirt."
+        }
+      ]
+    },
+    {
+      "id": "n-robe-de-chambre",
+      "type": "noun",
+      "en": "dressing gown, bathrobe",
+      "fr": "robe de chambre",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Home & housework"
+      ],
+      "tip": "Not a dress: la robe de chambre is what you wear over your pyjamas.",
+      "confusables": [
+        "n-robe"
+      ],
+      "examples": [
+        {
+          "fr": "Le matin, je bois mon café en robe de chambre.",
+          "en": "In the morning I drink my coffee in my dressing gown."
+        }
+      ]
+    },
+    {
+      "id": "n-chausson",
+      "type": "noun",
+      "en": "slipper",
+      "fr": "chausson",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories",
+        "Home & housework"
+      ],
+      "alt": [
+        "les chaussons"
+      ],
+      "tip": "le chausson aux pommes = an apple turnover.",
+      "confusables": [
+        "n-chausson-aux-pommes"
+      ],
+      "examples": [
+        {
+          "fr": "À la maison, je porte des chaussons.",
+          "en": "At home I wear slippers."
+        }
+      ]
+    },
+    {
+      "id": "n-laine",
+      "type": "noun",
+      "en": "wool",
+      "fr": "laine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "en laine = (made of) wool.",
+      "examples": [
+        {
+          "fr": "Mon pull est en laine.",
+          "en": "My jumper is wool."
+        }
+      ]
+    },
+    {
+      "id": "n-motif",
+      "type": "noun",
+      "en": "pattern (on fabric)",
+      "fr": "motif",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "à + motif: à rayures, à pois; en + matière: en coton, en laine.",
+      "examples": [
+        {
+          "fr": "Les rayures et les pois sont des motifs.",
+          "en": "Stripes and polka dots are patterns."
+        }
+      ]
+    },
+    {
+      "id": "n-taille",
+      "type": "noun",
+      "en": "size (clothes)",
+      "fr": "taille",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Shopping"
+      ],
+      "tip": "à ma taille = my size. Also height and waist.",
+      "confusables": [
+        "n-tailleur"
+      ],
+      "examples": [
+        {
+          "fr": "Vous voulez essayer la taille au-dessus ?",
+          "en": "Would you like to try the next size up?"
+        }
+      ]
+    },
+    {
+      "id": "n-cabine-d-essayage",
+      "type": "noun",
+      "en": "fitting room, changing room",
+      "fr": "cabine d'essayage",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Shopping"
+      ],
+      "alt": [
+        "les cabines d'essayage"
+      ],
+      "examples": [
+        {
+          "fr": "Les cabines d'essayage sont au fond, à droite.",
+          "en": "The fitting rooms are at the back, on the right."
+        }
+      ]
+    },
+    {
+      "id": "n-carte-de-fidelite",
+      "type": "noun",
+      "en": "loyalty card",
+      "fr": "carte de fidélité",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Shopping"
+      ],
+      "examples": [
+        {
+          "fr": "Vous avez la carte de fidélité du magasin ?",
+          "en": "Do you have the shop's loyalty card?"
+        }
+      ]
+    },
+    {
+      "id": "n-jouet",
+      "type": "noun",
+      "en": "toy",
+      "fr": "jouet",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Shopping",
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Nous achetons des jouets pour les enfants.",
+          "en": "We're buying toys for the children."
+        }
+      ]
+    },
+    {
+      "id": "n-portique",
+      "type": "noun",
+      "en": "security gate (scanner)",
+      "fr": "portique",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Transport",
+        "Travel & sightseeing"
+      ],
+      "alt": [
+        "le portique de sécurité"
+      ],
+      "examples": [
+        {
+          "fr": "Au portique de sécurité, enlevez votre manteau.",
+          "en": "At the security gate, take off your coat."
+        }
+      ]
+    },
+    {
+      "id": "n-equipe",
+      "type": "noun",
+      "en": "team",
+      "fr": "équipe",
+      "gender": "f",
+      "article": "l'",
+      "themes": [
+        "Jobs & work",
+        "Sports"
+      ],
+      "examples": [
+        {
+          "fr": "Au travail, je travaille en équipe.",
+          "en": "At work I work in a team."
+        }
+      ]
+    },
+    {
+      "id": "n-pause",
+      "type": "noun",
+      "en": "break (a rest)",
+      "fr": "pause",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Jobs & work"
+      ],
+      "tip": "faire une pause = to take a break.",
+      "examples": [
+        {
+          "fr": "Au travail, ne fais pas beaucoup de pauses !",
+          "en": "At work, don't take a lot of breaks!"
+        }
+      ]
+    },
+    {
+      "id": "n-essence",
+      "type": "noun",
+      "en": "petrol, gasoline",
+      "fr": "essence",
+      "gender": "f",
+      "article": "l'",
+      "themes": [
+        "Transport"
+      ],
+      "examples": [
+        {
+          "fr": "L'essence est chère.",
+          "en": "Petrol is expensive."
+        }
+      ]
+    },
+    {
+      "id": "n-frais",
+      "type": "noun",
+      "en": "costs, expenses",
+      "fr": "frais",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "Shopping",
+        "Transport"
+      ],
+      "tip": "les frais (costs) ≠ frais, fraîche (fresh)",
+      "confusables": [
+        "adj-frais"
+      ],
+      "examples": [
+        {
+          "fr": "Avec le covoiturage, on réduit les frais.",
+          "en": "With car sharing, you cut costs."
+        }
+      ]
+    },
+    {
+      "id": "n-minimum",
+      "type": "noun",
+      "en": "minimum",
+      "fr": "minimum",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Quantity & degree"
+      ],
+      "tip": "au minimum = at least.",
+      "examples": [
+        {
+          "fr": "Cinq euros, c'est le minimum.",
+          "en": "Five euros is the minimum."
+        }
+      ]
+    },
+    {
+      "id": "n-maximum",
+      "type": "noun",
+      "en": "maximum",
+      "fr": "maximum",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Quantity & degree"
+      ],
+      "tip": "au maximum = at most.",
+      "examples": [
+        {
+          "fr": "Dix kilomètres, c'est le maximum.",
+          "en": "Ten kilometres is the maximum."
+        }
+      ]
+    },
+    {
+      "id": "n-randonnee",
+      "type": "noun",
+      "en": "hike, hiking",
+      "fr": "randonnée",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Sports",
+        "Hobbies & free time"
+      ],
+      "acceptedSynonyms": [
+        "n-marche"
+      ],
+      "tip": "faire de la randonnée = to go hiking.",
+      "examples": [
+        {
+          "fr": "Pour faire de la randonnée, je prends mes chaussures de marche.",
+          "en": "To go hiking, I take my walking shoes."
+        }
+      ]
+    },
+    {
+      "id": "v-essayer",
+      "type": "verb",
+      "en": "to try on; to try",
+      "infinitive": "essayer",
+      "conj": [
+        "j'essaie",
+        "essaies",
+        "essaie",
+        "essayons",
+        "essayez",
+        "essaient"
+      ],
+      "conjAlt": [
+        "j'essaye",
+        "essayes",
+        "essaye",
+        "essayons",
+        "essayez",
+        "essayent"
+      ],
+      "rule": "-yer",
+      "themes": [
+        "Clothes & accessories",
+        "Shopping"
+      ],
+      "tip": "Like payer: j'essaie or j'essaye, both correct.",
+      "examples": [
+        {
+          "fr": "Où est-ce que je peux essayer ce pantalon ?",
+          "en": "Where can I try on these trousers?"
+        }
+      ]
+    },
+    {
+      "id": "v-s-habiller",
+      "type": "verb",
+      "en": "to get dressed, to dress",
+      "infinitive": "s'habiller",
+      "conj": [
+        "m'habille",
+        "t'habilles",
+        "s'habille",
+        "nous habillons",
+        "vous habillez",
+        "s'habillent"
+      ],
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Je m'habille à 7 heures.",
+          "en": "I get dressed at 7 o'clock."
+        }
+      ]
+    },
+    {
+      "id": "v-laisser",
+      "type": "verb",
+      "en": "to leave (something); to let",
+      "infinitive": "laisser",
+      "conj": [
+        "laisse",
+        "laisses",
+        "laisse",
+        "laissons",
+        "laissez",
+        "laissent"
+      ],
+      "themes": [
+        "Common words"
+      ],
+      "tip": "laisser = leave something somewhere; partir = leave, go away.",
+      "confusables": [
+        "v-partir"
+      ],
+      "examples": [
+        {
+          "fr": "Dans le bus, laisse ta place aux vieilles personnes.",
+          "en": "On the bus, give up your seat to old people."
+        }
+      ]
+    },
+    {
+      "id": "v-participer",
+      "type": "verb",
+      "en": "to take part (in)",
+      "infinitive": "participer",
+      "conj": [
+        "participe",
+        "participes",
+        "participe",
+        "participons",
+        "participez",
+        "participent"
+      ],
+      "themes": [
+        "Jobs & work"
+      ],
+      "tip": "participer à + noun.",
+      "examples": [
+        {
+          "fr": "Je participe aux réunions.",
+          "en": "I take part in the meetings."
+        }
+      ]
+    },
+    {
+      "id": "v-photographier",
+      "type": "verb",
+      "en": "to photograph, to take photos of",
+      "infinitive": "photographier",
+      "conj": [
+        "photographie",
+        "photographies",
+        "photographie",
+        "photographions",
+        "photographiez",
+        "photographient"
+      ],
+      "themes": [
+        "Hobbies & free time",
+        "Travel & sightseeing"
+      ],
+      "tip": "= faire des photos, prendre des photos.",
+      "examples": [
+        {
+          "fr": "Il photographie la tour Eiffel.",
+          "en": "He's photographing the Eiffel Tower."
+        }
+      ]
+    },
+    {
+      "id": "v-partager",
+      "type": "verb",
+      "en": "to share",
+      "infinitive": "partager",
+      "conj": [
+        "partage",
+        "partages",
+        "partage",
+        "partageons",
+        "partagez",
+        "partagent"
+      ],
+      "rule": "-ger",
+      "themes": [
+        "Common words",
+        "Transport"
+      ],
+      "examples": [
+        {
+          "fr": "Avec le covoiturage, on partage la voiture.",
+          "en": "With car sharing, you share the car."
+        }
+      ]
+    },
+    {
+      "id": "v-reduire",
+      "type": "verb",
+      "en": "to reduce, to cut",
+      "infinitive": "réduire",
+      "conj": [
+        "réduis",
+        "réduis",
+        "réduit",
+        "réduisons",
+        "réduisez",
+        "réduisent"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words",
+        "Shopping"
+      ],
+      "acceptedSynonyms": [
+        "v-diminuer"
+      ],
+      "tip": "Like conduire: je réduis, nous réduisons.",
+      "examples": [
+        {
+          "fr": "Le covoiturage réduit les frais.",
+          "en": "Car sharing cuts costs."
+        }
+      ]
+    },
+    {
+      "id": "v-diminuer",
+      "type": "verb",
+      "en": "to decrease, to go down",
+      "infinitive": "diminuer",
+      "conj": [
+        "diminue",
+        "diminues",
+        "diminue",
+        "diminuons",
+        "diminuez",
+        "diminuent"
+      ],
+      "themes": [
+        "Common words",
+        "Shopping"
+      ],
+      "examples": [
+        {
+          "fr": "Le prix de l'essence diminue.",
+          "en": "The price of petrol is going down."
+        }
+      ]
+    },
+    {
+      "id": "v-placer",
+      "type": "verb",
+      "en": "to place, to position",
+      "infinitive": "placer",
+      "conj": [
+        "place",
+        "places",
+        "place",
+        "plaçons",
+        "placez",
+        "placent"
+      ],
+      "rule": "-cer",
+      "themes": [
+        "Language & grammar"
+      ],
+      "tip": "se placer = to go, to be placed: Les adjectifs se placent après le nom.",
+      "examples": [
+        {
+          "fr": "Placez l'adjectif au bon endroit.",
+          "en": "Place the adjective in the right position."
+        }
+      ]
+    },
+    {
+      "id": "v-faciliter",
+      "type": "verb",
+      "en": "to make easier",
+      "infinitive": "faciliter",
+      "conj": [
+        "facilite",
+        "facilites",
+        "facilite",
+        "facilitons",
+        "facilitez",
+        "facilitent"
+      ],
+      "themes": [
+        "Common words"
+      ],
+      "tip": "facile = easy.",
+      "examples": [
+        {
+          "fr": "On fait la liaison pour faciliter la prononciation.",
+          "en": "We make the liaison to make pronunciation easier."
+        }
+      ]
+    },
+    {
+      "id": "adj-uni",
+      "type": "adjective",
+      "en": "plain (one colour)",
+      "masc": "uni",
+      "fem": "unie",
+      "themes": [
+        "Colours",
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Je préfère les vêtements unis.",
+          "en": "I prefer plain clothes."
+        }
+      ]
+    },
+    {
+      "id": "adj-beige",
+      "type": "adjective",
+      "en": "beige",
+      "masc": "beige",
+      "fem": "beige",
+      "themes": [
+        "Colours"
+      ],
+      "examples": [
+        {
+          "fr": "J'ai un grand manteau beige en laine.",
+          "en": "I have a big beige wool coat."
+        }
+      ]
+    },
+    {
+      "id": "adj-large",
+      "type": "adjective",
+      "en": "wide; loose (clothes)",
+      "masc": "large",
+      "fem": "large",
+      "themes": [
+        "Describing",
+        "Clothes & accessories"
+      ],
+      "tip": "Not \"large\": big is grand.",
+      "examples": [
+        {
+          "fr": "Ce pantalon est trop large.",
+          "en": "These trousers are too loose."
+        }
+      ]
+    },
+    {
+      "id": "adj-etroit",
+      "type": "adjective",
+      "en": "narrow; tight (clothes)",
+      "masc": "étroit",
+      "fem": "étroite",
+      "themes": [
+        "Describing",
+        "Clothes & accessories"
+      ],
+      "acceptedSynonyms": [
+        "adj-serre"
+      ],
+      "examples": [
+        {
+          "fr": "La chemise est trop étroite.",
+          "en": "The shirt is too tight."
+        }
+      ]
+    },
+    {
+      "id": "adj-serre",
+      "type": "adjective",
+      "en": "tight",
+      "masc": "serré",
+      "fem": "serrée",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "acceptedSynonyms": [
+        "adj-etroit"
+      ],
+      "examples": [
+        {
+          "fr": "Il est un peu trop serré.",
+          "en": "It's a bit too tight."
+        }
+      ]
+    },
+    {
+      "id": "adj-joli",
+      "type": "adjective",
+      "en": "pretty, nice",
+      "masc": "joli",
+      "fem": "jolie",
+      "themes": [
+        "Describing",
+        "Likes & opinions"
+      ],
+      "tip": "Goes before the noun: une jolie robe.",
+      "examples": [
+        {
+          "fr": "Je porte une jolie robe.",
+          "en": "I'm wearing a pretty dress."
+        }
+      ]
+    },
+    {
+      "id": "adj-mauvais",
+      "type": "adjective",
+      "en": "bad",
+      "masc": "mauvais",
+      "fem": "mauvaise",
+      "themes": [
+        "Describing",
+        "Likes & opinions"
+      ],
+      "tip": "Goes before the noun. mauvais ≠ bon.",
+      "examples": [
+        {
+          "fr": "C'est une mauvaise idée.",
+          "en": "It's a bad idea."
+        }
+      ]
+    },
+    {
+      "id": "adj-gros",
+      "type": "adjective",
+      "en": "fat; big (bulky)",
+      "masc": "gros",
+      "fem": "grosse",
+      "themes": [
+        "Describing"
+      ],
+      "tip": "Goes before the noun: un gros chien.",
+      "examples": [
+        {
+          "fr": "Mon chat est gros.",
+          "en": "My cat is fat."
+        }
+      ]
+    },
+    {
+      "id": "adj-hybride",
+      "type": "adjective",
+      "en": "hybrid",
+      "masc": "hybride",
+      "fem": "hybride",
+      "themes": [
+        "Transport",
+        "Describing"
+      ],
+      "examples": [
+        {
+          "fr": "J'ai une voiture hybride.",
+          "en": "I have a hybrid car."
+        }
+      ]
+    },
+    {
+      "id": "adj-certain",
+      "type": "adjective",
+      "en": "some, certain (before a plural noun)",
+      "masc": "certain",
+      "fem": "certaine",
+      "themes": [
+        "Common words",
+        "Quantity & degree"
+      ],
+      "examples": [
+        {
+          "fr": "Certains adjectifs se placent avant le nom."
+        }
+      ]
+    },
+    {
+      "id": "x-a-rayures",
+      "type": "expression",
+      "en": "striped",
+      "fr": "à rayures",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "la rayure = stripe.",
+      "examples": [
+        {
+          "fr": "Elle porte un pantalon à rayures.",
+          "en": "She's wearing striped trousers."
+        }
+      ]
+    },
+    {
+      "id": "x-a-pois",
+      "type": "expression",
+      "en": "polka-dot, spotted",
+      "fr": "à pois",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "le pois = dot; les petits pois = peas.",
+      "examples": [
+        {
+          "fr": "Elle porte une robe rouge à pois blancs.",
+          "en": "She's wearing a red dress with white polka dots."
+        }
+      ]
+    },
+    {
+      "id": "x-a-carreaux",
+      "type": "expression",
+      "en": "checked, plaid",
+      "fr": "à carreaux",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "le carreau = check; also a (floor or wall) tile.",
+      "examples": [
+        {
+          "fr": "Il porte une chemise à carreaux.",
+          "en": "He's wearing a checked shirt."
+        }
+      ]
+    },
+    {
+      "id": "x-a-fleurs",
+      "type": "expression",
+      "en": "flowery, floral",
+      "fr": "à fleurs",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Je porte un tee-shirt à fleurs.",
+          "en": "I'm wearing a flowery T-shirt."
+        }
+      ]
+    },
+    {
+      "id": "x-a-coeurs",
+      "type": "expression",
+      "en": "with a heart pattern",
+      "fr": "à cœurs",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Elle porte un pyjama à cœurs.",
+          "en": "She's wearing heart-print pyjamas."
+        }
+      ]
+    },
+    {
+      "id": "x-comment-tu-t-habilles",
+      "type": "expression",
+      "en": "How do you dress?",
+      "fr": "Comment tu t'habilles ?",
+      "themes": [
+        "Questions",
+        "Clothes & accessories"
+      ],
+      "alt": [
+        "Comment vous vous habillez ?",
+        "Comment t'habilles-tu ?"
+      ],
+      "examples": [
+        {
+          "fr": "En général, comment tu t'habilles ?",
+          "en": "Generally, how do you dress?",
+          "anyWording": true
+        }
+      ]
+    },
+    {
+      "id": "x-comment-elle-vous-va",
+      "type": "expression",
+      "en": "How does it fit you? (seller)",
+      "fr": "Comment elle vous va ?",
+      "themes": [
+        "Questions",
+        "Shopping",
+        "Clothes & accessories"
+      ],
+      "alt": [
+        "Comment il vous va ?"
+      ],
+      "tip": "il / elle = the piece of clothing: le pantalon → il, la jupe → elle.",
+      "examples": [
+        {
+          "fr": "Et la jupe, comment elle vous va ?",
+          "en": "And the skirt, how does it fit you?"
+        }
+      ]
+    },
+    {
+      "id": "x-je-veux-bien",
+      "type": "expression",
+      "en": "Yes, please. / I'd like that.",
+      "fr": "Je veux bien.",
+      "themes": [
+        "Greetings & phrases"
+      ],
+      "tip": "A polite yes to an offer.",
+      "examples": [
+        {
+          "fr": "– Vous voulez essayer la taille au-dessus ? – Oui, je veux bien, merci."
+        }
+      ]
+    },
+    {
+      "id": "x-ca-fait",
+      "type": "expression",
+      "en": "that comes to (a price)",
+      "fr": "ça fait",
+      "themes": [
+        "Shopping"
+      ],
+      "tip": "Sellers often say ça vous fait: Ça vous fait 95 euros.",
+      "examples": [
+        {
+          "fr": "Ça fait 95 euros, s'il vous plaît.",
+          "en": "That's 95 euros, please."
+        }
+      ]
+    },
+    {
+      "id": "x-au-contraire",
+      "type": "expression",
+      "en": "on the contrary",
+      "fr": "au contraire",
+      "themes": [
+        "Linking words"
+      ],
+      "examples": [
+        {
+          "fr": "Il n'est pas trop petit, au contraire, il est trop grand.",
+          "en": "It isn't too small; on the contrary, it's too big."
+        }
+      ]
+    },
+    {
+      "id": "x-au-fond",
+      "type": "expression",
+      "en": "at the back, at the end",
+      "fr": "au fond",
+      "themes": [
+        "Position words"
+      ],
+      "examples": [
+        {
+          "fr": "Les toilettes sont au fond, à gauche.",
+          "en": "The toilets are at the back, on the left."
+        }
+      ]
+    },
+    {
+      "id": "x-au-dessus",
+      "type": "expression",
+      "en": "above",
+      "fr": "au-dessus",
+      "themes": [
+        "Position words"
+      ],
+      "tip": "la taille au-dessus = the next size up.",
+      "examples": [
+        {
+          "fr": "Le café est au-dessus de la boulangerie.",
+          "en": "The café is above the bakery."
+        }
+      ]
+    },
+    {
+      "id": "x-mieux",
+      "type": "expression",
+      "en": "better (adverb)",
+      "fr": "mieux",
+      "themes": [
+        "Quantity & degree",
+        "Describing"
+      ],
+      "tip": "bien → mieux (better)",
+      "examples": [
+        {
+          "fr": "C'est beaucoup mieux !",
+          "en": "That's much better!"
+        }
+      ]
+    },
+    {
+      "id": "x-ni-ni",
+      "type": "expression",
+      "en": "neither… nor",
+      "fr": "ni… ni",
+      "themes": [
+        "Linking words"
+      ],
+      "tip": "With a verb, add ne: Je ne bois ni thé ni café.",
+      "examples": [
+        {
+          "fr": "Elle est parfaite ! Ni trop longue, ni trop courte."
+        }
+      ]
+    },
+    {
+      "id": "x-de-seconde-main",
+      "type": "expression",
+      "en": "second-hand",
+      "fr": "de seconde main",
+      "themes": [
+        "Shopping",
+        "Clothes & accessories"
+      ],
+      "acceptedSynonyms": [
+        "x-d-occasion"
+      ],
+      "examples": [
+        {
+          "fr": "Vous achetez dans des magasins de seconde main ?",
+          "en": "Do you buy in second-hand shops?"
+        }
+      ]
+    },
+    {
+      "id": "x-en-avance",
+      "type": "expression",
+      "en": "early (ahead of time)",
+      "fr": "en avance",
+      "themes": [
+        "Time & dates"
+      ],
+      "tip": "en avance = before the agreed time; tôt = early in the day. en avance ≠ en retard.",
+      "confusables": [
+        "x-tot"
+      ],
+      "examples": [
+        {
+          "fr": "J'arrive à 8 h 55 : je suis en avance.",
+          "en": "I arrive at 8:55: I'm early."
+        }
+      ]
+    },
+    {
+      "id": "x-dans-ce-cas",
+      "type": "expression",
+      "en": "in that case",
+      "fr": "dans ce cas",
+      "themes": [
+        "Linking words"
+      ],
+      "examples": [
+        {
+          "fr": "Dans ce cas, on fait la liaison.",
+          "en": "In that case, you make the liaison."
+        }
+      ]
+    },
+    {
+      "id": "v-apporter",
+      "type": "verb",
+      "en": "to bring (a thing)",
+      "infinitive": "apporter",
+      "conj": [
+        "j'apporte",
+        "apportes",
+        "apporte",
+        "apportons",
+        "apportez",
+        "apportent"
+      ],
+      "themes": [
+        "Common words"
+      ],
+      "tip": "apporter + a thing; amener + a person or an animal: j'apporte un gâteau, j'amène un ami.",
+      "confusables": [
+        "v-amener"
+      ],
+      "examples": [
+        {
+          "fr": "J'apporte un gâteau à la fête.",
+          "en": "I'm bringing a cake to the party."
         }
       ]
     }

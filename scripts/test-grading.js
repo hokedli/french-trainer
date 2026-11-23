@@ -98,6 +98,17 @@ check('n-lunettes', 'la lunette', 'partial', 'always plural');
 check('n-escargot', 'les escargots', 'partial', "Give the singular: **l'escargot (m)**.");
 expectNoNoteContaining('n-escargot', 'les escargots', 'snails (food)');
 check('n-escargots', "l'escargot (m)", 'partial', 'always plural');
+// The plural is the real one (frenchPlural or a "les …" alt); the word + s / x that isn't is a misspelt plural
+check('n-cheval', 'les chevaux', 'partial', 'Give the singular: **le cheval**.');
+expectNoNoteContaining('n-cheval', 'les chevaux', 'Almost');
+check('n-gateau', 'les gâteaus', 'partial', 'The plural is **gâteaux**, not gâteaus.');
+check('n-maison', 'les maisonx', 'partial', 'The plural is **maisons**, not maisonx.');
+// A "les …" alt is the plural, not an accepted answer on the singular card; countries keep theirs
+check('n-cadeau', 'les cadeaux', 'partial', 'Give the singular: **le cadeau**.');
+check('c-hollande', 'les Pays-Bas', 'correct');
+check('n-voisin', 'les voisines', 'partial', 'Give the singular: **la voisine**.');
+// The plural is also a confusable entry: its meaning is added
+check('n-travail', 'les travaux', 'partial', '**les travaux (m)** = roadworks');
 check('n-chat', 'les chats', 'partial', 'Give the singular: **le chat**.');
 expectNoNoteContaining('n-chat', 'les chats', 'Almost');
 check('n-soeur', 'la soeur', 'correct', 'œ');
@@ -146,6 +157,11 @@ check('x-bonjour', 'bonjour', 'correct');
 check('x-ca-va', 'ca va?', 'partial', 'Accent');
 check('x-ne-jamais', 'ne ... jamais', 'correct');
 check('num-21', 'vingt-et-un', 'correct');
+// 1990 spelling in vocab.json; the older spelling without hyphens stays correct
+check('num-21', 'vingt et un', 'correct', 'Fine!');
+check('num-361', 'trois cent soixante et un', 'correct', 'Fine!');
+// A noun typed with its article on another entry's card still gets the meaning of the word typed
+check('adj-frais', 'les frais', 'wrong', '**les frais (m)** = costs');
 check('num-80', 'quatre-vingt', 'partial', 'Almost');
 // a/à, ou/où, la/là: the accent makes it another word, not a spelling slip
 check('x-ou', 'où', 'wrong', '**où** = where.');
@@ -196,6 +212,16 @@ checkFillIn('adj-decede', 'paternels', 'morts', 'correct', 'Also right: **mort**
 checkFillIn('adj-decede', 'paternels', 'mort', 'partial', 'the sentence needs the plural');
 checkFillIn('adj-super', 'Saint-Laurent', 'géniale', 'partial', 'the same in both genders');
 checkFillIn('x-alors', 'fraises', 'donc', 'correct', 'Also right: **donc**');
+// One-way synonyms: réduire needs an object, so it is not accepted for diminuer (and vice versa is fine)
+checkFillIn('v-diminuer', 'essence', 'réduit', 'wrong');
+checkFillIn('v-reduire', 'covoiturage', 'diminue', 'correct', 'Also right: **diminuer**');
+// A near spelling that is another word, spelt exactly, is that word; a misspelling stays a misspelling (mèr)
+checkFillIn('x-devant', 'arrêt de bus', 'avant', 'wrong', '**avant** = before.');
+checkFillIn('n-point', 'Gmail', 'pont', 'wrong', '**le pont** = bridge.');
+checkFillIn('n-mere', 'Claire', 'mèr', 'partial', 'Almost');
+// Other words are recognised in their sentence forms: a conjugated verb, a plural noun
+checkFillIn('v-preparer', 'dîner', 'étudie', 'wrong', '**étudier** = to study.');
+checkFillIn('n-chiffre', 'deux', 'nombres', 'wrong', '**le nombre** = number');
 // The sentence decides the gender even when the article doesn't (l'assistant / l'assistante); eitherGender opens it up
 {
   const assistant = {

@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import { SEED } from '../js/seed-progress.js';
 import { buildFillIn } from '../js/selection.js';
-import { lookupKey, ownForms, altForms, synonymLinkProblem, fillInForms, wordBeforeBlank, BLANK } from '../js/grading.js';
+import { lookupKey, ownForms, altForms, synonymLinkProblem, fillInForms, wordBeforeBlank, BLANK, buildLookup, gradeItem, frenchPlural } from '../js/grading.js';
 
 const vocabPath = new URL('../vocab.json', import.meta.url);
 const errors = [];
@@ -206,6 +206,30 @@ for (const w of vocab.words) {
     const textBefore = fillIn.sentence.slice(0, fillIn.sentence.indexOf(BLANK));
     if (GENDERED_WORDS_BEFORE_BLANK.has(wordBeforeBlank(fillIn.sentence)) || GENDERED_SUBJECT_BEFORE_BLANK.test(textBefore)) {
       warnings.push(`${where}: "${fillIn.sentence}" already shows the gender before the blank — remove the flag`);
+    }
+  }
+}
+
+// Fill-ins accept both +x and +s as the plural of an -au / -eu / -ou word (pluralForms in grading.js), so a plural
+// blank grades the wrong one as correct (gâteaus, bijous). Such an example should have no "en".
+// The spellings among +x / +s that aren't the real plural (frenchPlural). Several words: no real plural is known, and
+// neither spelling ends up in a sentence (verres à eau), so there is nothing to check.
+function wrongPluralsOf(form) {
+  if (!/(au|eu|ou)$/i.test(form)) return [];
+  const realPlural = frenchPlural(form);
+  return realPlural ? [`${form}x`, `${form}s`].filter((plural) => plural.toLowerCase() !== realPlural) : [];
+}
+const lookup = buildLookup(vocab.words);
+for (const w of vocab.words) {
+  for (const [i, example] of (w.examples || []).entries()) {
+    const fillIn = buildFillIn({ ...w, examples: [example] });
+    if (!fillIn) continue;
+    // The entry's own singular forms, its alts and its acceptedSynonyms (and the other gender, for adjectives)
+    const singularForms = [w, ...lookup.synonymsOf(w)].flatMap(fillInForms).filter((f) => f.slot.plural === false).map((f) => f.form);
+    const wrongPlurals = [...new Set(singularForms.flatMap(wrongPluralsOf))];
+    const acceptedWrongPlurals = wrongPlurals.filter((answer) => gradeItem({ entry: w, fillIn, example }, answer, { lookup }).result === 'correct');
+    if (acceptedWrongPlurals.length) {
+      warnings.push(`${w.id} examples[${i}]: the fill-in "${fillIn.sentence}" accepts the wrong plural ${acceptedWrongPlurals.join(', ')} — remove "en" from this example`);
     }
   }
 }

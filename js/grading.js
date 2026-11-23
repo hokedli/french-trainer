@@ -161,6 +161,34 @@ export function altForms(entry) {
 
 const formsForLookup = (entry) => [...ownForms(entry), ...altForms(entry)];
 
+// Its forms in a sentence: the conjugated forms of a verb, the real plurals of a noun or adjective. Only fill-ins look
+// these up, to tell that "étudie" or "nombres" is another word; cards find verbs by their infinitive.
+function sentenceFormsForLookup(entry) {
+  const forms = formsForLookup(entry);
+  switch (entry.type) {
+    case 'verb':
+      return [...entry.conj, ...(entry.conjAlt || [])].flatMap((form) => [form, form.replace(/^j'/, '')]);
+    case 'noun':
+    case 'adjective':
+      return [...forms, ...forms.map(frenchPlural)];
+    default:
+      return forms;
+  }
+}
+
+function indexByForm(words, formsOf) {
+  const byForm = new Map();
+  for (const entry of words) {
+    for (const form of formsOf(entry)) {
+      if (!form) continue;
+      const key = lookupKey(form);
+      if (!byForm.has(key)) byForm.set(key, []);
+      if (!byForm.get(key).includes(entry)) byForm.get(key).push(entry);
+    }
+  }
+  return byForm;
+}
+
 // kindOf links: entry → its more general "base word". Invalid links are logged and ignored.
 function buildKindOfLinks(words) {
   const byId = new Map(words.map((w) => [w.id, w]));
@@ -215,21 +243,16 @@ function buildSynonymLinks(words, byId) {
 
 // Reverse index from every accepted answer to the entries it belongs to, plus the kindOf and acceptedSynonyms links.
 export function buildLookup(words) {
-  const byForm = new Map();
-  for (const entry of words) {
-    for (const form of formsForLookup(entry)) {
-      if (!form) continue;
-      const key = lookupKey(form);
-      if (!byForm.has(key)) byForm.set(key, []);
-      if (!byForm.get(key).includes(entry)) byForm.get(key).push(entry);
-    }
-  }
+  const byForm = indexByForm(words, formsForLookup);
+  const bySentenceForm = indexByForm(words, sentenceFormsForLookup);
   const { byId, baseIdByKindId, kindsByBaseId } = buildKindOfLinks(words);
   const synonymIdsById = buildSynonymLinks(words, byId);
-  const findAll = (form, excludeId, type) => (byForm.get(lookupKey(form)) || [])
+  const findIn = (index) => (form, excludeId, type) => (index.get(lookupKey(form)) || [])
     .filter((e) => e.id !== excludeId && (!type || e.type === type));
+  const findAll = findIn(byForm);
   return {
     findAll,
+    findAllInSentenceForms: findIn(bySentenceForm),
     find: (form, excludeId, type) => findAll(form, excludeId, type)[0],
     baseOf: (entry) => byId.get(baseIdByKindId.get(entry.id)) || null,
     kindsOf: (entry) => kindsByBaseId.get(entry.id) || [],
@@ -265,9 +288,38 @@ const synonymNote = (entry, other) => `Also right: **${shortName(other)}** = ${o
 // The answer is another entry. If this entry's acceptedSynonyms links to it, it is graded with that entry's own rules
 // (a full answer counts as correct, with "Also right: …"); otherwise it is wrong and the note says what it means.
 // Fill-ins grade synonyms themselves (they must fit the sentence), so they pass acceptSynonyms = false.
-function gradeAsOtherWord(entry, raw, form, ctx, type, acceptSynonyms = true) {
+// Accents kept: "mèr" is a misspelling of mère, not the word mer
+const sameAccentsKey = (s) => expandLigatures(withoutPunctuation(normalizeText(s)));
+
+// The other entries a typed answer is. A noun typed with its article ("les frais" on the frais (fresh) card) is looked up
+// without it. In a fill-in (inSentence), other words also count in their sentence forms: étudie, nombres.
+// sameAccents: only entries the answer spells exactly, accents included (the lookup itself ignores accents).
+function findOtherEntries(entry, form, ctx, { type, inSentence, sameAccents }) {
+  const { lookup } = ctx;
+  const nounWithoutArticle = type ? null : parseNounAnswer(normalizeText(form)).word;
+  const hasArticle = Boolean(nounWithoutArticle) && nounWithoutArticle !== normalizeText(form);
+  const nounsOnly = (others) => others.filter((o) => o.type === 'noun' || o.type === 'country');
+  const searches = [
+    () => lookup.findAll(form, entry.id, type),
+    () => (hasArticle ? nounsOnly(lookup.findAll(nounWithoutArticle, entry.id)) : []),
+    () => (inSentence ? lookup.findAllInSentenceForms(form, entry.id, type) : []),
+    () => (inSentence && hasArticle ? nounsOnly(lookup.findAllInSentenceForms(nounWithoutArticle, entry.id)) : []),
+  ];
+  const typedKeys = [form, hasArticle && nounWithoutArticle].filter(Boolean).map(sameAccentsKey);
+  const spelledExactly = (other) => [...formsForLookup(other), ...(inSentence ? sentenceFormsForLookup(other) : [])]
+    .some((f) => f && typedKeys.includes(sameAccentsKey(f)));
+  for (const search of searches) {
+    const others = sameAccents ? search().filter(spelledExactly) : search();
+    if (others.length) return others;
+  }
+  return [];
+}
+
+// options: type (only entries of this type), acceptSynonyms (an acceptedSynonyms entry is graded as right),
+// inSentence and sameAccents (see findOtherEntries)
+function gradeAsOtherWord(entry, raw, form, ctx, { type, acceptSynonyms = true, inSentence = false, sameAccents = false } = {}) {
   if (!ctx.lookup || ctx.isNestedLookup) return null;
-  const others = ctx.lookup.findAll(form, entry.id, type);
+  const others = findOtherEntries(entry, form, ctx, { type, inSentence, sameAccents });
   if (!others.length) return null;
   const synonymIds = acceptSynonyms ? ctx.lookup.synonymIdsOf(entry) : new Set();
   for (const other of others.filter((o) => synonymIds.has(o.id))) {
@@ -313,14 +365,35 @@ function parseNounAnswer(text) {
   return { article, word: rest.trim(), gender };
 }
 
+// The plural French uses for one word (noun or adjective). Several words or a hyphen: null, the rule doesn't know
+// which word takes the plural (pommes de terre, grands-pères), so only a "les …" alt tells.
+const PLURAL_S_AFTER_AU_EU = new Set(['landau', 'sarrau', 'bleu', 'pneu', 'émeu']);
+const PLURAL_X_AFTER_OU = new Set(['bijou', 'caillou', 'chou', 'genou', 'hibou', 'joujou', 'pou']);
+const PLURAL_S_AFTER_AL = new Set(['bal', 'carnaval', 'chacal', 'festival', 'récital', 'régal', 'banal', 'fatal', 'final', 'natal', 'naval']);
+const PLURAL_AUX_AFTER_AIL = new Set(['travail', 'corail', 'émail', 'vitrail', 'bail', 'soupirail', 'vantail']);
+export function frenchPlural(word) {
+  const w = normalizeText(word);
+  if (!/^\p{L}+$/u.test(w)) return null;
+  if (/[sxz]$/.test(w)) return w;
+  if (/(au|eu)$/.test(w)) return w + (PLURAL_S_AFTER_AU_EU.has(w) ? 's' : 'x');
+  if (/ou$/.test(w)) return w + (PLURAL_X_AFTER_OU.has(w) ? 'x' : 's');
+  if (/al$/.test(w) && !PLURAL_S_AFTER_AL.has(w)) return `${w.slice(0, -2)}aux`;
+  if (PLURAL_AUX_AFTER_AIL.has(w)) return `${w.slice(0, -3)}aux`;
+  return `${w}s`;
+}
+
 function nounCandidates(entry) {
   const main = {
     article: entry.article, word: normalizeText(entry.fr), wordDisplay: entry.fr, gender: entry.gender,
     requireGender: entry.article === "l'" || (entry.article === 'les' && Boolean(entry.pluralOnly)),
     display: nounDisplay(entry.article, entry.fr, entry.gender),
   };
-  const alternatives = (entry.alt || []).map((altText) => {
-    const parsed = parseNounAnswer(normalizeText(altText));
+  const parsedAlts = (entry.alt || []).map((altText) => ({ altText, parsed: parseNounAnswer(normalizeText(altText)) }));
+  // On a singular noun card, a "les …" alt is the plural: it tells the card what the plural is ("Give the singular"),
+  // but isn't an accepted answer there. Fill-ins still use it (nounFillInForms). Countries keep theirs (les Pays-Bas).
+  const isPluralAlt = ({ parsed }) => entry.type === 'noun' && entry.article !== 'les' && parsed.article === 'les';
+  const pluralAltWords = parsedAlts.filter(isPluralAlt).map(({ parsed }) => parsed.word);
+  const alternatives = parsedAlts.filter((a) => !isPluralAlt(a)).map(({ altText, parsed }) => {
     const article = parsed.article === 'le/la' ? 'le' : parsed.article ?? '';
     return {
       article, word: parsed.word, wordDisplay: parsed.word,
@@ -329,6 +402,9 @@ function nounCandidates(entry) {
     };
   });
   const candidates = [main, ...alternatives];
+  for (const candidate of candidates) {
+    candidate.plurals = unique([frenchPlural(candidate.word), ...(candidate === main ? pluralAltWords : [])].filter(Boolean));
+  }
   // Every form with this word, e.g. "le dentiste / la dentiste" for an mf noun with its feminine in alt
   for (const candidate of candidates) {
     candidate.sameWordDisplay = unique(candidates.filter((other) => other.word === candidate.word).map((other) => other.display)).join(' / ');
@@ -352,8 +428,12 @@ function gradeNounAgainst(answer, candidate) {
   const notes = [];
   const cmp = compareText(answer.word, candidate.word, candidate.wordDisplay);
   let pluralIssue = false;
-  // "les escargots" on the l'escargot card is the plural of this word, even when the plural is also its own entry
-  const answerIsPluralOfWord = candidate.article !== 'les' && [candidate.word + 's', candidate.word + 'x'].includes(answer.word);
+  // "les escargots" on the l'escargot card is the plural of this word, even when the plural is also its own entry.
+  // The plural is the real one (frenchPlural, or a "les …" alt): chevaux, gâteaux.
+  const answerIsPluralOfWord = candidate.article !== 'les' && cmp.kind !== 'exact' && candidate.plurals.includes(answer.word);
+  // "gâteaus", "chevals": the word + s / x, but not its plural
+  const answerIsMisspeltPlural = candidate.article !== 'les' && !answerIsPluralOfWord && candidate.plurals.length > 0
+    && [candidate.word + 's', candidate.word + 'x'].includes(answer.word);
   let wordResult;
   if (cmp.kind === 'exact') wordResult = 'correct';
   else if (candidate.article === 'les' && [answer.word + 's', answer.word + 'x'].includes(candidate.word)) {
@@ -362,9 +442,12 @@ function gradeNounAgainst(answer, candidate) {
   } else if (answerIsPluralOfWord) {
     wordResult = 'partial';
     notes.push(`Give the singular: **${candidate.display}**.`);
+  } else if (answerIsMisspeltPlural) {
+    wordResult = 'partial';
+    notes.push(`Give the singular: **${candidate.display}**.`, `The plural is **${candidate.plurals[0]}**, not ${answer.word}.`);
   } else if (cmp.kind === 'different') return { result: 'wrong', notes, different: true };
   else wordResult = 'partial';
-  if (!pluralIssue && !answerIsPluralOfWord) notes.push(...comparisonNotes(cmp));
+  if (!pluralIssue && !answerIsPluralOfWord && !answerIsMisspeltPlural) notes.push(...comparisonNotes(cmp));
   const wordExact = cmp.kind === 'exact';
 
   // "le conductrice (f)": the article and the gender marker contradict each other
@@ -423,7 +506,7 @@ function gradeNounAgainst(answer, candidate) {
 
   if (pluralIssue) notes.unshift(`**${candidate.display}** is always plural in French.`);
   if (wordResult !== 'correct' && genderRight && expected) notes.push('Gender right ✓');
-  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue && !answerIsPluralOfWord, wordExact };
+  return { result: worstResult(wordResult, articleResult), notes, close: cmp.kind === 'close' && !pluralIssue && !answerIsPluralOfWord && !answerIsMisspeltPlural, wordExact, pluralOfWord: answerIsPluralOfWord };
 }
 
 function bestGrade(grades) {
@@ -431,9 +514,9 @@ function bestGrade(grades) {
 }
 
 // Grade against the form the learner actually wrote: for ami / amie, "l'amie (m)" is a gender
-// mistake on amie, not a misspelling of ami.
+// mistake on amie, not a misspelling of ami; "les voisines" is the plural of voisine, not a misspelling of voisin.
 function bestNounGrade(grades) {
-  const exactWordGrades = grades.filter((g) => g.wordExact);
+  const exactWordGrades = grades.filter((g) => g.wordExact || g.pluralOfWord);
   return bestGrade(exactWordGrades.length ? exactWordGrades : grades);
 }
 
@@ -447,7 +530,13 @@ function gradeNoun(entry, raw, ctx) {
     const asOtherWord = gradeAsOtherWord(entry, raw, parseNounAnswer(parts[0]).word, ctx);
     if (asOtherWord || grades[0].different) return asOtherWord || { result: 'wrong', notes: [] };
   }
-  return { result: worstResult(...grades.map((g) => g.result)), notes: unique(grades.flatMap((g) => g.notes)) };
+  // The plural is also a confusable entry (les travaux on the travail card): say what that one means. Not for a plural
+  // entry that is the same thing (les escargots, the food, on the escargot card)
+  const isConfusable = (other) => (entry.confusables || []).includes(other.id) || (other.confusables || []).includes(entry.id);
+  const pluralEntryNotes = grades.length === 1 && grades[0].pluralOfWord && ctx.lookup
+    ? ctx.lookup.findAll(parseNounAnswer(parts[0]).word, entry.id, 'noun').filter(isConfusable).map((other) => otherWordNote(entry, other, ctx.lookup))
+    : [];
+  return { result: worstResult(...grades.map((g) => g.result)), notes: unique([...grades.flatMap((g) => g.notes), ...pluralEntryNotes]) };
 }
 
 // ---------- adjectives ----------
@@ -609,7 +698,7 @@ function gradeVerb(entry, raw, ctx) {
   if (infinitive !== null) {
     const cmp = compareText(infinitive, expectedInfinitive, entry.infinitive);
     const otherVerb = cmp.kind !== 'exact' && ctx.lookup?.find(infinitive, entry.id, 'verb');
-    if (otherVerb && cmp.kind !== 'accent') return gradeAsOtherWord(entry, raw, infinitive, ctx, 'verb');
+    if (otherVerb && cmp.kind !== 'accent') return gradeAsOtherWord(entry, raw, infinitive, ctx, { type: 'verb' });
     if (cmp.kind !== 'exact' && infinitive.endsWith('er') && !expectedInfinitive.endsWith('er')) {
       madeUpVerb = true;
       infinitiveResult = 'wrong';
@@ -891,10 +980,14 @@ function gradeFillIn(entry, fillIn, raw, ctx) {
   if (unfitting) {
     return { result: 'partial', notes: [fillInMismatchNote(entry, fillIn, unfitting, before), unfitting.isSynonym ? null : rule].filter(Boolean) };
   }
+  const otherWordOptions = { type: entry.type === 'verb' ? 'verb' : undefined, acceptSynonyms: false, inSentence: true };
+  // A near spelling that is really another vocab word, spelt exactly (avant for devant), counts as that word, as on the cards
+  const asOtherWord = match?.cmp.kind === 'close' ? gradeAsOtherWord(entry, raw, typed, ctx, { ...otherWordOptions, sameAccents: true }) : null;
+  if (asOtherWord) return asOtherWord;
   if (match && match.cmp.kind !== 'different') {
     return { result: 'partial', notes: [match.candidate.isSynonym && synonymNote(entry, match.candidate.owner), ...comparisonNotes(match.cmp), rule].filter(Boolean) };
   }
-  return gradeAsOtherWord(entry, raw, typed, ctx, entry.type === 'verb' ? 'verb' : undefined, false) || { result: 'wrong', notes: [rule].filter(Boolean) };
+  return gradeAsOtherWord(entry, raw, typed, ctx, otherWordOptions) || { result: 'wrong', notes: [rule].filter(Boolean) };
 }
 
 // ---------- entry points ----------
