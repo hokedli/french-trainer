@@ -166,8 +166,11 @@ const formsForLookup = (entry) => [...ownForms(entry), ...altForms(entry)];
 function sentenceFormsForLookup(entry) {
   const forms = formsForLookup(entry);
   switch (entry.type) {
-    case 'verb':
-      return [...entry.conj, ...(entry.conjAlt || [])].flatMap((form) => [form, form.replace(/^j'/, '')]);
+    case 'verb': {
+      // Imperatives too (sois, va), but not the bare verb of a reflexive one (appelle-toi), which is another verb's form
+      const imperatives = imperativeForms(entry).filter((f) => f.slot.pronounBefore !== false).map((f) => f.form);
+      return [...entry.conj, ...(entry.conjAlt || [])].flatMap((form) => [form, form.replace(/^j'/, '')]).concat(imperatives);
+    }
     case 'noun':
     case 'adjective':
       return [...forms, ...forms.map(frenchPlural)];
@@ -770,7 +773,7 @@ function gradePlain(entry, raw, ctx) {
 // ---------- sentence fill-ins ----------
 // Every form of an entry that can stand in a sentence, with its "slot": what the sentence needs from the word there.
 //   nouns, countries: { gender: m|f|mf, plural, elides }   adjectives: { gender: m|f|mf, plural }
-//   verbs: { person: 0–5 | 'infinitive' }                   expressions: {}
+//   verbs: { person: 0–5 | 'infinitive' | 'imperative-tu|nous|vous', keepsS?, pronounBefore? }   expressions: {}
 // plural null = the same spelling in the singular and plural (le bus / les bus); elides = starts with a vowel or silent h
 // (l'ami), null when unknown (an h with no article to tell). Gender mf = one spelling for both genders.
 // The blank of a fill-in has the slot of the form that was cut out of the sentence: that form's gender is the
@@ -840,7 +843,7 @@ export function fillInForms(entry) {
   switch (entry.type) {
     case 'verb':
       return entry.conj.flatMap((_, person) => acceptedVerbForms(entry, person).map((form) => ({ form: form.replace(/^j'/, ''), slot: { person } })))
-        .concat([{ form: entry.infinitive, slot: { person: 'infinitive' } }])
+        .concat(imperativeForms(entry), [{ form: entry.infinitive, slot: { person: 'infinitive' } }])
         .map((f) => ({ ...f, hint: entry.infinitive, fromAlt: false }));
     case 'adjective':
       return adjectiveFillInForms(entry);
@@ -856,12 +859,126 @@ export function fillInForms(entry) {
   }
 }
 
+// ---------- the imperative in fill-ins ----------
+// Imperative forms are taken from the present tu / nous / vous forms (conj, conjAlt):
+//   tu drops the s of -es (all -er verbs, ouvrir, découvrir…) and vas → va, but keeps it before -y / -en (vas-y, penses-y);
+//   reflexive verbs: pronoun after the verb without ne (lève-toi), in front with ne (ne te lève pas).
+// A blank is an imperative when no subject comes before it in its clause (only ne and object pronouns may: "Ne ______ pas"),
+// or when a pronoun is hyphenated after it ("______-moi"), and its sentence isn't a question.
+
+const IMPERATIVE_PERSON_OF_PRESENT = { 1: 'imperative-tu', 3: 'imperative-nous', 4: 'imperative-vous' };
+const IMPERATIVE_PRONOUN = { 'imperative-tu': 'tu', 'imperative-nous': 'nous', 'imperative-vous': 'vous' };
+export const isImperativePerson = (person) => Object.hasOwn(IMPERATIVE_PRONOUN, person);
+// The only French verbs whose imperative isn't the present form ([tu, nous, vous]); the list is closed
+const IRREGULAR_IMPERATIVES = {
+  'être': ['sois', 'soyons', 'soyez'],
+  avoir: ['aie', 'ayons', 'ayez'],
+  savoir: ['sache', 'sachons', 'sachez'],
+  vouloir: ['veuille', 'veuillons', 'veuillez'],
+};
+const REFLEXIVE_PRONOUN_AND_VERB = /^(te |t'|nous |vous )(.+)$/;
+const tuImperative = (presentForm) => (presentForm === 'vas' ? 'va' : /es$/.test(presentForm) ? presentForm.slice(0, -1) : presentForm);
+
+// { form, slot } for the imperative. keepsS: a tu form that is only right before -y / -en (true) or only elsewhere (false);
+// pronounBefore: a reflexive form with its pronoun in front (with ne: te lève) or without it (before -toi: lève)
+export function imperativeForms(entry) {
+  const irregular = IRREGULAR_IMPERATIVES[entry.infinitive];
+  if (irregular) return Object.values(IMPERATIVE_PERSON_OF_PRESENT).map((person, i) => ({ form: irregular[i], slot: { person } }));
+  const reflexive = REFLEXIVE_PRONOUN_AND_VERB.test(entry.conj[1]);
+  return Object.entries(IMPERATIVE_PERSON_OF_PRESENT).flatMap(([presentIndex, person]) =>
+    acceptedVerbForms(entry, Number(presentIndex)).flatMap((present) => {
+      const isTu = person === 'imperative-tu';
+      if (reflexive) {
+        const [, pronoun, verb] = present.match(REFLEXIVE_PRONOUN_AND_VERB);
+        const imperativeVerb = isTu ? tuImperative(verb) : verb;
+        return [{ form: pronoun + imperativeVerb, slot: { person, pronounBefore: true } }, { form: imperativeVerb, slot: { person, pronounBefore: false } }];
+      }
+      if (!isTu || tuImperative(present) === present) return [{ form: present, slot: { person } }];
+      return [{ form: tuImperative(present), slot: { person, keepsS: false } }, { form: present, slot: { person, keepsS: true } }];
+    }));
+}
+
+// Before an imperative in its clause: nothing, or ne followed by object pronouns ("Ne le ______ pas"). Without ne,
+// a pronoun in front is the subject: "Nous ______ à midi".
+const OBJECT_PRONOUNS_AFTER_NE = new Set(['me', "m'", 'te', "t'", 'le', 'la', "l'", 'les', 'lui', 'leur', 'nous', 'vous', 'y', 'en']);
+const fitsBeforeAnImperative = (clauseBefore) => {
+  const [first, ...rest] = clauseBefore.match(/\p{L}+'?/gu) || [];
+  if (clauseBefore.replace(/\p{L}+'?/gu, '').trim()) return false; // digits or symbols: "03/02 ______"
+  return !first || (['ne', "n'"].includes(first) && rest.every((w) => OBJECT_PRONOUNS_AFTER_NE.has(w)));
+};
+const PRONOUN_AFTER_AN_IMPERATIVE = /^-(?:moi|toi|le|la|les|lui|leur|nous|vous|y|en|m'en|t'en|m'y)(?!\p{L})/u;
+const TU_CLUES = new Set(['tu', 'te', "t'", 'toi', 'ton', 'ta', 'tes']);
+const VOUS_CLUES = new Set(['vous', 'votre', 'vos', 'madame', 'monsieur', 'mademoiselle', 'mesdames', 'messieurs']);
+// "Les enfants, …" / "Mes amis, …" at the start of the sentence speaks to several people
+const PLURAL_ADDRESS = /^(?:les|mes) \p{L}+ ?,/u;
+
+// The text before and after the blank within its own sentence (a dialogue turn after – counts as one), normalized
+function blankSentence(sentence) {
+  const at = sentence.indexOf(BLANK);
+  const before = normalizeText(sentence.slice(0, at).split(/[.!?…–—]/).pop());
+  const rest = normalizeText(sentence.slice(at + BLANK.length));
+  const end = rest.search(/[.!?…–—]/);
+  return { before, after: end < 0 ? rest : rest.slice(0, end + 1) };
+}
+
+// The words that show who is spoken to: { tuClue, vousClue }, each the first clue found or null
+function addresseeClues(before, after) {
+  const text = `${before} ${after}`;
+  const words = text.match(/\p{L}+'?/gu) || [];
+  const firstClue = (clueWords) => words.find((w) => clueWords.has(w)) ?? null;
+  return {
+    tuClue: text.includes("s'il te plaît") ? "s'il te plaît" : firstClue(TU_CLUES),
+    vousClue: text.includes("s'il vous plaît") ? "s'il vous plaît"
+      : PLURAL_ADDRESS.test(before) ? before.match(PLURAL_ADDRESS)[0].replace(/ ?,$/, '') : firstClue(VOUS_CLUES),
+  };
+}
+
+// null if the blank is not an imperative; otherwise what the sentence around it shows.
+// afterComma: found because the blank starts a clause after a comma (validate.js checks that no subject came earlier)
+export function imperativeContext(sentence) {
+  const { before, after } = blankSentence(sentence);
+  if (after.trimEnd().endsWith('?')) return null;
+  const pronounAfter = PRONOUN_AFTER_AN_IMPERATIVE.test(after);
+  const clauseBefore = before.split(/[,;:«»"()]/).pop();
+  if (!pronounAfter && !fitsBeforeAnImperative(clauseBefore)) return null;
+  return {
+    pronounAfter,
+    beforeYEn: /^-(?:y|en)(?!\p{L})/u.test(after),
+    afterComma: !pronounAfter && clauseBefore !== before,
+    ...addresseeClues(before, after),
+  };
+}
+
+// The slot of an imperative blank: the person the sentence was written with, plus the other of tu / vous when nothing
+// in the sentence shows who is spoken to. A clue that contradicts the written form is ignored (validate.js warns).
+function imperativeBlankSlot(writtenPersons, context) {
+  const written = unique(writtenPersons);
+  const clue = context.tuClue && !context.vousClue ? { person: 'imperative-tu', word: context.tuClue }
+    : context.vousClue && !context.tuClue ? { person: 'imperative-vous', word: context.vousClue } : null;
+  const isTuOrVous = written.some((p) => p !== 'imperative-nous');
+  const clueFits = !!clue && written.includes(clue.person);
+  const persons = isTuOrVous && !clue ? unique([...written, 'imperative-tu', 'imperative-vous']) : written;
+  return {
+    persons, imperative: true, pronounAfter: context.pronounAfter, beforeYEn: context.beforeYEn, afterComma: context.afterComma,
+    clue: isTuOrVous && clueFits ? clue : null,
+    clueContradicts: isTuOrVous && !!clue && !clueFits,
+    addresseeUnclear: isTuOrVous && !clue, // no clue, or clues for both tu and vous
+  };
+}
+
 // The slot of the blank, from the form that was cut out. A verb form can be several persons (mange: je and il);
 // persons whose subject pronoun isn't in the sentence are dropped ("On ______ à midi" is not the je form).
+// In an imperative sentence only the imperative persons count. null = this form can't be the blank here: an
+// imperative-only form (sois, sache, lève of se lever) outside an imperative, e.g. the subjunctive "que tu sois".
 export function blankSlot(entry, blankedText, formSlot, sentence) {
   if (entry.type !== 'verb') return formSlot;
   const blanked = normalizeText(blankedText);
-  const persons = fillInForms(entry).filter((f) => normalizeText(f.form) === blanked).map((f) => f.slot.person);
+  const matching = fillInForms(entry).filter((f) => normalizeText(f.form) === blanked).map((f) => f.slot.person);
+  const imperativePersons = matching.filter(isImperativePerson);
+  const context = imperativePersons.length ? imperativeContext(sentence) : null;
+  if (context) return imperativeBlankSlot(imperativePersons, context);
+  const persons = matching.filter((p) => !isImperativePerson(p));
+  if (!persons.length) return null;
   const words = normalizeText(sentence).split(/[^\p{L}']+/u);
   const pronounInSentence = (pronoun) => words.includes(pronoun) || (pronoun === 'je' && words.some((w) => w.startsWith("j'")));
   const narrowed = persons.filter((p) => !SUBJECT_PRONOUN_OF_PERSON[p] || pronounInSentence(SUBJECT_PRONOUN_OF_PERSON[p]));
@@ -881,9 +998,14 @@ function elisionAfter(word) {
   return WORDS_THAT_CHANGE_BEFORE_A_VOWEL.has(word) ? false : null;
 }
 
-// Why a form doesn't fit the blank (person | number | gender | elision), or null if it fits
+// Why a form doesn't fit the blank (person | imperative-s | pronoun-place | number | gender | elision), or null if it fits
 function slotMismatch(formSlot, blank, sentenceContext) {
-  if ('persons' in blank) return blank.persons.includes(formSlot.person) ? null : 'person';
+  if ('persons' in blank) {
+    if (!blank.persons.includes(formSlot.person)) return 'person';
+    if (formSlot.keepsS != null && formSlot.keepsS !== blank.beforeYEn) return 'imperative-s';
+    if (formSlot.pronounBefore != null && formSlot.pronounBefore === blank.pronounAfter) return 'pronoun-place';
+    return null;
+  }
   if (formSlot.plural != null && blank.plural != null && formSlot.plural !== blank.plural) return 'number';
   if (!sentenceContext.eitherGender && formSlot.gender !== 'mf' && formSlot.gender !== blank.gender) return 'gender';
   if (sentenceContext.needsElision != null && formSlot.elides != null && formSlot.elides !== sentenceContext.needsElision) return 'elision';
@@ -914,14 +1036,42 @@ function bestCandidateMatch(typed, candidates) {
 }
 const matchRank = (match) => (match ? KIND_RANK[match.cmp.kind] : -1);
 
+const personName = (person) => (person === 'infinitive' ? 'the infinitive'
+  : isImperativePerson(person) ? `the **${IMPERATIVE_PRONOUN[person]}** imperative` : `the **${PRONOUNS[person]}** form`);
+
+// The note for one of the entry's own forms that doesn't fit an imperative blank
+function imperativeMismatchNote(entry, fillIn, candidate) {
+  const answer = `**${fillIn.answer}**`;
+  const blank = fillIn.slot;
+  const { person } = candidate.slot;
+  if (candidate.mismatch === 'imperative-s') {
+    return blank.beforeYEn ? `Before **y** and **en**, the tu imperative keeps its **s**: ${answer}.`
+      : `In the imperative, the tu form drops its **s**: ${answer}, not ${candidate.form}.`;
+  }
+  if (candidate.mismatch === 'pronoun-place') {
+    return blank.pronounAfter ? `Without **ne**, the pronoun goes after the verb: ${answer}.` : `With **ne**, the pronoun stays in front of the verb: ${answer}.`;
+  }
+  if (isImperativePerson(person)) {
+    if (blank.persons.every((p) => p === 'imperative-nous')) return `That's ${personName(person)}. The sentence says *let's*, so it's the **nous** form: ${answer}.`;
+    if (person === 'imperative-nous') return `That's the **nous** imperative (let's…). Here you need ${answer}.`;
+    if (blank.clue) return `That's ${personName(person)}. **${blank.clue.word}** shows it's ${IMPERATIVE_PRONOUN[blank.clue.person]} here: ${answer}.`;
+    return `That's ${personName(person)}. Here you need ${answer}.`;
+  }
+  const irregular = IRREGULAR_IMPERATIVES[entry.infinitive];
+  if (irregular && [1, 3, 4].includes(person)) return `The imperative of **${entry.infinitive}** is irregular (${irregular.join(', ')}): here it's ${answer}.`;
+  return `That's ${personName(person)} of ${entry.infinitive}. Here you need the imperative: ${answer}.`;
+}
+
 // The note for a right word that doesn't fit this sentence
 function fillInMismatchNote(entry, fillIn, candidate, before) {
   const answer = `**${fillIn.answer}**`;
   const blank = fillIn.slot;
-  const personName = (person) => (person === 'infinitive' ? 'the infinitive' : `the **${PRONOUNS[person]}** form`);
+  if (blank.imperative && !candidate.isSynonym) return imperativeMismatchNote(entry, fillIn, candidate);
   if (candidate.isSynonym) {
     const reason = {
       person: `that's ${personName(candidate.slot.person)}`,
+      'imperative-s': blank.beforeYEn ? 'before y and en the tu imperative keeps its s' : 'in the imperative the tu form drops its s',
+      'pronoun-place': blank.pronounAfter ? 'without ne the pronoun goes after the verb' : 'with ne the pronoun stays in front of the verb',
       number: `the sentence needs the ${blank.plural ? 'plural' : 'singular'}`,
       gender: blank.gender === 'mf' ? `${answer} is the same in both genders, so this sentence can't check the gender of **${candidate.form}**`
         : `it's ${genderName(candidate.slot.gender)} and the sentence uses the ${genderName(blank.gender)}`,
@@ -963,7 +1113,10 @@ function gradeFillIn(entry, fillIn, raw, ctx) {
       typed = withoutArticle;
     }
   }
-  const persons = fillIn.slot.persons?.filter(Number.isInteger) || [];
+  // The conjugation rule of the persons the blank needs; in an imperative only nous / vous, which are the present forms
+  const persons = !fillIn.slot.imperative ? fillIn.slot.persons?.filter(Number.isInteger) || []
+    : fillIn.slot.persons.includes('imperative-tu') || IRREGULAR_IMPERATIVES[entry.infinitive] ? []
+    : fillIn.slot.persons.map((p) => ({ 'imperative-nous': 3, 'imperative-vous': 4 })[p]);
   const rule = persons.length ? verbRuleNote(entry, persons) : null;
 
   const match = bestCandidateMatch(typed, fitting);
@@ -977,9 +1130,19 @@ function gradeFillIn(entry, fillIn, raw, ctx) {
   if (accentPairGrade) return accentPairGrade;
 
   // A right word that doesn't fit the sentence: wrong person, gender, number, or elision (l'___), or another wording
-  const unfitting = candidates.find((c) => c.mismatch && compareText(typed, c.text).kind === 'exact');
+  // (own forms before synonyms; in an imperative, imperative forms first: pensez is the vous imperative, not the vous form)
+  const mismatchOrder = (c) => (c.isSynonym ? 2 : 0) + (fillIn.slot.imperative && !isImperativePerson(c.slot.person) ? 1 : 0);
+  const unfitting = candidates.filter((c) => c.mismatch && compareText(typed, c.text).kind === 'exact')
+    .sort((a, b) => mismatchOrder(a) - mismatchOrder(b))[0];
   if (unfitting) {
-    return { result: 'partial', notes: [fillInMismatchNote(entry, fillIn, unfitting, before), unfitting.isSynonym ? null : rule].filter(Boolean) };
+    const showRule = !unfitting.isSynonym && !fillIn.slot.imperative;
+    return { result: 'partial', notes: [fillInMismatchNote(entry, fillIn, unfitting, before), showRule ? rule : null].filter(Boolean) };
+  }
+  if (fillIn.slot.imperative) {
+    const withoutSubject = typed.replace(/^(?:je |j'|tu |il |elle |on |nous |vous |ils |elles )/, '');
+    if (withoutSubject !== typed && candidates.some((c) => !c.isSynonym && compareText(withoutSubject, c.text).kind === 'exact')) {
+      return { result: 'partial', notes: [`No subject pronoun in the imperative: **${fillIn.answer}**.`] };
+    }
   }
   const otherWordOptions = { type: entry.type === 'verb' ? 'verb' : undefined, acceptSynonyms: false, inSentence: true };
   // A near spelling that is really another vocab word, spelt exactly (avant for devant), counts as that word, as on the cards

@@ -222,6 +222,60 @@ checkFillIn('n-mere', 'Claire', 'mèr', 'partial', 'Almost');
 // Other words are recognised in their sentence forms: a conjugated verb, a plural noun
 checkFillIn('v-preparer', 'dîner', 'étudie', 'wrong', '**étudier** = to study.');
 checkFillIn('n-chiffre', 'deux', 'nombres', 'wrong', '**le nombre** = number');
+// Imperative: a blank with no subject before it (or a hyphenated pronoun after it); the sentence's clue picks tu or vous
+checkFillIn('v-penser', 'acheter du pain', 'pense', 'correct');
+checkFillIn('v-penser', 'acheter du pain', 'penses', 'partial', 'the tu form drops its **s**: **Pense**, not penses');
+checkFillIn('v-penser', 'acheter du pain', 'pensez', 'partial', "**s'il te plaît** shows it's tu here");
+checkFillIn('v-penser', 'acheter du pain', 'tu penses', 'partial', 'No subject pronoun in the imperative');
+checkFillIn('v-penser', 'acheter du pain', 'pensent', 'partial', 'Here you need the imperative');
+checkFillIn('v-penser', 'acheter du pain', 'penser', 'partial', 'the infinitive');
+checkFillIn('v-laisser', 'Dans le bus', 'laisse', 'correct');
+checkFillIn('v-laisser', 'Dans le bus', 'laissez', 'partial', "**ta** shows it's tu here");
+checkFillIn('v-lire', 'Les enfants', 'lisez', 'correct');
+checkFillIn('v-lire', 'Les enfants', 'lis', 'partial', "**les enfants** shows it's vous here");
+checkFillIn('v-crier', 'Les enfants, ne', 'criez', 'correct');
+checkFillIn('v-crier', 'Les enfants, ne', 'crions', 'partial', 'the **nous** imperative');
+checkFillIn('v-donner', 'grammes de sucre', 'donnez', 'correct');
+checkFillIn('v-donner', 'grammes de sucre', 'donne', 'partial', "**s'il vous plaît** shows it's vous here");
+checkFillIn('v-fumer', 'ici', 'fumez', 'correct');
+checkFillIn('v-rester', 'chez nous', 'restons', 'correct');
+checkFillIn('v-rester', 'chez nous', 'restez', 'partial', "*let's*, so it's the **nous** form");
+// Not imperatives: a subject pronoun before the blank, or something other than ne + object pronouns
+checkFillIn('v-marcher', 'forêt', 'marchons', 'correct');
+checkFillIn('v-marcher', 'forêt', 'marchez', 'partial', 'the **vous** form');
+checkFillIn('v-signifier', '03/02', 'signifie', 'correct');
+checkFillIn('v-passer', 'Vous passez', 'passez', 'correct');
+{
+  // Rules with no real example yet: test-only entries
+  const withExamples = (id, examples) => ({ ...byId.get(id), id: `test-${id}`, examples });
+  const fermer = withExamples('v-fermer', [{ fr: 'Ferme la porte.', en: 'Close the door.' }]);
+  checkFillIn(fermer, 'Ferme', 'ferme', 'correct');
+  checkFillIn(fermer, 'Ferme', 'fermez', 'correct'); // no clue: tu and vous both fit
+  checkFillIn(fermer, 'Ferme', 'fermons', 'partial', 'the **nous** imperative');
+  checkFillIn(fermer, 'Ferme', 'fermes', 'partial', 'drops its **s**');
+  const aller = withExamples('v-aller', [{ fr: "Va à l'école !", en: 'Go to school!' }, { fr: 'Vas-y, Paul !', en: 'Go on, Paul!' }]);
+  checkFillIn(aller, "l'école", 'va', 'correct');
+  checkFillIn(aller, "l'école", 'vas', 'partial', 'drops its **s**: **Va**, not vas');
+  checkFillIn(aller, 'Paul', 'vas', 'correct');
+  checkFillIn(aller, 'Paul', 'va', 'partial', 'Before **y** and **en**, the tu imperative keeps its **s**');
+  const etre = withExamples('v-etre', [{ fr: 'Sois sage, Paul !', en: 'Be good, Paul!' }, { fr: 'Il faut que tu sois là.', en: 'You have to be there.' }]);
+  checkFillIn(etre, 'sage', 'sois', 'correct');
+  checkFillIn(etre, 'sage', 'soyez', 'correct');
+  checkFillIn(etre, 'sage', 'es', 'partial', 'The imperative of **être** is irregular');
+  const subjunctive = buildFillIn({ ...etre, examples: [etre.examples[1]] });
+  if (subjunctive) failures++;
+  console.log(`${subjunctive ? '✗' : '✓'} imperative-only "sois" is never blanked outside an imperative (que tu sois)`);
+  const habiller = withExamples('v-s-habiller', [{ fr: 'Habille-toi vite !', en: 'Get dressed quickly!' }, { fr: "Ne t'habille pas en noir !", en: "Don't wear black!" }]);
+  checkFillIn(habiller, 'vite', 'habille', 'correct');
+  checkFillIn(habiller, 'vite', "t'habille", 'partial', 'Without **ne**, the pronoun goes after the verb');
+  checkFillIn(habiller, 'noir', "t'habille", 'correct');
+  checkFillIn(habiller, 'noir', 'vous habillez', 'correct');
+  checkFillIn(habiller, 'noir', 'habille', 'partial', 'With **ne**, the pronoun stays in front of the verb');
+  // A clue that contradicts the written form is ignored: the written form stays right (validate.js warns)
+  const dire = withExamples('v-dire', [{ fr: 'Dis à Paul que vous venez.', en: "Tell Paul you're coming." }]);
+  checkFillIn(dire, 'Paul', 'dis', 'correct');
+  checkFillIn(dire, 'Paul', 'dites', 'partial', 'the **vous** imperative');
+}
 // The sentence decides the gender even when the article doesn't (l'assistant / l'assistante); eitherGender opens it up
 {
   const assistant = {

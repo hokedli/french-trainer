@@ -98,7 +98,9 @@ function blankExample(entry, example) {
     const start = match.index + match[1].length;
     const blanked = sentence.slice(0, start) + BLANK + sentence.slice(start + match[2].length);
     if (blanked.replace(BLANK, '').replace(/[^\p{L}]/gu, '').length < 4) continue;
-    return { example, sentence: blanked, answer: match[2], hint, slot: blankSlot(entry, match[2], slot, blanked) };
+    const blankedSlot = blankSlot(entry, match[2], slot, blanked);
+    if (!blankedSlot) continue; // an imperative-only form (sois) outside an imperative, e.g. the subjunctive
+    return { example, sentence: blanked, answer: match[2], hint, slot: blankedSlot };
   }
   return null;
 }

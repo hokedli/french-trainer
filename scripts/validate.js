@@ -235,6 +235,37 @@ for (const w of vocab.words) {
     }
   }
 }
+// Imperative fill-ins (imperativeContext in grading.js): sentences it can misread, see CLAUDE.md → Sentence fill-ins
+const SUBJECT_PRONOUNS = /(?:^|[^\p{L}])(?:je|j'|tu|il|elle|on|nous|vous|ils|elles)(?![\p{L}])/iu;
+const LETS = /\blet(?:'s|’s| us)\b/i;
+// Every conjugated or imperative form in the vocab: a sentence that starts with one (no subject) is an imperative
+const verbFormsInVocab = new Set(vocab.words.filter((w) => w.type === 'verb').flatMap(fillInForms)
+  .filter((f) => f.slot.person !== 'infinitive').map((f) => f.form.toLowerCase()));
+for (const w of vocab.words.filter((entry) => entry.type === 'verb')) {
+  for (const [i, example] of (w.examples || []).entries()) {
+    const fillIn = buildFillIn({ ...w, examples: [example] });
+    if (!fillIn) continue;
+    const where = `${w.id} examples[${i}] "${fillIn.sentence}"`;
+    const { slot } = fillIn;
+    const turnBefore = fillIn.sentence.slice(0, fillIn.sentence.indexOf(BLANK)).split(/[.!?…–—]/).pop();
+    if (!slot.imperative) {
+      // "Prends ton sac et ______ !": only the first imperative is recognised
+      const firstWord = turnBefore.trim().toLowerCase().replace(/^(?:ne |n')/, '').match(/^[\p{L}']+(?!-)/u)?.[0];
+      if (['et', 'puis', 'ou', 'mais'].includes(wordBeforeBlank(fillIn.sentence)) && verbFormsInVocab.has(firstWord) && !SUBJECT_PRONOUNS.test(turnBefore)) {
+        warnings.push(`${where}: looks like a second imperative after "${wordBeforeBlank(fillIn.sentence)}", which the app doesn't recognise as one — reword it`);
+      }
+      continue;
+    }
+    if (slot.afterComma && SUBJECT_PRONOUNS.test(turnBefore)) {
+      warnings.push(`${where}: graded as an imperative, but a subject comes earlier in the sentence — if the blank shares it ("je me lève, ______ et…"), reword it`);
+    }
+    if (slot.clueContradicts) warnings.push(`${where}: a tu / vous word in the sentence contradicts the imperative it uses — make every tu / vous word refer to the person spoken to`);
+    if (slot.addresseeUnclear) warnings.push(`${where}: accepts both the tu and the vous imperative (no clue, or clues for both) — fine if both fit; otherwise add s'il te plaît / s'il vous plaît, ton / votre, madame…`);
+    const isNous = slot.persons.includes('imperative-nous');
+    if (isNous && !LETS.test(example.en)) warnings.push(`${where}: a nous imperative, but the English doesn't say "Let's" / "Let us"`);
+    if (!isNous && LETS.test(example.en)) warnings.push(`${where}: the English says "Let's", but the sentence uses the ${slot.persons.join(' / ').replace(/imperative-/g, '')} imperative`);
+  }
+}
 printWarnings();
 const counts = {};
 for (const w of vocab.words) counts[w.type] = (counts[w.type] || 0) + 1;
