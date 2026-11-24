@@ -212,14 +212,15 @@ function buildKindOfLinks(words) {
   return { byId, baseIdByKindId, kindsByBaseId };
 }
 
-// Why entry's acceptedSynonyms link to otherId is invalid, or null. Confusables are never accepted as each other's answer,
-// and an id is only ever one of kindOf / acceptedSynonyms / confusables / alt for an entry.
+// Why entry's acceptedSynonyms link to otherId is invalid, or null. An entry never accepts its own confusables, and an id
+// is only ever one of kindOf / acceptedSynonyms / confusables / alt for an entry. The other entry may list this one as a
+// confusable: a one-way acceptance (n-chemisier accepts chemise; on n-chemise, chemisier stays a trap).
 export function synonymLinkProblem(entry, otherId, byId) {
   const other = byId.get(otherId);
   if (!other) return 'is not an id in vocab.json';
   if (other.id === entry.id) return 'points to the entry itself';
   if (other.type !== entry.type) return `is a ${other.type}, not a ${entry.type}`;
-  if ((entry.confusables || []).includes(other.id) || (other.confusables || []).includes(entry.id)) return 'is also a confusable';
+  if ((entry.confusables || []).includes(other.id)) return 'is also a confusable';
   if (entry.kindOf === other.id || other.kindOf === entry.id || (entry.kindOf && entry.kindOf === other.kindOf)) {
     return 'is linked by kindOf (base word or another kind of it)';
   }

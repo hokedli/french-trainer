@@ -3,13 +3,15 @@
 Offline-first PWA for practising A1 French vocabulary. Plain HTML/CSS/vanilla JS (ES modules), no framework, no build step.
 Hosted on GitHub Pages (auto-deploys on push to `main`); progress syncs through Firebase (Google sign-in + Firestore).
 
+**Git: never commit and never push** (not even when a task seems finished or a step below mentions it). The owner always commits and pushes manually; leave the changes in the working tree.
+
 ## Project structure
 
 | Path | What it is |
 | --- | --- |
 | `vocab.json` | **All vocabulary — the single source of truth.** |
-| `index.html`, `style.css` | Page shell and styles |
-| `js/app.js` | UI: sign-in, practice set → Check → results table → Next set (key `N`), status line, Online switch, vocab/app update checks |
+| `index.html`, `style.css`, `manifest.webmanifest`, `icons/` | Page shell, styles, PWA manifest and icons (the icons are in `APP_FILES` in `sw.js`) |
+| `js/app.js` | UI: sign-in, practice set → Check (Ctrl+Enter) → results table → Next set (key `N`); Skip button (new set without recording anything; no keyboard shortcut on purpose, so a stray key can't throw a set away); accent bar (é è ê ë à â ç î ï ô œ ù û) that types into the last focused answer field; status line, Online switch, vocab/app update checks |
 | `js/grading.js` | Rule-based grading and explanations (pure functions, also runs in Node). `buildLookup` = reverse index answer → entries, plus the `kindOf` and `acceptedSynonyms` links. `fillInForms` = every form of an entry that can stand in a sentence, with its slot (gender, number, elision, person); `gradeFillIn` grades sentence fill-ins |
 | `js/selection.js` | Leitner boxes from the attempt log, choosing the 10 words, building sentence fill-ins (`blankExample` cuts a form out of an example and keeps its slot) |
 | `js/seed-progress.js` | Starting Leitner boxes from the chat sessions before the app existed |
@@ -20,6 +22,9 @@ Hosted on GitHub Pages (auto-deploys on push to `main`); progress syncs through 
 | `firestore.rules` | Security rules (deployed by pasting into the Firebase console → Firestore → Rules) |
 | `scripts/validate.js` | Validates `vocab.json` |
 | `scripts/test-grading.js` | Grading regression checks |
+| `package.json` | Only script shortcuts: `npm run validate`, `npm test` (no dependencies) |
+| `french-keyboard.zip` | Separate Windows tool for typing French accents (PowerShell + C# helper, with its own README inside); not part of the web app and not in `APP_FILES` |
+| `README.md`, `.nojekyll`, `.gitattributes` | Repo readme; `.nojekyll` makes GitHub Pages serve the files as they are |
 
 Progress lives in Firestore as an append-only log: `users/{uid}/attempts/{autoId}` = `{ wordId, result: correct|partial|wrong, myAnswer, timestamp, deviceId }`. Boxes are recomputed from the log; attempts for ids no longer in `vocab.json` are ignored.
 
@@ -37,9 +42,9 @@ Common fields: `id` (stable, never change it), `type`, `en` (the English prompt)
 
 **kindOf**: only on the specific entry; the base word doesn't list its kinds (the app collects them). The base must exist, must not be the entry itself and must not have its own `kindOf` — `validate.js` reports these as errors, and the app logs a warning and ignores the link. Use it when the specific word is still the same kind of thing (backpack → bag); if the meaning changes, use `confusables` (pomme / pomme de terre). Full rules: "French–English Vocabulary.md" → "For vocab.json: entries to add" → "How to convert".
 
-**acceptedSynonyms**: one direction only — the listed entries are accepted on this entry's card, not the other way round. For a two-way pair, list it on both entries (`n-travail` ↔ `n-metier`); one-way where the other prompt asks for a specific register (`n-enseignant` → `n-prof`, but "teacher (informal)" doesn't accept enseignant). Works for verbs too (`v-terminer` ↔ `v-finir`), which have no `alt`. On a card, a synonym answer is graded with the other entry's own rules (its alts, both adjective forms, full conjugation) and counts as correct in the Leitner boxes; in a sentence fill-in it must also fit the sentence (see *Sentence fill-ins*). Each id must exist, be a different entry of the same type, and not be a confusable (either direction) or a kindOf base / kind / sibling — `validate.js` reports these as errors, and the app logs a warning and ignores the link.
+**acceptedSynonyms**: one direction only — the listed entries are accepted on this entry's card, not the other way round. For a two-way pair, list it on both entries (`n-travail` ↔ `n-metier`); one-way where the other prompt asks for a specific register (`n-enseignant` → `n-prof`, but "teacher (informal)" doesn't accept enseignant). Works for verbs too (`v-terminer` ↔ `v-finir`), which have no `alt`. On a card, a synonym answer is graded with the other entry's own rules (its alts, both adjective forms, full conjugation) and counts as correct in the Leitner boxes; in a sentence fill-in it must also fit the sentence (see *Sentence fill-ins*). Each id must exist, be a different entry of the same type, and not be one of this entry's own confusables or a kindOf base / kind / sibling — `validate.js` reports these as errors, and the app logs a warning and ignores the link.
 
-**One relation per id**: for an entry, an id is only ever one of `kindOf`, `acceptedSynonyms`, `confusables` or `alt` (an alt that is another entry's own word counts as that id). Confusables are never accepted as each other's answer, so the other entry mustn't accept or kindOf-link this one either. `validate.js` enforces both. Confusables usually go both ways, but one-way is fine when the trap only exists in one direction: `n-voiture` lists `n-car` (the English prompt "car"), `n-car` doesn't list `n-voiture`. Confusables are only checked by `validate.js` and block `acceptedSynonyms`; the app never shows them, so a wrong answer that is another entry gets its `le car = coach.` note either way.
+**One relation per id**: for an entry, an id is only ever one of `kindOf`, `acceptedSynonyms`, `confusables` or `alt` (an alt that is another entry's own word counts as that id). An entry never accepts its own confusables, and the other entry mustn't have it as an alt or kindOf link. It may accept it, though: a one-way acceptance where the trap only goes one way (`n-chemisier` accepts `n-chemise`, the more common word for a woman's shirt too, while `n-chemise` keeps `n-chemisier` as a confusable, since a man's shirt is never a chemisier). `validate.js` enforces these. Confusables usually go both ways, but one-way is fine when the trap only exists in one direction: `n-voiture` lists `n-car` (the English prompt "car"), `n-car` doesn't list `n-voiture`. Confusables are only checked by `validate.js` and block the entry's own `acceptedSynonyms`; the app never shows them, so a wrong answer that is another entry gets its `le car = coach.` note either way.
 
 **Feedback that uses these fields** (in `js/grading.js`, results page only):
 - Correct answer to a base word → `Also: le sac à dos (backpack, rucksack) · …` listing its kinds.
@@ -84,7 +89,7 @@ Examples should be simple A1 sentences that contain the word (or one of its alts
    - **Remove:** delete the entry (its history is then ignored).
 2. Increase `version` by 1 (the app compares versions to pick up the change).
 3. Run `node scripts/validate.js` — must print ✓. Warnings (e.g. an `eitherGender` / `anyWording` flag that does nothing, or a fill-in that would accept a wrong plural like `gâteaus`) only show with `--verbose`. If grading code changed, also run `node scripts/test-grading.js`.
-4. Commit and push to `main`. GitHub Pages redeploys within a minute or two; the app downloads the new vocab next time it is opened online and shows "Vocabulary updated: +N words".
+4. The owner commits and pushes to `main` manually (never do it yourself). GitHub Pages redeploys within a minute or two; the app downloads the new vocab next time it is opened online and shows "Vocabulary updated: +N words".
 
 On this Windows machine Node is at `C:\Program Files\nodejs` (add it to PATH in PowerShell if `node` isn't found: `$env:Path = "C:\Program Files\nodejs;" + $env:Path`).
 

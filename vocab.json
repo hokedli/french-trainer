@@ -1,5 +1,5 @@
 {
-  "version": 27,
+  "version": 28,
   "themes": [
     "People & identity",
     "Jobs & work",
@@ -1725,7 +1725,7 @@
     {
       "id": "n-gerant",
       "type": "noun",
-      "en": "manager",
+      "en": "manager (runs a shop, restaurant, hotel)",
       "fr": "gérant",
       "gender": "m",
       "article": "le",
@@ -1735,10 +1735,17 @@
       "alt": [
         "la gérante"
       ],
+      "confusables": [
+        "n-responsable"
+      ],
       "examples": [
         {
           "fr": "Elle est gérante.",
           "en": "She is a manager."
+        },
+        {
+          "fr": "Le gérant du restaurant est très sympa.",
+          "en": "The restaurant manager is very nice."
         }
       ]
     },
@@ -3976,6 +3983,7 @@
       "themes": [
         "Language & grammar"
       ],
+      "tip": "Also a letter you send: poster une lettre.",
       "examples": [
         {
           "fr": "Lisez les lettres.",
@@ -4782,7 +4790,7 @@
     {
       "id": "n-lycee",
       "type": "noun",
-      "en": "secondary school, high school",
+      "en": "upper secondary school (15–18)",
       "fr": "lycée",
       "gender": "m",
       "article": "le",
@@ -4795,7 +4803,7 @@
       "examples": [
         {
           "fr": "Il est professeur au lycée.",
-          "en": "He's a teacher at a secondary school."
+          "en": "He's a teacher at an upper secondary school."
         }
       ]
     },
@@ -5896,7 +5904,8 @@
         "Hobbies & free time"
       ],
       "confusables": [
-        "v-observer"
+        "v-observer",
+        "v-garder"
       ],
       "examples": [
         {
@@ -6395,6 +6404,9 @@
       ],
       "themes": [
         "Common words"
+      ],
+      "acceptedSynonyms": [
+        "v-croire"
       ],
       "tip": "penser à = to think about; to remember to: Pense à acheter du pain !",
       "examples": [
@@ -8214,6 +8226,9 @@
         "Family & relationships",
         "Describing",
         "Body & health"
+      ],
+      "confusables": [
+        "n-enceinte"
       ],
       "examples": [
         {
@@ -12288,6 +12303,9 @@
       "themes": [
         "Time & dates"
       ],
+      "confusables": [
+        "x-minuit"
+      ],
       "examples": [
         {
           "fr": "On mange à midi.",
@@ -14349,6 +14367,9 @@
       "themes": [
         "Hobbies & free time"
       ],
+      "confusables": [
+        "n-dessin-anime"
+      ],
       "examples": [
         {
           "fr": "Le dessin, c'est mon loisir préféré.",
@@ -15115,6 +15136,9 @@
       "article": "le",
       "themes": [
         "Sports"
+      ],
+      "confusables": [
+        "n-tennis-shoe"
       ],
       "examples": [
         {
@@ -19262,6 +19286,9 @@
         "Restaurant & café"
       ],
       "kindOf": "n-repas",
+      "alt": [
+        "le petit déjeuner"
+      ],
       "tip": "= le repas du matin (the morning meal)",
       "examples": [
         {
@@ -19331,7 +19358,7 @@
     {
       "id": "n-plat",
       "type": "noun",
-      "en": "dish; course",
+      "en": "dish; course (of a meal)",
       "fr": "plat",
       "gender": "m",
       "article": "le",
@@ -22220,6 +22247,9 @@
       "themes": [
         "Shopping"
       ],
+      "acceptedSynonyms": [
+        "adj-pas-cher"
+      ],
       "tip": "Never changes: \"une jupe bon marché\". Rarely used. Use \"pas cher / pas chère\" instead.",
       "confusables": [
         "adj-cher"
@@ -22233,7 +22263,7 @@
     {
       "id": "adj-pas-cher",
       "type": "adjective",
-      "en": "inexpensive, cheap",
+      "en": "not expensive",
       "masc": "pas cher",
       "fem": "pas chère",
       "themes": [
@@ -25784,6 +25814,9 @@
       "themes": [
         "Shopping"
       ],
+      "confusables": [
+        "n-tablette-device"
+      ],
       "examples": [
         {
           "fr": "Une tablette de chocolat.",
@@ -28665,6 +28698,9 @@
       "fr": "prendre le petit-déjeuner",
       "themes": [
         "Restaurant & café"
+      ],
+      "alt": [
+        "prendre le petit déjeuner"
       ],
       "examples": [
         {
@@ -32583,6 +32619,9 @@
         "Clothes & accessories"
       ],
       "tip": "A shirt with buttons and a collar; a T-shirt is un tee-shirt.",
+      "confusables": [
+        "n-chemisier"
+      ],
       "examples": [
         {
           "fr": "Je porte une chemise grise.",
@@ -32736,6 +32775,9 @@
       "article": "la",
       "themes": [
         "Clothes & accessories"
+      ],
+      "confusables": [
+        "n-casque"
       ],
       "examples": [
         {
@@ -33033,21 +33075,41 @@
       ]
     },
     {
-      "id": "n-matiere",
+      "id": "n-matiere-material",
       "type": "noun",
-      "en": "material, fabric; (school) subject",
+      "en": "material (cotton, leather…)",
       "fr": "matière",
       "gender": "f",
       "article": "la",
       "themes": [
-        "Clothes & accessories",
-        "School & studies"
+        "Clothes & accessories"
       ],
-      "tip": "Also a school subject: Quelle est ta matière préférée ?",
+      "tip": "Also a school subject: \"Quelle est ta matière préférée ?\" \"Le matériel\" = equipment, not material.",
+      "confusables": [
+        "n-tissu"
+      ],
       "examples": [
         {
           "fr": "Le cuir et le coton sont des matières.",
           "en": "Leather and cotton are materials."
+        }
+      ]
+    },
+    {
+      "id": "n-matiere-subject",
+      "type": "noun",
+      "en": "(school) subject",
+      "fr": "matière",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "School & studies"
+      ],
+      "tip": "Also means material (cotton, leather…). The subject of a conversation or an email = \"le sujet\".",
+      "examples": [
+        {
+          "fr": "Quelle est ta matière préférée ?",
+          "en": "What is your favourite (school) subject ?"
         }
       ]
     },
@@ -33267,10 +33329,17 @@
       "themes": [
         "Hobbies & free time"
       ],
+      "acceptedSynonyms": [
+        "v-se-relaxer"
+      ],
       "examples": [
         {
           "fr": "J'adore écouter de la musique pour me détendre.",
           "en": "I love listening to music to relax."
+        },
+        {
+          "fr": "Le soir, je me détends avec un livre.",
+          "en": "In the evening, I relax with a book."
         }
       ]
     },
@@ -34402,7 +34471,8 @@
       ],
       "tip": "à ma taille = my size. Also height and waist.",
       "confusables": [
-        "n-tailleur"
+        "n-tailleur",
+        "n-pointure"
       ],
       "examples": [
         {
@@ -35364,6 +35434,1785 @@
         {
           "fr": "J'apporte un gâteau à la fête.",
           "en": "I'm bringing a cake to the party."
+        }
+      ]
+    },
+    {
+      "id": "n-bottine",
+      "type": "noun",
+      "en": "ankle boot",
+      "fr": "bottine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-chaussure",
+      "examples": [
+        {
+          "fr": "Je voudrais essayer les bottines en vitrine.",
+          "en": "I'd like to try on the ankle boots in the window."
+        }
+      ]
+    },
+    {
+      "id": "n-botte-de-pluie",
+      "type": "noun",
+      "en": "rain boot, welly",
+      "fr": "botte de pluie",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Nature & weather"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les bottes de pluie"
+      ],
+      "examples": [
+        {
+          "fr": "Il pleut beaucoup, je mets des bottes de pluie.",
+          "en": "It's raining a lot, I'm putting on my wellies."
+        }
+      ]
+    },
+    {
+      "id": "n-chaussure-de-marche",
+      "type": "noun",
+      "en": "walking boot, hiking shoe",
+      "fr": "chaussure de marche",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Sports"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les chaussures de marche",
+        "la chaussure de randonnée",
+        "les chaussures de randonnée"
+      ],
+      "examples": [
+        {
+          "fr": "À la montagne, je mets des chaussures de marche.",
+          "en": "In the mountains I wear walking boots."
+        }
+      ]
+    },
+    {
+      "id": "n-chaussure-a-talons",
+      "type": "noun",
+      "en": "high-heeled shoe",
+      "fr": "chaussure à talons",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-chaussure",
+      "alt": [
+        "les chaussures à talons",
+        "la chaussure à talon"
+      ],
+      "tip": "des chaussures à talons ≠ des chaussures plates (sans talons).",
+      "examples": [
+        {
+          "fr": "Pour le mariage, je mets des chaussures à talons.",
+          "en": "For the wedding I'm wearing high heels."
+        }
+      ]
+    },
+    {
+      "id": "n-tennis-shoe",
+      "type": "noun",
+      "en": "canvas trainers, plimsolls",
+      "fr": "tennis",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "Clothes & accessories",
+        "Sports"
+      ],
+      "kindOf": "n-chaussure",
+      "tip": "Usually feminine (des tennis blanches), sometimes masculine. Le tennis = the sport.",
+      "confusables": [
+        "n-tennis"
+      ],
+      "examples": [
+        {
+          "fr": "En été, je mets des tennis en tissu.",
+          "en": "In summer I wear canvas trainers."
+        }
+      ]
+    },
+    {
+      "id": "n-tissu",
+      "type": "noun",
+      "en": "fabric, cloth",
+      "fr": "tissu",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "tip": "en tissu = (made of) fabric.",
+      "confusables": [
+        "n-matiere-material"
+      ],
+      "examples": [
+        {
+          "fr": "Ces chaussures sont en tissu.",
+          "en": "These shoes are made of fabric."
+        }
+      ]
+    },
+    {
+      "id": "n-vitrine",
+      "type": "noun",
+      "en": "shop window",
+      "fr": "vitrine",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Shopping"
+      ],
+      "tip": "en vitrine = in the window.",
+      "examples": [
+        {
+          "fr": "Les bottines sont en vitrine.",
+          "en": "The ankle boots are in the window."
+        }
+      ]
+    },
+    {
+      "id": "n-pointure",
+      "type": "noun",
+      "en": "shoe size",
+      "fr": "pointure",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Clothes & accessories",
+        "Shopping"
+      ],
+      "tip": "la pointure = shoe size; la taille = clothes size.",
+      "confusables": [
+        "n-taille"
+      ],
+      "examples": [
+        {
+          "fr": "Quelle est votre pointure ?",
+          "en": "What's your shoe size?"
+        }
+      ]
+    },
+    {
+      "id": "n-chemisier",
+      "type": "noun",
+      "en": "blouse",
+      "fr": "chemisier",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Clothes & accessories"
+      ],
+      "acceptedSynonyms": [
+        "n-chemise"
+      ],
+      "tip": "\"un chemisier\" = a woman's blouse only. \"Une chemise\" works for women too (\"une chemise femme\") and is the more commonly used word.",
+      "examples": [
+        {
+          "fr": "Elle porte un chemisier blanc.",
+          "en": "She's wearing a white blouse."
+        },
+        {
+          "fr": "J'achète des chemisiers pour le travail.", 
+          "en": "I buy blouses for work.", 
+          "eitherGender": true
+        }
+      ]
+    },
+    {
+      "id": "n-meteo",
+      "type": "noun",
+      "en": "weather forecast; the weather",
+      "fr": "météo",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "\"Quel temps il fait ?\" = What's the weather like?",
+      "examples": [
+        {
+          "fr": "Je regarde la météo à la télé.",
+          "en": "I watch the weather forecast on TV."
+        }
+      ]
+    },
+    {
+      "id": "n-ciel",
+      "type": "noun",
+      "en": "sky",
+      "fr": "ciel",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Nature & weather"
+      ],
+      "examples": [
+        {
+          "fr": "Ce matin, le ciel est bleu.",
+          "en": "This morning the sky is blue."
+        }
+      ]
+    },
+    {
+      "id": "n-soleil",
+      "type": "noun",
+      "en": "sun",
+      "fr": "soleil",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "il y a du soleil = it's sunny.",
+      "examples": [
+        {
+          "fr": "Il y a du soleil aujourd'hui.",
+          "en": "It's sunny today."
+        }
+      ]
+    },
+    {
+      "id": "n-vent",
+      "type": "noun",
+      "en": "wind",
+      "fr": "vent",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "il y a du vent = it's windy.",
+      "examples": [
+        {
+          "fr": "En automne, il y a du vent.",
+          "en": "In autumn it's windy."
+        }
+      ]
+    },
+    {
+      "id": "n-brouillard",
+      "type": "noun",
+      "en": "fog",
+      "fr": "brouillard",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Nature & weather"
+      ],
+      "examples": [
+        {
+          "fr": "Le matin, il y a du brouillard.",
+          "en": "In the morning it's foggy."
+        }
+      ]
+    },
+    {
+      "id": "n-orage",
+      "type": "noun",
+      "en": "storm, thunderstorm",
+      "fr": "orage",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Nature & weather"
+      ],
+      "examples": [
+        {
+          "fr": "Il y a un orage ce soir.",
+          "en": "There's a storm tonight."
+        }
+      ]
+    },
+    {
+      "id": "n-grele",
+      "type": "noun",
+      "en": "hail",
+      "fr": "grêle",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "il grêle = it's hailing.",
+      "examples": [
+        {
+          "fr": "Attention, il y a de la grêle !",
+          "en": "Careful, there's hail!"
+        }
+      ]
+    },
+    {
+      "id": "n-arc-en-ciel",
+      "type": "noun",
+      "en": "rainbow",
+      "fr": "arc-en-ciel",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Nature & weather"
+      ],
+      "alt": [
+        "les arcs-en-ciel"
+      ],
+      "examples": [
+        {
+          "fr": "Après la pluie, il y a un arc-en-ciel.",
+          "en": "After the rain there's a rainbow."
+        }
+      ]
+    },
+    {
+      "id": "n-canicule",
+      "type": "noun",
+      "en": "heatwave",
+      "fr": "canicule",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Nature & weather"
+      ],
+      "examples": [
+        {
+          "fr": "En été, il y a parfois une canicule.",
+          "en": "In summer there is sometimes a heatwave."
+        }
+      ]
+    },
+    {
+      "id": "n-degre",
+      "type": "noun",
+      "en": "degree (temperature)",
+      "fr": "degré",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "il fait -5° = il fait moins cinq.",
+      "examples": [
+        {
+          "fr": "Il fait 15 degrés.",
+          "en": "It's 15 degrees."
+        }
+      ]
+    },
+    {
+      "id": "n-nord",
+      "type": "noun",
+      "en": "north",
+      "fr": "nord",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Countries",
+        "Nature & weather"
+      ],
+      "tip": "le nord, le sud, l'est, l'ouest.",
+      "examples": [
+        {
+          "fr": "Dans le nord de la France, il pleut souvent.",
+          "en": "In the north of France it often rains."
+        }
+      ]
+    },
+    {
+      "id": "n-debut",
+      "type": "noun",
+      "en": "beginning, start",
+      "fr": "début",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Time & dates"
+      ],
+      "tip": "début janvier, mi-septembre (the middle), fin février.",
+      "examples": [
+        {
+          "fr": "Je pars en vacances début janvier.",
+          "en": "I'm going on holiday at the beginning of January."
+        }
+      ]
+    },
+    {
+      "id": "n-episode",
+      "type": "noun",
+      "en": "episode",
+      "fr": "épisode",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Ce soir, je vais regarder un épisode de ma série.",
+          "en": "Tonight I'm going to watch an episode of my series."
+        }
+      ]
+    },
+    {
+      "id": "n-manege",
+      "type": "noun",
+      "en": "merry-go-round; (fairground) ride",
+      "fr": "manège",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Les enfants adorent le manège.",
+          "en": "Children love the merry-go-round."
+        }
+      ]
+    },
+    {
+      "id": "n-grande-roue",
+      "type": "noun",
+      "en": "big wheel, Ferris wheel",
+      "fr": "grande roue",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "On monte dans la grande roue ?",
+          "en": "Shall we go on the big wheel?"
+        }
+      ]
+    },
+    {
+      "id": "n-montagnes-russes",
+      "type": "noun",
+      "en": "roller coaster",
+      "fr": "montagnes russes",
+      "gender": "f",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "tip": "Plural in French: les montagnes russes.",
+      "examples": [
+        {
+          "fr": "J'adore les montagnes russes !",
+          "en": "I love roller coasters!"
+        }
+      ]
+    },
+    {
+      "id": "n-camping",
+      "type": "noun",
+      "en": "camping; campsite",
+      "fr": "camping",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Hobbies & free time",
+        "Travel & sightseeing"
+      ],
+      "tip": "faire du camping = camper.",
+      "examples": [
+        {
+          "fr": "En été, nous faisons du camping.",
+          "en": "In summer we go camping."
+        }
+      ]
+    },
+    {
+      "id": "n-responsable",
+      "type": "noun",
+      "en": "person in charge, head (of a team, a department)",
+      "fr": "responsable",
+      "gender": "mf",
+      "article": "le",
+      "themes": [
+        "Jobs & work"
+      ],
+      "alt": [
+        "la responsable"
+      ],
+      "tip": "Also an adjective: responsable = responsible. For the manager of a shop or restaurant: le gérant.",
+      "confusables": [
+        "n-gerant"
+      ],
+      "examples": [
+        {
+          "fr": "Elle est responsable du marketing.",
+          "en": "She's head of marketing."
+        }
+      ]
+    },
+    {
+      "id": "n-these",
+      "type": "noun",
+      "en": "thesis (PhD)",
+      "fr": "thèse",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "School & studies"
+      ],
+      "examples": [
+        {
+          "fr": "Elle écrit sa thèse à l'université.",
+          "en": "She's writing her thesis at university."
+        }
+      ]
+    },
+    {
+      "id": "n-chataigne",
+      "type": "noun",
+      "en": "chestnut",
+      "fr": "châtaigne",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Fruit & vegetables",
+        "Bakery & desserts",
+        "Food & dishes"
+      ],
+      "tip": "un marron is a chestnut too: that is where the colour marron comes from.",
+      "examples": [
+        {
+          "fr": "Marron, c'est la couleur de la châtaigne.",
+          "en": "Brown (marron) is the colour of the chestnut."
+        }
+      ]
+    },
+    {
+      "id": "n-rhume",
+      "type": "noun",
+      "en": "cold (illness)",
+      "fr": "rhume",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Body & health"
+      ],
+      "tip": "avoir un rhume = to have a cold.",
+      "examples": [
+        {
+          "fr": "J'ai un rhume, je reste à la maison.",
+          "en": "I've got a cold, I'm staying at home."
+        }
+      ]
+    },
+    {
+      "id": "n-photocopie",
+      "type": "noun",
+      "en": "photocopy",
+      "fr": "photocopie",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "School & studies",
+        "Jobs & work"
+      ],
+      "examples": [
+        {
+          "fr": "J'ai besoin d'une photocopie.",
+          "en": "I need a photocopy."
+        }
+      ]
+    },
+    {
+      "id": "n-colis",
+      "type": "noun",
+      "en": "parcel, package",
+      "fr": "colis",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects",
+        "Town & places"
+      ],
+      "examples": [
+        {
+          "fr": "Je vais au bureau de poste pour poster un colis.",
+          "en": "I'm going to the post office to post a parcel."
+        }
+      ]
+    },
+    {
+      "id": "n-groupe",
+      "type": "noun",
+      "en": "group; band (music)",
+      "fr": "groupe",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "C'est le concert de mon groupe préféré.",
+          "en": "It's my favourite band's concert."
+        }
+      ]
+    },
+    {
+      "id": "n-jazz",
+      "type": "noun",
+      "en": "jazz",
+      "fr": "jazz",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Le deuxième jour, il y a du jazz.",
+          "en": "On the second day there is jazz."
+        }
+      ]
+    },
+    {
+      "id": "x-minuit",
+      "type": "expression",
+      "en": "midnight",
+      "fr": "minuit",
+      "themes": [
+        "Time & dates"
+      ],
+      "tip": "No article: à minuit, il est minuit. minuit = 0 h; midi = 12 h.",
+      "confusables": [
+        "n-midi"
+      ],
+      "examples": [
+        {
+          "fr": "Le festival finit à minuit.",
+          "en": "The festival ends at midnight."
+        }
+      ]
+    },
+    {
+      "id": "n-election",
+      "type": "noun",
+      "en": "election",
+      "fr": "élection",
+      "gender": "f",
+      "article": "l'",
+      "themes": [
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "Les élections sont en avril.",
+          "en": "The elections are in April."
+        }
+      ]
+    },
+    {
+      "id": "n-gorge",
+      "type": "noun",
+      "en": "throat",
+      "fr": "gorge",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Body & health"
+      ],
+      "tip": "avoir mal à la gorge = to have a sore throat.",
+      "examples": [
+        {
+          "fr": "Amélie ne peut pas parler, elle a mal à la gorge.",
+          "en": "Amélie can't talk, she has a sore throat."
+        }
+      ]
+    },
+    {
+      "id": "n-dessin-anime",
+      "type": "noun",
+      "en": "cartoon",
+      "fr": "dessin animé",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "alt": [
+        "les dessins animés"
+      ],
+      "confusables": [
+        "n-dessin"
+      ],
+      "examples": [
+        {
+          "fr": "Maman, on peut regarder un dessin animé ?",
+          "en": "Mum, can we watch a cartoon?"
+        }
+      ]
+    },
+    {
+      "id": "n-secret",
+      "type": "noun",
+      "en": "secret",
+      "fr": "secret",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "Je ne peux pas te le dire, c'est un secret.",
+          "en": "I can't tell you, it's a secret."
+        }
+      ]
+    },
+    {
+      "id": "n-tablette-device",
+      "type": "noun",
+      "en": "tablet (computer)",
+      "fr": "tablette",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects"
+      ],
+      "tip": "Also a bar of chocolate: une tablette de chocolat.",
+      "confusables": [
+        "n-tablette"
+      ],
+      "examples": [
+        {
+          "fr": "Je regarde des films sur ma tablette.",
+          "en": "I watch films on my tablet."
+        }
+      ]
+    },
+    {
+      "id": "n-ordinateur-portable",
+      "type": "noun",
+      "en": "laptop",
+      "fr": "ordinateur portable",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Everyday objects"
+      ],
+      "kindOf": "n-ordinateur",
+      "alt": [
+        "les ordinateurs portables"
+      ],
+      "examples": [
+        {
+          "fr": "Je travaille sur mon ordinateur portable.",
+          "en": "I work on my laptop."
+        }
+      ]
+    },
+    {
+      "id": "n-clavier",
+      "type": "noun",
+      "en": "keyboard",
+      "fr": "clavier",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "Le clavier de mon ordinateur est noir.",
+          "en": "My computer keyboard is black."
+        }
+      ]
+    },
+    {
+      "id": "n-cle-usb",
+      "type": "noun",
+      "en": "USB stick, flash drive",
+      "fr": "clé USB",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects"
+      ],
+      "alt": [
+        "la clef USB",
+        "les clés USB"
+      ],
+      "examples": [
+        {
+          "fr": "Mes photos sont sur la clé USB.",
+          "en": "My photos are on the USB stick."
+        }
+      ]
+    },
+    {
+      "id": "n-souris",
+      "type": "noun",
+      "en": "mouse (computer; animal)",
+      "fr": "souris",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects",
+        "Animals"
+      ],
+      "examples": [
+        {
+          "fr": "Ma souris ne fonctionne pas.",
+          "en": "My mouse isn't working."
+        }
+      ]
+    },
+    {
+      "id": "n-ecran",
+      "type": "noun",
+      "en": "screen",
+      "fr": "écran",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "L'écran de mon ordinateur est grand.",
+          "en": "My computer screen is big."
+        }
+      ]
+    },
+    {
+      "id": "n-disque-dur",
+      "type": "noun",
+      "en": "hard drive",
+      "fr": "disque dur",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects"
+      ],
+      "alt": [
+        "les disques durs"
+      ],
+      "examples": [
+        {
+          "fr": "J'ai un disque dur pour mes photos.",
+          "en": "I have a hard drive for my photos."
+        }
+      ]
+    },
+    {
+      "id": "n-montre-connectee",
+      "type": "noun",
+      "en": "smartwatch",
+      "fr": "montre connectée",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects",
+        "Clothes & accessories"
+      ],
+      "kindOf": "n-montre",
+      "alt": [
+        "les montres connectées"
+      ],
+      "examples": [
+        {
+          "fr": "Je porte une montre connectée pour faire du sport.",
+          "en": "I wear a smartwatch to do sport."
+        }
+      ]
+    },
+    {
+      "id": "n-ecouteurs",
+      "type": "noun",
+      "en": "earphones, earbuds",
+      "fr": "écouteurs",
+      "gender": "m",
+      "article": "les",
+      "pluralOnly": true,
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "J'écoute de la musique avec mes écouteurs.",
+          "en": "I listen to music with my earphones."
+        }
+      ]
+    },
+    {
+      "id": "n-casque",
+      "type": "noun",
+      "en": "headphones; helmet",
+      "fr": "casque",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects"
+      ],
+      "tip": "Also a helmet: un casque de vélo.",
+      "confusables": [
+        "n-casquette"
+      ],
+      "examples": [
+        {
+          "fr": "J'écoute de la musique avec mon casque.",
+          "en": "I listen to music with my headphones."
+        }
+      ]
+    },
+    {
+      "id": "n-enceinte",
+      "type": "noun",
+      "en": "(Bluetooth) speaker",
+      "fr": "enceinte",
+      "gender": "f",
+      "article": "l'",
+      "themes": [
+        "Everyday objects"
+      ],
+      "tip": "enceinte (adjective) = pregnant.",
+      "confusables": [
+        "adj-enceinte"
+      ],
+      "examples": [
+        {
+          "fr": "J'écoute de la musique sur mon enceinte.",
+          "en": "I listen to music on my speaker."
+        }
+      ]
+    },
+    {
+      "id": "n-perche-a-selfie",
+      "type": "noun",
+      "en": "selfie stick",
+      "fr": "perche à selfie",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "Il prend des photos avec une perche à selfie.",
+          "en": "He takes photos with a selfie stick."
+        }
+      ]
+    },
+    {
+      "id": "n-appareil-photo",
+      "type": "noun",
+      "en": "camera",
+      "fr": "appareil photo",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Everyday objects",
+        "Travel & sightseeing"
+      ],
+      "alt": [
+        "les appareils photo"
+      ],
+      "examples": [
+        {
+          "fr": "Je prends mon appareil photo en vacances.",
+          "en": "I take my camera on holiday."
+        }
+      ]
+    },
+    {
+      "id": "n-stylet",
+      "type": "noun",
+      "en": "stylus",
+      "fr": "stylet",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "J'écris sur ma tablette avec un stylet.",
+          "en": "I write on my tablet with a stylus."
+        }
+      ]
+    },
+    {
+      "id": "n-liseuse",
+      "type": "noun",
+      "en": "e-reader",
+      "fr": "liseuse",
+      "gender": "f",
+      "article": "la",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "Je lis des livres sur ma liseuse.",
+          "en": "I read books on my e-reader."
+        }
+      ]
+    },
+    {
+      "id": "n-chargeur",
+      "type": "noun",
+      "en": "charger",
+      "fr": "chargeur",
+      "gender": "m",
+      "article": "le",
+      "themes": [
+        "Everyday objects"
+      ],
+      "examples": [
+        {
+          "fr": "J'ai oublié mon chargeur !",
+          "en": "I've forgotten my charger!"
+        }
+      ]
+    },
+    {
+      "id": "n-oiseau",
+      "type": "noun",
+      "en": "bird",
+      "fr": "oiseau",
+      "gender": "m",
+      "article": "l'",
+      "themes": [
+        "Animals",
+        "Nature & weather"
+      ],
+      "tip": "Plural: les oiseaux.",
+      "examples": [
+        {
+          "fr": "Il y a un oiseau dans l'arbre.",
+          "en": "There's a bird in the tree."
+        }
+      ]
+    },
+    {
+      "id": "v-s-asseoir",
+      "type": "verb",
+      "en": "to sit down",
+      "infinitive": "s'asseoir",
+      "conj": [
+        "m'assieds",
+        "t'assieds",
+        "s'assied",
+        "nous asseyons",
+        "vous asseyez",
+        "s'asseyent"
+      ],
+      "conjAlt": [
+        "m'assois",
+        "t'assois",
+        "s'assoit",
+        "nous assoyons",
+        "vous assoyez",
+        "s'assoient"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words",
+        "Home & housework"
+      ],
+      "tip": "Asseyez-vous ! = Sit down! (polite). Both conjugations are correct: je m'assieds or je m'assois.",
+      "examples": [
+        {
+          "fr": "Je m'assieds sur le canapé.",
+          "en": "I sit down on the sofa."
+        }
+      ]
+    },
+    {
+      "id": "v-croire",
+      "type": "verb",
+      "en": "to believe, to think",
+      "infinitive": "croire",
+      "conj": [
+        "crois",
+        "crois",
+        "croit",
+        "croyons",
+        "croyez",
+        "croient"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words",
+        "Likes & opinions"
+      ],
+      "acceptedSynonyms": [
+        "v-penser"
+      ],
+      "examples": [
+        {
+          "fr": "Je crois qu'elles sont un peu petites.",
+          "en": "I think they are a bit small."
+        }
+      ]
+    },
+    {
+      "id": "v-souffler",
+      "type": "verb",
+      "en": "to blow",
+      "infinitive": "souffler",
+      "conj": [
+        "souffle",
+        "souffles",
+        "souffle",
+        "soufflons",
+        "soufflez",
+        "soufflent"
+      ],
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "souffler les bougies = to blow out the candles.",
+      "examples": [
+        {
+          "fr": "Le vent souffle à 80 kilomètres par heure.",
+          "en": "The wind is blowing at 80 kilometres an hour."
+        }
+      ]
+    },
+    {
+      "id": "v-se-promener",
+      "type": "verb",
+      "en": "to go for a walk",
+      "infinitive": "se promener",
+      "conj": [
+        "me promène",
+        "te promènes",
+        "se promène",
+        "nous promenons",
+        "vous promenez",
+        "se promènent"
+      ],
+      "rule": "e→è",
+      "themes": [
+        "Hobbies & free time",
+        "Nature & weather"
+      ],
+      "tip": "la promenade = a walk.",
+      "examples": [
+        {
+          "fr": "Le dimanche, je me promène au parc.",
+          "en": "On Sundays I go for a walk in the park."
+        }
+      ]
+    },
+    {
+      "id": "v-celebrer",
+      "type": "verb",
+      "en": "to celebrate",
+      "infinitive": "célébrer",
+      "conj": [
+        "célèbre",
+        "célèbres",
+        "célèbre",
+        "célébrons",
+        "célébrez",
+        "célèbrent"
+      ],
+      "rule": "é→è",
+      "themes": [
+        "Hobbies & free time",
+        "Time & dates"
+      ],
+      "examples": [
+        {
+          "fr": "Nous célébrons Noël en famille.",
+          "en": "We celebrate Christmas with the family."
+        }
+      ]
+    },
+    {
+      "id": "v-se-relaxer",
+      "type": "verb",
+      "en": "to relax, to unwind",
+      "infinitive": "se relaxer",
+      "conj": [
+        "me relaxe",
+        "te relaxes",
+        "se relaxe",
+        "nous relaxons",
+        "vous relaxez",
+        "se relaxent"
+      ],
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "acceptedSynonyms": [
+        "v-se-detendre"
+      ],
+      "examples": [
+        {
+          "fr": "Le week-end, je me relaxe.",
+          "en": "At the weekend I relax."
+        }
+      ]
+    },
+    {
+      "id": "v-poster",
+      "type": "verb",
+      "en": "to post (a letter, a parcel)",
+      "infinitive": "poster",
+      "conj": [
+        "poste",
+        "postes",
+        "poste",
+        "postons",
+        "postez",
+        "postent"
+      ],
+      "themes": [
+        "Town & places",
+        "Everyday objects"
+      ],
+      "tip": "le poster (a noun) = a poster on the wall.",
+      "examples": [
+        {
+          "fr": "Je poste une lettre.",
+          "en": "I'm posting a letter."
+        }
+      ]
+    },
+    {
+      "id": "v-rencontrer",
+      "type": "verb",
+      "en": "to meet (for the first time)",
+      "infinitive": "rencontrer",
+      "conj": [
+        "rencontre",
+        "rencontres",
+        "rencontre",
+        "rencontrons",
+        "rencontrez",
+        "rencontrent"
+      ],
+      "themes": [
+        "Family & relationships",
+        "Common words"
+      ],
+      "tip": "rencontrer = to meet someone for the first time, or by chance.",
+      "examples": [
+        {
+          "fr": "Je rencontre ses parents samedi.",
+          "en": "I'm meeting her parents on Saturday."
+        }
+      ]
+    },
+    {
+      "id": "v-voter",
+      "type": "verb",
+      "en": "to vote",
+      "infinitive": "voter",
+      "conj": [
+        "vote",
+        "votes",
+        "vote",
+        "votons",
+        "votez",
+        "votent"
+      ],
+      "themes": [
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "Tu peux voter aux élections si tu as 18 ans.",
+          "en": "You can vote in elections if you are 18."
+        }
+      ]
+    },
+    {
+      "id": "v-comprendre",
+      "type": "verb",
+      "en": "to understand",
+      "infinitive": "comprendre",
+      "conj": [
+        "comprends",
+        "comprends",
+        "comprend",
+        "comprenons",
+        "comprenez",
+        "comprennent"
+      ],
+      "rule": "irregular",
+      "themes": [
+        "Common words",
+        "Language & grammar"
+      ],
+      "tip": "Like prendre: nous comprenons, ils comprennent.",
+      "examples": [
+        {
+          "fr": "Je ne comprends pas la question.",
+          "en": "I don't understand the question."
+        }
+      ]
+    },
+    {
+      "id": "v-garder",
+      "type": "verb",
+      "en": "to look after; to keep",
+      "infinitive": "garder",
+      "conj": [
+        "garde",
+        "gardes",
+        "garde",
+        "gardons",
+        "gardez",
+        "gardent"
+      ],
+      "themes": [
+        "Common words",
+        "Animals"
+      ],
+      "tip": "garder ≠ regarder (to watch).",
+      "confusables": [
+        "v-regarder"
+      ],
+      "examples": [
+        {
+          "fr": "Nous pouvons garder votre chien ce week-end.",
+          "en": "We can look after your dog this weekend."
+        }
+      ]
+    },
+    {
+      "id": "v-fonctionner",
+      "type": "verb",
+      "en": "to work (a machine)",
+      "infinitive": "fonctionner",
+      "conj": [
+        "fonctionne",
+        "fonctionnes",
+        "fonctionne",
+        "fonctionnons",
+        "fonctionnez",
+        "fonctionnent"
+      ],
+      "themes": [
+        "Everyday objects"
+      ],
+      "tip": "For a person, use travailler.",
+      "examples": [
+        {
+          "fr": "Mon ordinateur ne fonctionne pas.",
+          "en": "My computer isn't working."
+        }
+      ]
+    },
+    {
+      "id": "v-appeler",
+      "type": "verb",
+      "en": "to call",
+      "infinitive": "appeler",
+      "conj": [
+        "j'appelle",
+        "appelles",
+        "appelle",
+        "appelons",
+        "appelez",
+        "appellent"
+      ],
+      "rule": "double-l",
+      "themes": [
+        "Common words",
+        "Everyday objects"
+      ],
+      "tip": "Like s'appeler: j'appelle, nous appelons.",
+      "examples": [
+        {
+          "fr": "Tu peux m'appeler quand tu veux.",
+          "en": "You can call me whenever you want."
+        }
+      ]
+    },
+    {
+      "id": "adj-plat",
+      "type": "adjective",
+      "en": "flat",
+      "masc": "plat",
+      "fem": "plate",
+      "themes": [
+        "Describing",
+        "Clothes & accessories"
+      ],
+      "tip": "des chaussures plates = flat shoes; l'eau plate = still water.",
+      "examples": [
+        {
+          "fr": "Je préfère les chaussures plates.",
+          "en": "I prefer flat shoes."
+        }
+      ]
+    },
+    {
+      "id": "adj-superbe",
+      "type": "adjective",
+      "en": "superb, gorgeous",
+      "masc": "superbe",
+      "fem": "superbe",
+      "themes": [
+        "Describing",
+        "Likes & opinions"
+      ],
+      "examples": [
+        {
+          "fr": "C'est une superbe journée.",
+          "en": "It's a gorgeous day."
+        }
+      ]
+    },
+    {
+      "id": "adj-colore",
+      "type": "adjective",
+      "en": "colourful",
+      "masc": "coloré",
+      "fem": "colorée",
+      "themes": [
+        "Colours",
+        "Clothes & accessories"
+      ],
+      "examples": [
+        {
+          "fr": "Je porte un pull coloré.",
+          "en": "I'm wearing a colourful jumper."
+        }
+      ]
+    },
+    {
+      "id": "adj-interdit",
+      "type": "adjective",
+      "en": "forbidden, not allowed",
+      "masc": "interdit",
+      "fem": "interdite",
+      "themes": [
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "Vous ne pouvez pas fumer ici, c'est interdit.",
+          "en": "You can't smoke here, it's not allowed."
+        }
+      ]
+    },
+    {
+      "id": "adj-responsable",
+      "type": "adjective",
+      "en": "responsible",
+      "masc": "responsable",
+      "fem": "responsable",
+      "themes": [
+        "Describing"
+      ],
+      "tip": "Responsible for = \"responsable de\".",
+      "examples": [
+        {
+          "fr": "Elle est très responsable.",
+          "en": "She's very responsible."
+        },
+        {
+          "fr": "Je suis responsable de mon chien.",
+          "en": "I'm responsible for my dog."
+        }
+      ]
+    },
+    {
+      "id": "x-vous-chaussez-du-combien",
+      "type": "expression",
+      "en": "What size shoe do you take?",
+      "fr": "Vous chaussez du combien ?",
+      "themes": [
+        "Questions",
+        "Shopping",
+        "Clothes & accessories"
+      ],
+      "alt": [
+        "Tu chausses du combien ?"
+      ],
+      "examples": [
+        {
+          "fr": "Vous chaussez du combien ? – Je chausse du 43.",
+          "en": "What size shoe do you take? – I'm a 43.",
+          "anyWording": true
+        }
+      ]
+    },
+    {
+      "id": "x-n-est-ce-pas",
+      "type": "expression",
+      "en": "isn't it? don't you? (tag question)",
+      "fr": "n'est-ce pas ?",
+      "themes": [
+        "Questions"
+      ],
+      "tip": "Added at the end of a sentence to ask for agreement.",
+      "examples": [
+        {
+          "fr": "Elles sont en cuir, n'est-ce pas ?",
+          "en": "They're leather, aren't they?"
+        }
+      ]
+    },
+    {
+      "id": "x-ne-plus",
+      "type": "expression",
+      "en": "no longer, not any more",
+      "fr": "ne… plus",
+      "themes": [
+        "Common words"
+      ],
+      "tip": "ne… plus ≠ ne… pas: Je n'ai plus de pain = I've run out of bread.",
+      "examples": [
+        {
+          "fr": "Je n'ai plus ce modèle en noir."
+        }
+      ]
+    },
+    {
+      "id": "x-il-fait-beau",
+      "type": "expression",
+      "en": "the weather's nice",
+      "fr": "il fait beau",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "il ne fait pas beau = il fait mauvais.",
+      "examples": [
+        {
+          "fr": "Aujourd'hui, il fait beau à Paris.",
+          "en": "Today the weather's nice in Paris."
+        }
+      ]
+    },
+    {
+      "id": "x-il-fait-mauvais",
+      "type": "expression",
+      "en": "the weather's bad",
+      "fr": "il fait mauvais",
+      "themes": [
+        "Nature & weather"
+      ],
+      "examples": [
+        {
+          "fr": "Aujourd'hui, il fait mauvais : il pleut.",
+          "en": "Today the weather's bad: it's raining."
+        }
+      ]
+    },
+    {
+      "id": "x-il-fait-chaud",
+      "type": "expression",
+      "en": "it's hot (weather)",
+      "fr": "il fait chaud",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "For a person: j'ai chaud = I'm hot.",
+      "examples": [
+        {
+          "fr": "En été, il fait chaud.",
+          "en": "In summer it's hot."
+        }
+      ]
+    },
+    {
+      "id": "x-il-pleut",
+      "type": "expression",
+      "en": "it's raining",
+      "fr": "il pleut",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "pleuvoir: il va pleuvoir = it's going to rain.",
+      "examples": [
+        {
+          "fr": "Il pleut, je prends mon parapluie.",
+          "en": "It's raining, I'm taking my umbrella."
+        }
+      ]
+    },
+    {
+      "id": "x-il-pleut-des-cordes",
+      "type": "expression",
+      "en": "it's pouring (with rain)",
+      "fr": "il pleut des cordes",
+      "themes": [
+        "Nature & weather"
+      ],
+      "tip": "la corde = rope.",
+      "examples": [
+        {
+          "fr": "Prends ton parapluie, il pleut des cordes !",
+          "en": "Take your umbrella, it's pouring!"
+        }
+      ]
+    },
+    {
+      "id": "x-il-fait-un-temps-magnifique",
+      "type": "expression",
+      "en": "the weather is wonderful",
+      "fr": "il fait un temps magnifique",
+      "themes": [
+        "Nature & weather"
+      ],
+      "alt": [
+        "il fait un temps splendide"
+      ],
+      "tip": "le temps = time, and also the weather.",
+      "examples": [
+        {
+          "fr": "Aujourd'hui, il fait un temps magnifique !",
+          "en": "Today the weather is wonderful!",
+          "anyWording": true
+        }
+      ]
+    },
+    {
+      "id": "x-en-fonction-de",
+      "type": "expression",
+      "en": "depending on",
+      "fr": "en fonction de",
+      "themes": [
+        "Prepositions"
+      ],
+      "examples": [
+        {
+          "fr": "Je porte mes vêtements en fonction de la météo.",
+          "en": "I wear my clothes depending on the weather."
+        }
+      ]
+    },
+    {
+      "id": "x-noel",
+      "type": "expression",
+      "en": "Christmas",
+      "fr": "Noël",
+      "themes": [
+        "Time & dates"
+      ],
+      "tip": "le 25 décembre. Joyeux Noël ! = Merry Christmas!",
+      "examples": [
+        {
+          "fr": "Tu vas acheter des cadeaux pour Noël ?",
+          "en": "Are you going to buy presents for Christmas?"
+        }
+      ]
+    },
+    {
+      "id": "x-deja",
+      "type": "expression",
+      "en": "already",
+      "fr": "déjà",
+      "themes": [
+        "Time & dates",
+        "Common words"
+      ],
+      "examples": [
+        {
+          "fr": "Il est déjà 9 heures !",
+          "en": "It's already 9 o'clock!"
+        }
+      ]
+    },
+    {
+      "id": "x-faire-la-sieste",
+      "type": "expression",
+      "en": "to have a nap",
+      "fr": "faire la sieste",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Pendant le week-end, tu vas faire la sieste ?",
+          "en": "At the weekend, are you going to have a nap?"
+        }
+      ]
+    },
+    {
+      "id": "x-non-plus",
+      "type": "expression",
+      "en": "neither, (not)… either",
+      "fr": "non plus",
+      "themes": [
+        "Linking words"
+      ],
+      "tip": "After a negative: \"moi non plus\" (me neither) or \"moi si\" (I do). After a positive: \"moi aussi\" (me too) or \"pas moi\" (not me).",
+      "examples": [
+        {
+          "fr": "– Je ne porte pas de jupe. – Moi non plus.",
+          "en": "– I don't wear skirts. – Me neither."
+        },
+        {
+          "fr": "Je ne mange pas de viande non plus.",
+          "en": "I don't eat meat either."
+        }
+      ]
+    },
+    {
+      "id": "x-moi-si",
+      "type": "expression",
+      "en": "I do (after a negative)",
+      "fr": "moi si",
+      "themes": [
+        "Linking words"
+      ],
+      "tip": "si = yes, after a negative question or sentence.",
+      "examples": [
+        {
+          "fr": "– Je ne porte pas de jupe. – Moi si !",
+          "en": "– I don't wear skirts. – I do!"
+        }
+      ]
+    },
+    {
+      "id": "x-passer-du-temps",
+      "type": "expression",
+      "en": "to spend time",
+      "fr": "passer du temps",
+      "themes": [
+        "Hobbies & free time"
+      ],
+      "examples": [
+        {
+          "fr": "Je vais au café pour passer du temps avec mes amis.",
+          "en": "I go to the café to spend time with my friends."
+        }
+      ]
+    },
+    {
+      "id": "x-avoir-mal-a",
+      "type": "expression",
+      "en": "to have a pain in, to hurt",
+      "fr": "avoir mal à",
+      "themes": [
+        "Body & health"
+      ],
+      "tip": "avoir mal à la gorge = to have a sore throat; j'ai mal à la jambe = my leg hurts.",
+      "examples": [
+        {
+          "fr": "J'ai mal à la gorge.",
+          "en": "I have a sore throat."
         }
       ]
     }

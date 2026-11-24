@@ -343,6 +343,8 @@ function expectNoNoteContaining(id, answer, fragment) {
     noun('n-mixed', 'mixed', { confusables: ['n-mix'] }),
     noun('n-one-way', 'one way', { acceptedSynonyms: ['n-mix'] }), // n-mix has no confusable with n-one-way: valid
     noun('n-other-side', 'other side', { acceptedSynonyms: ['n-mixed'] }), // fine
+    noun('n-trap', 'trap', { confusables: ['n-accepts-trap'] }), // confusable on the other side only:
+    noun('n-accepts-trap', 'accepts trap', { acceptedSynonyms: ['n-trap'] }), // valid, one-way (like chemisier → chemise)
     noun('n-broken', 'broken', { acceptedSynonyms: ['n-broken', 'n-missing', 'x-phrase'] }),
     { id: 'x-phrase', type: 'expression', en: 'phrase', fr: 'phrase' },
   ];
@@ -359,6 +361,8 @@ function expectNoNoteContaining(id, answer, fragment) {
     ['self, missing id and other type ignored', synonymsOf('n-broken') === '' && ['n-broken', 'n-missing', 'x-phrase'].every((o) => warned('n-broken', o))],
     ['valid links kept and accepted', synonymsOf('n-one-way') === 'n-mix' && grade('n-one-way', 'le mix').result === 'correct'],
     ['one direction only', grade('n-mix', 'le one way').result === 'wrong' && grade('n-other-side', 'le mixed').result === 'correct'],
+    ['accepts an entry that lists it as a confusable', synonymsOf('n-accepts-trap') === 'n-trap' && grade('n-accepts-trap', 'le trap').result === 'correct'
+      && grade('n-trap', 'le accepts trap').result === 'wrong'],
   ];
   for (const [name, ok] of results) {
     if (!ok) failures++;

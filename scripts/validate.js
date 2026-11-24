@@ -161,11 +161,13 @@ for (const w of vocab.words) {
   }
   for (const [id, relations] of relationsById.get(w.id)) {
     if (relations.size > 1) errors.push(`${w.id}: "${id}" is in ${[...relations].join(' and ')} — an id can only be one of kindOf, acceptedSynonyms, confusables or alt`);
-    // Confusables are never accepted, so the other entry must not accept this one or link it by kindOf either.
-    // The link itself may be one-way (n-voiture lists n-car because of the English "car", n-car doesn't list n-voiture).
+    // A confusable must not be an alt or a kindOf link of the other entry either. The link itself may be one-way
+    // (n-voiture lists n-car because of the English "car", n-car doesn't list n-voiture), and the other entry may even
+    // accept this one (n-chemisier accepts n-chemise, while n-chemise lists n-chemisier as a confusable).
     const reverse = relationsById.get(id)?.get(w.id);
-    if (relations.has('confusables') && reverse && !reverse.has('confusables')) {
-      errors.push(`${w.id}: "${id}" is a confusable here, but ${id} has ${w.id} in ${[...reverse].join(' and ')}`);
+    const reverseConflicts = [...(reverse || [])].filter((relation) => relation === 'kindOf' || relation === 'alt');
+    if (relations.has('confusables') && reverseConflicts.length) {
+      errors.push(`${w.id}: "${id}" is a confusable here, but ${id} has ${w.id} in ${reverseConflicts.join(' and ')}`);
     }
   }
 }
